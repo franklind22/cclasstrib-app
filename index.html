@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cClassTrib por NCM - LC 214/2025</title>
+<style>
+  body { background: #f3f4f6; font-family: sans-serif; margin: 0; padding: 12px; }
+  #container { max-width: 100%; margin: auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 16px; }
+  header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 16px; text-align: center; border-radius: 12px 12px 0 0; font-size: 22px; }
+  .search-bar { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 16px 0; }
+  @media (min-width: 500px) { .search-bar { grid-template-columns: 1fr auto auto; } }
+  input, select { padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 17px; width: 100%; box-sizing: border-box; }
+  button { padding: 12px; border: none; border-radius: 8px; color: white; cursor: pointer; font-size: 16px; min-height: 48px; touch-action: manipulation; }
+  #search-btn { background: #10b981; }
+  #export-csv { background: #f59e0b; }
+  #svrs-btn { background: #3b82f6; }
+  
+  .actions {
+    display: flex;
+    flex-direction: column; /* empilha em mobile */
+    gap: 12px;
+    margin: 16px 0;
+  }
+  @media (min-width: 500px) {
+    .actions { flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+  }
+  .actions > * { flex: 1 1 100%; min-width: 100%; box-sizing: border-box; text-align: center; }
+  @media (min-width: 500px) {
+    .actions > * { flex: 1 1 30%; min-width: 140px; }
+  }
+  .actions label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    align-items: flex-start;
+  }
+  .actions input[type="file"] { padding: 8px; width: 100%; }
+
+  #history { margin: 16px 0; }
+  #history-list { list-style: none; padding: 0; }
+  #history li { margin: 6px 0; }
+  #loading { display: none; text-align: center; font-size: 18px; margin: 16px 0; color: #2563eb; }
+  .table-container { max-height: 450px; overflow: auto; border: 1px solid #d1d5db; border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #3b82f6; color: white; padding: 10px; position: sticky; top: 0; z-index: 10; text-align: left; font-size: 14px; }
+  td { padding: 10px; border-bottom: 1px solid #eee; font-size: 14px; }
+  tr:hover { background: #f8fafc; }
+  #pagination { display: none; justify-content: center; gap: 16px; margin: 12px 0; }
+  #pagination button { background: #6b7280; padding: 10px 16px; min-width: 100px; }
+  #message { padding: 12px; border-radius: 8px; margin: 12px 0; text-align: center; font-size: 15px; }
+  .success { background: #d1fae5; border: 1px solid #10b981; }
+  .error { background: #fee2e2; border: 1px solid #ef4444; }
+  .info { background: #dbeafe; border: 1px solid #3b82f6; color: #1e40af; }
+  .svrs-info { font-size: 14px; color: #555; text-align: center; margin: 8px 0; }
+</style>
+</head>
+<body>
+  <div id="container">
+    <header>cClassTrib por NCM (LC 214/2025)</header>
+
+    <div class="search-bar">
+      <input id="ncm-input" type="tel" placeholder="Digite NCM (2 a 8 dígitos)">
+      <button id="search-btn">Buscar</button>
+      <select id="filter-select">
+        <option value="todos">Todos</option>
+        <option value="reducao">Redução</option>
+        <option value="integral">Integral</option>
+      </select>
+    </div>
+
+    <div class="actions">
+  <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+    <label style="font-size: 14px;">Importar JSON oficial</label>
+    <div style="display: flex; gap: 8px; align-items: center;">
+      <input type="file" id="import-json" accept=".json" style="flex: 1; padding: 8px;">
+      <button id="btn-importar" style="background: #9f7aea; min-width: 100px;">Importar</button>
+    </div>
+  </div>
+  <button id="export-csv">Exportar CSV</button>
+  <button id="svrs-btn">Tabela oficial SVRS ↗</button>
+</div>
+
+    <div id="history">
+      <h3>Histórico</h3>
+      <ul id="history-list"></ul>
+    </div>
+
+    <div id="loading">🔍 Buscando...</div>
+
+    <div id="results">
+      <div class="table-container">
+        <table id="results-table">
+          <thead>
+            <tr>
+              <th>NCM</th>
+              <th>cClassTrib</th>
+              <th>CST</th>
+              <th>Descrição</th>
+              <th>Redução</th>
+              <th>Créd. Presumido</th>
+              <th>Legislação</th>
+              <th>Regime</th>
+              <th>Ativo</th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </div>
+      <div id="pagination" class="pagination">
+        <button id="prev-page">← Anterior</button>
+        <span id="page-info"></span>
+        <button id="next-page">Próxima →</button>
+      </div>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    let data = {};
+    let trie = {};
+    let history = JSON.parse(localStorage.getItem('history')) || [];
+    let currentResults = [];
+    let filteredResults = [];
+    let currentPage = 1;
+
+    function insertIntoTrie(ncm, entries) {
+      let node = trie;
+      for (let i = 0; i < ncm.length; i++) {
+        let digit = ncm.charAt(i);
+        if (!node[digit]) node[digit] = {};
+        node = node[digit];
+      }
+      node.entries = entries;
+    }
+
+    function getByPrefix(prefix) {
+  let node = trie;
+  for (let i = 0; i < prefix.length; i++) {
+    let digit = prefix.charAt(i);
+    if (!node[digit]) return [];
+    node = node[digit];
+  }
+  let results = [];
+  function collect(subnode, curr) {
+    // Mostra resultados mesmo se não for exatamente 8 dígitos (para prefixos parciais)
+    if (subnode.entries) {
+      subnode.entries.forEach(e => {
+        let row = { ncm: curr };
+        for (let k in e) row[k] = e[k];
+        results.push(row);
+      });
+    }
+    // Continua coletando filhos se houver mais dígitos
+    for (let d of '0123456789') {
+      if (subnode[d]) collect(subnode[d], curr + d);
+    }
+  }
+  collect(node, prefix);
+  return results;
+}
+
+    function initData() {
+      const initialData = {
+        "96190000": [
+          { "cclasstrib": "200013", "cst": "200", "descricao": "Absorventes 100%", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true },
+          { "cclasstrib": "200035", "cst": "200", "descricao": "Fraldas 60%", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true }
+        ],
+        "34011190": [
+          { "cclasstrib": "100001", "cst": "100", "descricao": "Sabão 0%", "pReducao": "0%", "pCredPres": "0%", "legislacao": "LC214/art123", "regime": "normal", "ativo": true },
+          { "cclasstrib": "200035", "cst": "200", "descricao": "Sabonete em barra – Anexo VIII", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/art136", "regime": "reducao", "ativo": true }
+        ],
+        "48181000": [
+          { "cclasstrib": "200035", "cst": "200", "descricao": "Papel higiênico – Anexo VIII", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/art136", "regime": "reducao", "ativo": true }
+        ],
+        "33061000": [
+          { "cclasstrib": "200035", "cst": "200", "descricao": "Pasta de dente – Anexo VIII", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/art136", "regime": "reducao", "ativo": true }
+        ]
+        // Adicione mais aqui se quiser, ou use o import JSON
+      };
+
+      for (let ncm in initialData) {
+        data[ncm] = initialData[ncm];
+        insertIntoTrie(ncm, data[ncm]);
+      }
+    }
+
+    function renderHistory() {
+      let list = document.getElementById('history-list');
+      list.innerHTML = '';
+      history.forEach(h => {
+        let li = document.createElement('li');
+        li.innerHTML = h + ' <button onclick="document.getElementById(\'ncm-input\').value=\'' + h + '\'; performSearch()">🔍</button>';
+        list.appendChild(li);
+      });
+    }
+
+    function addToHistory(ncm) {
+      history = history.filter(h => h !== ncm);
+      history.unshift(ncm);
+      history = history.slice(0, 10);
+      localStorage.setItem('history', JSON.stringify(history));
+      renderHistory();
+    }
+
+    function showMessage(type, msg) {
+      let m = document.getElementById('message');
+      m.className = type;
+      m.textContent = msg;
+      setTimeout(() => { m.textContent = ''; m.className = ''; }, 5000);
+    }
+
+    function applyFilter() {
+      let filter = document.getElementById('filter-select').value;
+      filteredResults = currentResults.filter(row => {
+        if (filter === 'todos') return true;
+        if (filter === 'reducao') return row.pReducao !== '0%';
+        if (filter === 'integral') return row.pReducao === '0%';
+      });
+      if (filteredResults.length === 0) {
+        showMessage('error', 'Nenhum item corresponde ao filtro');
+        document.getElementById('results-table').style.display = 'none';
+        document.getElementById('pagination').style.display = 'none';
+      } else {
+        currentPage = 1;
+        renderTable();
+        updatePagination();
+        document.getElementById('results-table').style.display = 'table';
+        document.getElementById('pagination').style.display = 'flex';
+      }
+    }
+
+    function performSearch() {
+  let input = document.getElementById('ncm-input').value.trim().replace(/\D/g, '');
+  if (input.length < 2 || input.length > 8) {
+    showMessage('error', 'Digite entre 2 e 8 dígitos');
+    return;
+  }
+  document.getElementById('loading').style.display = 'block';
+  setTimeout(() => {
+    currentResults = getByPrefix(input);
+    if (currentResults.length === 0) {
+      showMessage('error', 'Nenhum NCM encontrado com esse prefixo');
+      document.getElementById('results-table').style.display = 'none';
+      document.getElementById('pagination').style.display = 'none';
+    } else {
+      addToHistory(input);
+      applyFilter();
+    }
+    document.getElementById('loading').style.display = 'none';
+  }, 10);
+}
+
+    function renderTable() {
+      let body = document.getElementById('results-body');
+      body.innerHTML = '';
+      let start = (currentPage - 1) * 20;
+      let end = Math.min(start + 20, filteredResults.length);
+      for (let i = start; i < end; i++) {
+        let row = filteredResults[i];
+        let tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${row.ncm}</td>
+          <td>${row.cclasstrib}</td>
+          <td>${row.cst}</td>
+          <td>${row.descricao}</td>
+          <td>${row.pReducao}</td>
+          <td>${row.pCredPres || '-'}</td>
+          <td>${row.legislacao}</td>
+          <td>${row.regime}</td>
+          <td>${row.ativo ? 'Sim' : 'Não'}</td>
+        `;
+        body.appendChild(tr);
+      }
+    }
+
+    function updatePagination() {
+      let total = Math.ceil(filteredResults.length / 20);
+      document.getElementById('page-info').textContent = `Página ${currentPage} de ${total}`;
+      document.getElementById('prev-page').disabled = currentPage === 1;
+      document.getElementById('next-page').disabled = currentPage === total;
+    }
+
+    function exportCSV() {
+      let rows = [['NCM', 'cClassTrib', 'CST', 'Descricao', 'pReducao', 'pCredPres', 'Legislacao', 'Regime', 'Ativo']];
+      for (let ncm in data) {
+        data[ncm].forEach(e => {
+          rows.push([ncm, e.cclasstrib, e.cst, e.descricao, e.pReducao, e.pCredPres || '', e.legislacao, e.regime, e.ativo ? 'true' : 'false']);
+        });
+      }
+      let csv = rows.map(r => r.map(v => `"${(v + '').replace(/"/g, '""')}"`).join(',')).join('\n');
+      let blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      let url = URL.createObjectURL(blob);
+      let a = document.createElement('a');
+      a.href = url;
+      let date = new Date();
+      a.download = `cclasstrib-\( {date.getFullYear()}- \){('0' + (date.getMonth() + 1)).slice(-2)}-${('0' + date.getDate()).slice(-2)}.csv`;
+      a.click();
+    }
+
+    // Eventos
+    document.getElementById('search-btn').onclick = performSearch;
+    document.getElementById('ncm-input').onkeypress = e => { if (e.key === 'Enter') performSearch(); };
+    document.getElementById('filter-select').onchange = () => { if (currentResults.length > 0) applyFilter(); };
+    document.getElementById('export-csv').onclick = exportCSV;
+    document.getElementById('prev-page').onclick = () => { if (currentPage > 1) { currentPage--; renderTable(); updatePagination(); } };
+    document.getElementById('next-page').onclick = () => { let total = Math.ceil(filteredResults.length / 20); if (currentPage < total) { currentPage++; renderTable(); updatePagination(); } };
+
+    // Import JSON
+    document.getElementById('import-json').onchange = e => {
+      let file = e.target.files[0];
+      if (!file) return;
+      let reader = new FileReader();
+      reader.onload = ev => {
+        try {
+          let imported = JSON.parse(ev.target.result);
+          let count = 0;
+          for (let ncm in imported) {
+            if (!/^\d{8}$/.test(ncm)) continue;
+            let arr = imported[ncm];
+            data[ncm] = arr;
+            insertIntoTrie(ncm, arr);
+            count++;
+          }
+          showMessage('success', count + ' NCMs importados!');
+        } catch (err) {
+          showMessage('error', 'Formato JSON incorreto');
+        }
+      };
+      reader.readAsText(file);
+    };
+
+    // Inicialização
+    initData();
+    renderHistory();
+    // Botão Importar (confirma após selecionar arquivo)
+let arquivoSelecionado = null;
+
+document.getElementById('import-json').onchange = function(e) {
+  arquivoSelecionado = e.target.files[0];
+  if (arquivoSelecionado) {
+    showMessage('info', 'Arquivo selecionado: ' + arquivoSelecionado.name + ' — clique em "Importar" para confirmar');
+  }
+};
+
+document.getElementById('btn-importar').onclick = function() {
+  if (!arquivoSelecionado) {
+    showMessage('error', 'Nenhum arquivo selecionado');
+    return;
+  }
+
+  let reader = new FileReader();
+  reader.onload = function(ev) {
+    try {
+      let imported = JSON.parse(ev.target.result);
+      let count = 0;
+      for (let ncm in imported) {
+        if (/^\d{8}$/.test(ncm)) {
+          data[ncm] = imported[ncm];
+          insertIntoTrie(ncm, data[ncm]);
+          count++;
+        }
+      }
+      showMessage('success', count + ' NCMs importados com sucesso!');
+      
+      // Limpa tela para refletir nova base
+      currentResults = [];
+      filteredResults = [];
+      document.getElementById('results-table').style.display = 'none';
+      document.getElementById('pagination').style.display = 'none';
+      
+      // Limpa o input file
+      document.getElementById('import-json').value = '';
+      arquivoSelecionado = null;
+    } catch (err) {
+      showMessage('error', 'JSON inválido: ' + err.message);
+    }
+  };
+  reader.readAsText(arquivoSelecionado);
+};
+  </script>
+</body>
+</html>
