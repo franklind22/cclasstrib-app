@@ -2,7 +2,7 @@
 # cClassTrib por NCM – Reforma Tributária 2026
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blue?logo=githubpages)](https://seuusuario.github.io/cclasstrib-app/)
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blue?logo=githubpages)](https://franklind22.github.io/cclasstrib-app/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
@@ -27,7 +27,7 @@ Funciona diretamente no navegador (desktop e mobile), sem necessidade de servido
 
 Acesse a versão online hospedada no GitHub Pages:
 
-→ https://seuusuario.github.io/cclasstrib-app/
+→ https://franklind22.github.io/cclasstrib-app/
 
 (Após publicar, substitua pelo link real do seu repositório)
 
@@ -126,21 +126,6 @@ Contribuições são bem-vindas!
 - Sugira mais NCMs ou melhorias → Pull Requests  
 - Compartilhe com contadores, advogados tributaristas e lojistas
 
-Feito com ❤️ por Franklin D. (@FranklinDalmaso) – Aracruz/ES – 2026
+Feito com ❤️ por Franklin D. (@FranklinDalmaso) – São Mateus/ES – 2026
 ```
-
-### Como usar no GitHub
-
-1. Crie um repositório chamado `cclasstrib-app` (ou o nome que preferir)
-2. Adicione o arquivo `index.html` (o código minificado que enviei antes)
-3. Crie um arquivo chamado `README.md` e cole o conteúdo acima
-4. (Opcional) Adicione um `data.json` com mais NCMs para o carregamento automático
-5. Ative GitHub Pages em Settings → Pages → Branch: main → / (root)
-
-Se quiser, posso gerar também:
-- Um `data.json` de exemplo maior
-- Um `.gitignore`
-- Um arquivo de favicon simples
-- Ou badges personalizados extras
-
-É só pedir! 🚀
+##
