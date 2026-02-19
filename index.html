@@ -71,10 +71,13 @@
     </div>
 
     <div class="actions">
-  <label>
-    Importar JSON oficial
-    <input type="file" id="import-json" accept=".json">
-  </label>
+  <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+    <label style="font-size: 14px;">Importar JSON oficial</label>
+    <div style="display: flex; gap: 8px; align-items: center;">
+      <input type="file" id="import-json" accept=".json" style="flex: 1; padding: 8px;">
+      <button id="btn-importar" style="background: #9f7aea; min-width: 100px;">Importar</button>
+    </div>
+  </div>
   <button id="export-csv">Exportar CSV</button>
   <button id="svrs-btn">Tabela oficial SVRS ↗</button>
 </div>
@@ -330,6 +333,51 @@
     // Inicialização
     initData();
     renderHistory();
+    // Botão Importar (confirma após selecionar arquivo)
+let arquivoSelecionado = null;
+
+document.getElementById('import-json').onchange = function(e) {
+  arquivoSelecionado = e.target.files[0];
+  if (arquivoSelecionado) {
+    showMessage('info', 'Arquivo selecionado: ' + arquivoSelecionado.name + ' — clique em "Importar" para confirmar');
+  }
+};
+
+document.getElementById('btn-importar').onclick = function() {
+  if (!arquivoSelecionado) {
+    showMessage('error', 'Nenhum arquivo selecionado');
+    return;
+  }
+
+  let reader = new FileReader();
+  reader.onload = function(ev) {
+    try {
+      let imported = JSON.parse(ev.target.result);
+      let count = 0;
+      for (let ncm in imported) {
+        if (/^\d{8}$/.test(ncm)) {
+          data[ncm] = imported[ncm];
+          insertIntoTrie(ncm, data[ncm]);
+          count++;
+        }
+      }
+      showMessage('success', count + ' NCMs importados com sucesso!');
+      
+      // Limpa tela para refletir nova base
+      currentResults = [];
+      filteredResults = [];
+      document.getElementById('results-table').style.display = 'none';
+      document.getElementById('pagination').style.display = 'none';
+      
+      // Limpa o input file
+      document.getElementById('import-json').value = '';
+      arquivoSelecionado = null;
+    } catch (err) {
+      showMessage('error', 'JSON inválido: ' + err.message);
+    }
+  };
+  reader.readAsText(arquivoSelecionado);
+};
   </script>
 </body>
 </html>
