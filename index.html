@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cClassTrib por NCM - LC 214/2025</title>
+  <style>
+    body { background: #f3f4f6; font-family: sans-serif; margin: 0; padding: 0; }
+    #container { max-width: 900px; margin: 0 auto; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 12px; padding: 16px; }
+    header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 16px; text-align: center; border-radius: 12px 12px 0 0; font-size: 24px; }
+    .search-bar { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 16px 0; }
+    @media (min-width: 600px) { .search-bar { grid-template-columns: 1fr auto auto; } }
+    input, select { padding: 8px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; }
+    button { padding: 8px 16px; border: none; border-radius: 8px; color: white; cursor: pointer; touch-action: manipulation; }
+    #search-btn { background: linear-gradient(to bottom, #10b981, #059669); }
+    #export-csv { background: linear-gradient(to bottom, #f59e0b, #d97706); }
+    .actions { display: flex; justify-content: space-between; margin: 16px 0; }
+    #history { margin: 16px 0; }
+    #history-list { list-style: none; padding: 0; }
+    #history li { display: flex; justify-content: space-between; margin: 4px 0; }
+    #loading { display: none; text-align: center; font-size: 18px; margin: 16px 0; }
+    .table-container { max-height: 500px; overflow: auto; border: 1px solid #d1d5db; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; }
+    th { background: #3b82f6; color: white; padding: 8px; position: sticky; top: 0; z-index: 10; }
+    td { padding: 8px; border-bottom: 1px solid #d1d5db; }
+    tr:hover { background: #f3f4f6; }
+    #pagination { display: none; justify-content: center; align-items: center; margin: 8px 0; }
+    .pagination button { background: linear-gradient(to bottom, #6b7280, #4b5563); margin: 0 8px; }
+    .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
+    #message.success { background: #d1fae5; border: 1px solid #10b981; }
+    #message.error { background: #fee2e2; border: 1px solid #ef4444; }
+    #message { padding: 8px; border-radius: 8px; margin: 8px 0; text-align: center; }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>cClassTrib por NCM (LC 214/2025)</header>
+
+    <div class="search-bar">
+      <input id="ncm-input" type="tel" placeholder="Digite NCM (2 a 8 dígitos)">
+      <button id="search-btn">Buscar</button>
+      <select id="filter-select">
+        <option value="todos">Todos</option>
+        <option value="reducao">Redução</option>
+        <option value="integral">Integral</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <input type="file" id="import-json" accept=".json">
+      <button id="export-csv">Exportar CSV</button>
+    </div>
+
+    <div id="history">
+      <h3>Histórico</h3>
+      <ul id="history-list"></ul>
+    </div>
+
+    <div id="loading">🔍 Buscando...</div>
+
+    <div id="results">
+      <div class="table-container">
+        <table id="results-table">
+          <thead>
+            <tr>
+              <th>NCM</th>
+              <th>cClassTrib</th>
+              <th>CST</th>
+              <th>Descrição</th>
+              <th>Redução</th>
+              <th>Créd. Presumido</th>
+              <th>Legislação</th>
+              <th>Regime</th>
+              <th>Ativo</th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </div>
+      <div id="pagination" class="pagination">
+        <button id="prev-page">← Anterior</button>
+        <span id="page-info"></span>
+        <button id="next-page">Próxima →</button>
+      </div>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    let data = {};
+    let trie = {};
+    let history = JSON.parse(localStorage.getItem('history')) || [];
+    let currentResults = [];
+    let filteredResults = [];
+    let currentPage = 1;
+
+    function insertIntoTrie(ncm, entries) {
+      let node = trie;
+      for (let i = 0; i < ncm.length; i++) {
+        let digit = ncm.charAt(i);
+        if (!node[digit]) node[digit] = {};
+        node = node[digit];
+      }
+      node.entries = entries;
+    }
+
+    function getByPrefix(prefix) {
+      let node = trie;
+      for (let i = 0; i < prefix.length; i++) {
+        let digit = prefix.charAt(i);
+        if (!node[digit]) return [];
+        node = node[digit];
+      }
+      let results = [];
+      function collect(subnode, curr) {
+        if (curr.length === 8 && subnode.entries) {
+          subnode.entries.forEach(e => {
+            let row = { ncm: curr };
+            for (let k in e) row[k] = e[k];
+            results.push(row);
+          });
+        }
+        for (let d of '0123456789') {
+          if (subnode[d]) collect(subnode[d], curr + d);
+        }
+      }
+      collect(node, prefix);
+      return results;
+    }
+
+    function initData() {
+      const initialData = {
+        "96190000": [
+          { "cclasstrib": "200013", "cst": "200", "descricao": "Absorventes 100%", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true },
+          { "cclasstrib": "200035", "cst": "200", "descricao": "Fraldas 60%", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true }
+        ],
+        "34011190": [
+          { "cclasstrib": "100001", "cst": "100", "descricao": "Sabão 0%", "pReducao": "0%", "pCredPres": "0%", "legislacao": "LC214/art123", "regime": "normal", "ativo": true },
+          { "cclasstrib": "200035", "cst": "200", "descricao": "Sabonete em barra – Anexo VIII", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/art136", "regime": "reducao", "ativo": true }
+        ],
+        "48181000": [
+          { "cclasstrib": "200035", "cst": "200", "descricao": "Papel higiênico – Anexo VIII", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/art136", "regime": "reducao", "ativo": true }
+        ],
+        "33061000": [
+          { "cclasstrib": "200035", "cst": "200", "descricao": "Pasta de dente – Anexo VIII", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/art136", "regime": "reducao", "ativo": true }
+        ]
+        // Adicione mais aqui se quiser, ou use o import JSON
+      };
+
+      for (let ncm in initialData) {
+        data[ncm] = initialData[ncm];
+        insertIntoTrie(ncm, data[ncm]);
+      }
+    }
+
+    function renderHistory() {
+      let list = document.getElementById('history-list');
+      list.innerHTML = '';
+      history.forEach(h => {
+        let li = document.createElement('li');
+        li.innerHTML = h + ' <button onclick="document.getElementById(\'ncm-input\').value=\'' + h + '\'; performSearch()">🔍</button>';
+        list.appendChild(li);
+      });
+    }
+
+    function addToHistory(ncm) {
+      history = history.filter(h => h !== ncm);
+      history.unshift(ncm);
+      history = history.slice(0, 10);
+      localStorage.setItem('history', JSON.stringify(history));
+      renderHistory();
+    }
+
+    function showMessage(type, msg) {
+      let m = document.getElementById('message');
+      m.className = type;
+      m.textContent = msg;
+      setTimeout(() => { m.textContent = ''; m.className = ''; }, 5000);
+    }
+
+    function applyFilter() {
+      let filter = document.getElementById('filter-select').value;
+      filteredResults = currentResults.filter(row => {
+        if (filter === 'todos') return true;
+        if (filter === 'reducao') return row.pReducao !== '0%';
+        if (filter === 'integral') return row.pReducao === '0%';
+      });
+      if (filteredResults.length === 0) {
+        showMessage('error', 'Nenhum item corresponde ao filtro');
+        document.getElementById('results-table').style.display = 'none';
+        document.getElementById('pagination').style.display = 'none';
+      } else {
+        currentPage = 1;
+        renderTable();
+        updatePagination();
+        document.getElementById('results-table').style.display = 'table';
+        document.getElementById('pagination').style.display = 'flex';
+      }
+    }
+
+    function performSearch() {
+      let input = document.getElementById('ncm-input').value.trim();
+      if (!/^\d{2,8}$/.test(input)) {
+        showMessage('error', 'Digite entre 2 e 8 dígitos');
+        return;
+      }
+      document.getElementById('loading').style.display = 'block';
+      setTimeout(() => {
+        currentResults = getByPrefix(input);
+        if (currentResults.length === 0) {
+          showMessage('error', 'NCM não encontrado');
+          document.getElementById('results-table').style.display = 'none';
+          document.getElementById('pagination').style.display = 'none';
+        } else {
+          addToHistory(input);
+          applyFilter();
+        }
+        document.getElementById('loading').style.display = 'none';
+      }, 10);
+    }
+
+    function renderTable() {
+      let body = document.getElementById('results-body');
+      body.innerHTML = '';
+      let start = (currentPage - 1) * 20;
+      let end = Math.min(start + 20, filteredResults.length);
+      for (let i = start; i < end; i++) {
+        let row = filteredResults[i];
+        let tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${row.ncm}</td>
+          <td>${row.cclasstrib}</td>
+          <td>${row.cst}</td>
+          <td>${row.descricao}</td>
+          <td>${row.pReducao}</td>
+          <td>${row.pCredPres || '-'}</td>
+          <td>${row.legislacao}</td>
+          <td>${row.regime}</td>
+          <td>${row.ativo ? 'Sim' : 'Não'}</td>
+        `;
+        body.appendChild(tr);
+      }
+    }
+
+    function updatePagination() {
+      let total = Math.ceil(filteredResults.length / 20);
+      document.getElementById('page-info').textContent = `Página ${currentPage} de ${total}`;
+      document.getElementById('prev-page').disabled = currentPage === 1;
+      document.getElementById('next-page').disabled = currentPage === total;
+    }
+
+    function exportCSV() {
+      let rows = [['NCM', 'cClassTrib', 'CST', 'Descricao', 'pReducao', 'pCredPres', 'Legislacao', 'Regime', 'Ativo']];
+      for (let ncm in data) {
+        data[ncm].forEach(e => {
+          rows.push([ncm, e.cclasstrib, e.cst, e.descricao, e.pReducao, e.pCredPres || '', e.legislacao, e.regime, e.ativo ? 'true' : 'false']);
+        });
+      }
+      let csv = rows.map(r => r.map(v => `"${(v + '').replace(/"/g, '""')}"`).join(',')).join('\n');
+      let blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      let url = URL.createObjectURL(blob);
+      let a = document.createElement('a');
+      a.href = url;
+      let date = new Date();
+      a.download = `cclasstrib-\( {date.getFullYear()}- \){('0' + (date.getMonth() + 1)).slice(-2)}-${('0' + date.getDate()).slice(-2)}.csv`;
+      a.click();
+    }
+
+    // Eventos
+    document.getElementById('search-btn').onclick = performSearch;
+    document.getElementById('ncm-input').onkeypress = e => { if (e.key === 'Enter') performSearch(); };
+    document.getElementById('filter-select').onchange = () => { if (currentResults.length > 0) applyFilter(); };
+    document.getElementById('export-csv').onclick = exportCSV;
+    document.getElementById('prev-page').onclick = () => { if (currentPage > 1) { currentPage--; renderTable(); updatePagination(); } };
+    document.getElementById('next-page').onclick = () => { let total = Math.ceil(filteredResults.length / 20); if (currentPage < total) { currentPage++; renderTable(); updatePagination(); } };
+
+    // Import JSON
+    document.getElementById('import-json').onchange = e => {
+      let file = e.target.files[0];
+      if (!file) return;
+      let reader = new FileReader();
+      reader.onload = ev => {
+        try {
+          let imported = JSON.parse(ev.target.result);
+          let count = 0;
+          for (let ncm in imported) {
+            if (!/^\d{8}$/.test(ncm)) continue;
+            let arr = imported[ncm];
+            data[ncm] = arr;
+            insertIntoTrie(ncm, arr);
+            count++;
+          }
+          showMessage('success', count + ' NCMs importados!');
+        } catch (err) {
+          showMessage('error', 'Formato JSON incorreto');
+        }
+      };
+      reader.readAsText(file);
+    };
+
+    // Inicialização
+    initData();
+    renderHistory();
+  </script>
+</body>
+</html>
