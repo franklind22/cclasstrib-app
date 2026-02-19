@@ -1,78 +1,68 @@
 ```markdown
 # cClassTrib por NCM – Reforma Tributária 2026
 
+[![GitHub Pages](https://github.com/franklind22/cclasstrib-app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://franklind22.github.io/cclasstrib-app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blue?logo=githubpages)](https://franklind22.github.io/cclasstrib-app/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
-**Aplicativo web 100% offline-capaz** para consulta rápida de códigos **cClassTrib**, CST, percentual de redução e regime tributário do IBS/CBS conforme a **Lei Complementar 214/2025** (Reforma Tributária).
+**Aplicativo web 100% offline** para consultar rapidamente os códigos **cClassTrib**, **CST**, **percentual de redução** e **legislação** dos NCMs conforme a **Lei Complementar 214/2025** (Reforma Tributária – IBS/CBS).
 
-Funciona diretamente no navegador (desktop e mobile), sem necessidade de servidor backend.
+Funciona no navegador (celular e desktop), sem servidor, sem login, sem instalação.
 
-## ✨ Funcionalidades
+### ✨ Funcionalidades
 
-- Busca por NCM (2 a 8 dígitos) com autocomplete instantâneo
-- Filtro: Todos / Apenas com redução / Apenas alíquota integral
-- Histórico de buscas salvas no navegador (localStorage – últimos 10)
-- Importação de tabela oficial JSON (formato governo / NF-e)
+- Busca instantânea por NCM (2 a 8 dígitos)
+- Filtro: Todos / Com redução / Alíquota integral
+- Histórico de buscas (salvo no navegador – últimos 10)
+- Importação de tabela oficial JSON (formato governo/NF-e)
 - Exportação em CSV (com data no nome do arquivo)
-- Paginação inteligente (20 itens por página)
-- Tabela responsiva com cabeçalho fixo (sticky header)
-- Loading indicator e mensagens de erro/sucesso claras
-- Design moderno, mobile-first, gradiente header, botões coloridos
-- Algoritmo de busca por prefixo (Trie) → performance excelente mesmo com +10.000 NCMs
+- Tabela responsiva com cabeçalho fixo e paginação (20 itens/página)
+- Design mobile-first, gradiente header, loading e mensagens claras
+- Botão direto para tabela oficial no Portal SVRS
+- Busca otimizada com Trie (rápida mesmo com milhares de NCMs)
 
-## 🖥️ Demonstração
+### 🖥️ Demonstração Online
 
-Acesse a versão online hospedada no GitHub Pages:
+Acesse agora:
 
-→ https://franklind22.github.io/cclasstrib-app/
+→ **https://franklind22.github.io/cclasstrib-app/**
 
-(Após publicar, substitua pelo link real do seu repositório)
-
-Exemplos de buscas rápidas:
-
+Exemplos rápidos de busca:
 - `96190000` → Absorventes e fraldas (saúde menstrual)
 - `48181000` → Papel higiênico (Anexo VIII)
-- `30022000` → Vacinas humanas (Anexo XIV)
-- `1006` → Todos os tipos de arroz da cesta básica
+- `34011190` → Sabonete em barra (Anexo VIII)
+- `1006` → Arroz (cesta básica)
 
-## 🚀 Como usar localmente
+### 🚀 Como usar (no celular ou computador)
 
-1. Baixe ou clone o repositório:
-   ```bash
-   git clone https://github.com/seuusuario/cclasstrib-app.git
-   ```
+1. Acesse o link acima  
+2. Digite o NCM (ex: 9619 ou 4818)  
+3. Para tabela completa:  
+   - Clique em **“Tabela oficial SVRS”**  
+   - Baixe/exporte o JSON do Portal  
+   - Importe no app clicando em “Importar JSON”
 
-2. Abra o arquivo `index.html` diretamente no navegador (Chrome, Firefox, Edge, Safari)
+Funciona offline após primeira carga (exceto atualização via JSON externo).
 
-   Ou use Live Server no VS Code / extensão HTML Preview no celular.
+### 📥 Como atualizar a base completa
 
-3. (Opcional) Para atualizar a base de dados automaticamente:
-   - Coloque um arquivo `data.json` no repositório
-   - O app tenta carregar via fetch na inicialização
+1. Acesse o Portal oficial:  
+   https://dfe-portal.svrs.rs.gov.br/DFE/TabelaClassificacaoTributaria  
+   (versão mais recente: v.1.40 – jan/2026)
 
-## 📥 Importar tabela oficial completa
+2. Consulte/exporte o JSON (pode precisar de certificado digital para download full)
 
-1. Baixe a tabela oficial mais recente:
-   - Portal NF-e → Diversos → Informe Técnico RT 2025.002 (ou versão mais atual)
-   - Ou sites agregadores: SVRS, Taxcel, ALT+C, etc.
-   - Formato esperado: `{ "NCM8digitos": [ {cclasstrib: "...", cst: "...", ...} ] }`
+3. No app → clique em “Importar JSON” → selecione o arquivo baixado
 
-2. Clique em “Importar JSON” no app e selecione o arquivo.
+### 🛠️ Tecnologias
 
-## 🛠️ Tecnologias utilizadas
+- HTML5 + CSS3 (Grid, Flex, Gradients, Sticky)
+- JavaScript puro (ES5 – compatibilidade máxima com Android antigo)
+- Estrutura Trie para busca por prefixo (O(1) rápido)
+- localStorage para histórico
+- FileReader + Blob para import/export
+- Mobile-first + touch-action
 
-- HTML5 semântico
-- CSS3 (Grid, Flexbox, Gradients, Sticky positioning)
-- JavaScript puro (ES5 – máxima compatibilidade)
-- Estrutura Trie para busca ultra-rápida por prefixo
-- localStorage para histórico persistente
-- FileReader + Blob API para import/export
-- Mobile-first + touch-action: manipulation
-
-## 📊 Estrutura do JSON oficial (esperado)
+### 📄 Estrutura esperada do JSON oficial
 
 ```json
 {
@@ -80,22 +70,10 @@ Exemplos de buscas rápidas:
     {
       "cclasstrib": "200013",
       "cst": "200",
-      "descricao": "Absorventes higiênicos femininos",
+      "descricao": "Absorventes higiênicos",
       "pReducao": "100%",
       "pCredPres": "0%",
       "legislacao": "LC214/Anexo VII",
-      "regime": "reducao",
-      "ativo": true
-    }
-  ],
-  "48181000": [
-    {
-      "cclasstrib": "100001",
-      "cst": "200",
-      "descricao": "Papel higiênico",
-      "pReducao": "60%",
-      "pCredPres": "0%",
-      "legislacao": "LC214/Anexo VIII",
       "regime": "reducao",
       "ativo": true
     }
@@ -103,29 +81,22 @@ Exemplos de buscas rápidas:
 }
 ```
 
-## 📌 Requisitos mínimos
+### ⚠️ Aviso importante
 
-- Qualquer navegador moderno (Chrome 80+, Firefox 78+, Safari 14+, Edge 80+)
-- Android/iOS com navegador atualizado
-- Funciona offline após primeira carga (exceto atualização via JSON externo)
+Este app **não substitui** consulta oficial na Receita Federal, SEFAZ ou contador.  
+Os dados iniciais são exemplificativos e baseados em interpretações públicas da LC 214/2025.  
+Sempre valide com a tabela oficial mais recente do governo.
 
-## ⚠️ Aviso legal
+### 📄 Licença
 
-Este aplicativo **não substitui** consulta oficial junto à Receita Federal do Brasil, SEFAZ ou contador.  
-Os dados iniciais são exemplificativos e baseados em interpretações públicas da LC 214/2025 até fevereiro/2026.  
-Sempre valide com a tabela oficial mais recente publicada pelo governo.
+MIT License – use, modifique e distribua livremente.
 
-## 📄 Licença
+### 🙏 Contribuições
 
-MIT License – sinta-se à vontade para usar, modificar e distribuir.
+Quer adicionar mais NCMs, corrigir algo ou melhorar?  
+- Abra uma Issue  
+- Envie Pull Request  
+- Compartilhe com contadores, advogados tributaristas e lojistas!
 
-## 🙏 Agradecimentos / Contribuições
-
-Contribuições são bem-vindas!  
-- Reporte bugs → Issues  
-- Sugira mais NCMs ou melhorias → Pull Requests  
-- Compartilhe com contadores, advogados tributaristas e lojistas
-
-Feito com ❤️ por Franklin D. (@FranklinDalmaso) – São Mateus/ES – 2026
+Feito com ❤️ por **Franklin D.** (@FranklinDalmaso) – São Mateus/ES – 2026
 ```
-##
