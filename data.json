@@ -130,3 +130,135 @@
     {"cclasstrib": "300001", "cst": "300", "descricao": "Anti-hipertensivos / losartana genérica", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}
   ]
 }
+{
+  "96190000": [
+    {"cclasstrib": "200013", "cst": "200", "descricao": "Absorventes higiênicos externos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true},
+    {"cclasstrib": "200035", "cst": "200", "descricao": "Fraldas descartáveis infantis", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true}
+  ],
+  "96190010": [
+    {"cclasstrib": "200013", "cst": "200", "descricao": "Absorventes internos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true}
+  ],
+  "34011190": [
+    {"cclasstrib": "200035", "cst": "200", "descricao": "Sabonetes de toucador em barra", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}
+  ],
+  "34011900": [
+    {"cclasstrib": "200035", "cst": "200", "descricao": "Sabões em barra para uso doméstico", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}
+  ],
+  "33061000": [
+    {"cclasstrib": "200035", "cst": "200", "descricao": "Dentifrícios (pastas de dente)", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}
+  ],
+  "96032100": [
+    {"cclasstrib": "200035", "cst": "200", "descricao": "Escovas de dentes", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}
+  ],
+  "48181000": [
+    {"cclasstrib": "200035", "cst": "200", "descricao": "Papel higiênico", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}
+  ],
+  "38089419": [
+    {"cclasstrib": "200035", "cst": "200", "descricao": "Água sanitária / hipoclorito de sódio", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}
+  ],
+  "34022000": [
+    {"cclasstrib": "200035", "cst": "200", "descricao": "Preparações tensoativas para lavagem (detergentes)", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}
+  ],
+  "10062000": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Arroz descascilhado / castanho", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "10063011": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Arroz polido / branco tipo 1", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "10064000": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Arroz quebrado", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "07133319": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Feijão comum (Phaseolus vulgaris) – outros", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "07133329": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Feijão comum – secos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "04011010": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Leite UHT ≤1% gordura", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "04012010": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Leite UHT >1% ≤6% gordura", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "04021010": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Leite em pó desnatado ≤1,5% gordura", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "04069010": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Queijo prato / minas padrão", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "04051000": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Manteiga", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "15171000": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Margarina (exceto líquida)", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "15079010": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Óleo de soja refinado", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "17011400": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Açúcar de cana", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "11010010": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Farinha de trigo", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "19059090": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Pão francês e outros pães populares", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "19021100": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Massas alimentícias não cozidas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "04072000": [
+    {"cclasstrib": "200014", "cst": "200", "descricao": "Ovos frescos de aves", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}
+  ],
+  "07020000": [
+    {"cclasstrib": "200014", "cst": "200", "descricao": "Tomates frescos ou refrigerados", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}
+  ],
+  "07030011": [
+    {"cclasstrib": "200014", "cst": "200", "descricao": "Cebolas frescas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}
+  ],
+  "07099990": [
+    {"cclasstrib": "200014", "cst": "200", "descricao": "Outros hortícolas frescos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}
+  ],
+  "08030000": [
+    {"cclasstrib": "200014", "cst": "200", "descricao": "Bananas frescas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}
+  ],
+  "08051000": [
+    {"cclasstrib": "200014", "cst": "200", "descricao": "Laranjas frescas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}
+  ],
+  "09011100": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Café em grão", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "21011100": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Extratos e concentrados de café", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "11062000": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Farinha de mandioca", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "19030000": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Tapioca e sucedâneos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "07133399": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Feijão comum – demais", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "07133100": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Feijão fradinho", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "09030000": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Erva-mate", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "15132120": [
+    {"cclasstrib": "200003", "cst": "200", "descricao": "Óleo de babaçu em bruto", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}
+  ],
+  "30049069": [
+    {"cclasstrib": "300001", "cst": "200", "descricao": "Medicamentos genéricos essenciais", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}
+  ],
+  "30049099": [
+    {"cclasstrib": "300001", "cst": "200", "descricao": "Outros medicamentos genéricos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}
+  ],
+  "30022021": [
+    {"cclasstrib": "300001", "cst": "200", "descricao": "Vacinas humanas (ex: influenza)", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}
+  ],
+  "30043919": [
+    {"cclasstrib": "300001", "cst": "200", "descricao": "Medicamentos hormonais", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}
+  ]
+}
