@@ -4,33 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cClassTrib por NCM - LC 214/2025</title>
-  <style>
-    body { background: #f3f4f6; font-family: sans-serif; margin: 0; padding: 0; }
-    #container { max-width: 900px; margin: 0 auto; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 12px; padding: 16px; }
-    header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 16px; text-align: center; border-radius: 12px 12px 0 0; font-size: 24px; }
-    .search-bar { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 16px 0; }
-    @media (min-width: 600px) { .search-bar { grid-template-columns: 1fr auto auto; } }
-    input, select { padding: 8px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; }
-    button { padding: 8px 16px; border: none; border-radius: 8px; color: white; cursor: pointer; touch-action: manipulation; }
-    #search-btn { background: linear-gradient(to bottom, #10b981, #059669); }
-    #export-csv { background: linear-gradient(to bottom, #f59e0b, #d97706); }
-    .actions { display: flex; justify-content: space-between; margin: 16px 0; }
-    #history { margin: 16px 0; }
-    #history-list { list-style: none; padding: 0; }
-    #history li { display: flex; justify-content: space-between; margin: 4px 0; }
-    #loading { display: none; text-align: center; font-size: 18px; margin: 16px 0; }
-    .table-container { max-height: 500px; overflow: auto; border: 1px solid #d1d5db; border-radius: 8px; }
-    table { width: 100%; border-collapse: collapse; }
-    th { background: #3b82f6; color: white; padding: 8px; position: sticky; top: 0; z-index: 10; }
-    td { padding: 8px; border-bottom: 1px solid #d1d5db; }
-    tr:hover { background: #f3f4f6; }
-    #pagination { display: none; justify-content: center; align-items: center; margin: 8px 0; }
-    .pagination button { background: linear-gradient(to bottom, #6b7280, #4b5563); margin: 0 8px; }
-    .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
-    #message.success { background: #d1fae5; border: 1px solid #10b981; }
-    #message.error { background: #fee2e2; border: 1px solid #ef4444; }
-    #message { padding: 8px; border-radius: 8px; margin: 8px 0; text-align: center; }
-  </style>
+<style>
+  body { background: #f3f4f6; font-family: sans-serif; margin: 0; padding: 0; }
+  #container { max-width: 900px; margin: 0 auto; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 12px; padding: 16px; }
+  header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 16px; text-align: center; border-radius: 12px 12px 0 0; font-size: 24px; }
+  .search-bar { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 16px 0; }
+  @media (min-width: 600px) { .search-bar { grid-template-columns: 1fr auto auto; } }
+  input, select { padding: 8px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; }
+  button { padding: 8px 16px; border: none; border-radius: 8px; color: white; cursor: pointer; touch-action: manipulation; font-size: 16px; }
+  #search-btn { background: linear-gradient(to bottom, #10b981, #059669); }
+  #export-csv { background: linear-gradient(to bottom, #f59e0b, #d97706); }
+  #svrs-btn { background: linear-gradient(to bottom, #3b82f6, #2563eb); }
+  
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 16px 0;
+    justify-content: space-between; /* mantém espaçamento bom */
+    align-items: center;
+  }
+  .actions > * {
+    flex: 1 1 45%; /* faz os botões crescerem igualmente */
+    min-width: 140px; /* evita que fiquem muito pequenos */
+    text-align: center;
+  }
+  .actions label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    flex: 1 1 45%;
+    min-width: 140px;
+  }
+
+  #history { margin: 16px 0; }
+  #history-list { list-style: none; padding: 0; }
+  #history li { margin: 6px 0; }
+  #loading { display: none; text-align: center; font-size: 18px; margin: 16px 0; color: #2563eb; }
+  .table-container { max-height: 500px; overflow: auto; border: 1px solid #d1d5db; border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #3b82f6; color: white; padding: 8px; position: sticky; top: 0; z-index: 10; text-align: left; }
+  td { padding: 8px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f8fafc; }
+  #pagination { display: none; justify-content: center; gap: 16px; margin: 12px 0; }
+  #pagination button { background: #6b7280; padding: 8px 16px; }
+  #message { padding: 12px; border-radius: 8px; margin: 12px 0; text-align: center; }
+  .success { background: #d1fae5; border: 1px solid #10b981; }
+  .error { background: #fee2e2; border: 1px solid #ef4444; }
+  .info { background: #dbeafe; border: 1px solid #3b82f6; color: #1e40af; }
+  .svrs-info { font-size: 14px; color: #555; text-align: center; margin: 8px 0; }
+</style>
 </head>
 <body>
   <div id="container">
@@ -47,9 +71,13 @@
     </div>
 
     <div class="actions">
-      <input type="file" id="import-json" accept=".json">
-      <button id="export-csv">Exportar CSV</button>
-    </div>
+  <label>
+    Importar JSON oficial
+    <input type="file" id="import-json" accept=".json">
+  </label>
+  <button id="export-csv">Exportar CSV</button>
+  <button id="svrs-btn">Tabela oficial SVRS ↗</button>
+</div>
 
     <div id="history">
       <h3>Histórico</h3>
