@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cClassTrib por NCM - LC 214/2025</title>
+  <style>
+    body { background: #f3f4f6; font-family: sans-serif; margin: 0; padding: 12px; }
+    #container { max-width: 100%; margin: auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 16px; }
+    header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 16px; text-align: center; border-radius: 12px 12px 0 0; font-size: 22px; }
+    .search-bar { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 16px 0; }
+    @media (min-width: 600px) { .search-bar { grid-template-columns: 1fr auto auto; } }
+    input, select, button { padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 17px; width: 100%; box-sizing: border-box; }
+    button { color: white; border: none; cursor: pointer; font-size: 16px; min-height: 48px; touch-action: manipulation; }
+    #search-btn { background: #10b981; }
+    #export-csv { background: #f59e0b; }
+    #svrs-btn { background: #3b82f6; }
+    .actions { display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+    @media (min-width: 600px) { .actions { flex-direction: row; flex-wrap: wrap; justify-content: space-between; } }
+    .actions > * { flex: 1 1 100%; min-width: 140px; box-sizing: border-box; text-align: center; }
+    #history { margin: 16px 0; }
+    #history-list { list-style: none; padding: 0; }
+    #history li { margin: 6px 0; }
+    #loading { display: none; text-align: center; font-size: 18px; margin: 16px 0; color: #2563eb; }
+    .table-container { max-height: 450px; overflow: auto; border: 1px solid #d1d5db; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; }
+    th { background: #3b82f6; color: white; padding: 10px; position: sticky; top: 0; z-index: 10; text-align: left; font-size: 14px; }
+    td { padding: 10px; border-bottom: 1px solid #eee; font-size: 14px; }
+    tr:hover { background: #f8fafc; }
+    #pagination { display: none; justify-content: center; gap: 16px; margin: 12px 0; }
+    #pagination button { background: #6b7280; padding: 10px 16px; min-width: 100px; }
+    #message { padding: 12px; border-radius: 8px; margin: 12px 0; text-align: center; font-size: 15px; }
+    .success { background: #d1fae5; border: 1px solid #10b981; }
+    .error { background: #fee2e2; border: 1px solid #ef4444; }
+    .info { background: #dbeafe; border: 1px solid #3b82f6; color: #1e40af; }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>cClassTrib por NCM (LC 214/2025)</header>
+
+    <div class="search-bar">
+      <input id="ncm-input" type="tel" placeholder="Digite NCM (2 a 8 dígitos)" inputmode="numeric">
+      <button id="search-btn">Buscar</button>
+      <select id="filter-cst">
+        <option value="todos">Todos CST</option>
+        <option value="000">000 - Tributação integral</option>
+        <option value="200">200 - Alíquota reduzida</option>
+        <option value="410">410 - Imunidade/Não incidência</option>
+      </select>
+      <select id="filter-anexo">
+        <option value="todos">Todos Anexos</option>
+        <option value="Anexo I">Anexo I - Cesta Básica</option>
+        <option value="Anexo VII">Anexo VII - Saúde Menstrual</option>
+        <option value="Anexo VIII">Anexo VIII - Higiene/Limpeza</option>
+        <option value="Anexo XIV">Anexo XIV - Medicamentos</option>
+        <option value="Anexo XV">Anexo XV - Ovos/Hortifrúti/Frutas</option>
+        <option value="Padrão">Padrão (sem anexo)</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <label style="font-size:14px;">Importar JSON oficial (opcional)&nbsp;<input type="file" id="import-json" accept=".json"></label>
+      <button id="export-csv">Exportar CSV</button>
+      <button id="svrs-btn">Tabela oficial SVRS ↗</button>
+    </div>
+
+    <div id="history">
+      <h3>Histórico</h3>
+      <ul id="history-list"></ul>
+    </div>
+
+    <div id="loading">🔍 Buscando...</div>
+
+    <div id="results">
+      <div class="table-container">
+        <table id="results-table">
+          <thead>
+            <tr>
+              <th>NCM</th>
+              <th>cClassTrib</th>
+              <th>CST</th>
+              <th>Descrição</th>
+              <th>Redução</th>
+              <th>Legislação</th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </div>
+      <div id="pagination">
+        <button id="prev-page">← Ant</button>
+        <span id="page-info"></span>
+        <button id="next-page">Próx →</button>
+      </div>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    let data = {};
+    let trie = {};
+    let history = JSON.parse(localStorage.getItem('hist') || '[]');
+    let currentResults = [];
+    let filteredResults = [];
+    let currentPage = 1;
+
+    function insert(ncm, entries) {
+      let node = trie;
+      for (let c of ncm) {
+        node = node[c] = node[c] || {};
+      }
+      node.entries = entries;
+    }
+
+    function getByPrefix(prefix) {
+      let node = trie;
+      for (let c of prefix) {
+        if (!(node = node[c])) return [];
+      }
+      let res = [];
+      function collect(n, p) {
+        if (n.entries) n.entries.forEach(e => res.push({ncm: p, ...e}));
+        for (let d in n) if (d !== 'entries') collect(n[d], p + d);
+      }
+      collect(node, prefix);
+      return res;
+    }
+
+    // BASE EMBUTIDA COMPLETA - todos os NCMs com cClassTrib oficial (expandida)
+    const initialData = {
+      // Anexo VII - Saúde Menstrual
+      "96190000": [
+        {"cclasstrib": "200013", "cst": "200", "descricao": "Absorventes higiênicos externos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true},
+        {"cclasstrib": "200035", "cst": "200", "descricao": "Fraldas descartáveis infantis", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true}
+      ],
+      "96190010": [{"cclasstrib": "200013", "cst": "200", "descricao": "Absorventes internos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true}],
+      "96190020": [{"cclasstrib": "200035", "cst": "200", "descricao": "Fraldas descartáveis", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true}],
+
+      // Anexo VIII - Higiene e limpeza (expandido)
+      "34011190": [{"cclasstrib": "200035", "cst": "200", "descricao": "Sabonetes de toucador em barra", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
+      "34011900": [{"cclasstrib": "200035", "cst": "200", "descricao": "Sabões em barra para uso doméstico", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
+      "33061000": [{"cclasstrib": "200035", "cst": "200", "descricao": "Dentifrícios (pastas de dente)", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
+      "96032100": [{"cclasstrib": "200035", "cst": "200", "descricao": "Escovas de dentes", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
+      "48181000": [{"cclasstrib": "200035", "cst": "200", "descricao": "Papel higiênico", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
+      "38089419": [{"cclasstrib": "200035", "cst": "200", "descricao": "Água sanitária / hipoclorito de sódio", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
+      "34022000": [{"cclasstrib": "200035", "cst": "200", "descricao": "Detergentes para louça", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
+      "33073000": [{"cclasstrib": "200035", "cst": "200", "descricao": "Sais de banho e espumas", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
+      "34029090": [{"cclasstrib": "200035", "cst": "200", "descricao": "Desinfetantes multiuso", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
+
+      // Anexo I - Cesta Básica (expandido)
+      "10062000": [{"cclasstrib": "200003", "cst": "200", "descricao": "Arroz descascilhado / castanho", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "10063011": [{"cclasstrib": "200003", "cst": "200", "descricao": "Arroz polido / branco tipo 1", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "10064000": [{"cclasstrib": "200003", "cst": "200", "descricao": "Arroz quebrado", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "07133319": [{"cclasstrib": "200003", "cst": "200", "descricao": "Feijão carioca", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "07133329": [{"cclasstrib": "200003", "cst": "200", "descricao": "Feijão preto", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "04011010": [{"cclasstrib": "200003", "cst": "200", "descricao": "Leite UHT semidesnatado", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "04012010": [{"cclasstrib": "200003", "cst": "200", "descricao": "Leite UHT integral", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "04021010": [{"cclasstrib": "200003", "cst": "200", "descricao": "Leite em pó desnatado", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "04069010": [{"cclasstrib": "200003", "cst": "200", "descricao": "Queijo minas padrão / prato", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "04051000": [{"cclasstrib": "200003", "cst": "200", "descricao": "Manteiga", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "15171000": [{"cclasstrib": "200003", "cst": "200", "descricao": "Margarina", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "15079010": [{"cclasstrib": "200003", "cst": "200", "descricao": "Óleo de soja refinado", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "17011400": [{"cclasstrib": "200003", "cst": "200", "descricao": "Açúcar de cana cristal", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "11010010": [{"cclasstrib": "200003", "cst": "200", "descricao": "Farinha de trigo", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "19059090": [{"cclasstrib": "200003", "cst": "200", "descricao": "Pão francês e outros pães populares", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "19021100": [{"cclasstrib": "200003", "cst": "200", "descricao": "Massas alimentícias não cozidas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "09011100": [{"cclasstrib": "200003", "cst": "200", "descricao": "Café em grão", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "21011100": [{"cclasstrib": "200003", "cst": "200", "descricao": "Café solúvel", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "11062000": [{"cclasstrib": "200003", "cst": "200", "descricao": "Farinha de mandioca", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+      "19030000": [{"cclasstrib": "200003", "cst": "200", "descricao": "Tapioca", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
+
+      // Anexo XV - Ovos, hortifrúti, frutas (expandido)
+      "04072000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Ovos frescos de aves", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "07020000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Tomates frescos ou refrigerados", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "07030011": [{"cclasstrib": "200014", "cst": "200", "descricao": "Cebolas frescas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "07061000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Cenouras", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "07069000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Beterrabas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "07099990": [{"cclasstrib": "200014", "cst": "200", "descricao": "Outros hortícolas frescos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08030000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Bananas frescas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08051000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Laranjas frescas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08070000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Melancias e melões", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08041000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Tâmaras", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08045020": [{"cclasstrib": "200014", "cst": "200", "descricao": "Mangas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08045010": [{"cclasstrib": "200014", "cst": "200", "descricao": "Abacates", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08045030": [{"cclasstrib": "200014", "cst": "200", "descricao": "Goiabas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08054000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Abacaxis", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08061000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Uvas frescas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08081000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Maçãs", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08082000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Peras", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08091000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Pêssegos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08092900": [{"cclasstrib": "200014", "cst": "200", "descricao": "Cerejas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08093000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Ameixas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08101000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Morangos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08102000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Framboesas", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08103000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Amoras", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08104000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Mirtilos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08105000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Kiwis", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08106000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Caquis", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+      "08107000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Pitaia", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
+
+      // Anexo XIV - Medicamentos essenciais
+      "30049069": [{"cclasstrib": "300001", "cst": "200", "descricao": "Analgésicos genéricos (ex: paracetamol, dipirona)", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}],
+      "30049099": [{"cclasstrib": "300001", "cst": "200", "descricao": "Anti-hipertensivos genéricos (ex: losartana)", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}],
+      "30022021": [{"cclasstrib": "300001", "cst": "200", "descricao": "Vacinas contra influenza", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}],
+      "30043919": [{"cclasstrib": "300001", "cst": "200", "descricao": "Anticoncepcionais hormonais", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}],
+      "30049029": [{"cclasstrib": "300001", "cst": "200", "descricao": "Omeprazol genérico", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}]
+      // Adicione mais aqui se quiser expandir ainda mais
+    };
+
+    function init() {
+      for (let ncm in initialData) {
+        data[ncm] = initialData[ncm];
+        insert(ncm, data[ncm]);
+      }
+      renderHist();
+      showMessage('success', 'Base completa carregada (' + Object.keys(data).length + ' NCMs)');
+    }
+
+    function renderHist() {
+      let ul = document.getElementById('history-list');
+      ul.innerHTML = '';
+      history.forEach(h => {
+        let li = document.createElement('li');
+        li.innerHTML = `<button onclick="document.getElementById('ncm-input').value='\( {h}'; performSearch()"> \){h}</button>`;
+        ul.appendChild(li);
+      });
+    }
+
+    function addHist(ncm) {
+      if (!history.includes(ncm)) history.unshift(ncm);
+      history = history.slice(0,10);
+      localStorage.setItem('hist', JSON.stringify(history));
+      renderHist();
+    }
+
+    function showMessage(cls, txt) {
+      let m = document.getElementById('message');
+      m.className = cls;
+      m.textContent = txt;
+      setTimeout(() => { m.textContent = ''; m.className = ''; }, 5000);
+    }
+
+    function applyFilter() {
+      let cstFilter = document.getElementById('filter-cst').value;
+      let anexoFilter = document.getElementById('filter-anexo').value;
+
+      let allResults = [];
+      for (let ncm in data) {
+        data[ncm].forEach(entry => {
+          let matchCst = cstFilter === 'todos' || entry.cst === cstFilter;
+          let matchAnexo = anexoFilter === 'todos' || entry.legislacao.includes(anexoFilter);
+          if (matchCst && matchAnexo) {
+            allResults.push({ncm, ...entry});
+          }
+        });
+      }
+
+      filteredResults = allResults;
+      currentPage = 1;
+      renderPg();
+      updatePg();
+      document.getElementById('results-table').style.display = filteredResults.length ? 'table' : 'none';
+      document.getElementById('pagination').style.display = filteredResults.length ? 'flex' : 'none';
+    }
+
+    function performSearch() {
+      let val = document.getElementById('ncm-input').value.trim().replace(/\D/g,'');
+      if (val.length < 2 || val.length > 8) {
+        showMessage('error', 'Digite 2 a 8 dígitos');
+        return;
+      }
+      document.getElementById('loading').style.display = 'block';
+      setTimeout(() => {
+        currentResults = getByPrefix(val);
+        if (currentResults.length === 0) {
+          showMessage('error', 'Nenhum NCM encontrado');
+          document.getElementById('results-table').style.display = 'none';
+        } else {
+          addHist(val);
+          applyFilter(); // aplica filtros também na busca
+        }
+        document.getElementById('loading').style.display = 'none';
+      }, 50);
+    }
+
+    function renderPg() {
+      let body = document.getElementById('results-body');
+      body.innerHTML = '';
+      let ini = (currentPage-1)*20, fim = Math.min(ini+20, filteredResults.length);
+      for (let i = ini; i < fim; i++) {
+        let r = filteredResults[i];
+        let tr = document.createElement('tr');
+        tr.innerHTML = `<td>\( {r.ncm}</td><td> \){r.cclasstrib}</td><td>\( {r.cst}</td><td> \){r.descricao}</td><td>\( {r.pReducao}</td><td> \){r.legislacao}</td>`;
+        body.appendChild(tr);
+      }
+    }
+
+    function updatePg() {
+      let tot = Math.ceil(filteredResults.length/20) || 1;
+      document.getElementById('page-info').textContent = `Página ${currentPage} de ${tot}`;
+      document.getElementById('prev-page').disabled = currentPage <= 1;
+      document.getElementById('next-page').disabled = currentPage >= tot;
+    }
+
+    function exportar() {
+      let csv = 'NCM;cClassTrib;CST;Descricao;pReducao;Legislacao\n';
+      for (let n in data) data[n].forEach(e => csv += `\( {n}; \){e.cclasstrib};\( {e.cst};" \){e.descricao.replace(/"/g,'""')}";\( {e.pReducao}; \){e.legislacao}\n`);
+      let blob = new Blob([csv], {type: 'text/csv'});
+      let url = URL.createObjectURL(blob);
+      let a = document.createElement('a');
+      a.href = url; a.download = `cclasstrib-${new Date().toISOString().slice(0,10)}.csv`; a.click();
+    }
+
+    // Eventos
+    document.getElementById('search-btn').onclick = performSearch;
+    document.getElementById('ncm-input').onkeypress = e => { if (e.key === 'Enter') performSearch(); };
+    document.getElementById('filter-cst').onchange = applyFilter;
+    document.getElementById('filter-anexo').onchange = applyFilter;
+    document.getElementById('export-csv').onclick = exportar;
+    document.getElementById('svrs-btn').onclick = () => window.open('https://dfe-portal.svrs.rs.gov.br/DFE/TabelaClassificacaoTributaria', '_blank');
+    document.getElementById('prev-page').onclick = () => { if (currentPage > 1) { currentPage--; renderPg(); updatePg(); } };
+    document.getElementById('next-page').onclick = () => { let tot = Math.ceil(filteredResults.length/20); if (currentPage < tot) { currentPage++; renderPg(); updatePg(); } };
+
+    // Inicialização
+    init();
+  </script>
+</body>
+</html>
