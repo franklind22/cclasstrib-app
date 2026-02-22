@@ -82,8 +82,7 @@ Para expandir o banco de dados sem quebrar a lógica do sistema, siga este padr�
   }
 ]
 
-
-⚠️ AVISO LEGAL: Este software é uma ferramenta de simulação pedagógica e de apoio ao desenvolvimento. Os dados devem ser validados por um profissional de contabilidade antes de serem aplicados em ambientes de produção fiscal.
+## ⚠️ AVISO LEGAL: Este software é uma ferramenta de simulação pedagógica e de apoio ao desenvolvimento. Os dados devem ser validados por um profissional de contabilidade antes de serem aplicados em ambientes de produção fiscal.
 
 
 **⭐ Star se ajudou!** **💡 NCM faltando?** Basta editar o `dados.json` ou abrir uma issue.  
