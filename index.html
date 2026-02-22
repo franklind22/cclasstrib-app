@@ -100,46 +100,54 @@ function validateCClassTrib(cclasstrib) {
   return { valid, error: valid ? null : "cClassTrib inválido (6 dígitos)" };
 }
 
-// BASE COMPLETA - SUA BASE ORIGINAL (60+ NCMs)
-const NCM_DATA = {
-  "96190000": [
-    {"cclasstrib": "200013", "cst": "200", "descricao": "Absorventes higiênicos externos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true},
-    {"cclasstrib": "200035", "cst": "200", "descricao": "Fraldas descartáveis infantis", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true}
-  ],
-  "96190010": [{"cclasstrib": "200013", "cst": "200", "descricao": "Absorventes internos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true}],
-  "96190020": [{"cclasstrib": "200035", "cst": "200", "descricao": "Fraldas descartáveis", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VII", "regime": "reducao", "ativo": true}],
-  "34011190": [{"cclasstrib": "200035", "cst": "200", "descricao": "Sabonetes de toucador em barra", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
-  "34011900": [{"cclasstrib": "200035", "cst": "200", "descricao": "Sabões em barra para uso doméstico", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
-  "33061000": [{"cclasstrib": "200035", "cst": "200", "descricao": "Dentifrícios (pastas de dente)", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
-  "96032100": [{"cclasstrib": "200035", "cst": "200", "descricao": "Escovas de dentes", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
-  "48181000": [{"cclasstrib": "200035", "cst": "200", "descricao": "Papel higiênico", "pReducao": "60%", "pCredPres": "0%", "legislacao": "LC214/Anexo VIII", "regime": "reducao", "ativo": true}],
-  "10062000": [{"cclasstrib": "200003", "cst": "200", "descricao": "Arroz descascilhado", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
-  "10063011": [{"cclasstrib": "200003", "cst": "200", "descricao": "Arroz polido tipo 1", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
-  "07133319": [{"cclasstrib": "200003", "cst": "200", "descricao": "Feijão carioca", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
-  "04011010": [{"cclasstrib": "200003", "cst": "200", "descricao": "Leite UHT semidesnatado", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo I", "regime": "reducao", "ativo": true}],
-  "04072000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Ovos frescos de aves", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
-  "07020000": [{"cclasstrib": "200014", "cst": "200", "descricao": "Tomates frescos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XV", "regime": "reducao", "ativo": true}],
-  "30049069": [{"cclasstrib": "300001", "cst": "200", "descricao": "Analgésicos genéricos", "pReducao": "100%", "pCredPres": "0%", "legislacao": "LC214/Anexo XIV", "regime": "reducao", "ativo": true}]
-};
-
-// Árvore otimizada O(1)
-const NCM_TREE = {};
-Object.keys(NCM_DATA).forEach(ncm => {
-  const prefix = ncm.slice(0,4);
-  if (!NCM_TREE[prefix]) NCM_TREE[prefix] = [];
-  NCM_TREE[prefix].push(ncm);
-});
-  // Estatísticas
-const TOTAL_NCMS = Object.keys(NCM_DATA).length;
-const TOTAL_ITEMS = Object.values(NCM_DATA).reduce((a,b)=>a+b.length,0);
-document.getElementById('totalNCMs').textContent = TOTAL_NCMS;
-document.getElementById('totalItens').textContent = TOTAL_ITEMS;
-
+// Variáveis Globais
+let NCM_DATA = {}; // Começa vazio, será preenchido pelo dados.json
+let NCM_TREE = {};
 let currentResults = [], currentPage = 0, ITEMS_PER_PAGE = 20, currentCST = '', currentAnexo = '';
 
-function searchAndFilter() {
-  const ncm = document.getElementById('ncmInput').value.replace(/D/g,'');
+// 🟢 FUNÇÃO PARA CARREGAR DADOS DO GITHUB PAGES
+async function loadExternalData() {
   const resultDiv = document.getElementById('resultado');
+  resultDiv.innerHTML = '<div class="loading">📥 Carregando banco de dados da Reforma...</div>';
+  
+  try {
+    // Busca o arquivo dados.json que deve estar na mesma pasta do index.html
+    const response = await fetch('dados.json');
+    if (!response.ok) throw new Error('Erro ao carregar dados.json');
+    
+    NCM_DATA = await response.json();
+    
+    // Reconstrói a Árvore Otimizada após o carregamento
+    Object.keys(NCM_DATA).forEach(ncm => {
+      const prefix = ncm.slice(0,4);
+      if (!NCM_TREE[prefix]) NCM_TREE[prefix] = [];
+      NCM_TREE[prefix].push(ncm);
+    });
+
+    // Atualiza Estatísticas
+    const TOTAL_NCMS = Object.keys(NCM_DATA).length;
+    const TOTAL_ITEMS = Object.values(NCM_DATA).reduce((a,b)=>a+b.length,0);
+    document.getElementById('totalNCMs').textContent = TOTAL_NCMS;
+    document.getElementById('totalItens').textContent = TOTAL_ITEMS;
+    
+    resultDiv.innerHTML = ''; // Limpa o loading
+    console.log("✅ Banco de dados carregado com sucesso!");
+    
+  } catch (error) {
+    console.error(error);
+    resultDiv.innerHTML = `<div class="error">❌ Erro ao carregar arquivo dados.json. Verifique se ele foi enviado para o GitHub.</div>`;
+  }
+}
+
+function searchAndFilter() {
+  const ncm = document.getElementById('ncmInput').value.replace(/\D/g,'');
+  const resultDiv = document.getElementById('resultado');
+
+  if (Object.keys(NCM_DATA).length === 0) {
+    alert("O banco de dados ainda não foi carregado.");
+    return;
+  }
+
   resultDiv.innerHTML = '<div class="loading">🔍 Processando filtros...</div>';
 
   setTimeout(() => {
@@ -147,7 +155,6 @@ function searchAndFilter() {
     currentAnexo = document.getElementById('filterAnexo').value;
 
     if (ncm.length >= 2) {
-      // 🔍 Busca específica NCM
       const prefix = ncm.slice(0,4);
       const candidates = NCM_TREE[prefix] || [];
       currentResults = candidates.filter(key => key.includes(ncm)).flatMap(key => 
@@ -155,18 +162,17 @@ function searchAndFilter() {
           const valid = validateCClassTrib(item.cclasstrib);
           return valid.valid && 
                  (!currentCST || item.cst === currentCST) && 
-                 (!currentAnexo || item.legislacao.includes(currentAnexo));
+                 (!currentAnexo || (item.legislacao && item.legislacao.includes(currentAnexo)));
         }).map(item => ({...item, ncm: key}))
       );
       addToHistory(ncm);
     } else {
-      // 🌐 Filtro global (todos NCMs)
       currentResults = Object.entries(NCM_DATA).flatMap(([ncmKey, items]) => 
         items.filter(item => {
           const valid = validateCClassTrib(item.cclasstrib);
           return valid.valid && 
                  (!currentCST || item.cst === currentCST) && 
-                 (!currentAnexo || item.legislacao.includes(currentAnexo));
+                 (!currentAnexo || (item.legislacao && item.legislacao.includes(currentAnexo)));
         }).map(item => ({...item, ncm: ncmKey}))
       );
     }
@@ -176,46 +182,35 @@ function searchAndFilter() {
   }, 100);
 }
 
+// --- Funções de interface permanecem as mesmas ---
+
 function showPage() {
   const total = currentResults.length;
   if (total === 0) {
     document.getElementById('resultado').innerHTML = '<div class="error">❌ Nenhum resultado encontrado</div>';
     return;
   }
-
   const start = currentPage * ITEMS_PER_PAGE;
   const end = start + ITEMS_PER_PAGE;
   const pageData = currentResults.slice(start, end);
 
   let html = `<div class="success">✅ ${total} resultado(s) | Página ${currentPage+1} de ${Math.ceil(total/ITEMS_PER_PAGE)}</div>`;
-  html += '<div class="table-container">';
-  html += '<table><tr><th>NCM</th><th>cClassTrib</th><th>CST</th><th>Descrição</th><th>%Red.</th><th>Legislação</th></tr>';
-  
+  html += '<div class="table-container"><table><tr><th>NCM</th><th>cClassTrib</th><th>CST</th><th>Descrição</th><th>%Red.</th><th>Legislação</th></tr>';
   pageData.forEach(item => {
-    html += `<tr>
-      <td>${item.ncm}</td>
-      <td><strong style="color:#10b981;">${item.cclasstrib}</strong></td>
-      <td>${item.cst}</td>
-      <td>${item.descricao}</td>
-      <td>${item.pReducao}</td>
-      <td>${item.legislacao}</td>
-    </tr>`;
+    html += `<tr><td>${item.ncm}</td><td><strong style="color:#10b981;">${item.cclasstrib}</strong></td><td>${item.cst}</td><td>${item.descricao}</td><td>${item.pReducao}</td><td>${item.legislacao}</td></tr>`;
   });
-  
-  html += '</table></div>';
-  html += '<div class="pagination">';
+  html += '</table></div><div class="pagination">';
   if (currentPage > 0) html += `<button class="page-btn" onclick="previousPage()">← Anterior</button>`;
   html += `<span class="page-btn active">${currentPage+1}</span>`;
   if (end < total) html += `<button class="page-btn" onclick="nextPage()">Próxima →</button>`;
   html += '</div>';
-
   document.getElementById('resultado').innerHTML = html;
 }
 
 function previousPage() { if (currentPage > 0) { currentPage--; showPage(); } }
 function nextPage() { if ((currentPage + 1) * ITEMS_PER_PAGE < currentResults.length) { currentPage++; showPage(); } }
-  
- function addToHistory(ncm) {
+
+function addToHistory(ncm) {
   let history = JSON.parse(localStorage.getItem('cclasstribHistory')) || [];
   if (!history.find(h => h.ncm === ncm)) {
     history.unshift({ncm, date: new Date().toLocaleString('pt-BR')});
@@ -228,17 +223,10 @@ function showHistory() {
   const history = JSON.parse(localStorage.getItem('cclasstribHistory')) || [];
   const list = document.getElementById('historyList');
   const section = document.getElementById('historySection');
-
   if (history.length > 0) {
-    list.innerHTML = history.slice(0,5).map(h => 
-      `<div class="history-item" onclick="document.getElementById('ncmInput').value='${h.ncm}';searchAndFilter()">
-        <span>${h.ncm} <small style="opacity:0.7;">(${h.date})</small></span>
-      </div>`
-    ).join('');
+    list.innerHTML = history.slice(0,5).map(h => `<div class="history-item" onclick="document.getElementById('ncmInput').value='${h.ncm}';searchAndFilter()"><span>${h.ncm} <small style="opacity:0.7;">(${h.date})</small></span></div>`).join('');
     section.style.display = 'block';
-  } else {
-    section.style.display = 'none';
-  }
+  } else { section.style.display = 'none'; }
 }
 
 function clearAll() {
@@ -253,12 +241,10 @@ function clearAll() {
 }
 
 function exportCSV() {
-  let csv = 'NCM;cClassTrib;CST;Descricao;pReducao;Legislacao
-';
+  let csv = 'NCM;cClassTrib;CST;Descricao;pReducao;Legislacao\n';
   Object.entries(NCM_DATA).forEach(([ncm, items]) => {
     items.forEach(item => {
-      csv += `"${ncm}";"${item.cclasstrib}";"${item.cst}";"${item.descricao.replace(/"/g,'""')}";"${item.pReducao}";"${item.legislacao}"
-`;
+      csv += `"${ncm}";"${item.cclasstrib}";"${item.cst}";"${item.descricao.replace(/"/g,'""')}";"${item.pReducao}";"${item.legislacao}"\n`;
     });
   });
   const blob = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
@@ -272,38 +258,18 @@ function exportCSV() {
   URL.revokeObjectURL(url);
 }
 
-// 🧪 TESTES UNITÁRIOS (ModelagemRTC)
-function initTests() {
-  console.log("🧪 Testes cClassTrib:");
-  const tests = [
-    {input: "200013", expected: true},
-    {input: "20013", expected: false},
-    {input: "ABC123", expected: false},
-    {input: "999999", expected: true}
-  ];
-  tests.forEach((t,i) => {
-    const result = validateCClassTrib(t.input).valid === t.expected;
-    console.log(`Teste ${i+1}: ${result ? "✅" : "❌"} ${t.input}`);
-  });
-  console.log("✅ Inicialização completa!");
-}
-
 // 🚀 EVENTOS FINAIS
 document.addEventListener('DOMContentLoaded', function() {
-  initTests();
+  loadExternalData(); // 🟢 CARREGA O JSON AO INICIAR
   document.getElementById('searchBtn').addEventListener('click', searchAndFilter);
   document.getElementById('clearBtn').addEventListener('click', clearAll);
   document.getElementById('exportBtn').addEventListener('click', exportCSV);
-  document.getElementById('svrsBtn').addEventListener('click', () => 
-    window.open('https://dfe-portal.svrs.rs.gov.br/Cff/ClassificacaoTributaria', '_blank')
-  );
-  document.getElementById('ncmInput').addEventListener('keypress', e => {
-    if (e.key === 'Enter') searchAndFilter();
-  });
+  document.getElementById('svrsBtn').addEventListener('click', () => window.open('https://dfe-portal.svrs.rs.gov.br/Cff/ClassificacaoTributaria', '_blank'));
+  document.getElementById('ncmInput').addEventListener('keypress', e => { if (e.key === 'Enter') searchAndFilter(); });
   document.getElementById('filterCST').addEventListener('change', searchAndFilter);
   document.getElementById('filterAnexo').addEventListener('change', searchAndFilter);
   showHistory();
-});
+});    
 </script>
 </body>
 </html>
