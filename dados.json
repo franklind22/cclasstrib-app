@@ -1,7 +1,7 @@
 {
   "versao": "1.0.0",
   "ultimaAtualizacao": "2026-02-22",
-  "dados": }
+  "dados": {
   "01022110": [
     {
       "cclasstrib": "200038",
@@ -8927,4 +8927,5 @@
     "ativo": true
   }
 ]
+}
 }
