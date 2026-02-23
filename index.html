@@ -5,128 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>cClassTrib por NCM - LC 214/2025</title>
     <style>
-        :root {
-            --primary: #1e3a8a; 
-            --success: #059669; 
-            --bg: #f8fafc;
-        }
-
+        :root { --primary: #1e3a8a; --success: #059669; --bg: #f8fafc; }
         * {margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
-        
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif; 
-            background: var(--bg); 
-            padding: 10px; 
-            color: #1e293b;
-        }
-
-        .container {
-            background: white; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            border-radius: 16px; 
-            box-shadow: 0 4px 25px rgba(0,0,0,0.06); 
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); 
-            color: white; 
-            padding: 25px 15px; 
-            text-align: center;
-        }
-
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); padding: 10px; color: #1e293b; }
+        .container { background: white; max-width: 1200px; margin: 0 auto; border-radius: 16px; box-shadow: 0 4px 25px rgba(0,0,0,0.06); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 25px 15px; text-align: center; }
         .header h1 { font-size: clamp(1.4rem, 5vw, 1.8rem); margin-bottom: 5px; }
         .header p { font-size: 0.85rem; opacity: 0.9; }
-
         .content { padding: 15px; }
-
-        .stats {
-            background: #f1f5f9; 
-            border-radius: 12px; 
-            padding: 12px; 
-            margin-bottom: 20px; 
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 10px;
-            font-size: 13px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .search-bar {
-            display: grid; 
-            grid-template-columns: 1fr; 
-            gap: 10px; 
-            margin-bottom: 15px;
-        }
-        @media (min-width: 768px) {
-            .search-bar { grid-template-columns: 2fr 1fr 1fr; }
-        }
-
-        input, select {
-            width: 100%;
-            padding: 14px; 
-            border: 2px solid #e2e8f0; 
-            border-radius: 12px; 
-            font-size: 16px; 
-            transition: 0.3s;
-            background: white;
-        }
-
-        input:focus, select:focus { border-color: #3b82f6; outline: none; }
-
-        .actions-grid {
-            display: grid; 
-            grid-template-columns: 1fr; 
-            gap: 10px; 
-            margin-bottom: 10px;
-        }
-        @media (min-width: 480px) {
-            .actions-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        button {
-            padding: 15px; 
-            border: none; 
-            border-radius: 12px; 
-            font-size: 15px; 
-            font-weight: 600; 
-            cursor: pointer; 
-            transition: 0.2s; 
-            color: white;
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-        }
-        
-        button:active { transform: scale(0.98); }
-
+        .stats { background: #f1f5f9; border-radius: 12px; padding: 12px; margin-bottom: 20px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; font-size: 13px; border: 1px solid #e2e8f0; }
+        .search-bar { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 15px; }
+        @media (min-width: 768px) { .search-bar { grid-template-columns: 2fr 1fr 1fr; } }
+        input, select { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; background: white; }
+        .actions-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 10px; }
+        @media (min-width: 480px) { .actions-grid { grid-template-columns: 1fr 1fr; } }
+        button { padding: 15px; border: none; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center; }
         .btn-search { background: #2563eb; }
         .btn-clear { background: #64748b; }
         .btn-export { background: var(--success); }
         .btn-link { background: #ffffff; color: #475569; border: 1px solid #e2e8f0; }
-
-        .table-container {
-            width: 100%;
-            overflow-x: auto; 
-            border-radius: 12px; 
-            border: 1px solid #e2e8f0;
-            margin-top: 15px;
-        }
-
+        .table-container { width: 100%; overflow-x: auto; border-radius: 12px; border: 1px solid #e2e8f0; margin-top: 15px; }
         table { width: 100%; border-collapse: collapse; min-width: 700px; }
         th { background: #f8fafc; padding: 15px 10px; text-align: left; font-size: 12px; color: #64748b; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; }
         td { padding: 15px 10px; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
-        
         .cclasstrib-cell { color: var(--success); font-weight: bold; font-family: monospace; font-size: 16px; }
-
-        .loading { text-align: center; padding: 40px; color: #64748b; font-style: italic; }
+        .loading { text-align: center; padding: 40px; color: #64748b; }
         .error { background: #fef2f2; color: #b91c1c; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #fee2e2; }
-        
-        .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 20px; padding-bottom: 10px; }
+        .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
         .page-btn { padding: 10px 16px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; }
-        .page-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+        .page-btn.active { background: #2563eb; color: white; }
     </style>
 </head>
 <body>
@@ -153,7 +60,7 @@
             </select>
             <select id="filterAnexo">
                 <option value="">Todos os Anexos / Regimes</option>
-                <option value="Anexo I">Anexo I - Cesta Básica (Água/Alimentos)</option>
+                <option value="Anexo I">Anexo I - Cesta Básica</option>
                 <option value="Anexo VII">Anexo VII - Saúde Menstrual</option>
                 <option value="Anexo VIII">Anexo VIII - Higiene Pessoal</option>
                 <option value="Anexo IX">Anexo IX - Insumos Agropecuários</option>
@@ -186,43 +93,42 @@
     const ITEMS_PER_PAGE = 15;
 
     async function loadExternalData() {
-    const resultDiv = document.getElementById('resultado');
-    resultDiv.innerHTML = '<div class="loading">📥 Carregando base de dados...</div>';
-    
-    try {
-        // Tenta carregar o arquivo da mesma pasta (funciona perfeito no GitHub Pages)
-        // O ?t= força o navegador a pegar a versão mais recente
-        const response = await fetch(`dados.json?t=${new Date().getTime()}`);
+        const resultDiv = document.getElementById('resultado');
+        resultDiv.innerHTML = '<div class="loading">📥 Carregando base de dados...</div>';
         
-        if (!response.ok) throw new Error("Erro ao carregar arquivo");
-        
-        NCM_DATA = await response.json();
-        
-        // Limpa e reconstrói a árvore de busca
-        NCM_TREE = {}; 
+        // Tentamos primeiro o caminho relativo (mais confiável no GitHub Pages)
+        const paths = [
+            `dados.json?t=${new Date().getTime()}`,
+            `https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/dados.json`
+        ];
+
+        for (let path of paths) {
+            try {
+                const response = await fetch(path);
+                if (response.ok) {
+                    NCM_DATA = await response.json();
+                    break;
+                }
+            } catch (e) { console.error("Falha ao tentar caminho:", path); }
+        }
+
+        if (Object.keys(NCM_DATA).length > 0) {
+            initData();
+            resultDiv.innerHTML = '';
+        } else {
+            resultDiv.innerHTML = `<div class="error"><strong>⚠️ Erro:</strong> dados.json não encontrado no repositório.</div>`;
+        }
+    }
+
+    function initData() {
+        NCM_TREE = {};
         Object.keys(NCM_DATA).forEach(ncm => {
             const prefix = ncm.slice(0,4);
             if (!NCM_TREE[prefix]) NCM_TREE[prefix] = [];
             NCM_TREE[prefix].push(ncm);
         });
-
-        // Atualiza os contadores na tela
-        const totalNCMs = Object.keys(NCM_DATA).length;
-        const totalRegras = Object.values(NCM_DATA).reduce((a, b) => a + b.length, 0);
-        
-        document.getElementById('totalNCMs').textContent = totalNCMs;
-        document.getElementById('totalItens').textContent = totalRegras;
-        
-        resultDiv.innerHTML = ''; // Limpa a mensagem de carregando
-
-    } catch (e) {
-        console.error("Erro no fetch:", e);
-        resultDiv.innerHTML = `
-            <div class="error">
-                <strong>⚠️ Arquivo não encontrado</strong><br>
-                Certifique-se que o arquivo <b>dados.json</b> está na mesma pasta do index.html no seu GitHub.
-            </div>`;
-         }
+        document.getElementById('totalNCMs').textContent = Object.keys(NCM_DATA).length;
+        document.getElementById('totalItens').textContent = Object.values(NCM_DATA).reduce((a,b) => a + b.length, 0);
     }
 
     function searchAndFilter() {
@@ -256,28 +162,16 @@
     function renderTable() {
         const container = document.getElementById('resultado');
         if (currentResults.length === 0) {
-            container.innerHTML = '<div class="error">Nenhum dado encontrado para estes filtros.</div>';
+            container.innerHTML = '<div class="error">Nenhum dado encontrado.</div>';
             return;
         }
-
         const start = currentPage * ITEMS_PER_PAGE;
         const pageData = currentResults.slice(start, start + ITEMS_PER_PAGE);
 
-        let html = `<div class="table-container"><table>
-            <thead><tr><th>NCM</th><th>cClassTrib</th><th>CST</th><th>Descrição</th><th>Red.</th><th>Legislação</th></tr></thead>
-            <tbody>`;
-
+        let html = `<div class="table-container"><table><thead><tr><th>NCM</th><th>cClassTrib</th><th>CST</th><th>Descrição</th><th>Red.</th><th>Legislação</th></tr></thead><tbody>`;
         pageData.forEach(item => {
-            html += `<tr>
-                <td><strong>${item.ncm}</strong></td>
-                <td class="cclasstrib-cell">${item.cclasstrib}</td>
-                <td><span style="background:#f1f5f9; padding:4px 8px; border-radius:4px; font-weight:bold;">${item.cst}</span></td>
-                <td>${item.descricao}</td>
-                <td>${item.pReducao || '0%'}</td>
-                <td style="font-size:11px; color:#94a3b8;">${item.legislacao}</td>
-            </tr>`;
+            html += `<tr><td><strong>${item.ncm}</strong></td><td class="cclasstrib-cell">${item.cclasstrib}</td><td><span style="background:#f1f5f9;padding:4px 8px;border-radius:4px;">${item.cst}</span></td><td>${item.descricao}</td><td>${item.pReducao || '0%'}</td><td style="font-size:11px;color:#94a3b8;">${item.legislacao}</td></tr>`;
         });
-
         html += '</tbody></table></div>';
         
         if (currentResults.length > ITEMS_PER_PAGE) {
@@ -287,27 +181,22 @@
             if (start + ITEMS_PER_PAGE < currentResults.length) html += `<button class="page-btn" onclick="changePage(1)">»</button>`;
             html += '</div>';
         }
-
         container.innerHTML = html;
     }
 
     function changePage(step) { currentPage += step; renderTable(); }
-
-    function clearAll() {
-        document.getElementById('ncmInput').value = '';
-        document.getElementById('filterCST').value = '';
-        document.getElementById('filterAnexo').value = '';
-        document.getElementById('resultado').innerHTML = '';
-        currentResults = [];
+    function clearAll() { 
+        document.getElementById('ncmInput').value = ''; 
+        document.getElementById('filterCST').value = ''; 
+        document.getElementById('filterAnexo').value = ''; 
+        document.getElementById('resultado').innerHTML = ''; 
+        currentResults = []; 
     }
 
     function exportCSV() {
-        const data = currentResults.length ? currentResults : 
-            Object.entries(NCM_DATA).flatMap(([ncm, items]) => items.map(i => ({...i, ncm})));
+        const data = currentResults.length ? currentResults : Object.entries(NCM_DATA).flatMap(([ncm, items]) => items.map(i => ({...i, ncm})));
         let csv = '\ufeffNCM;cClassTrib;CST;Descricao;Reducao;Legislacao\n';
-        data.forEach(i => {
-            csv += `"${i.ncm}";"${i.cclasstrib}";"${i.cst}";"${i.descricao.replace(/"/g,'""')}";"${i.pReducao}";"${i.legislacao}"\n`;
-        });
+        data.forEach(i => { csv += `"${i.ncm}";"${i.cclasstrib}";"${i.cst}";"${i.descricao.replace(/"/g,'""')}";"${i.pReducao}";"${i.legislacao}"\n`; });
         const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
