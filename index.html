@@ -36,6 +36,28 @@ td{padding:12px;border-bottom:1px solid #f1f5f9;font-size:14px;}
 .page-btn{padding:6px 12px;border:1px solid #e2e8f0;border-radius:8px;background:white;cursor:pointer;}
 .page-btn.active{background:#2563eb;color:white;}
 mark{background:yellow;font-weight:bold;}
+
+  .modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 5% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
 </style>
 </head>
 
@@ -84,6 +106,7 @@ mark{background:yellow;font-weight:bold;}
 <button class="btn-clear" onclick="clearAll()">🗑️ Limpar</button>
 <button class="btn-export" onclick="exportCSV()">📤 Exportar CSV</button>
 <button class="btn-link" onclick="window.open('https://dfe-portal.svrs.rs.gov.br/Cff/ClassificacaoTributaria','_blank')">🌐 SVRS Oficial</button>
+<button onclick="abrirModalCapitulo()">📘</button>
 </div>
 
 <div id="resultado"></div>
@@ -121,6 +144,7 @@ RAW_DATA = JSON.parse(text);
 console.log("JSON convertido com sucesso!");
 
 buildFlatIndex();
+populateCapituloFilter();
 populateCapitulos();
 updateCounters();
 
@@ -131,7 +155,107 @@ console.error("ERRO REAL:", error);
 div.innerHTML = '<div class="error">Erro real: '+ error.message +'</div>';
 }
 }
-
+const CAPITULOS = {
+  "01": "Animais vivos",
+  "02": "Carnes e miudezas comestíveis",
+  "03": "Peixes e crustáceos",
+  "04": "Leite, laticínios e ovos",
+  "05": "Outros produtos de origem animal",
+  "06": "Plantas vivas e floricultura",
+  "07": "Produtos hortícolas",
+  "08": "Frutas",
+  "09": "Café, chá e especiarias",
+  "10": "Cereais",
+  "11": "Produtos da indústria de moagem",
+  "12": "Sementes e frutos oleaginosos",
+  "13": "Gomas e resinas vegetais",
+  "14": "Matérias para entrançar",
+  "15": "Gorduras e óleos",
+  "16": "Preparações de carne e peixe",
+  "17": "Açúcares e confeitaria",
+  "18": "Cacau e preparações",
+  "19": "Preparações à base de cereais",
+  "20": "Preparações de hortícolas",
+  "21": "Preparações alimentícias diversas",
+  "22": "Bebidas",
+  "23": "Resíduos industriais alimentares",
+  "24": "Tabaco",
+  "25": "Sal, enxofre e minerais",
+  "26": "Minérios",
+  "27": "Combustíveis minerais",
+  "28": "Produtos químicos inorgânicos",
+  "29": "Produtos químicos orgânicos",
+  "30": "Produtos farmacêuticos",
+  "31": "Adubos",
+  "32": "Corantes e extratos",
+  "33": "Cosméticos e perfumes",
+  "34": "Sabões e detergentes",
+  "35": "Matérias albuminoides",
+  "36": "Explosivos",
+  "37": "Produtos fotográficos",
+  "38": "Produtos químicos diversos",
+  "39": "Plásticos",
+  "40": "Borracha",
+  "41": "Peles",
+  "42": "Obras de couro",
+  "43": "Peleteria",
+  "44": "Madeira",
+  "45": "Cortiça",
+  "46": "Cestaria",
+  "47": "Pastas de madeira",
+  "48": "Papel",
+  "49": "Livros e impressos",
+  "50": "Seda",
+  "51": "Lã",
+  "52": "Algodão",
+  "53": "Outras fibras vegetais",
+  "54": "Filamentos sintéticos",
+  "55": "Fibras sintéticas",
+  "56": "Pastas e feltros",
+  "57": "Tapetes",
+  "58": "Tecidos especiais",
+  "59": "Tecidos impregnados",
+  "60": "Tecidos de malha",
+  "61": "Vestuário de malha",
+  "62": "Vestuário",
+  "63": "Outros artefatos têxteis",
+  "64": "Calçados",
+  "65": "Chapéus",
+  "66": "Guarda-chuvas",
+  "67": "Penas e flores artificiais",
+  "68": "Obras de pedra",
+  "69": "Cerâmica",
+  "70": "Vidro",
+  "71": "Pedras preciosas",
+  "72": "Ferro e aço",
+  "73": "Obras de ferro",
+  "74": "Cobre",
+  "75": "Níquel",
+  "76": "Alumínio",
+  "77": "Reservado",
+  "78": "Chumbo",
+  "79": "Zinco",
+  "80": "Estanho",
+  "81": "Outros metais",
+  "82": "Ferramentas",
+  "83": "Obras diversas de metal",
+  "84": "Máquinas mecânicas",
+  "85": "Máquinas elétricas",
+  "86": "Veículos ferroviários",
+  "87": "Veículos automóveis",
+  "88": "Aeronaves",
+  "89": "Embarcações",
+  "90": "Instrumentos ópticos e médicos",
+  "91": "Relógios",
+  "92": "Instrumentos musicais",
+  "93": "Armas",
+  "94": "Móveis",
+  "95": "Brinquedos",
+  "96": "Obras diversas",
+  "97": "Obras de arte",
+  "98": "Reservado",
+  "99": "Uso especial"
+};
 function buildFlatIndex(){
 FLAT_INDEX=[];
 Object.entries(RAW_DATA).forEach(([ncm,items])=>{
@@ -317,6 +441,46 @@ link.download="cclasstrib_export.csv";
 link.click();
 URL.revokeObjectURL(url);
 }
+function populateCapituloFilter() {
+  const select = document.getElementById("filtroCapitulo");
+  select.innerHTML = '<option value="">Todos</option>';
+
+  Object.keys(CAPITULOS).forEach(cap => {
+    const option = document.createElement("option");
+    option.value = cap;
+    option.textContent = `${cap} - ${CAPITULOS[cap]}`;
+    select.appendChild(option);
+  });
+  }
+  function abrirModalCapitulo() {
+  const cap = document.getElementById("filtroCapitulo").value;
+  if (!cap) {
+    alert("Selecione um capítulo primeiro.");
+    return;
+  }
+
+  const registros = FLAT_INDEX.filter(i => i.capitulo === cap);
+  const posicoes = [...new Set(registros.map(i => i.ncm.substring(0,4)))];
+
+  document.getElementById("conteudoCapitulo").innerHTML = `
+    <h2>Capítulo ${cap}</h2>
+    <p><strong>${CAPITULOS[cap]}</strong></p>
+    <p>Total de NCM no sistema: ${registros.length}</p>
+    <p><strong>Posições encontradas:</strong><br>${posicoes.join(", ")}</p>
+  `;
+
+  document.getElementById("modalCapitulo").style.display = "block";
+}
+
+function fecharModal() {
+  document.getElementById("modalCapitulo").style.display = "none";
+}
 </script>
+  <div id="modalCapitulo" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <div id="conteudoCapitulo"></div>
+  </div>
+  </div>
 </body>
 </html>
