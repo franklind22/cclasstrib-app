@@ -8472,5 +8472,456 @@
     "regime": "completa",
     "ativo": true
   }
-] 
+],
+  "0201": [
+  {
+    "cclasstrib": "ANEXO_I_0201",
+    "cst": "200",
+    "descricao": "Carnes de bovinos frescas ou refrigeradas",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0202": [
+  {
+    "cclasstrib": "ANEXO_I_0202",
+    "cst": "200",
+    "descricao": "Carnes de bovinos congeladas",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0203": [
+  {
+    "cclasstrib": "ANEXO_I_0203",
+    "cst": "200",
+    "descricao": "Carnes de suínos",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0207": [
+  {
+    "cclasstrib": "ANEXO_I_0207",
+    "cst": "200",
+    "descricao": "Carnes de aves",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0401": [
+  {
+    "cclasstrib": "ANEXO_I_0401",
+    "cst": "200",
+    "descricao": "Leite e creme de leite",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0402": [
+  {
+    "cclasstrib": "ANEXO_I_0402",
+    "cst": "200",
+    "descricao": "Leite em pó",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0403": [
+  {
+    "cclasstrib": "ANEXO_I_0403",
+    "cst": "200",
+    "descricao": "Iogurte",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0405": [
+  {
+    "cclasstrib": "ANEXO_I_0405",
+    "cst": "200",
+    "descricao": "Manteiga",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0406": [
+  {
+    "cclasstrib": "ANEXO_I_0406",
+    "cst": "200",
+    "descricao": "Queijos",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"1001": [
+  {
+    "cclasstrib": "ANEXO_I_1001",
+    "cst": "200",
+    "descricao": "Trigo",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"1005": [
+  {
+    "cclasstrib": "ANEXO_I_1005",
+    "cst": "200",
+    "descricao": "Milho",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"1006": [
+  {
+    "cclasstrib": "ANEXO_I_1006",
+    "cst": "200",
+    "descricao": "Arroz",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"1902": [
+  {
+    "cclasstrib": "ANEXO_I_1902",
+    "cst": "200",
+    "descricao": "Massas alimentícias",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"1905": [
+  {
+    "cclasstrib": "ANEXO_I_1905",
+    "cst": "200",
+    "descricao": "Produtos de panificação",
+    "pReducao": 100,
+    "legislacao": "LC 214/2025 - Anexo I (Cesta Básica)",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+  "0302": [
+  {
+    "cclasstrib": "ANEXO_VII_0302",
+    "cst": "200",
+    "descricao": "Peixes frescos ou refrigerados",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0303": [
+  {
+    "cclasstrib": "ANEXO_VII_0303",
+    "cst": "200",
+    "descricao": "Peixes congelados",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"1507": [
+  {
+    "cclasstrib": "ANEXO_VII_1507",
+    "cst": "200",
+    "descricao": "Óleo de soja",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"1509": [
+  {
+    "cclasstrib": "ANEXO_VII_1509",
+    "cst": "200",
+    "descricao": "Azeite de oliva",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"1701": [
+  {
+    "cclasstrib": "ANEXO_VII_1701",
+    "cst": "200",
+    "descricao": "Açúcares de cana ou de beterraba",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"1806": [
+  {
+    "cclasstrib": "ANEXO_VII_1806",
+    "cst": "200",
+    "descricao": "Chocolate e outras preparações contendo cacau",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"2001": [
+  {
+    "cclasstrib": "ANEXO_VII_2001",
+    "cst": "200",
+    "descricao": "Produtos hortícolas conservados em vinagre ou ácido acético",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"2009": [
+  {
+    "cclasstrib": "ANEXO_VII_2009",
+    "cst": "200",
+    "descricao": "Sucos de frutas ou de produtos hortícolas",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"2103": [
+  {
+    "cclasstrib": "ANEXO_VII_2103",
+    "cst": "200",
+    "descricao": "Molhos e preparações para molhos",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"3303": [
+  {
+    "cclasstrib": "ANEXO_VII_3303",
+    "cst": "200",
+    "descricao": "Perfumes e águas de toalete",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+  "3004": [
+  {
+    "cclasstrib": "ANEXO_VIII_3004",
+    "cst": "200",
+    "descricao": "Medicamentos preparados para venda a retalho",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"3401": [
+  {
+    "cclasstrib": "ANEXO_VIII_3401",
+    "cst": "200",
+    "descricao": "Sabões e preparações tensoativas",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"3402": [
+  {
+    "cclasstrib": "ANEXO_VIII_3402",
+    "cst": "200",
+    "descricao": "Preparações tensoativas e detergentes",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"3808": [
+  {
+    "cclasstrib": "ANEXO_VIII_3808",
+    "cst": "200",
+    "descricao": "Inseticidas, rodenticidas e outros produtos semelhantes",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"4011": [
+  {
+    "cclasstrib": "ANEXO_VIII_4011",
+    "cst": "200",
+    "descricao": "Pneus novos de borracha",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"4818": [
+  {
+    "cclasstrib": "ANEXO_VIII_4818",
+    "cst": "200",
+    "descricao": "Papel higiênico e artigos semelhantes de uso doméstico",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"6302": [
+  {
+    "cclasstrib": "ANEXO_VIII_6302",
+    "cst": "200",
+    "descricao": "Roupas de cama, mesa, toucador ou cozinha",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"9403": [
+  {
+    "cclasstrib": "ANEXO_VIII_9403",
+    "cst": "200",
+    "descricao": "Outros móveis e suas partes",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+  "2710": [
+  {
+    "cclasstrib": "ANEXO_XV_2710",
+    "cst": "200",
+    "descricao": "Óleos de petróleo ou de minerais betuminosos",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo XV",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"2804": [
+  {
+    "cclasstrib": "ANEXO_XV_2804",
+    "cst": "200",
+    "descricao": "Hidrogênio, gases raros e outros elementos não metálicos",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo XV",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"3102": [
+  {
+    "cclasstrib": "ANEXO_XV_3102",
+    "cst": "200",
+    "descricao": "Adubos minerais ou químicos nitrogenados",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo XV",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"3923": [
+  {
+    "cclasstrib": "ANEXO_XV_3923",
+    "cst": "200",
+    "descricao": "Artigos para transporte ou embalagem de plástico",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo XV",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"4410": [
+  {
+    "cclasstrib": "ANEXO_XV_4410",
+    "cst": "200",
+    "descricao": "Painéis de partículas e painéis semelhantes de madeira",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo XV",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"7208": [
+  {
+    "cclasstrib": "ANEXO_XV_7208",
+    "cst": "200",
+    "descricao": "Produtos laminados planos de ferro ou aço não ligado",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo XV",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"7308": [
+  {
+    "cclasstrib": "ANEXO_XV_7308",
+    "cst": "200",
+    "descricao": "Construções e suas partes de ferro ou aço",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo XV",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"8501": [
+  {
+    "cclasstrib": "ANEXO_XV_8501",
+    "cst": "200",
+    "descricao": "Motores e geradores elétricos",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo XV",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"8708": [
+  {
+    "cclasstrib": "ANEXO_XV_8708",
+    "cst": "200",
+    "descricao": "Partes e acessórios de veículos automóveis",
+    "pReducao": 60,
+    "legislacao": "LC 214/2025 - Anexo XV",
+    "regime": "reducao",
+    "ativo": true
+  }
+]
 }
