@@ -8351,5 +8351,126 @@
     "regime": "completa",
     "ativo": true
   }
-]
+],
+  "0306": [
+  {
+    "cclasstrib": "700010",
+    "cst": "200",
+    "descricao": "CRUSTÁCEOS (LC 214/2025 Anexo VII)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"030731": [
+  {
+    "cclasstrib": "700011",
+    "cst": "200",
+    "descricao": "MEXILHÕES",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"040320": [
+  {
+    "cclasstrib": "700012",
+    "cst": "200",
+    "descricao": "LEITE FERMENTADO",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0409": [
+  {
+    "cclasstrib": "700013",
+    "cst": "200",
+    "descricao": "MEL NATURAL",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"220299": [
+  {
+    "cclasstrib": "700014",
+    "cst": "200",
+    "descricao": "OUTRAS BEBIDAS NÃO ALCOÓLICAS",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+  "3401": [
+  {
+    "cclasstrib": "800010",
+    "cst": "200",
+    "descricao": "SABÕES (LC 214/2025 Anexo VIII)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"330610": [
+  {
+    "cclasstrib": "800011",
+    "cst": "200",
+    "descricao": "DENTIFRÍCIOS",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"481810": [
+  {
+    "cclasstrib": "800012",
+    "cst": "200",
+    "descricao": "PAPEL HIGIÊNICO",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+  "0407": [
+  {
+    "cclasstrib": "150010",
+    "cst": "000",
+    "descricao": "OVOS (LC 214/2025 Anexo XV)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025 Anexo XV",
+    "regime": "completa",
+    "ativo": true
+  }
+],
+"0701": [
+  {
+    "cclasstrib": "150011",
+    "cst": "000",
+    "descricao": "BATATAS",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025 Anexo XV",
+    "regime": "completa",
+    "ativo": true
+  }
+],
+"080810": [
+  {
+    "cclasstrib": "150012",
+    "cst": "000",
+    "descricao": "MAÇÃS FRESCAS",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025 Anexo XV",
+    "regime": "completa",
+    "ativo": true
+  }
+] 
 }
