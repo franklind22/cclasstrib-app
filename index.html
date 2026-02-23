@@ -93,32 +93,45 @@
     const ITEMS_PER_PAGE = 15;
 
     async function loadExternalData() {
-        const resultDiv = document.getElementById('resultado');
-        resultDiv.innerHTML = '<div class="loading">📥 Carregando base de dados...</div>';
+    const resultDiv = document.getElementById('resultado');
+    resultDiv.innerHTML = '<div class="loading">📥 Conectando ao banco de dados...</div>';
+    
+    // ATENÇÃO: Link corrigido para o modo RAW e nome correto do arquivo (Dados.json com D maiúsculo)
+    const GITHUB_URL = 'https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/Dados.json';
+
+    try {
+        const response = await fetch(`${GITHUB_URL}?t=${new Date().getTime()}`);
         
-        // Tentamos primeiro o caminho relativo (mais confiável no GitHub Pages)
-        const paths = [
-            `dados.json?t=${new Date().getTime()}`,
-            `https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/dados.json`
-        ];
+        if (!response.ok) throw new Error("Erro ao baixar arquivo");
+        
+        NCM_DATA = await response.json();
+        
+        // Inicializa a árvore de busca
+        NCM_TREE = {};
+        Object.keys(NCM_DATA).forEach(ncm => {
+            const prefix = ncm.slice(0,4);
+            if (!NCM_TREE[prefix]) NCM_TREE[prefix] = [];
+            NCM_TREE[prefix].push(ncm);
+        });
 
-        for (let path of paths) {
-            try {
-                const response = await fetch(path);
-                if (response.ok) {
-                    NCM_DATA = await response.json();
-                    break;
-                }
-            } catch (e) { console.error("Falha ao tentar caminho:", path); }
-        }
+        // Atualiza contadores
+        document.getElementById('totalNCMs').textContent = Object.keys(NCM_DATA).length;
+        document.getElementById('totalItens').textContent = Object.values(NCM_DATA).reduce((a,b) => a + b.length, 0);
+        
+        resultDiv.innerHTML = ''; // Limpa mensagem de carregamento
+        console.log("Sucesso: Dados carregados do GitHub.");
 
-        if (Object.keys(NCM_DATA).length > 0) {
-            initData();
-            resultDiv.innerHTML = '';
-        } else {
-            resultDiv.innerHTML = `<div class="error"><strong>⚠️ Erro:</strong> dados.json não encontrado no repositório.</div>`;
-        }
+    } catch (e) {
+        console.error("Erro de carregamento:", e);
+        resultDiv.innerHTML = `
+            <div class="error">
+                <strong>⚠️ Erro de Conexão</strong><br>
+                Não foi possível ler o arquivo Dados.json.<br>
+                <small>Verifique se o arquivo no GitHub se chama exatamente "Dados.json" (com D maiúsculo).</small>
+            </div>`;
     }
+}
+
 
     function initData() {
         NCM_TREE = {};
