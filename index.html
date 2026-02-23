@@ -152,11 +152,15 @@
                 <option value="410">410 - Imunidade</option>
             </select>
             <select id="filterAnexo">
-                <option value="">Todos Anexos</option>
-                <option value="Anexo I">Anexo I - Cesta Básica</option>
-                <option value="Anexo VIII">Anexo VIII - Higiene</option>
-                <option value="Anexo IX">Anexo IX - Agro</option>
-                <option value="Anexo XV">Anexo XV - Hortifrúti</option>
+                <option value="">Todos os Anexos / Regimes</option>
+                <option value="Anexo I">Anexo I - Cesta Básica (Água/Alimentos)</option>
+                <option value="Anexo VII">Anexo VII - Saúde Menstrual</option>
+                <option value="Anexo VIII">Anexo VIII - Higiene Pessoal</option>
+                <option value="Anexo IX">Anexo IX - Insumos Agropecuários</option>
+                <option value="Anexo XV">Anexo XV - Hortifrúti e Ovos</option>
+                <option value="Geral">Regime Geral (Roupas / Jeans / TVs)</option>
+                <option value="Específico">Regime Específico (Restaurantes / Bares)</option>
+                <option value="Seletivo">Imposto Seletivo (Bebidas / Cigarros)</option>
             </select>
         </div>
 
@@ -185,15 +189,11 @@
         const resultDiv = document.getElementById('resultado');
         resultDiv.innerHTML = '<div class="loading">📥 Sincronizando com o repositório...</div>';
         
-        // URL ajustada para o novo repositório cclasstrib-app
         const GITHUB_RAW = 'https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/dados.json';
 
         try {
-            // Tenta carregar do GitHub com timestamp para evitar cache
             const response = await fetch(`${GITHUB_RAW}?t=${new Date().getTime()}`);
-            
             if (!response.ok) throw new Error();
-            
             NCM_DATA = await response.json();
             
             Object.keys(NCM_DATA).forEach(ncm => {
@@ -206,19 +206,16 @@
             document.getElementById('totalItens').textContent = Object.values(NCM_DATA).reduce((a,b) => a + b.length, 0);
             resultDiv.innerHTML = '';
         } catch (e) {
-            // Fallback: se o GitHub Raw falhar, tenta carregar o ficheiro local
             try {
                 const localResp = await fetch(`dados.json?t=${new Date().getTime()}`);
                 if (!localResp.ok) throw new Error();
                 NCM_DATA = await localResp.json();
-                // (Repete indexação se necessário, simplificado aqui para brevidade)
                 resultDiv.innerHTML = '';
             } catch(e2) {
                 resultDiv.innerHTML = `
                 <div class="error">
                     <strong>⚠️ Erro de Conexão</strong><br>
-                    Não foi possível ler o ficheiro dados.json.<br>
-                    <small>Verifique se o ficheiro está na branch 'main' do repositório cclasstrib-app.</small>
+                    Não foi possível ler o ficheiro dados.json.
                 </div>`;
             }
         }
@@ -255,7 +252,7 @@
     function renderTable() {
         const container = document.getElementById('resultado');
         if (currentResults.length === 0) {
-            container.innerHTML = '<div class="error">Nenhum dado encontrado para os critérios selecionados.</div>';
+            container.innerHTML = '<div class="error">Nenhum dado encontrado para estes filtros.</div>';
             return;
         }
 
