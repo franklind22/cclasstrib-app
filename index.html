@@ -99,17 +99,33 @@ setupDebounce();
 });
 
 async function loadExternalData(){
-const div=document.getElementById('resultado');
-div.innerHTML='<div class="loading">📥 Carregando dados...</div>';
+const div = document.getElementById('resultado');
+div.innerHTML = '<div class="loading">📥 Testando conexão...</div>';
+
 try{
-const response=await fetch('dados.json?t='+Date.now());
-RAW_DATA=await response.json();
+
+const response = await fetch('/cclasstrib-app/dados.json');
+
+console.log("Status HTTP:", response.status);
+
+const text = await response.text();
+
+console.log("Primeiros 200 caracteres:");
+console.log(text.substring(0,200));
+
+RAW_DATA = JSON.parse(text);
+
+console.log("JSON convertido com sucesso!");
+
 buildFlatIndex();
 populateCapitulos();
 updateCounters();
-div.innerHTML='';
-}catch(e){
-div.innerHTML='<div class="error">Erro ao carregar dados</div>';
+
+div.innerHTML = '<div class="loading">✅ JSON carregado com sucesso!</div>';
+
+}catch(error){
+console.error("ERRO REAL:", error);
+div.innerHTML = '<div class="error">Erro real: '+ error.message +'</div>';
 }
 }
 
