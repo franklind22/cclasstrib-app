@@ -8100,3 +8100,91 @@
     }
   ]
 }
+  "61091000": [
+    {
+      "cclasstrib": "100001",
+      "cst": "000",
+      "descricao": "VESTUÁRIO - CAMISETAS DE ALGODÃO",
+      "pReducao": "0%",
+      "legislacao": "Regra Geral - Alíquota Integral",
+      "regime": "padrao",
+      "ativo": true
+    }
+  ],
+  "22030000": [
+    {
+      "cclasstrib": "500001",
+      "cst": "000",
+      "descricao": "BEBIDAS - CERVEJAS DE MALTE",
+      "pReducao": "0%",
+      "legislacao": "Sujeito a Imposto Seletivo",
+      "regime": "seletivo",
+      "ativo": true
+    }
+  ],
+  "21069090": [
+    {
+      "cclasstrib": "100005",
+      "cst": "200",
+      "descricao": "RESTAURANTES - PREPARAÇÕES ALIMENTÍCIAS (REFEIÇÕES)",
+      "pReducao": "60%",
+      "legislacao": "Regime Específicos de Serviços",
+      "regime": "reducao",
+      "ativo": true
+    }
+  ]
+  "22011000": [
+    {
+      "cclasstrib": "200001",
+      "cst": "200",
+      "descricao": "ÁGUA MINERAL NATURAL - SEM ADIÇÃO DE AÇÚCAR",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo I (Cesta Básica)",
+      "regime": "reducao",
+      "ativo": true
+    }
+  ],
+  "22021000": [
+    {
+      "cclasstrib": "500002",
+      "cst": "000",
+      "descricao": "ÁGUA COM SABOR / REFRIGERANTES (ADICIONADA DE AÇÚCAR)",
+      "pReducao": "0%",
+      "legislacao": "Sujeito a Imposto Seletivo",
+      "regime": "seletivo",
+      "ativo": true
+    }
+  ],
+  "62034200": [
+    {
+      "cclasstrib": "100020",
+      "cst": "000",
+      "descricao": "VESTUÁRIO - CALÇAS COMPRIDAS (JEANS) MASCULINAS",
+      "pReducao": "0%",
+      "legislacao": "Regra Geral - Alíquota Integral",
+      "regime": "padrao",
+      "ativo": true
+    }
+  ],
+  "62046200": [
+    {
+      "cclasstrib": "100021",
+      "cst": "000",
+      "descricao": "VESTUÁRIO - CALÇAS COMPRIDAS (JEANS) FEMININAS",
+      "pReducao": "0%",
+      "legislacao": "Regra Geral - Alíquota Integral",
+      "regime": "padrao",
+      "ativo": true
+    }
+  ],
+  "22030000": [
+    {
+      "cclasstrib": "500001",
+      "cst": "000",
+      "descricao": "CERVEJA DE MALTE - DISTRIBUIÇÃO",
+      "pReducao": "0%",
+      "legislacao": "Sujeito a Imposto Seletivo",
+      "regime": "seletivo",
+      "ativo": true
+    }
+  ]
