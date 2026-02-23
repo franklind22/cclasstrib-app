@@ -38,19 +38,34 @@ td{padding:12px;border-bottom:1px solid #f1f5f9;font-size:14px;}
 mark{background:yellow;font-weight:bold;}
 
   .modal {
+  .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-content {
   background: white;
-  margin: 5% auto;
-  padding: 20px;
+  padding: 25px;
   width: 90%;
   max-width: 600px;
-  border-radius: 10px;
+  border-radius: 16px;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .close {
@@ -71,6 +86,34 @@ mark{background:yellow;font-weight:bold;}
   color: white;
   font-size: 16px;
 }
+  .capitulo-wrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.btn-capitulo {
+  padding: 12px;
+  border-radius: 12px;
+  background: #1e3a8a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.btn-capitulo:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.15);
+}
+
+.btn-capitulo:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+  }
 </style>
 </head>
 
@@ -105,10 +148,23 @@ mark{background:yellow;font-weight:bold;}
 <option value="ANEXO XV">Anexo XV</option>
 </select>
 <div class="capitulo-wrapper">
-  <select id="filterCapitulo">
+  <select id="filterCapitulo" onchange="toggleCapituloBtn()">
     <option value="">Todos Capítulos</option>
   </select>
-  <button type="button" class="btn-capitulo" onclick="abrirModalCapitulo()">📘</button>
+
+  <button 
+    type="button" 
+    id="btnCapitulo"
+    class="btn-capitulo"
+    onclick="abrirModalCapitulo()"
+    disabled
+    title="Informações detalhadas do Capítulo"
+  >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+      <path d="M4 4h14a2 2 0 0 1 2 2v14l-4-2-4 2-4-2-4 2V6a2 2 0 0 1 2-2z" 
+            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 </div>
 <select id="filterReducao">
 <option value="">Todos</option>
@@ -468,10 +524,7 @@ function populateCapituloFilter() {
 }
   function abrirModalCapitulo() {
   const cap = document.getElementById("filterCapitulo").value;
-  if (!cap) {
-    alert("Selecione um capítulo primeiro.");
-    return;
-  }
+  if (!cap) return;
 
   const registros = FLAT_INDEX.filter(i => i.capitulo === cap);
   const posicoes = [...new Set(registros.map(i => i.ncm.substring(0,4)))];
@@ -483,12 +536,17 @@ function populateCapituloFilter() {
     <p><strong>Posições encontradas:</strong><br>${posicoes.join(", ")}</p>
   `;
 
-  document.getElementById("modalCapitulo").style.display = "block";
+  document.getElementById("modalCapitulo").classList.add("show");
 }
 
 function fecharModal() {
-  document.getElementById("modalCapitulo").style.display = "none";
+  document.getElementById("modalCapitulo").classList.remove("show");
 }
+  function toggleCapituloBtn() {
+  const select = document.getElementById("filterCapitulo");
+  const btn = document.getElementById("btnCapitulo");
+  btn.disabled = !select.value;
+  }
 </script>
   <div id="modalCapitulo" class="modal">
   <div class="modal-content">
