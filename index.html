@@ -67,7 +67,23 @@ body{
   gap:10px;
   grid-template-columns:1fr;
 }
+/* INPUTS E SELECTS */
+input,
+select{
+  padding:12px;
+  border:2px solid #e2e8f0;
+  border-radius:12px;
+  font-size:15px;
+  background:white;
+  transition:all .2s ease;
+  outline:none;
+}
 
+input:focus,
+select:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
 /* Tablet */
 @media(min-width:600px){
   .search-bar{
