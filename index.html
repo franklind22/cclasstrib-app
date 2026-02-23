@@ -155,55 +155,56 @@
 
         currentPage = 0;
         renderTable();
+<script>
+let NCM_DATA = {};
+let NCM_TREE = {};
+let currentResults = [];
+let currentPage = 0;
+const ITEMS_PER_PAGE = 15;
+
+/* =========================
+   INICIALIZAÇÃO
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadExternalData();
+});
+
+/* =========================
+   CARREGAR JSON
+========================= */
+
+async function loadExternalData() {
+    const resultDiv = document.getElementById('resultado');
+    resultDiv.innerHTML = '<div class="loading">📥 Carregando dados...</div>';
+
+    try {
+        const response = await fetch(`dados.json?t=${Date.now()}`);
+        if (!response.ok) throw new Error("Erro ao carregar JSON");
+
+        NCM_DATA = await response.json();
+
+        buildTree();
+        updateCounters();
+
+        resultDiv.innerHTML = '';
+        console.log("✅ Dados carregados:", Object.keys(NCM_DATA).length);
+
+    } catch (e) {
+        console.error(e);
+        resultDiv.innerHTML = `
+        <div class="error">
+            <strong>⚠️ Erro ao carregar dados</strong><br>
+            Verifique se o ficheiro dados.json está publicado.
+        </div>`;
     }
+}
 
-    function renderTable() {
-        const container = document.getElementById('resultado');
-        if (currentResults.length === 0) {
-            container.innerHTML = '<div class="error">Nenhum dado encontrado.</div>';
-            return;
-        }
-        const start = currentPage * ITEMS_PER_PAGE;
-        const pageData = currentResults.slice(start, start + ITEMS_PER_PAGE);
+/* =========================
+   ORGANIZAR NCM TREE
+========================= */
 
-        let html = `<div class="table-container"><table><thead><tr><th>NCM</th><th>cClassTrib</th><th>CST</th><th>Descrição</th><th>Red.</th><th>Legislação</th></tr></thead><tbody>`;
-        pageData.forEach(item => {
-            html += `<tr><td><strong>${item.ncm}</strong></td><td class="cclasstrib-cell">${item.cclasstrib}</td><td><span style="background:#f1f5f9;padding:4px 8px;border-radius:4px;">${item.cst}</span></td><td>${item.descricao}</td><td>${item.pReducao || '0%'}</td><td style="font-size:11px;color:#94a3b8;">${item.legislacao}</td></tr>`;
-        });
-        html += '</tbody></table></div>';
-        
-        if (currentResults.length > ITEMS_PER_PAGE) {
-            html += '<div class="pagination">';
-            if (currentPage > 0) html += `<button class="page-btn" onclick="changePage(-1)">«</button>`;
-            html += `<button class="page-btn active">${currentPage + 1}</button>`;
-            if (start + ITEMS_PER_PAGE < currentResults.length) html += `<button class="page-btn" onclick="changePage(1)">»</button>`;
-            html += '</div>';
-        }
-        container.innerHTML = html;
-    }
-
-    function changePage(step) { currentPage += step; renderTable(); }
-    function clearAll() { 
-        document.getElementById('ncmInput').value = ''; 
-        document.getElementById('filterCST').value = ''; 
-        document.getElementById('filterAnexo').value = ''; 
-        document.getElementById('resultado').innerHTML = ''; 
-        currentResults = []; 
-    }
-
-    function exportCSV() {
-        const data = currentResults.length ? currentResults : Object.entries(NCM_DATA).flatMap(([ncm, items]) => items.map(i => ({...i, ncm})));
-        let csv = '\ufeffNCM;cClassTrib;CST;Descricao;Reducao;Legislacao\n';
-        data.forEach(i => { csv += `"${i.ncm}";"${i.cclasstrib}";"${i.cst}";"${i.descricao.replace(/"/g,'""')}";"${i.pReducao}";"${i.legislacao}"\n`; });
-        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = `auditoria_ncm_2026.csv`;
-        link.click();
-    }
-
-    function initializeData() {
-
+function buildTree() {
     NCM_TREE = {};
 
     Object.keys(NCM_DATA).forEach(ncm => {
@@ -211,15 +212,92 @@
         if (!NCM_TREE[prefix]) NCM_TREE[prefix] = [];
         NCM_TREE[prefix].push(ncm);
     });
+}
 
+/* =========================
+   CONTADORES
+========================= */
+
+function updateCounters() {
     document.getElementById('totalNCMs').textContent =
         Object.keys(NCM_DATA).length;
 
     document.getElementById('totalItens').textContent =
-        Object.values(NCM_DATA).reduce((a,b) => a + b.length, 0);
+        Object.values(NCM_DATA)
+            .reduce((total, arr) => total + arr.length, 0);
+}
+
+/* =========================
+   BUSCA POR NCM
+========================= */
+
+function buscarNCM() {
+
+    const input = document.getElementById("ncmInput").value.trim();
+    if (!input) return;
+
+    currentResults = [];
+
+    Object.keys(NCM_DATA).forEach(ncm => {
+        if (ncm.startsWith(input)) {
+            NCM_DATA[ncm].forEach(item => {
+                currentResults.push({
+                    ncm,
+                    ...item
+                });
+            });
+        }
+    });
+
+    applyFilters();
+}
+
+/* =========================
+   FILTROS
+========================= */
+
+function applyFilters() {
+
+    const selectedCST = document.getElementById("cstFilter")?.value;
+
+    let filtered = currentResults;
+
+    if (selectedCST && selectedCST !== "todos") {
+        filtered = filtered.filter(item => item.cst === selectedCST);
     }
-    
-    document.addEventListener('DOMContentLoaded', loadExternalData);
+
+    currentPage = 0;
+    renderResults(filtered);
+}
+
+/* =========================
+   RENDERIZAÇÃO
+========================= */
+
+function renderResults(data) {
+
+    const resultDiv = document.getElementById("resultado");
+
+    if (data.length === 0) {
+        resultDiv.innerHTML = "<div class='error'>Nenhum resultado encontrado.</div>";
+        return;
+    }
+
+    const start = currentPage * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+    const pageItems = data.slice(start, end);
+
+    resultDiv.innerHTML = pageItems.map(item => `
+        <div class="card">
+            <strong>NCM:</strong> ${item.ncm}<br>
+            <strong>cClassTrib:</strong> ${item.cclasstrib}<br>
+            <strong>CST:</strong> ${item.cst}<br>
+            <strong>Descrição:</strong> ${item.descricao}<br>
+            <strong>Redução:</strong> ${item.pReducao}<br>
+            <strong>Legislação:</strong> ${item.legislacao}
+        </div>
+    `).join("");
+}
 </script>
 </body>
 </html>
