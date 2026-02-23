@@ -101,7 +101,7 @@
 
     try {
         // O ?t= impede que o navegador use uma versão antiga guardada na memória
-        const response = await fetch(`${GITHUB_RAW}?t=${new Date().getTime()}`);
+        const response = await fetch(`dados.json?t=${new Date().getTime()}`);
         
         if (!response.ok) throw new Error("Não foi possível aceder ao ficheiro");
         
@@ -125,10 +125,7 @@
     } catch (e) {
         console.error("Erro:", e);
         // Se o link do GitHub falhar, tenta carregar o ficheiro local como última alternativa
-        try {
-            const localResp = await fetch(`dados.json?t=${new Date().getTime()}`);
-            if (localResp.ok) {
-                NCM_DATA = await localResp.json();
+        
                 // (repete a lógica de inicialização aqui se necessário)
                 resultDiv.innerHTML = '';
             } else {
