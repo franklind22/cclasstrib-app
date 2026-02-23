@@ -145,7 +145,6 @@ console.log("JSON convertido com sucesso!");
 
 buildFlatIndex();
 populateCapituloFilter();
-populateCapitulos();
 updateCounters();
 
 div.innerHTML = '<div class="loading">✅ JSON carregado com sucesso!</div>';
@@ -261,7 +260,7 @@ FLAT_INDEX=[];
 Object.entries(RAW_DATA).forEach(([ncm,items])=>{
 items.forEach(item=>{
 FLAT_INDEX.push({
-ncm: ncm.replace(/\./g,''),,
+ncm: ncm.replace(/\./g,''),
 capitulo:ncm.substring(0,2),
 cclasstrib:item.cclasstrib,
 cst:item.cst,
@@ -442,8 +441,8 @@ link.click();
 URL.revokeObjectURL(url);
 }
 function populateCapituloFilter() {
-  const select = document.getElementById("filtroCapitulo");
-  select.innerHTML = '<option value="">Todos</option>';
+  const select = document.getElementById("filterCapitulo");
+  select.innerHTML = '<option value="">Todos Capítulos</option>';
 
   Object.keys(CAPITULOS).forEach(cap => {
     const option = document.createElement("option");
@@ -451,9 +450,9 @@ function populateCapituloFilter() {
     option.textContent = `${cap} - ${CAPITULOS[cap]}`;
     select.appendChild(option);
   });
-  }
+}
   function abrirModalCapitulo() {
-  const cap = document.getElementById("filtroCapitulo").value;
+  const cap = document.getElementById("filterCapitulo").value;
   if (!cap) {
     alert("Selecione um capítulo primeiro.");
     return;
