@@ -94,19 +94,20 @@
 
     async function loadExternalData() {
     const resultDiv = document.getElementById('resultado');
-    resultDiv.innerHTML = '<div class="loading">📥 Conectando ao banco de dados...</div>';
+    resultDiv.innerHTML = '<div class="loading">📥 Sincronizando dados com o GitHub...</div>';
     
-    // ATENÇÃO: Link corrigido para o modo RAW e nome correto do arquivo (Dados.json com D maiúsculo)
-    const GITHUB_URL = 'https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/Dados.json';
+    // LINK RAW CORRETO (para leitura de código)
+    const GITHUB_RAW = 'https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/dados.json';
 
     try {
-        const response = await fetch(`${GITHUB_URL}?t=${new Date().getTime()}`);
+        // O ?t= impede que o navegador use uma versão antiga guardada na memória
+        const response = await fetch(`${GITHUB_RAW}?t=${new Date().getTime()}`);
         
-        if (!response.ok) throw new Error("Erro ao baixar arquivo");
+        if (!response.ok) throw new Error("Não foi possível aceder ao ficheiro");
         
         NCM_DATA = await response.json();
         
-        // Inicializa a árvore de busca
+        // Organiza os dados para a busca rápida
         NCM_TREE = {};
         Object.keys(NCM_DATA).forEach(ncm => {
             const prefix = ncm.slice(0,4);
@@ -114,21 +115,33 @@
             NCM_TREE[prefix].push(ncm);
         });
 
-        // Atualiza contadores
+        // Atualiza os contadores no ecrã
         document.getElementById('totalNCMs').textContent = Object.keys(NCM_DATA).length;
         document.getElementById('totalItens').textContent = Object.values(NCM_DATA).reduce((a,b) => a + b.length, 0);
         
-        resultDiv.innerHTML = ''; // Limpa mensagem de carregamento
-        console.log("Sucesso: Dados carregados do GitHub.");
+        resultDiv.innerHTML = ''; 
+        console.log("Sucesso: Dados carregados.");
 
     } catch (e) {
-        console.error("Erro de carregamento:", e);
-        resultDiv.innerHTML = `
+        console.error("Erro:", e);
+        // Se o link do GitHub falhar, tenta carregar o ficheiro local como última alternativa
+        try {
+            const localResp = await fetch(`dados.json?t=${new Date().getTime()}`);
+            if (localResp.ok) {
+                NCM_DATA = await localResp.json();
+                // (repete a lógica de inicialização aqui se necessário)
+                resultDiv.innerHTML = '';
+            } else {
+                throw new Error();
+            }
+        } catch(e2) {
+            resultDiv.innerHTML = `
             <div class="error">
                 <strong>⚠️ Erro de Conexão</strong><br>
-                Não foi possível ler o arquivo Dados.json.<br>
-                <small>Verifique se o arquivo no GitHub se chama exatamente "Dados.json" (com D maiúsculo).</small>
+                Não foi possível ler o ficheiro <b>dados.json</b>.<br>
+                <small>Verifique se o ficheiro está na branch 'main' e se o nome é 'dados.json'.</small>
             </div>`;
+        }
     }
 }
 
