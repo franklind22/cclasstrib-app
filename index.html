@@ -137,7 +137,7 @@ FLAT_INDEX=[];
 Object.entries(RAW_DATA).forEach(([ncm,items])=>{
 items.forEach(item=>{
 FLAT_INDEX.push({
-ncm,
+ncm: ncm.replace(/\./g,''),,
 capitulo:ncm.substring(0,2),
 cclasstrib:item.cclasstrib,
 cst:item.cst,
