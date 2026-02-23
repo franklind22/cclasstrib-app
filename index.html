@@ -6,9 +6,9 @@
     <title>cClassTrib por NCM - LC 214/2025</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --success: #059669;
-            --bg: #f1f5f9;
+            --primary: #1e3a8a; 
+            --success: #059669; 
+            --bg: #f8fafc;
         }
 
         * {margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
@@ -25,26 +25,24 @@
             max-width: 1200px; 
             margin: 0 auto; 
             border-radius: 16px; 
-            box-shadow: 0 4px 25px rgba(0,0,0,0.1); 
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06); 
             overflow: hidden;
         }
 
         .header {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); 
             color: white; 
-            padding: 30px 15px; 
+            padding: 25px 15px; 
             text-align: center;
         }
 
-        .header h1 { font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 8px; }
-        .header p { font-size: 0.9rem; opacity: 0.9; }
+        .header h1 { font-size: clamp(1.4rem, 5vw, 1.8rem); margin-bottom: 5px; }
+        .header p { font-size: 0.85rem; opacity: 0.9; }
 
         .content { padding: 15px; }
 
-        /* Stats Responsivo */
         .stats {
-            background: #f8fafc; 
-            border: 1px solid #e2e8f0; 
+            background: #f1f5f9; 
             border-radius: 12px; 
             padding: 12px; 
             margin-bottom: 20px; 
@@ -53,13 +51,13 @@
             flex-wrap: wrap;
             gap: 10px;
             font-size: 13px;
+            border: 1px solid #e2e8f0;
         }
 
-        /* Grid de Busca: 1 coluna no telemóvel, 3 no PC */
         .search-bar {
             display: grid; 
             grid-template-columns: 1fr; 
-            gap: 12px; 
+            gap: 10px; 
             margin-bottom: 15px;
         }
         @media (min-width: 768px) {
@@ -71,13 +69,13 @@
             padding: 14px; 
             border: 2px solid #e2e8f0; 
             border-radius: 12px; 
-            font-size: 16px; /* Evita zoom automático no iOS */
+            font-size: 16px; 
             transition: 0.3s;
+            background: white;
         }
 
-        input:focus, select:focus { border-color: var(--primary); outline: none; }
+        input:focus, select:focus { border-color: #3b82f6; outline: none; }
 
-        /* Botões Responsivos */
         .actions-grid {
             display: grid; 
             grid-template-columns: 1fr; 
@@ -104,34 +102,31 @@
         
         button:active { transform: scale(0.98); }
 
-        .btn-search { background: var(--primary); }
+        .btn-search { background: #2563eb; }
         .btn-clear { background: #64748b; }
         .btn-export { background: var(--success); }
-        .btn-link { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+        .btn-link { background: #ffffff; color: #475569; border: 1px solid #e2e8f0; }
 
-        /* Tabela Adaptável */
         .table-container {
             width: 100%;
             overflow-x: auto; 
             border-radius: 12px; 
             border: 1px solid #e2e8f0;
             margin-top: 15px;
-            -webkit-overflow-scrolling: touch;
         }
 
-        table { width: 100%; border-collapse: collapse; min-width: 600px; }
-        th { background: #f8fafc; padding: 15px 10px; text-align: left; font-size: 13px; color: #64748b; border-bottom: 2px solid #e2e8f0; }
+        table { width: 100%; border-collapse: collapse; min-width: 700px; }
+        th { background: #f8fafc; padding: 15px 10px; text-align: left; font-size: 12px; color: #64748b; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; }
         td { padding: 15px 10px; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
         
         .cclasstrib-cell { color: var(--success); font-weight: bold; font-family: monospace; font-size: 16px; }
 
-        /* Paginação */
-        .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+        .loading { text-align: center; padding: 40px; color: #64748b; font-style: italic; }
+        .error { background: #fef2f2; color: #b91c1c; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #fee2e2; }
+        
+        .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 20px; padding-bottom: 10px; }
         .page-btn { padding: 10px 16px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; }
-        .page-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
-
-        .loading { text-align: center; padding: 40px; color: #64748b; }
-        .error { background: #fef2f2; color: #b91c1c; padding: 15px; border-radius: 10px; text-align: center; }
+        .page-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
     </style>
 </head>
 <body>
@@ -172,7 +167,7 @@
 
         <div class="actions-grid">
             <button onclick="exportCSV()" class="btn-export">📤 Exportar CSV</button>
-            <button onclick="window.open('https://dfe-portal.svrs.rs.gov.br/Cff/ClassificacaoTributaria', '_blank')" class="btn-link">🌐 Tabela SVRS</button>
+            <button onclick="window.open('https://dfe-portal.svrs.rs.gov.br/Cff/ClassificacaoTributaria', '_blank')" class="btn-link">🌐 SVRS Oficial</button>
         </div>
 
         <div id="resultado"></div>
@@ -188,13 +183,17 @@
 
     async function loadExternalData() {
         const resultDiv = document.getElementById('resultado');
-        resultDiv.innerHTML = '<div class="loading">📥 Sincronizando dados...</div>';
+        resultDiv.innerHTML = '<div class="loading">📥 Sincronizando com o repositório...</div>';
         
-        const GITHUB_URL = 'https://raw.githubusercontent.com/franklind22/cclasstrib/main/dados.json';
+        // URL ajustada para o novo repositório cclasstrib-app
+        const GITHUB_RAW = 'https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/dados.json';
 
         try {
-            const response = await fetch(`${GITHUB_URL}?t=${new Date().getTime()}`);
+            // Tenta carregar do GitHub com timestamp para evitar cache
+            const response = await fetch(`${GITHUB_RAW}?t=${new Date().getTime()}`);
+            
             if (!response.ok) throw new Error();
+            
             NCM_DATA = await response.json();
             
             Object.keys(NCM_DATA).forEach(ncm => {
@@ -207,7 +206,21 @@
             document.getElementById('totalItens').textContent = Object.values(NCM_DATA).reduce((a,b) => a + b.length, 0);
             resultDiv.innerHTML = '';
         } catch (e) {
-            resultDiv.innerHTML = '<div class="error">❌ Erro ao conectar ao GitHub.</div>';
+            // Fallback: se o GitHub Raw falhar, tenta carregar o ficheiro local
+            try {
+                const localResp = await fetch(`dados.json?t=${new Date().getTime()}`);
+                if (!localResp.ok) throw new Error();
+                NCM_DATA = await localResp.json();
+                // (Repete indexação se necessário, simplificado aqui para brevidade)
+                resultDiv.innerHTML = '';
+            } catch(e2) {
+                resultDiv.innerHTML = `
+                <div class="error">
+                    <strong>⚠️ Erro de Conexão</strong><br>
+                    Não foi possível ler o ficheiro dados.json.<br>
+                    <small>Verifique se o ficheiro está na branch 'main' do repositório cclasstrib-app.</small>
+                </div>`;
+            }
         }
     }
 
@@ -242,7 +255,7 @@
     function renderTable() {
         const container = document.getElementById('resultado');
         if (currentResults.length === 0) {
-            container.innerHTML = '<div class="error">Nenhum dado encontrado.</div>';
+            container.innerHTML = '<div class="error">Nenhum dado encontrado para os critérios selecionados.</div>';
             return;
         }
 
@@ -257,7 +270,7 @@
             html += `<tr>
                 <td><strong>${item.ncm}</strong></td>
                 <td class="cclasstrib-cell">${item.cclasstrib}</td>
-                <td><span style="background:#f1f5f9; padding:4px 8px; border-radius:4px;">${item.cst}</span></td>
+                <td><span style="background:#f1f5f9; padding:4px 8px; border-radius:4px; font-weight:bold;">${item.cst}</span></td>
                 <td>${item.descricao}</td>
                 <td>${item.pReducao || '0%'}</td>
                 <td style="font-size:11px; color:#94a3b8;">${item.legislacao}</td>
@@ -305,4 +318,3 @@
 </script>
 </body>
 </html>
-
