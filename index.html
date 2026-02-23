@@ -335,6 +335,12 @@ mark{
 <body>
 <div class="container">
 <div class="header">
+    <div id="versaoApp" style="
+  font-size:12px;
+  color:#64748b;
+  margin-top:8px;
+  text-align:center;
+"></div>
 <h1>🧾 cClassTrib por NCM</h1>
 <p>Reforma Tributária 2026 | LC 214/2025</p>
 </div>
@@ -406,45 +412,59 @@ mark{
 </div>
 
 <script>
-let RAW_DATA={},FLAT_INDEX=[],currentResults=[];
-let currentPage=0,lastQueryKey="",lastResultsCache=[];
-const ITEMS_PER_PAGE=15;
-
-document.addEventListener("DOMContentLoaded",()=>{
-loadExternalData();
-setupDebounce();
-});
+let CURRENT_VERSION = null;
 
 async function loadExternalData(){
-const div = document.getElementById('resultado');
-div.innerHTML = '<div class="loading">📥 Testando conexão...</div>';
 
-try{
+  const div = document.getElementById('resultado');
+  div.innerHTML = '<div class="loading">📥 Carregando dados...</div>';
 
-const response = await fetch('/cclasstrib-app/dados.json?v=' + new Date().getTime());
+  try{
 
-console.log("Status HTTP:", response.status);
+    // Caminho RELATIVO (funciona melhor no GitHub Pages)
+    const response = await fetch('dados.json?v=' + Date.now(), {
+      cache: "no-store"
+    });
 
-const text = await response.text();
+    if(!response.ok){
+      throw new Error("HTTP " + response.status);
+    }
 
-console.log("Primeiros 200 caracteres:");
-console.log(text.substring(0,200));
+    const json = await response.json();
 
-RAW_DATA = JSON.parse(text);
+    // ✅ Se existir sistema de versão
+    if(json.versao){
 
-console.log("JSON convertido com sucesso!");
+      // Detecta mudança automática de versão
+      if(CURRENT_VERSION && CURRENT_VERSION !== json.versao){
+        console.log("Nova versão detectada. Atualizando página...");
+        location.reload(true);
+        return;
+      }
 
-buildFlatIndex();
-populateCapituloFilter();
-updateCounters();
+      CURRENT_VERSION = json.versao;
 
-div.innerHTML = '<div class="loading">✅ JSON carregado com sucesso!</div>';
+      RAW_DATA = json.dados || {};
 
-}catch(error){
-console.error("ERRO REAL:", error);
-div.innerHTML = '<div class="error">Erro real: '+ error.message +'</div>';
-}
-}
+      console.log("Versão carregada:", json.versao);
+
+    }else{
+      // Compatível com JSON antigo (sem versão)
+      RAW_DATA = json;
+    }
+
+    buildFlatIndex();
+    populateCapituloFilter();
+    updateCounters();
+
+    div.innerHTML = '<div class="loading">✅ Dados atualizados!</div>';
+
+  }catch(error){
+
+    console.error("ERRO REAL:", error);
+    div.innerHTML = '<div class="error">Erro real: '+ error.message +'</div>';
+  }
+  }
 const CAPITULOS = {
   "01": "Animais vivos",
   "02": "Carnes e miudezas comestíveis",
@@ -767,6 +787,9 @@ function fecharModal() {
   const btn = document.getElementById("btnCapitulo");
   btn.disabled = !select.value;
   }
+  document.addEventListener("DOMContentLoaded", () => {
+  loadData();
+});
 </script>
   <div id="modalCapitulo" class="modal">
   <div class="modal-content">
