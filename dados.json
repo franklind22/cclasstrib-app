@@ -8175,5 +8175,181 @@
       "regime": "padrao",
       "ativo": true
     }
-  ]
+  ],
+  "0306": [
+  {
+    "cclasstrib": "700001",
+    "cst": "200",
+    "descricao": "CRUSTÁCEOS (conforme Anexo VII LC 214/2025)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0307.31.00": [
+  {
+    "cclasstrib": "700002",
+    "cst": "200",
+    "descricao": "MOLUSCOS - CAMARÕES PREPARADOS",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0403.20.00": [
+  {
+    "cclasstrib": "700003",
+    "cst": "200",
+    "descricao": "LEITE FERMENTADO",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"0409.00.00": [
+  {
+    "cclasstrib": "700004",
+    "cst": "200",
+    "descricao": "MEL NATURAL",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"2202.99.00": [
+  {
+    "cclasstrib": "700005",
+    "cst": "200",
+    "descricao": "BEBIDAS LÁCTEAS",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"3401.11.90": [
+  {
+    "cclasstrib": "800001",
+    "cst": "200",
+    "descricao": "SABÕES DE TOUCADOR",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"3306.10.00": [
+  {
+    "cclasstrib": "800002",
+    "cst": "200",
+    "descricao": "DENTIFRÍCIOS",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"9603.21.00": [
+  {
+    "cclasstrib": "800003",
+    "cst": "200",
+    "descricao": "ESCOVAS DE DENTES",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"4818.10.00": [
+  {
+    "cclasstrib": "800004",
+    "cst": "200",
+    "descricao": "PAPEL HIGIÊNICO",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"3808.94.19": [
+  {
+    "cclasstrib": "800005",
+    "cst": "200",
+    "descricao": "ÁGUA SANITÁRIA",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+"9619.00.00": [
+  {
+    "cclasstrib": "800006",
+    "cst": "200",
+    "descricao": "FRALDAS E ARTIGOS HIGIÊNICOS",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025 Anexo VIII",
+    "regime": "reducao",
+    "ativo": true
+  }
+],
+ "0407.2": [
+  {
+    "cclasstrib": "150001",
+    "cst": "000",
+    "descricao": "OVOS (conforme subposição 0407.2)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025 Anexo XV",
+    "regime": "completa",
+    "ativo": true
+  }
+],
+"0701": [
+  {
+    "cclasstrib": "150002",
+    "cst": "000",
+    "descricao": "BATATAS E RAÍZES HORTÍCOLAS",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025 Anexo XV",
+    "regime": "completa",
+    "ativo": true
+  }
+],
+"0702": [
+  {
+    "cclasstrib": "150003",
+    "cst": "000",
+    "descricao": "TOMATES FRESCOS",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025 Anexo XV",
+    "regime": "completa",
+    "ativo": true
+  }
+],
+"0803": [
+  {
+    "cclasstrib": "150004",
+    "cst": "000",
+    "descricao": "BANANAS",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025 Anexo XV",
+    "regime": "completa",
+    "ativo": true
+  }
+],
+"0808": [
+  {
+    "cclasstrib": "150005",
+    "cst": "000",
+    "descricao": "MAÇÃS, PERAS E CAQUIS",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025 Anexo XV",
+    "regime": "completa",
+    "ativo": true
+  }
+]
 }
