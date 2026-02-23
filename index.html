@@ -194,10 +194,29 @@ currentResults=[];
 FLAT_INDEX.forEach(item=>{
 let score=0;
 if(ncmQuery){
-if(item.ncm===ncmQuery) score+=120;
-else if(item.ncm.startsWith(ncmQuery)) score+=60;
-else if(item.ncm.includes(ncmQuery)) score+=30;
-else return;
+
+// correspondência exata
+if(item.ncm === ncmQuery){
+score += 150;
+}
+
+// quando o JSON tem 4 dígitos e o usuário digitou 8
+else if(ncmQuery.startsWith(item.ncm)){
+score += 120;
+}
+
+// quando o JSON tem 8 e usuário digitou 4
+else if(item.ncm.startsWith(ncmQuery)){
+score += 80;
+}
+
+// correspondência parcial
+else if(item.ncm.includes(ncmQuery)){
+score += 40;
+}
+else{
+return;
+}
 }
 words.forEach(word=>{if(item.descricaoLower.includes(word)) score+=15;});
 if(!ncmQuery && words.length>0 && score===0) return;
