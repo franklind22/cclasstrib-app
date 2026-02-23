@@ -412,6 +412,15 @@ mark{
 </div>
 
 <script>
+// ===== VARIÁVEIS GLOBAIS =====
+let RAW_DATA = {};
+let FLAT_INDEX = [];
+let currentResults = [];
+let lastResultsCache = [];
+let lastQueryKey = "";
+let currentPage = 0;
+const ITEMS_PER_PAGE = 20;
+
 async function loadExternalData(){
 
   const div = document.getElementById('resultado');
