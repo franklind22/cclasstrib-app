@@ -97,7 +97,7 @@
     resultDiv.innerHTML = '<div class="loading">📥 Sincronizando dados com o GitHub...</div>';
     
     // LINK RAW CORRETO (para leitura de código)
-    const GITHUB_RAW = 'https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/dados.json';
+    const GITHUB_RAW = 'dados.json';
 
     try {
         // O ?t= impede que o navegador use uma versão antiga guardada na memória
@@ -132,7 +132,7 @@
                 // (repete a lógica de inicialização aqui se necessário)
                 resultDiv.innerHTML = '';
             } else {
-                throw new Error();
+                throw new Error();h
             }
         } catch(e2) {
             resultDiv.innerHTML = `
