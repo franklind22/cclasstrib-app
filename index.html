@@ -114,7 +114,7 @@ async function loadExternalData() {
 
         resultDiv.innerHTML = '';
         console.log("✅ Dados carregados:", Object.keys(NCM_DATA).length);
-
+        console.log("Tentando carregar JSON...");
     } catch (e) {
         console.error(e);
         resultDiv.innerHTML = `
