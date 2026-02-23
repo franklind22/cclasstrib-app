@@ -6,7 +6,7 @@
 
 ### ✨ **🚀 DEMO AO VIVO**
 
-🔗 [https://franklind22.github.io/cclasstrib/](https://franklind22.github.io/cclasstrib/)
+🔗 [[https://franklind22.github.io/cclasstrib/](https://franklind22.github.io/cclasstrib-app/)](https://franklind22.github.io/cclasstrib-app/)
 
 ---
 
