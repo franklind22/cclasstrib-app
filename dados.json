@@ -8911,17 +8911,17 @@
     "legislacao": "LC 214/2025 - Anexo XV",
     "regime": "reducao",
     "ativo": true
-  }
+
 ],
-"8708": [
-  {
-    "cclasstrib": "ANEXO_XV_8708",
-    "cst": "200",
-    "descricao": "Partes e acessórios de veículos automóveis",
-    "pReducao": 60,
-    "legislacao": "LC 214/2025 - Anexo XV",
-    "regime": "reducao",
-    "ativo": true
-  }
-]
- }
+  "8708": [
+    {
+      "cclasstrib": "ANEXO_XV_8708",
+      "cst": "200",
+      "descricao": "Partes e acessórios de veículos automóveis",
+      "pReducao": 60,
+      "legislacao": "LC 214/2025 - Anexo XV",
+      "regime": "reducao",
+      "ativo": true
+    }
+  ]
+}
