@@ -412,8 +412,6 @@ mark{
 </div>
 
 <script>
-let CURRENT_VERSION = null;
-
 async function loadExternalData(){
 
   const div = document.getElementById('resultado');
@@ -421,48 +419,27 @@ async function loadExternalData(){
 
   try{
 
-    // Caminho RELATIVO (funciona melhor no GitHub Pages)
-    const response = await fetch('/cclasstrib-app/dados.json?v=' + new Date().getTime());
+    const response = await fetch('/cclasstrib-app/dados.json?v=' + Date.now());
 
     if(!response.ok){
       throw new Error("HTTP " + response.status);
     }
 
-    const json = await response.json();
-
-    // ✅ Se existir sistema de versão
-    if(json.versao){
-
-      // Detecta mudança automática de versão
-      if(CURRENT_VERSION && CURRENT_VERSION !== json.versao){
-        console.log("Nova versão detectada. Atualizando página...");
-        location.reload(true);
-        return;
-      }
-
-      CURRENT_VERSION = json.versao;
-
-      RAW_DATA = json.dados || {};
-
-      console.log("Versão carregada:", json.versao);
-
-    }else{
-      // Compatível com JSON antigo (sem versão)
-      RAW_DATA = json;
-    }
+    RAW_DATA = await response.json();
 
     buildFlatIndex();
     populateCapituloFilter();
     updateCounters();
 
-    div.innerHTML = '<div class="loading">✅ Dados atualizados!</div>';
+    div.innerHTML = '';
 
   }catch(error){
 
     console.error("ERRO REAL:", error);
     div.innerHTML = '<div class="error">Erro real: '+ error.message +'</div>';
+
   }
-  }
+}
 const CAPITULOS = {
   "01": "Animais vivos",
   "02": "Carnes e miudezas comestíveis",
