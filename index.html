@@ -84,77 +84,6 @@
         <div id="resultado"></div>
     </div>
 </div>
-
-<script>
-    let NCM_DATA = {};
-    let NCM_TREE = {};
-    let currentResults = [];
-    let currentPage = 0;
-    const ITEMS_PER_PAGE = 15;
-
-    async function loadExternalData() {
-    const resultDiv = document.getElementById('resultado');
-    resultDiv.innerHTML = '<div class="loading">📥 Carregando dados...</div>';
-
-    try {
-        const response = await fetch(`dados.json?t=${Date.now()}`);
-        if (!response.ok) throw new Error();
-
-        NCM_DATA = await response.json();
-
-        initializeData(); // 🔥 IMPORTANTE
-
-        resultDiv.innerHTML = '';
-        console.log("Dados carregados com sucesso.");
-
-    } catch (e) {
-        console.error(e);
-        resultDiv.innerHTML = `
-        <div class="error">
-            <strong>⚠️ Erro ao carregar dados</strong>
-        </div>`;
-    }
-}
-}
-
-
-    function initData() {
-        NCM_TREE = {};
-        Object.keys(NCM_DATA).forEach(ncm => {
-            const prefix = ncm.slice(0,4);
-            if (!NCM_TREE[prefix]) NCM_TREE[prefix] = [];
-            NCM_TREE[prefix].push(ncm);
-        });
-        document.getElementById('totalNCMs').textContent = Object.keys(NCM_DATA).length;
-        document.getElementById('totalItens').textContent = Object.values(NCM_DATA).reduce((a,b) => a + b.length, 0);
-    }
-
-    function searchAndFilter() {
-        const ncmQuery = document.getElementById('ncmInput').value.replace(/\D/g,'');
-        const fCST = document.getElementById('filterCST').value;
-        const fAnexo = document.getElementById('filterAnexo').value;
-        let pool = [];
-
-        if (ncmQuery.length >= 2) {
-            const prefix = ncmQuery.slice(0,4);
-            const matches = (NCM_TREE[prefix] || []).filter(code => code.includes(ncmQuery));
-            matches.forEach(code => {
-                NCM_DATA[code].forEach(item => pool.push({...item, ncm: code}));
-            });
-        } else {
-            Object.entries(NCM_DATA).forEach(([code, items]) => {
-                items.forEach(item => pool.push({...item, ncm: code}));
-            });
-        }
-
-        currentResults = pool.filter(item => {
-            const matchCST = !fCST || item.cst === fCST;
-            const matchAnexo = !fAnexo || (item.legislacao && item.legislacao.toUpperCase().includes(fAnexo.toUpperCase()));
-            return matchCST && matchAnexo;
-        });
-
-        currentPage = 0;
-        renderTable();
 <script>
 let NCM_DATA = {};
 let NCM_TREE = {};
@@ -165,22 +94,18 @@ const ITEMS_PER_PAGE = 15;
 /* =========================
    INICIALIZAÇÃO
 ========================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-    loadExternalData();
-});
+document.addEventListener("DOMContentLoaded", loadExternalData);
 
 /* =========================
    CARREGAR JSON
 ========================= */
-
 async function loadExternalData() {
     const resultDiv = document.getElementById('resultado');
     resultDiv.innerHTML = '<div class="loading">📥 Carregando dados...</div>';
 
     try {
         const response = await fetch(`dados.json?t=${Date.now()}`);
-        if (!response.ok) throw new Error("Erro ao carregar JSON");
+        if (!response.ok) throw new Error();
 
         NCM_DATA = await response.json();
 
@@ -193,17 +118,15 @@ async function loadExternalData() {
     } catch (e) {
         console.error(e);
         resultDiv.innerHTML = `
-        <div class="error">
-            <strong>⚠️ Erro ao carregar dados</strong><br>
-            Verifique se o ficheiro dados.json está publicado.
-        </div>`;
+            <div class="error">
+                <strong>⚠️ Erro ao carregar dados</strong>
+            </div>`;
     }
 }
 
 /* =========================
-   ORGANIZAR NCM TREE
+   ORGANIZA ÁRVORE NCM
 ========================= */
-
 function buildTree() {
     NCM_TREE = {};
 
@@ -215,9 +138,8 @@ function buildTree() {
 }
 
 /* =========================
-   CONTADORES
+   ATUALIZA CONTADORES
 ========================= */
-
 function updateCounters() {
     document.getElementById('totalNCMs').textContent =
         Object.keys(NCM_DATA).length;
@@ -228,75 +150,101 @@ function updateCounters() {
 }
 
 /* =========================
-   BUSCA POR NCM
+   BUSCA + FILTRO
 ========================= */
+function searchAndFilter() {
 
-function buscarNCM() {
+    const ncmQuery = document.getElementById('ncmInput').value.replace(/\D/g,'');
+    const fCST = document.getElementById('filterCST').value;
+    const fAnexo = document.getElementById('filterAnexo').value;
 
-    const input = document.getElementById("ncmInput").value.trim();
-    if (!input) return;
+    let pool = [];
 
-    currentResults = [];
+    if (ncmQuery.length >= 2) {
+        const prefix = ncmQuery.slice(0,4);
+        const matches = (NCM_TREE[prefix] || [])
+            .filter(code => code.includes(ncmQuery));
 
-    Object.keys(NCM_DATA).forEach(ncm => {
-        if (ncm.startsWith(input)) {
-            NCM_DATA[ncm].forEach(item => {
-                currentResults.push({
-                    ncm,
-                    ...item
-                });
+        matches.forEach(code => {
+            NCM_DATA[code].forEach(item => {
+                pool.push({...item, ncm: code});
             });
-        }
-    });
-
-    applyFilters();
-}
-
-/* =========================
-   FILTROS
-========================= */
-
-function applyFilters() {
-
-    const selectedCST = document.getElementById("cstFilter")?.value;
-
-    let filtered = currentResults;
-
-    if (selectedCST && selectedCST !== "todos") {
-        filtered = filtered.filter(item => item.cst === selectedCST);
+        });
+    } else {
+        Object.entries(NCM_DATA).forEach(([code, items]) => {
+            items.forEach(item => pool.push({...item, ncm: code}));
+        });
     }
 
+    currentResults = pool.filter(item => {
+        const matchCST = !fCST || item.cst === fCST;
+        const matchAnexo = !fAnexo ||
+            (item.legislacao &&
+             item.legislacao.toUpperCase().includes(fAnexo.toUpperCase()));
+
+        return matchCST && matchAnexo;
+    });
+
     currentPage = 0;
-    renderResults(filtered);
+    renderTable();
 }
 
 /* =========================
-   RENDERIZAÇÃO
+   RENDERIZA TABELA
 ========================= */
-
-function renderResults(data) {
+function renderTable() {
 
     const resultDiv = document.getElementById("resultado");
 
-    if (data.length === 0) {
-        resultDiv.innerHTML = "<div class='error'>Nenhum resultado encontrado.</div>";
+    if (currentResults.length === 0) {
+        resultDiv.innerHTML =
+            "<div class='error'>Nenhum resultado encontrado.</div>";
         return;
     }
 
     const start = currentPage * ITEMS_PER_PAGE;
     const end = start + ITEMS_PER_PAGE;
-    const pageItems = data.slice(start, end);
+    const pageItems = currentResults.slice(start, end);
 
-    resultDiv.innerHTML = pageItems.map(item => `
-        <div class="card">
-            <strong>NCM:</strong> ${item.ncm}<br>
-            <strong>cClassTrib:</strong> ${item.cclasstrib}<br>
-            <strong>CST:</strong> ${item.cst}<br>
-            <strong>Descrição:</strong> ${item.descricao}<br>
-            <strong>Redução:</strong> ${item.pReducao}<br>
-            <strong>Legislação:</strong> ${item.legislacao}
+    resultDiv.innerHTML = `
+        <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>NCM</th>
+                    <th>cClassTrib</th>
+                    <th>CST</th>
+                    <th>Descrição</th>
+                    <th>Redução</th>
+                    <th>Legislação</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${pageItems.map(item => `
+                    <tr>
+                        <td>${item.ncm}</td>
+                        <td class="cclasstrib-cell">${item.cclasstrib}</td>
+                        <td>${item.cst}</td>
+                        <td>${item.descricao}</td>
+                        <td>${item.pReducao}</td>
+                        <td>${item.legislacao}</td>
+                    </tr>
+                `).join("")}
+            </tbody>
+        </table>
         </div>
-    `).join("");
+    `;
+}
+
+/* =========================
+   LIMPAR
+========================= */
+function clearAll() {
+    document.getElementById('ncmInput').value = "";
+    document.getElementById('filterCST').value = "";
+    document.getElementById('filterAnexo').value = "";
+    document.getElementById('resultado').innerHTML = "";
+    currentResults = [];
 }
 </script>
 </body>
