@@ -8111,16 +8111,25 @@
     }
   ],
   "22030000": [
-    {
-      "cclasstrib": "500001",
-      "cst": "000",
-      "descricao": "BEBIDAS - CERVEJAS DE MALTE",
-      "pReducao": "0%",
-      "legislacao": "Sujeito a Imposto Seletivo",
-      "regime": "seletivo",
-      "ativo": true
-    }
-  ],
+  {
+    "cclasstrib": "500001",
+    "cst": "000",
+    "descricao": "BEBIDAS - CERVEJAS DE MALTE",
+    "pReducao": "0%",
+    "legislacao": "Sujeito a Imposto Seletivo",
+    "regime": "seletivo",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "500001",
+    "cst": "000",
+    "descricao": "CERVEJA DE MALTE - DISTRIBUIÇÃO",
+    "pReducao": "0%",
+    "legislacao": "Sujeito a Imposto Seletivo",
+    "regime": "seletivo",
+    "ativo": true
+  }
+],
   "21069090": [
     {
       "cclasstrib": "100005",
@@ -8131,7 +8140,7 @@
       "regime": "reducao",
       "ativo": true
     }
-  ]
+  ],
   "22011000": [
     {
       "cclasstrib": "200001",
@@ -8173,17 +8182,6 @@
       "pReducao": "0%",
       "legislacao": "Regra Geral - Alíquota Integral",
       "regime": "padrao",
-      "ativo": true
-    }
-  ],
-  "22030000": [
-    {
-      "cclasstrib": "500001",
-      "cst": "000",
-      "descricao": "CERVEJA DE MALTE - DISTRIBUIÇÃO",
-      "pReducao": "0%",
-      "legislacao": "Sujeito a Imposto Seletivo",
-      "regime": "seletivo",
       "ativo": true
     }
   ]
