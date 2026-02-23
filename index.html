@@ -329,6 +329,22 @@ mark{
   }
 
 }
+
+  .btn-update{
+  background:#f59e0b;
+  color:white;
+  padding:8px 12px;
+  border-radius:10px;
+  font-size:12px;
+  cursor:pointer;
+  border:none;
+  transition:all .2s ease;
+}
+
+.btn-update:hover{
+  background:#d97706;
+  transform:scale(1.05);
+}
 </style>
 </head>
 
@@ -348,6 +364,9 @@ mark{
 <div class="content">
 
 <div class="stats">
+  <button id="btnUpdate" class="btn-update" title="Atualizar base">
+  🔄 Atualizar Base
+  </button>
 <span>Base: <strong id="totalNCMs">0</strong> NCMs</span>
 <span>Regras: <strong id="totalItens">0</strong></span>
 </div>
@@ -774,6 +793,24 @@ function fecharModal() {
   document.addEventListener("DOMContentLoaded", () => {
   loadExternalData();
   setupDebounce();
+});
+  // Botão limpa cache //
+  document.getElementById("btnUpdate").addEventListener("click", () => {
+
+  // Limpa qualquer cache interno do navegador
+  if ('caches' in window) {
+    caches.keys().then(names => {
+      names.forEach(name => caches.delete(name));
+    });
+  }
+
+  // Limpa storage se estiver usando
+  localStorage.clear();
+  sessionStorage.clear();
+
+  // Força reload ignorando cache
+  window.location.reload(true);
+
 });
 </script>
   <div id="modalCapitulo" class="modal">
