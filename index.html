@@ -422,9 +422,7 @@ async function loadExternalData(){
   try{
 
     // Caminho RELATIVO (funciona melhor no GitHub Pages)
-    const response = await fetch('dados.json?v=' + Date.now(), {
-      cache: "no-store"
-    });
+    const response = await fetch('/cclasstrib-app/dados.json?v=' + new Date().getTime());
 
     if(!response.ok){
       throw new Error("HTTP " + response.status);
