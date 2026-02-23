@@ -2,32 +2,35 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>cClassTrib por NCM - LC 214/2025</title>
 
 <style>
-:root { --primary:#1e3a8a; --success:#059669; --bg:#f8fafc; }
+:root{--primary:#1e3a8a;--success:#059669;--bg:#f8fafc;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Segoe UI',system-ui;background:var(--bg);padding:10px;color:#1e293b;}
-.container{background:white;max-width:1200px;margin:auto;border-radius:16px;box-shadow:0 4px 25px rgba(0,0,0,.06);overflow:hidden;}
-.header{background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:white;padding:25px 15px;text-align:center;}
-.content{padding:15px;}
+body{font-family:'Segoe UI',system-ui;background:var(--bg);padding:15px;color:#1e293b;}
+.container{background:white;max-width:1300px;margin:auto;border-radius:16px;box-shadow:0 4px 25px rgba(0,0,0,.06);overflow:hidden;}
+.header{background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:white;padding:25px;text-align:center;}
+.content{padding:20px;}
 .stats{background:#f1f5f9;border-radius:12px;padding:12px;margin-bottom:20px;display:flex;justify-content:space-around;flex-wrap:wrap;font-size:13px;border:1px solid #e2e8f0;}
 .search-bar{display:grid;gap:10px;margin-bottom:15px;}
-@media(min-width:768px){.search-bar{grid-template-columns:2fr 1fr 1fr;}}
-input,select{padding:14px;border:2px solid #e2e8f0;border-radius:12px;font-size:16px;}
-button{padding:15px;border:none;border-radius:12px;font-weight:600;cursor:pointer;color:white;}
+@media(min-width:768px){.search-bar{grid-template-columns:2fr 1fr 1fr 1fr 1fr;}}
+input,select{padding:12px;border:2px solid #e2e8f0;border-radius:12px;font-size:15px;}
+.actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:15px;}
+button{padding:12px;border:none;border-radius:12px;font-weight:600;cursor:pointer;color:white;}
 .btn-search{background:#2563eb;}
 .btn-clear{background:#64748b;}
+.btn-export{background:#059669;}
+.btn-link{background:white;color:#475569;border:1px solid #e2e8f0;}
 .table-container{overflow-x:auto;border-radius:12px;border:1px solid #e2e8f0;margin-top:15px;}
-table{width:100%;border-collapse:collapse;min-width:700px;}
+table{width:100%;border-collapse:collapse;min-width:800px;}
 th{background:#f8fafc;padding:12px;font-size:12px;text-transform:uppercase;border-bottom:2px solid #e2e8f0;}
 td{padding:12px;border-bottom:1px solid #f1f5f9;font-size:14px;}
 .cclasstrib-cell{color:var(--success);font-weight:bold;font-family:monospace;}
-.error{background:#fef2f2;color:#b91c1c;padding:15px;border-radius:10px;text-align:center;}
 .loading{text-align:center;padding:40px;color:#64748b;}
+.error{background:#fef2f2;color:#b91c1c;padding:15px;border-radius:10px;text-align:center;}
 .pagination{display:flex;justify-content:center;gap:6px;margin-top:15px;flex-wrap:wrap;}
-.page-btn{padding:8px 14px;border:1px solid #e2e8f0;border-radius:8px;background:white;cursor:pointer;}
+.page-btn{padding:6px 12px;border:1px solid #e2e8f0;border-radius:8px;background:white;cursor:pointer;}
 .page-btn.active{background:#2563eb;color:white;}
 mark{background:yellow;font-weight:bold;}
 </style>
@@ -63,11 +66,21 @@ mark{background:yellow;font-weight:bold;}
 <option value="ANEXO IX">Anexo IX</option>
 <option value="ANEXO XV">Anexo XV</option>
 </select>
+<select id="filterCapitulo">
+<option value="">Todos Capítulos</option>
+</select>
+<select id="filterReducao">
+<option value="">Todos</option>
+<option value="com">Apenas com redução</option>
+<option value="sem">Sem redução</option>
+</select>
 </div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-<button class="btn-search" onclick="searchAndFilter()">Buscar</button>
-<button class="btn-clear" onclick="clearAll()">Limpar</button>
+<div class="actions">
+<button class="btn-search" onclick="searchAndFilter()">🔍 Buscar</button>
+<button class="btn-clear" onclick="clearAll()">🗑️ Limpar</button>
+<button class="btn-export" onclick="exportCSV()">📤 Exportar CSV</button>
+<button class="btn-link" onclick="window.open('https://dfe-portal.svrs.rs.gov.br/Cff/ClassificacaoTributaria','_blank')">🌐 SVRS Oficial</button>
 </div>
 
 <div id="resultado"></div>
@@ -76,29 +89,23 @@ mark{background:yellow;font-weight:bold;}
 </div>
 
 <script>
-let RAW_DATA = {};
-let FLAT_INDEX = [];
-let currentResults = [];
-let currentPage = 0;
-let lastQueryKey = "";
-let lastResultsCache = [];
-const ITEMS_PER_PAGE = 15;
+let RAW_DATA={},FLAT_INDEX=[],currentResults=[];
+let currentPage=0,lastQueryKey="",lastResultsCache=[];
+const ITEMS_PER_PAGE=15;
 
-/* INIT */
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",()=>{
 loadExternalData();
 setupDebounce();
 });
 
-/* LOAD JSON */
 async function loadExternalData(){
 const div=document.getElementById('resultado');
-div.innerHTML='<div class="loading">📥 Carregando...</div>';
-
+div.innerHTML='<div class="loading">📥 Carregando dados...</div>';
 try{
 const response=await fetch('dados.json?t='+Date.now());
 RAW_DATA=await response.json();
 buildFlatIndex();
+populateCapitulos();
 updateCounters();
 div.innerHTML='';
 }catch(e){
@@ -106,18 +113,18 @@ div.innerHTML='<div class="error">Erro ao carregar dados</div>';
 }
 }
 
-/* BUILD INDEX */
 function buildFlatIndex(){
 FLAT_INDEX=[];
 Object.entries(RAW_DATA).forEach(([ncm,items])=>{
 items.forEach(item=>{
 FLAT_INDEX.push({
 ncm,
+capitulo:ncm.substring(0,2),
 cclasstrib:item.cclasstrib,
 cst:item.cst,
 descricao:item.descricao,
 descricaoLower:item.descricao.toLowerCase(),
-pReducao:item.pReducao,
+pReducao:parseFloat(item.pReducao)||0,
 legislacao:item.legislacao,
 legislacaoUpper:item.legislacao?item.legislacao.toUpperCase():""
 });
@@ -125,13 +132,22 @@ legislacaoUpper:item.legislacao?item.legislacao.toUpperCase():""
 });
 }
 
-/* COUNTERS */
+function populateCapitulos(){
+const select=document.getElementById("filterCapitulo");
+const capitulos=[...new Set(FLAT_INDEX.map(i=>i.capitulo))].sort();
+capitulos.forEach(cap=>{
+const opt=document.createElement("option");
+opt.value=cap;
+opt.textContent=`Capítulo ${cap}`;
+select.appendChild(opt);
+});
+}
+
 function updateCounters(){
 document.getElementById('totalNCMs').textContent=Object.keys(RAW_DATA).length;
 document.getElementById('totalItens').textContent=FLAT_INDEX.length;
 }
 
-/* DEBOUNCE */
 function setupDebounce(){
 const input=document.getElementById("ncmInput");
 let timeout;
@@ -141,48 +157,36 @@ timeout=setTimeout(searchAndFilter,250);
 });
 }
 
-/* SEARCH PRO */
 function searchAndFilter(){
-
 const rawQuery=document.getElementById('ncmInput').value.trim();
 const fCST=document.getElementById('filterCST').value;
 const fAnexo=document.getElementById('filterAnexo').value.toUpperCase();
-const queryKey=rawQuery+"|"+fCST+"|"+fAnexo;
+const fCap=document.getElementById('filterCapitulo').value;
+const fReducao=document.getElementById('filterReducao').value;
 
-if(queryKey===lastQueryKey){
-currentResults=lastResultsCache;
-renderTable();
-return;
-}
-
+const queryKey=rawQuery+"|"+fCST+"|"+fAnexo+"|"+fCap+"|"+fReducao;
+if(queryKey===lastQueryKey){currentResults=lastResultsCache;renderTable();return;}
 lastQueryKey=queryKey;
+
 const ncmQuery=rawQuery.replace(/\D/g,'');
 const words=rawQuery.toLowerCase().split(/\s+/).filter(w=>w.length>1);
 currentResults=[];
 
 FLAT_INDEX.forEach(item=>{
 let score=0;
-
-/* NCM ranking */
 if(ncmQuery){
 if(item.ncm===ncmQuery) score+=120;
 else if(item.ncm.startsWith(ncmQuery)) score+=60;
 else if(item.ncm.includes(ncmQuery)) score+=30;
 else return;
 }
-
-/* Multi-word ranking */
-words.forEach(word=>{
-if(item.descricaoLower===word) score+=40;
-else if(item.descricaoLower.includes(word)) score+=15;
-});
-
+words.forEach(word=>{if(item.descricaoLower.includes(word)) score+=15;});
 if(!ncmQuery && words.length>0 && score===0) return;
-
-/* Filters */
 if(fCST && item.cst!==fCST) return;
 if(fAnexo && !item.legislacaoUpper.includes(fAnexo)) return;
-
+if(fCap && item.capitulo!==fCap) return;
+if(fReducao==="com" && item.pReducao<=0) return;
+if(fReducao==="sem" && item.pReducao>0) return;
 currentResults.push({...item,score});
 });
 
@@ -192,7 +196,6 @@ currentPage=0;
 renderTable(words);
 }
 
-/* Highlight */
 function highlight(text,words){
 if(!words||words.length===0) return text;
 let result=text;
@@ -203,13 +206,9 @@ result=result.replace(regex,"<mark>$1</mark>");
 return result;
 }
 
-/* Render */
 function renderTable(words=[]){
 const div=document.getElementById("resultado");
-if(currentResults.length===0){
-div.innerHTML='<div class="error">Nenhum resultado encontrado</div>';
-return;
-}
+if(currentResults.length===0){div.innerHTML='<div class="error">Nenhum resultado encontrado</div>';return;}
 const start=currentPage*ITEMS_PER_PAGE;
 const end=start+ITEMS_PER_PAGE;
 const pageItems=currentResults.slice(start,end);
@@ -220,7 +219,7 @@ div.innerHTML=`
 <thead>
 <tr>
 <th>NCM</th><th>cClassTrib</th><th>CST</th>
-<th>Descrição</th><th>Redução</th><th>Legislação</th>
+<th>Descrição</th><th>Redução %</th><th>Legislação</th>
 </tr>
 </thead>
 <tbody>
@@ -230,7 +229,7 @@ ${pageItems.map(item=>`
 <td class="cclasstrib-cell">${item.cclasstrib}</td>
 <td>${item.cst}</td>
 <td>${highlight(item.descricao,words)}</td>
-<td>${item.pReducao}</td>
+<td>${item.pReducao}%</td>
 <td>${item.legislacao}</td>
 </tr>`).join("")}
 </tbody>
@@ -240,7 +239,6 @@ ${renderPagination()}
 `;
 }
 
-/* Pagination */
 function renderPagination(){
 const totalPages=Math.ceil(currentResults.length/ITEMS_PER_PAGE);
 if(totalPages<=1) return "";
@@ -251,20 +249,36 @@ buttons+=`<button class="page-btn ${i===currentPage?'active':''}" onclick="chang
 return `<div class="pagination">${buttons}</div>`;
 }
 
-function changePage(page){
-currentPage=page;
-renderTable();
-}
+function changePage(page){currentPage=page;renderTable();}
 
-/* Clear */
 function clearAll(){
 document.getElementById('ncmInput').value="";
 document.getElementById('filterCST').value="";
 document.getElementById('filterAnexo').value="";
+document.getElementById('filterCapitulo').value="";
+document.getElementById('filterReducao').value="";
 document.getElementById('resultado').innerHTML="";
-currentResults=[];
+currentResults=[];lastResultsCache=[];lastQueryKey="";currentPage=0;
+}
+
+function exportCSV(){
+if(currentResults.length===0){alert("Nenhum resultado.");return;}
+const headers=["NCM","cClassTrib","CST","Descrição","Redução","Legislação"];
+const rows=currentResults.map(i=>[
+i.ncm,i.cclasstrib,i.cst,
+`"${i.descricao.replace(/"/g,'""')}"`,
+i.pReducao,
+`"${i.legislacao.replace(/"/g,'""')}"`
+]);
+const csv=[headers,...rows].map(e=>e.join(";")).join("\n");
+const blob=new Blob(["\uFEFF"+csv],{type:"text/csv;charset=utf-8;"});
+const url=URL.createObjectURL(blob);
+const link=document.createElement("a");
+link.href=url;
+link.download="cclasstrib_export.csv";
+link.click();
+URL.revokeObjectURL(url);
 }
 </script>
-
 </body>
 </html>
