@@ -763,7 +763,8 @@ function fecharModal() {
   btn.disabled = !select.value;
   }
   document.addEventListener("DOMContentLoaded", () => {
-  loadData();
+  loadExternalData();
+  setupDebounce();
 });
 </script>
   <div id="modalCapitulo" class="modal">
