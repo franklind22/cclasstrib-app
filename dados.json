@@ -1,0 +1,810 @@
+{
+"0204": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Carnes de ovinos ou caprinos",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200003",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"02041000": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Carcaças ou meias-carcaças de cordeiro",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200003",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"02043000": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Outras carnes de ovinos, desossadas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200003",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0401": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Leite e nata (creme de leite), não concentrados nem adicionados de açúcar",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"04011010": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Leite UHT integral",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"04012010": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Leite UHT desnatado",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0406": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Queijos e requeijão",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"04069090": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Outros queijos",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0701": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Batatas, frescas ou refrigeradas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"07019000": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Outras batatas frescas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0703": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Cebolas, chalotas, alhos, alhos-porós e outros vegetais aliáceos",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"07031019": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Cebolas frescas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0708": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Leguminosas frescas ou refrigeradas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"07082000": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Feijões frescos ou refrigerados",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0803": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Bananas, frescas ou secas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"08039000": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Outras bananas frescas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0805": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Frutas cítricas frescas ou secas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"08051000": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Laranjas frescas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0806": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Uvas frescas ou secas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"08061000": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Uvas frescas",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"1006": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Arroz",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"10063021": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Arroz semibranqueado ou branqueado",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"1001": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Trigo e mistura de trigo com centeio",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"1101": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Farinha de trigo",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"11010010": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Farinha de trigo comum",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"1507": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Óleo de soja, mesmo refinado",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"15079011": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Óleo de soja refinado",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"1701": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Açúcar de cana ou de beterraba",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"17011400": [
+  {
+    "anexo": "I",
+    "artigo": "Art. 1º",
+    "descricao_anexo": "Açúcar de cana",
+    "fundamento": "LC 214/2025 - Anexo I",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"3002": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Sangue humano; vacinas; toxinas; culturas de microrganismos",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"30022000": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Vacinas para medicina humana",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"3003": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Medicamentos não apresentados em doses",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"3004": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Medicamentos apresentados em doses ou acondicionados para venda",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"30049099": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Outros medicamentos acondicionados para venda a retalho",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"3005": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Algodão, gaze, ataduras e artigos semelhantes para usos médicos",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"9018": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Instrumentos e aparelhos para medicina, cirurgia, odontologia ou veterinária",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"90189099": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Outros instrumentos e aparelhos médicos",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"9021": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Artigos e aparelhos ortopédicos, próteses e implantes",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"90211020": [
+  {
+    "anexo": "II",
+    "artigo": "Art. 2º",
+    "descricao_anexo": "Próteses articulares",
+    "fundamento": "LC 214/2025 - Anexo II",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0901": [
+  {
+    "anexo": "III",
+    "artigo": "Art. 3º",
+    "descricao_anexo": "Café, mesmo torrado ou descafeinado",
+    "fundamento": "LC 214/2025 - Anexo III",
+    "cst": "210",
+    "cclasstrib": "300003",
+    "regra": "reducao_cesta",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"09011110": [
+  {
+    "anexo": "III",
+    "artigo": "Art. 3º",
+    "descricao_anexo": "Café não torrado, não descafeinado",
+    "fundamento": "LC 214/2025 - Anexo III",
+    "cst": "210",
+    "cclasstrib": "300003",
+    "regra": "reducao_cesta",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"09012100": [
+  {
+    "anexo": "III",
+    "artigo": "Art. 3º",
+    "descricao_anexo": "Café torrado, não descafeinado",
+    "fundamento": "LC 214/2025 - Anexo III",
+    "cst": "210",
+    "cclasstrib": "300003",
+    "regra": "reducao_cesta",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"1106": [
+  {
+    "anexo": "III",
+    "artigo": "Art. 3º",
+    "descricao_anexo": "Farinha de mandioca",
+    "fundamento": "LC 214/2025 - Anexo III",
+    "cst": "210",
+    "cclasstrib": "300003",
+    "regra": "reducao_cesta",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"11062000": [
+  {
+    "anexo": "III",
+    "artigo": "Art. 3º",
+    "descricao_anexo": "Farinha de mandioca",
+    "fundamento": "LC 214/2025 - Anexo III",
+    "cst": "210",
+    "cclasstrib": "300003",
+    "regra": "reducao_cesta",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"1905": [
+  {
+    "anexo": "III",
+    "artigo": "Art. 3º",
+    "descricao_anexo": "Pão comum",
+    "fundamento": "LC 214/2025 - Anexo III",
+    "cst": "210",
+    "cclasstrib": "300003",
+    "regra": "reducao_cesta",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"19059010": [
+  {
+    "anexo": "III",
+    "artigo": "Art. 3º",
+    "descricao_anexo": "Pão comum não recheado",
+    "fundamento": "LC 214/2025 - Anexo III",
+    "cst": "210",
+    "cclasstrib": "300003",
+    "regra": "reducao_cesta",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"15079000": [
+  {
+    "anexo": "III",
+    "artigo": "Art. 3º",
+    "descricao_anexo": "Óleo de soja refinado",
+    "fundamento": "LC 214/2025 - Anexo III",
+    "cst": "210",
+    "cclasstrib": "300003",
+    "regra": "reducao_cesta",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"17011400": [
+  {
+    "anexo": "III",
+    "artigo": "Art. 3º",
+    "descricao_anexo": "Açúcar de cana",
+    "fundamento": "LC 214/2025 - Anexo III",
+    "cst": "210",
+    "cclasstrib": "300003",
+    "regra": "reducao_cesta",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"04090000": [
+  {
+    "anexo": "VII",
+    "artigo": "Anexo VII",
+    "descricao_anexo": "Mel natural",
+    "fundamento": "LC 214/2025 - Anexo VII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0403": [
+  {
+    "anexo": "VII",
+    "artigo": "Anexo VII",
+    "descricao_anexo": "Leite fermentado e bebidas lácteas",
+    "fundamento": "LC 214/2025 - Anexo VII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"04032000": [
+  {
+    "anexo": "VII",
+    "artigo": "Anexo VII",
+    "descricao_anexo": "Leite fermentado",
+    "fundamento": "LC 214/2025 - Anexo VII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"1103": [
+  {
+    "anexo": "VII",
+    "artigo": "Anexo VII",
+    "descricao_anexo": "Grumos e sêmolas de cereais",
+    "fundamento": "LC 214/2025 - Anexo VII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"19022000": [
+  {
+    "anexo": "VII",
+    "artigo": "Anexo VII",
+    "descricao_anexo": "Massas alimentícias recheadas",
+    "fundamento": "LC 214/2025 - Anexo VII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"19023000": [
+  {
+    "anexo": "VII",
+    "artigo": "Anexo VII",
+    "descricao_anexo": "Outras massas alimentícias",
+    "fundamento": "LC 214/2025 - Anexo VII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"2009": [
+  {
+    "anexo": "VII",
+    "artigo": "Anexo VII",
+    "descricao_anexo": "Sucos de frutas e hortícolas",
+    "fundamento": "LC 214/2025 - Anexo VII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"33061000": [
+  {
+    "anexo": "VIII",
+    "artigo": "Anexo VIII",
+    "descricao_anexo": "Dentifrícios",
+    "fundamento": "LC 214/2025 - Anexo VIII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"34011190": [
+  {
+    "anexo": "VIII",
+    "artigo": "Anexo VIII",
+    "descricao_anexo": "Sabões de toucador",
+    "fundamento": "LC 214/2025 - Anexo VIII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"48181000": [
+  {
+    "anexo": "VIII",
+    "artigo": "Anexo VIII",
+    "descricao_anexo": "Papel higiênico",
+    "fundamento": "LC 214/2025 - Anexo VIII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"96190000": [
+  {
+    "anexo": "VIII",
+    "artigo": "Anexo VIII",
+    "descricao_anexo": "Fraldas e artigos semelhantes",
+    "fundamento": "LC 214/2025 - Anexo VIII",
+    "cst": "220",
+    "cclasstrib": "300002",
+    "regra": "reducao_60",
+    "tipo_ncm": "8d",
+    "ativo": true
+  }
+],
+"0407": [
+  {
+    "anexo": "XV",
+    "artigo": "Anexo XV",
+    "descricao_anexo": "Ovos de aves",
+    "fundamento": "LC 214/2025 - Anexo XV",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"0702": [
+  {
+    "anexo": "XV",
+    "artigo": "Anexo XV",
+    "descricao_anexo": "Tomates frescos ou refrigerados",
+    "fundamento": "LC 214/2025 - Anexo XV",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+  }
+],
+"0801": [
+  {
+    "anexo": "XV",
+    "artigo": "Anexo XV",
+    "descricao_anexo": "Cocos e castanhas do Brasil",
+    "fundamento": "LC 214/2025 - Anexo XV",
+    "cst": "200",
+    "cclasstrib": "200001",
+    "regra": "reducao_100",
+    "tipo_ncm": "4d",
+    "ativo": true
+   }
+ ]
+}
+
+
