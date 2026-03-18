@@ -1,16 +1,17 @@
-
 <div align="center">
-  <img src="https://img.icons8.com/fluency/96/000000/search.png" width="80" height="80"/>
+  <img src="https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/assets/icon.png" width="80" height="80" alt="Logo"/>
   <h1>🧾 cClassTrib · Consulta NCM</h1>
   <p><strong>Reforma Tributária IBS/CBS · LC 214/2025</strong></p>
   
-  <!-- BADGES FODAS -->
+  <!-- BADGES -->
   <p>
-    <img src="https://img.shields.io/badge/versão-4.0-blue?style=for-the-badge&logo=github" alt="Versão">
-    <img src="https://img.shields.io/badge/NCMs-750%2B-green?style=for-the-badge&logo=files" alt="NCMs">
-    <img src="https://img.shields.io/badge/CSTs-154-orange?style=for-the-badge&logo=tags" alt="CSTs">
-    <img src="https://img.shields.io/badge/licença-MIT-red?style=for-the-badge&logo=opensource" alt="Licença">
-    <img src="https://img.shields.io/badge/status-em%20produção-success?style=for-the-badge&logo=vercel" alt="Status">
+    <img src="https://img.shields.io/badge/versão-4.1-blue" alt="Versão">
+    <img src="https://img.shields.io/badge/NCMs-750%2B-green" alt="NCMs">
+    <img src="https://img.shields.io/badge/CSTs-154-orange" alt="CSTs">
+    <img src="https://img.shields.io/badge/licença-MIT-red" alt="Licença">
+    <img src="https://img.shields.io/badge/status-produção-success" alt="Status">
+    <img src="https://img.shields.io/badge/HTML-CSS-blue" alt="HTML/CSS">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
   </p>
 
   <!-- LINK DEMO -->
@@ -19,9 +20,6 @@
       🚀 ACESSE A DEMO AO VIVO
     </a>
   </h3>
-  
-  <!-- SCREENSHOT (opcional - adicione depois) -->
-  <!-- <img src="assets/screenshot.png" width="800" alt="Screenshot do App"> -->
 </div>
 
 ---
@@ -43,6 +41,7 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 ## ✨ **FUNCIONALIDADES**
 
 ### 🔍 **ABA CONSULTA**
+
 | Funcionalidade | Descrição |
 |----------------|-----------|
 | **Pesquisa por NCM** | Busca por código de 4, 6 ou 8 dígitos |
@@ -53,6 +52,7 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 | **Exportação** | Download dos resultados em JSON |
 
 ### 📚 **ABA CAPÍTULOS**
+
 | Funcionalidade | Descrição |
 |----------------|-----------|
 | **Lista completa** | Todos os capítulos NCM com descrição |
@@ -61,6 +61,7 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 | **Clique para consultar** | Navegação direta para a aba Consulta |
 
 ### 🏷️ **ABA CSTs**
+
 | Funcionalidade | Descrição |
 |----------------|-----------|
 | **Tabela completa** | 154 registros com cClassTrib |
@@ -71,6 +72,7 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 | **Exportação** | Download da lista completa |
 
 ### ℹ️ **ABA SOBRE**
+
 | Funcionalidade | Descrição |
 |----------------|-----------|
 | **Estatísticas** | NCMs, regras, versão |
@@ -91,16 +93,14 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 
 ---
 
-## 🎨 **TECNOLOGIAS UTILIZADAS**
+## 🛠️ **TECNOLOGIAS UTILIZADAS**
 
-<div align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white" />
-  <img src="https://img.shields.io/badge/Font%20Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white" />
-</div>
+- HTML5
+- CSS3 (com variáveis e design responsivo)
+- JavaScript (vanilla, sem dependências)
+- JSON para banco de dados
+- GitHub Pages para hospedagem
+- Font Awesome 6 para ícones
 
 ---
 
@@ -108,36 +108,41 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 
 ```
 cclasstrib-app/
-├── 📄 index.html          # Aplicação principal
-├── 📄 dados.json          # Base de dados dos NCMs
-├── 📄 README.md           # Documentação (você está aqui)
-└── 📁 assets/             # (opcional) Imagens e ícones
+├── index.html          # Aplicação principal
+├── dados.json          # Base de dados dos NCMs
+├── README.md           # Documentação
+└── assets/             # (opcional) Imagens e ícones
+    └── icon.png        # Ícone do projeto
 ```
 
 ---
 
 ## 🚀 **COMO EXECUTAR LOCALMENTE**
 
-1. **Clone o repositório**
+### Opção 1: Abrir direto
+1. Clone o repositório:
    ```bash
    git clone https://github.com/franklind22/cclasstrib-app.git
    cd cclasstrib-app
    ```
+2. Abra o arquivo `index.html` no navegador
 
-2. **Abra o arquivo**
-   - Dê duplo clique no `index.html` ou
-   - Use um servidor local:
-     ```bash
-     npx http-server
-     ```
-
-3. **Pronto!** Acesse `http://localhost:8080`
+### Opção 2: Servidor local (recomendado)
+```bash
+npx http-server
+# ou
+python -m http.server 8080
+```
+Acesse `http://localhost:8080`
 
 ---
 
 ## 📖 **COMO ATUALIZAR OS DADOS**
 
 ### Para adicionar um novo NCM:
+
+Abra o arquivo `dados.json` e adicione:
+
 ```json
 "02013000": [
   {
@@ -147,12 +152,16 @@ cclasstrib-app/
     "pReducao": "100%",
     "legislacao": "LC 214/2025 Anexo I",
     "regime": "reducao",
+    "documentos": ["NFCE", "NFE"],
     "ativo": true
   }
 ]
 ```
 
 ### Para adicionar um novo CST:
+
+No arquivo `index.html`, localize o array `CST_DATABASE` e adicione:
+
 ```javascript
 { 
   cst: '200', 
@@ -173,6 +182,7 @@ cclasstrib-app/
 |------|-----------|
 | [📜 LC 214/2025](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm) | Lei Complementar na íntegra |
 | [📊 Classificação Tributária SVRS](https://dfe-portal.svrs.rs.gov.br/Cff/ClassificacaoTributaria) | Portal da Conformidade Fácil - RS |
+| [🔍 Consulta NCM SEFAZ/RS](https://www.sefaz.rs.gov.br/NFE/NFE-WIZARD_NCM-CON.aspx) | Ferramenta oficial da SEFAZ Rio Grande do Sul |
 | [🐙 GitHub](https://github.com/franklind22/cclasstrib-app) | Repositório oficial |
 | [🚀 Demo](https://franklind22.github.io/cclasstrib-app/) | Versão online |
 
@@ -212,29 +222,21 @@ cclasstrib-app/
 
 ## ⚠️ **AVISO LEGAL**
 
-<div align="center">
-  <blockquote>
-    <p>⚠️ <strong>Este software é uma ferramenta de simulação pedagógica e de apoio ao desenvolvimento.</strong></p>
-    <p>Os dados devem ser validados por um profissional de contabilidade antes de serem aplicados em ambientes de produção fiscal.</p>
-  </blockquote>
-</div>
+> **⚠️ Este software é uma ferramenta de simulação pedagógica e de apoio ao desenvolvimento.**  
+> Os dados devem ser validados por um profissional de contabilidade antes de serem aplicados em ambientes de produção fiscal.
 
 ---
 
 ## 👨‍💻 **DESENVOLVEDOR**
 
 <div align="center">
-  <img src="https://img.icons8.com/fluency/96/000000/user-male-circle.png" width="80" height="80"/>
   <h3>Franklin D22</h3>
   <p>
     <a href="https://github.com/franklind22">
-      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+      <img src="https://img.shields.io/badge/GitHub-100000?logo=github&logoColor=white" alt="GitHub" height="30">
     </a>
-    <a href="#">
-      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-    </a>
-    <a href="#">
-      <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+    <a href="mailto:franklin.dalmaso@outlook.com">
+      <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email" height="30">
     </a>
   </p>
 </div>
@@ -253,9 +255,17 @@ Se você gostou do projeto:
 
 <div align="center">
   <h3>Feito com ❤️ para a comunidade fiscal brasileira</h3>
-  <p>© 2026 · Reforma Tributária</p>
-  <p>
-    <img src="https://img.icons8.com/color/48/000000/brazil.png" width="30"/>
-  </p>
+  <p>© 2026 · Reforma Tributária LC 214/2025 · Versão 4.1</p>
 </div>
 ```
+
+---
+
+## ✅ **O QUE FOI ATUALIZADO**
+
+| Item | Antes | Depois |
+|------|-------|--------|
+| **Versão** | 4.0 | 4.1 |
+| **Links úteis** | 3 links | 4 links (➕ SEFAZ/RS) |
+| **Tabela de links** | Sem SEFAZ | Com SEFAZ |
+| **Badge de versão** | 4.0 | 4.1 |
