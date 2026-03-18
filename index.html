@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* VARIÁVEIS CSS */
+        /* ===== VARIÁVEIS CSS ===== */
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
@@ -43,7 +43,7 @@
             --transition: all 0.2s ease;
         }
 
-        /* DARK MODE (opcional) */
+        /* DARK MODE */
         @media (prefers-color-scheme: dark) {
             :root {
                 --bg-primary: #1a1a1a;
@@ -52,9 +52,36 @@
                 --text-secondary: #a0a0a0;
                 --border-color: #404040;
             }
+            
+            body {
+                background: #1a1a1a;
+                color: #f0f0f0;
+            }
+            
+            .search-card, .result-card, .history-card, .footer {
+                background: #2d2d2d;
+                border-color: #404040;
+            }
+            
+            .search-input, .chapter-select {
+                background: #1a1a1a;
+                border-color: #404040;
+                color: #f0f0f0;
+            }
+            
+            .example-chip {
+                background: #404040;
+                color: #f0f0f0;
+                border-color: #555;
+            }
+            
+            .footer {
+                background: #2d2d2d;
+                color: #a0a0a0;
+            }
         }
 
-        /* RESET E BASE */
+        /* ===== RESET E BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -71,16 +98,16 @@
             flex-direction: column;
         }
 
-        /* LAYOUT */
+        /* ===== LAYOUT ===== */
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 1.5rem;
             width: 100%;
             flex: 1;
         }
 
-        /* HEADER */
+        /* ===== HEADER ===== */
         .header {
             background: linear-gradient(135deg, #0b2b5c 0%, #143875 100%);
             color: white;
@@ -90,7 +117,7 @@
         }
 
         .header-content {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 1.5rem;
             display: flex;
@@ -121,7 +148,7 @@
             opacity: 0.85;
         }
 
-        /* SEARCH CARD */
+        /* ===== SEARCH CARD ===== */
         .search-card {
             background: white;
             border-radius: var(--border-radius-lg);
@@ -210,7 +237,61 @@
             cursor: not-allowed;
         }
 
-        /* EXEMPLOS RÁPIDOS */
+        /* ===== SELETOR DE CAPÍTULOS ===== */
+        .chapter-selector {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .chapter-label {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chapter-select {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--border-radius-xl);
+            background: var(--gray-50);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            cursor: pointer;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .chapter-select:focus {
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(37,99,235,0.1);
+        }
+
+        .chapter-btn {
+            background: var(--primary-light);
+        }
+
+        .chapter-badge {
+            background: var(--gray-100);
+            padding: 0.2rem 0.8rem;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-left: 0.5rem;
+            border: 1px solid var(--gray-300);
+        }
+
+        /* ===== EXEMPLOS RÁPIDOS ===== */
         .quick-examples {
             margin-top: 1rem;
             display: flex;
@@ -241,7 +322,7 @@
             border-color: var(--gray-300);
         }
 
-        /* FILTER BAR */
+        /* ===== FILTER BAR ===== */
         .filter-bar {
             display: flex;
             flex-wrap: wrap;
@@ -277,7 +358,19 @@
             color: white;
         }
 
-        /* RESULT CARD */
+        .filter-btn .count {
+            background: rgba(255,255,255,0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            margin-left: 0.3rem;
+        }
+
+        .filter-btn.active .count {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* ===== RESULT CARD ===== */
         .result-card {
             background: white;
             border-radius: var(--border-radius-lg);
@@ -306,6 +399,9 @@
             color: var(--gray-800);
             border: 1px solid var(--gray-200);
             font-family: monospace;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .result-badge {
@@ -354,7 +450,7 @@
             background: #d4f0d4;
         }
 
-        /* ITEM DE RESULTADO */
+        /* ===== ITEM DE RESULTADO ===== */
         .result-item {
             padding: 1rem 0;
             border-bottom: 1px solid var(--gray-100);
@@ -376,6 +472,9 @@
             margin-bottom: 0.4rem;
             color: var(--gray-900);
             font-family: monospace;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .item-desc {
@@ -433,7 +532,20 @@
             border-color: #d9c5ff;
         }
 
-        /* SKELETON LOADING */
+        .tag.documentos {
+            background: #e6f0ff;
+            color: #0047ab;
+            border-color: #b8d3ff;
+        }
+
+        .tag.indicador {
+            background: #f0f0f0;
+            color: #555;
+            border-color: #ddd;
+            font-size: 0.7rem;
+        }
+
+        /* ===== SKELETON LOADING ===== */
         .skeleton {
             animation: skeleton-loading 1.5s infinite;
         }
@@ -468,7 +580,7 @@
             width: 100%;
         }
 
-        /* ESTADOS */
+        /* ===== ESTADOS ===== */
         .loading, .not-found {
             text-align: center;
             padding: 3rem 1rem;
@@ -516,7 +628,7 @@
             font-size: 1.2rem;
         }
 
-        /* HISTORY CARD */
+        /* ===== HISTORY CARD ===== */
         .history-card {
             background: white;
             border-radius: var(--border-radius-lg);
@@ -567,7 +679,7 @@
             font-size: 0.7rem;
         }
 
-        /* FOOTER */
+        /* ===== FOOTER ===== */
         .footer {
             background: white;
             border-top: 1px solid var(--gray-200);
@@ -611,7 +723,7 @@
             border: 1px solid var(--gray-200);
         }
 
-        /* UTILS */
+        /* ===== UTILS ===== */
         .hidden {
             display: none !important;
         }
@@ -631,6 +743,27 @@
         .gap-2 {
             gap: 1rem;
         }
+
+        .tooltip {
+            position: relative;
+            cursor: help;
+        }
+
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gray-800);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.7rem;
+            white-space: nowrap;
+            z-index: 10;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -647,7 +780,7 @@
     </header>
 
     <main class="container">
-        <!-- CARD DE PESQUISA -->
+        <!-- ===== CARD DE PESQUISA ===== -->
         <div class="search-card">
             <div class="search-label">
                 <i class="fas fa-hashtag" style="color:var(--primary);"></i>
@@ -662,6 +795,55 @@
                 <button class="search-btn" id="searchBtn">
                     <i class="fas fa-arrow-right"></i>
                     <span>Consultar</span>
+                </button>
+            </div>
+
+            <!-- SELETOR DE CAPÍTULOS (NOVO!) -->
+            <div class="chapter-selector">
+                <div class="chapter-label">
+                    <i class="fas fa-book-open"></i>
+                    <span>Ou navegue por capítulo:</span>
+                </div>
+                <select id="chapterSelect" class="chapter-select">
+                    <option value="">Selecione um capítulo...</option>
+                    <option value="01">01 - Animais vivos</option>
+                    <option value="02">02 - Carnes e miudezas</option>
+                    <option value="03">03 - Peixes e crustáceos</option>
+                    <option value="04">04 - Laticínios, ovos, mel</option>
+                    <option value="05">05 - Outros produtos de origem animal</option>
+                    <option value="06">06 - Plantas vivas</option>
+                    <option value="07">07 - Hortaliças</option>
+                    <option value="08">08 - Frutas</option>
+                    <option value="09">09 - Café, mate, especiarias</option>
+                    <option value="10">10 - Cereais</option>
+                    <option value="11">11 - Farinhas</option>
+                    <option value="12">12 - Sementes oleaginosas</option>
+                    <option value="15">15 - Gorduras e óleos</option>
+                    <option value="16">16 - Preparações de carne/peixe</option>
+                    <option value="17">17 - Açúcares</option>
+                    <option value="18">18 - Cacau</option>
+                    <option value="19">19 - Preparações de cereais</option>
+                    <option value="20">20 - Conservas vegetais</option>
+                    <option value="21">21 - Preparações alimentícias</option>
+                    <option value="22">22 - Bebidas</option>
+                    <option value="23">23 - Resíduos alimentares</option>
+                    <option value="24">24 - Tabaco</option>
+                    <option value="25">25 - Sal</option>
+                    <option value="29">29 - Produtos químicos</option>
+                    <option value="30">30 - Produtos farmacêuticos</option>
+                    <option value="31">31 - Fertilizantes</option>
+                    <option value="33">33 - Óleos essenciais</option>
+                    <option value="34">34 - Sabões</option>
+                    <option value="38">38 - Produtos químicos diversos</option>
+                    <option value="39">39 - Plástico</option>
+                    <option value="40">40 - Borracha</option>
+                    <option value="84">84 - Máquinas</option>
+                    <option value="85">85 - Aparelhos elétricos</option>
+                    <option value="87">87 - Veículos</option>
+                    <option value="90">90 - Instrumentos médicos</option>
+                </select>
+                <button class="search-btn chapter-btn" id="searchChapterBtn">
+                    <i class="fas fa-search"></i> Buscar Capítulo
                 </button>
             </div>
 
@@ -682,9 +864,9 @@
             </div>
         </div>
 
-        <!-- ÁREA DE RESULTADO -->
+        <!-- ===== ÁREA DE RESULTADO ===== -->
         <div class="result-card" id="resultCard">
-            <!-- FILTROS (aparecem quando há resultados) -->
+            <!-- FILTROS -->
             <div id="filterBar" class="filter-bar hidden">
                 <button class="filter-btn active" data-filter="all">
                     <i class="fas fa-list"></i> Todos
@@ -716,6 +898,7 @@
                 <i class="fas fa-file-search"></i>
                 <h3>Digite um NCM para consultar</h3>
                 <p class="text-muted">Ex: 0201, 0405, 1006, 15171000</p>
+                <p class="text-muted text-small">Ou selecione um capítulo acima</p>
             </div>
 
             <!-- SKELETON LOADING -->
@@ -737,7 +920,7 @@
                 </div>
             </div>
 
-            <!-- LOADING SPINNER (fallback) -->
+            <!-- LOADING SPINNER -->
             <div id="loadingSpinner" class="loading hidden">
                 <i class="fas fa-spinner fa-pulse"></i>
                 <p>Carregando dados...</p>
@@ -749,7 +932,10 @@
             <!-- CONTEÚDO DO RESULTADO -->
             <div id="resultContent" class="hidden">
                 <div class="result-header">
-                    <span class="result-ncm" id="resultNCM">-</span>
+                    <div class="result-ncm" id="resultNCM">
+                        <span id="resultNCMText">-</span>
+                        <span class="chapter-badge" id="resultChapter"></span>
+                    </div>
                     <div style="display: flex; gap: 1rem; align-items: center;">
                         <span class="result-badge" id="resultCount">
                             <i class="fas fa-list"></i>
@@ -784,23 +970,26 @@
             Dados baseados na <strong>LC 214/2025</strong> (Reforma Tributária)
         </div>
         <div class="stats" id="stats">
-            <i class="fas fa-database"></i> <span id="totalNCMs">0</span> NCMs mapeados · 
+            <i class="fas fa-database"></i> <span id="totalNCMs">0</span> NCMs · 
+            <i class="fas fa-boxes"></i> <span id="totalItens">0</span> registros ·
             <i class="fas fa-file-alt"></i> <span id="totalAnexos">11</span> anexos
         </div>
         <div class="footer-badges">
             <span class="badge"><i class="fas fa-check-circle" style="color:#10b981;"></i> Cache 1h</span>
             <span class="badge"><i class="fas fa-bolt" style="color:#fbbf24;"></i> Debounce 300ms</span>
-            <span class="badge"><i class="fas fa-moon" style="color:#6b7280;"></i> Dark mode ready</span>
+            <span class="badge"><i class="fas fa-moon" style="color:#6b7280;"></i> Dark mode</span>
+            <span class="badge"><i class="fas fa-file-invoice"></i> DFes</span>
+            <span class="badge"><i class="fas fa-book-open"></i> Capítulos</span>
         </div>
         <div style="margin-top: 1rem;">
             <a href="https://github.com/franklind22/cclasstrib-app" target="_blank"><i class="fab fa-github"></i> GitHub</a> · 
             <a href="#" id="refreshData"><i class="fas fa-sync-alt"></i> Recarregar</a> ·
             <a href="#" id="exportAll"><i class="fas fa-database"></i> Exportar base</a> ·
-            <span>versão 4.1</span>
+            <span>versão 5.0</span>
         </div>
     </footer>
 
-    <!-- TEMPLATE SKELETON (fallback) -->
+    <!-- TEMPLATES -->
     <template id="skeletonTemplate">
         <div class="skeleton-item">
             <div class="skeleton-line short skeleton"></div>
@@ -810,7 +999,7 @@
     </template>
 
     <script>
-        // CONSTANTES
+        // ===== CONSTANTES =====
         const DATA_FILE = 'dados.json';
         const CACHE_TIME = 3600000; // 1 hora
         const DEBOUNCE_TIME = 300; // 300ms
@@ -823,20 +1012,134 @@
         let sortAscending = true;
         let searchTimeout;
 
-        // ELEMENTOS DOM
+        // ===== MAPA DE CAPÍTULOS =====
+        const CHAPTER_NAMES = {
+            '01': 'Animais vivos',
+            '02': 'Carnes e miudezas',
+            '03': 'Peixes e crustáceos',
+            '04': 'Laticínios, ovos, mel',
+            '05': 'Outros produtos de origem animal',
+            '06': 'Plantas vivas',
+            '07': 'Hortaliças',
+            '08': 'Frutas',
+            '09': 'Café, mate, especiarias',
+            '10': 'Cereais',
+            '11': 'Farinhas',
+            '12': 'Sementes oleaginosas',
+            '15': 'Gorduras e óleos',
+            '16': 'Preparações de carne/peixe',
+            '17': 'Açúcares',
+            '18': 'Cacau',
+            '19': 'Preparações de cereais',
+            '20': 'Conservas vegetais',
+            '21': 'Preparações alimentícias',
+            '22': 'Bebidas',
+            '23': 'Resíduos alimentares',
+            '24': 'Tabaco',
+            '25': 'Sal',
+            '29': 'Produtos químicos',
+            '30': 'Produtos farmacêuticos',
+            '31': 'Fertilizantes',
+            '33': 'Óleos essenciais',
+            '34': 'Sabões',
+            '38': 'Produtos químicos diversos',
+            '39': 'Plástico',
+            '40': 'Borracha',
+            '84': 'Máquinas',
+            '85': 'Aparelhos elétricos',
+            '87': 'Veículos',
+            '90': 'Instrumentos médicos'
+        };
+
+        // ===== DOCUMENTOS FISCAIS POR CST (NOVO!) =====
+        const DOCUMENTOS_POR_CST = {
+            '200003': ['NFCE', 'NFE'],
+            '200004': ['NFCE', 'NFE', 'NFSE'],
+            '200005': ['NFE', 'NFSE'],
+            '200007': ['NFCE', 'NFE', 'NFSE'],
+            '200008': ['NFE', 'NFSE'],
+            '200009': ['NFCE', 'NFE'],
+            '200011': ['NFE'],
+            '200013': ['NFCE', 'NFE'],
+            '200014': ['NFCE', 'NFE'],
+            '200028': ['NFSE'],
+            '200029': ['NFSE'],
+            '200030': ['NFCE', 'NFE', 'NFSE'],
+            '200031': ['NFCE', 'NFE', 'NFSE'],
+            '200032': ['NFCE', 'NFE'],
+            '200033': ['NFCE', 'NFE'],
+            '200034': ['NFCE', 'NFE'],
+            '200035': ['NFCE', 'NFE'],
+            '200036': ['NFCE', 'NFE'],
+            '200037': ['NFSE'],
+            '200038': ['NFCE', 'NFE', 'NFSE'],
+            '200039': ['NFE', 'NFSE'],
+            '200043': ['NFCOM', 'NFE', 'NFSE'],
+            '200044': ['NFCOM', 'NFSE'],
+            '200046': ['NFABI', 'NFSE'],
+            '200047': ['NFCE', 'NFE'],
+            '200048': ['NFSE'],
+            '200049': ['BPE'],
+            '200050': ['BPETA', 'CTE', 'CTEOS'],
+            '200051': ['NFSE'],
+            '200052': ['NFSE'],
+            '200053': ['NFCE', 'NFE'],
+            '410001': ['BPE', 'BPETA', 'BPETM', 'CTE', 'CTEOS', 'NF3E', 'NFABI', 'NFAG', 'NFCE', 'NFCOM', 'NFE', 'NFSE', 'NFGAS'],
+            '410002': ['NFE'],
+            '410003': ['BPE', 'BPETA', 'BPETM', 'CTE', 'CTEOS', 'NF3E', 'NFABI', 'NFAG', 'NFCE', 'NFCOM', 'NFE', 'NFSE', 'NFSVIA', 'NFGAS', 'DERE'],
+            '410004': ['BPE', 'BPETA', 'CTE', 'CTEOS', 'NF3E', 'NFCOM', 'NFE', 'NFSE'],
+            '410005': ['NFAG', 'NFCE', 'NFE', 'NFSE'],
+            '410006': ['NFCE', 'NFE', 'NFSE'],
+            '410007': ['NFCE', 'NFE', 'NFSE'],
+            '410008': ['NFCE', 'NFCOM', 'NFE', 'NFSE'],
+            '410009': ['NFCE', 'NFCOM', 'NFE', 'NFSE'],
+            '410010': ['NFCOM', 'NFSE', 'DERE'],
+            '410011': [],
+            '410012': ['NFCE', 'NFE', 'NFSE'],
+            '410013': ['NFE'],
+            '410014': ['NFCE', 'NFE', 'NFSE'],
+            '410015': ['CTE', 'NFSE'],
+            '410016': ['NFE'],
+            '410017': ['NFE'],
+            '410018': ['NFABI', 'DERE'],
+            '410019': ['NFCE', 'NFE'],
+            '410020': ['NFCE', 'NFE'],
+            '410021': ['NF3E'],
+            '410022': ['NFABI'],
+            '410023': ['NFABI'],
+            '410024': ['NFABI'],
+            '410025': ['NFABI'],
+            '410026': ['BPE', 'BPETA', 'BPETM', 'CTE', 'CTEOS', 'NF3E', 'NFABI', 'NFAG', 'NFCE', 'NFCOM', 'NFE', 'NFSE', 'NFSVIA', 'NFGAS', 'DERE'],
+            '410027': ['CTE', 'CTEOS', 'NFE', 'NFSE'],
+            '410028': ['NFABI', 'NFSE'],
+            '410029': ['NFCE', 'NFE'],
+            '410030': ['NFE'],
+            '410031': ['NF3E', 'NFAG', 'NFCOM', 'NFE', 'NFGAS'],
+            '410032': ['NF3E', 'NFAG', 'NFCOM', 'NFGAS'],
+            '410033': ['NFABI', 'NFSE'],
+            '410034': ['NFSE', 'DERE'],
+            '410035': ['CTE', 'CTEOS', 'NFCE', 'NFE', 'NFSE'],
+            '410999': ['BPE', 'BPETA', 'BPETM', 'CTE', 'CTEOS', 'NF3E', 'NFABI', 'NFAG', 'NFCE', 'NFCOM', 'NFE', 'NFSE', 'NFGAS']
+        };
+
+        // ===== ELEMENTOS DOM =====
         const elements = {
             ncmInput: document.getElementById('ncmInput'),
             searchBtn: document.getElementById('searchBtn'),
+            chapterSelect: document.getElementById('chapterSelect'),
+            searchChapterBtn: document.getElementById('searchChapterBtn'),
             initialMessage: document.getElementById('initialMessage'),
             skeletonLoading: document.getElementById('skeletonLoading'),
             loadingSpinner: document.getElementById('loadingSpinner'),
             errorContainer: document.getElementById('errorContainer'),
             resultContent: document.getElementById('resultContent'),
-            resultNCM: document.getElementById('resultNCM'),
+            resultNCMText: document.getElementById('resultNCMText'),
+            resultChapter: document.getElementById('resultChapter'),
             resultCount: document.getElementById('resultCount').querySelector('span'),
             resultList: document.getElementById('resultList'),
             filterBar: document.getElementById('filterBar'),
             totalNCMs: document.getElementById('totalNCMs'),
+            totalItens: document.getElementById('totalItens'),
             totalAnexos: document.getElementById('totalAnexos'),
             refreshData: document.getElementById('refreshData'),
             exportBtn: document.getElementById('exportBtn'),
@@ -846,7 +1149,7 @@
             exportAll: document.getElementById('exportAll')
         };
 
-        // INICIALIZAÇÃO
+        // ===== INICIALIZAÇÃO =====
         document.addEventListener('DOMContentLoaded', () => {
             loadDatabase();
             setupEventListeners();
@@ -854,7 +1157,7 @@
             updateStatsPlaceholder();
         });
 
-        // CONFIGURA EVENTOS
+        // ===== CONFIGURA EVENTOS =====
         function setupEventListeners() {
             elements.searchBtn.addEventListener('click', handleSearch);
             
@@ -874,6 +1177,28 @@
                     handleSearch();
                 }
             });
+
+            // Seletor de capítulos
+            if (elements.searchChapterBtn) {
+                elements.searchChapterBtn.addEventListener('click', () => {
+                    const chapter = elements.chapterSelect.value;
+                    if (chapter) {
+                        elements.ncmInput.value = chapter;
+                        handleSearch();
+                    } else {
+                        showWarning('Selecione um capítulo');
+                    }
+                });
+            }
+
+            if (elements.chapterSelect) {
+                elements.chapterSelect.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && elements.chapterSelect.value) {
+                        elements.ncmInput.value = elements.chapterSelect.value;
+                        handleSearch();
+                    }
+                });
+            }
 
             // Exemplos rápidos
             document.querySelectorAll('.example-chip').forEach(chip => {
@@ -930,11 +1255,11 @@
             });
         }
 
-        // CARREGA BASE DE DADOS
+        // ===== CARREGA BASE DE DADOS =====
         async function loadDatabase(force = false) {
             const now = Date.now();
             
-            // Tenta carregar do cache (localStorage)
+            // Tenta carregar do cache
             try {
                 const cached = localStorage.getItem('ncmDatabase');
                 const cacheTime = localStorage.getItem('ncmCacheTime');
@@ -973,7 +1298,7 @@
             } catch (error) {
                 console.error('Erro ao carregar dados:', error);
                 
-                // Tenta usar cache expirado como fallback
+                // Tenta usar cache expirado
                 if (ncmDatabase) {
                     showWarning('Usando dados em cache - conexão com servidor falhou');
                 } else {
@@ -985,7 +1310,7 @@
             }
         }
 
-        // MOSTRA SKELETON LOADING
+        // ===== MOSTRA SKELETON =====
         function showSkeleton(show) {
             if (show) {
                 elements.skeletonLoading.classList.remove('hidden');
@@ -997,20 +1322,24 @@
             }
         }
 
-        // ATUALIZA ESTATÍSTICAS
+        // ===== ATUALIZA ESTATÍSTICAS =====
         function updateStats() {
             if (!ncmDatabase) return;
             
             const totalNCMs = Object.keys(ncmDatabase).length;
+            const totalItens = Object.values(ncmDatabase).reduce((acc, arr) => acc + arr.length, 0);
+            
             elements.totalNCMs.textContent = totalNCMs.toLocaleString();
+            elements.totalItens.textContent = totalItens.toLocaleString();
             elements.totalAnexos.textContent = '11';
         }
 
         function updateStatsPlaceholder() {
             elements.totalNCMs.textContent = 'carregando...';
+            elements.totalItens.textContent = 'carregando...';
         }
 
-        // FUNÇÃO DE PESQUISA PRINCIPAL
+        // ===== FUNÇÃO DE PESQUISA =====
         function handleSearch() {
             const rawInput = elements.ncmInput.value.trim().replace(/\D/g, '');
             
@@ -1019,8 +1348,8 @@
                 return;
             }
 
-            if (rawInput.length < 4 || rawInput.length > 8) {
-                showError('NCM deve ter entre 4 e 8 dígitos numéricos');
+            if (rawInput.length < 2 || rawInput.length > 8) {
+                showError('NCM deve ter entre 2 e 8 dígitos numéricos');
                 return;
             }
 
@@ -1029,28 +1358,31 @@
                 return;
             }
 
-            // Padroniza para busca
             const searchKey = normalizeNCM(rawInput);
             currentSearchKey = searchKey;
             
-            // Executa busca
             performSearch(searchKey);
         }
 
-        // NORMALIZA NCM
+        // ===== NORMALIZA NCM =====
         function normalizeNCM(ncm) {
             let clean = ncm.replace(/\D/g, '');
             if (clean.length > 8) clean = clean.substring(0, 8);
             return clean.replace(/^0+/, '') || '0';
         }
 
-        // BUSCA NO BANCO DE DADOS
+        // ===== EXTRAI CAPÍTULO DO NCM =====
+        function getChapterFromNCM(ncm) {
+            const digits = ncm.replace(/\D/g, '');
+            return digits.substring(0, 2);
+        }
+
+        // ===== BUSCA NO BANCO DE DADOS =====
         function performSearch(searchKey) {
             hideError();
             hideInitialMessage();
             showSkeleton(true);
 
-            // Simula pequeno delay para mostrar skeleton
             setTimeout(() => {
                 let results = [];
                 let matchedKey = null;
@@ -1060,7 +1392,7 @@
                     results = ncmDatabase[searchKey];
                     matchedKey = searchKey;
                 } else {
-                    // 2. Tenta buscar por início
+                    // 2. Busca por início (capítulos!)
                     for (const [key, value] of Object.entries(ncmDatabase)) {
                         const normalizedKey = key.replace(/\D/g, '').replace(/^0+/, '');
                         
@@ -1073,7 +1405,6 @@
                     }
                 }
 
-                // Remove duplicatas
                 const uniqueResults = removeDuplicates(results);
 
                 showSkeleton(false);
@@ -1083,16 +1414,14 @@
                     return;
                 }
 
-                // Salva no histórico
                 addToHistory(matchedKey || searchKey, uniqueResults.length);
                 
-                // Guarda e exibe resultados
                 currentResults = uniqueResults;
                 displayResults(uniqueResults, matchedKey || searchKey);
             }, 300);
         }
 
-        // REMOVE REGISTROS DUPLICADOS
+        // ===== REMOVE DUPLICATAS =====
         function removeDuplicates(results) {
             const seen = new Set();
             return results.filter(item => {
@@ -1103,27 +1432,34 @@
             });
         }
 
-        // EXIBE RESULTADOS
+        // ===== EXIBE RESULTADOS =====
         function displayResults(results, searchedNCM) {
             currentResults = results;
             
             const displayNCM = formatNCMDisplay(searchedNCM);
+            const chapter = getChapterFromNCM(searchedNCM);
+            const chapterName = CHAPTER_NAMES[chapter] || 'Capítulo desconhecido';
             
-            elements.resultNCM.textContent = displayNCM;
+            elements.resultNCMText.textContent = displayNCM;
+            elements.resultChapter.textContent = `Cap. ${chapter} · ${chapterName}`;
             elements.resultCount.textContent = `${results.length} ${results.length === 1 ? 'registro' : 'registros'}`;
             
-            // Aplica filtro atual
             let filteredResults = filterResultsByType(results, currentFilter);
             
-            // Aplica ordenação
             if (!sortAscending) {
                 filteredResults = [...filteredResults].reverse();
             }
             
-            // Gera HTML
-            const html = filteredResults.map(item => `
+            const html = filteredResults.map(item => {
+                // Adiciona documentos fiscais
+                const documentos = DOCUMENTOS_POR_CST[item.cclasstrib] || [];
+                
+                return `
                 <div class="result-item">
-                    <div class="item-title">${item.cclasstrib || 'N/A'} · CST ${item.cst || 'N/A'}</div>
+                    <div class="item-title">
+                        ${item.cclasstrib || 'N/A'} · CST ${item.cst || 'N/A'}
+                        ${item.cclasstrib ? `<span class="tag tooltip" data-tooltip="Ver detalhes" style="font-size:0.7rem; cursor:pointer;" onclick="showDetails('${item.cclasstrib}')"><i class="fas fa-info-circle"></i></span>` : ''}
+                    </div>
                     <div class="item-desc">${item.descricao || 'Descrição não disponível'}</div>
                     <div class="item-tags">
                         <span class="tag"><i class="fas fa-percent"></i> ${item.pReducao || 'N/A'}</span>
@@ -1135,21 +1471,29 @@
                             <i class="fas fa-tag"></i> CST ${item.cst || 'N/A'}
                         </span>
                         <span class="tag"><i class="fas fa-gavel"></i> ${item.legislacao || 'LC 214/2025'}</span>
+                        ${documentos.length > 0 ? `
+                        <span class="tag documentos" title="Documentos fiscais permitidos">
+                            <i class="fas fa-file-invoice"></i> ${documentos.join(', ')}
+                        </span>
+                        ` : ''}
+                        ${item.indicadores ? `
+                        <span class="tag indicador" title="Redução IBS: ${item.indicadores.pRedIBS || 0}% · Redução CBS: ${item.indicadores.pRedCBS || 0}%">
+                            <i class="fas fa-chart-line"></i> ${item.indicadores.pRedIBS || 0}%/${item.indicadores.pRedCBS || 0}%
+                        </span>
+                        ` : ''}
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
 
             elements.resultList.innerHTML = html;
             
-            // Mostra containers
             elements.filterBar.classList.remove('hidden');
             elements.resultContent.classList.remove('hidden');
             
-            // Atualiza contador no filtro ativo
             updateFilterCounts();
         }
 
-        // FILTRA RESULTADOS POR TIPO
+        // ===== FILTRA RESULTADOS =====
         function filterResultsByType(results, filter) {
             if (filter === 'all') return results;
             if (filter === 'reducao') return results.filter(r => r.regime === 'reducao');
@@ -1159,7 +1503,7 @@
             return results;
         }
 
-        // ATUALIZA BOTÕES DE FILTRO
+        // ===== ATUALIZA CONTADORES DOS FILTROS =====
         function updateFilterCounts() {
             const counts = {
                 all: currentResults.length,
@@ -1172,29 +1516,28 @@
             document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
                 const filter = btn.dataset.filter;
                 const count = counts[filter] || 0;
-                const span = btn.querySelector('span') || document.createElement('span');
                 
-                // Atualiza ou cria contador
-                if (!btn.querySelector('.count')) {
-                    btn.innerHTML = btn.innerHTML.replace('</span>', '');
-                    btn.innerHTML += ` <span class="count" style="background: rgba(255,255,255,0.2); padding: 0.1rem 0.4rem; border-radius: 12px; font-size: 0.7rem;">${count}</span>`;
-                } else {
-                    btn.querySelector('.count').textContent = count;
+                let countSpan = btn.querySelector('.count');
+                if (!countSpan) {
+                    countSpan = document.createElement('span');
+                    countSpan.className = 'count';
+                    btn.appendChild(countSpan);
                 }
+                countSpan.textContent = count;
             });
         }
 
-        // APLICA FILTRO
+        // ===== APLICA FILTRO =====
         function filterResults(filter) {
             currentFilter = filter;
             const filtered = filterResultsByType(currentResults, filter);
             
-            // Aplica ordenação
             const sorted = sortAscending ? filtered : [...filtered].reverse();
             
-            // Reexibe com filtro
-            const displayNCM = elements.resultNCM.textContent;
-            const html = sorted.map(item => `
+            const html = sorted.map(item => {
+                const documentos = DOCUMENTOS_POR_CST[item.cclasstrib] || [];
+                
+                return `
                 <div class="result-item">
                     <div class="item-title">${item.cclasstrib || 'N/A'} · CST ${item.cst || 'N/A'}</div>
                     <div class="item-desc">${item.descricao || 'Descrição não disponível'}</div>
@@ -1208,22 +1551,27 @@
                             <i class="fas fa-tag"></i> CST ${item.cst || 'N/A'}
                         </span>
                         <span class="tag"><i class="fas fa-gavel"></i> ${item.legislacao || 'LC 214/2025'}</span>
+                        ${documentos.length > 0 ? `
+                        <span class="tag documentos">
+                            <i class="fas fa-file-invoice"></i> ${documentos.join(', ')}
+                        </span>
+                        ` : ''}
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
 
             elements.resultList.innerHTML = html;
             elements.resultCount.textContent = `${filtered.length} ${filtered.length === 1 ? 'registro' : 'registros'}`;
         }
 
-        // ALTERNA ORDENAÇÃO
+        // ===== ALTERNA ORDENAÇÃO =====
         function toggleSort() {
             sortAscending = !sortAscending;
             elements.sortBtn.innerHTML = `<i class="fas fa-sort-alpha-${sortAscending ? 'down' : 'up'}"></i>`;
             filterResults(currentFilter);
         }
 
-        // SETA FILTRO ATIVO
+        // ===== SETA FILTRO ATIVO =====
         function setActiveFilter(filter) {
             document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
                 if (btn.dataset.filter === filter) {
@@ -1234,7 +1582,7 @@
             });
         }
 
-        // FORMATA NCM PARA EXIBIÇÃO
+        // ===== FORMATA NCM =====
         function formatNCMDisplay(ncm) {
             const digits = ncm.replace(/\D/g, '');
             
@@ -1244,11 +1592,13 @@
                 return `${digits.substring(0,4)}.${digits.substring(4,6)}`;
             } else if (digits.length === 4) {
                 return digits.padStart(4, '0');
+            } else if (digits.length === 2) {
+                return digits.padStart(2, '0');
             }
             return digits;
         }
 
-        // EXPORTA RESULTADOS
+        // ===== EXPORTA RESULTADOS =====
         function exportResults() {
             const dataStr = JSON.stringify(currentResults, null, 2);
             const blob = new Blob([dataStr], { type: 'application/json' });
@@ -1260,12 +1610,10 @@
             a.click();
             
             URL.revokeObjectURL(url);
-            
-            // Feedback
             showInfo('Resultados exportados com sucesso!');
         }
 
-        // EXPORTA BASE COMPLETA
+        // ===== EXPORTA BASE COMPLETA =====
         function exportDatabase() {
             if (!ncmDatabase) {
                 showError('Base de dados não carregada');
@@ -1285,18 +1633,19 @@
             showInfo('Base completa exportada!');
         }
 
-        // HISTÓRICO
+        // ===== HISTÓRICO =====
         function addToHistory(ncm, count) {
             const history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
             
             history.unshift({
                 ncm: ncm,
                 display: formatNCMDisplay(ncm),
+                chapter: getChapterFromNCM(ncm),
+                chapterName: CHAPTER_NAMES[getChapterFromNCM(ncm)] || '',
                 count: count,
                 timestamp: new Date().toISOString()
             });
             
-            // Mantém últimos 8
             if (history.length > 8) history.pop();
             localStorage.setItem('searchHistory', JSON.stringify(history));
             
@@ -1320,6 +1669,7 @@
                 <div class="history-item" onclick="document.getElementById('ncmInput').value='${h.ncm}';handleSearch()">
                     <i class="fas fa-history"></i>
                     <span>${h.display}</span>
+                    ${h.chapterName ? `<small>${h.chapterName}</small>` : ''}
                     <small>${h.count} ${h.count === 1 ? 'item' : 'itens'}</small>
                 </div>
             `).join('');
@@ -1333,7 +1683,7 @@
             showInfo('Histórico limpo!');
         }
 
-        // ESTADOS DE TELA
+        // ===== ESTADOS DE TELA =====
         function showError(message) {
             elements.errorContainer.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${message}`;
             elements.errorContainer.className = 'error-message error';
@@ -1378,20 +1728,50 @@
             elements.filterBar.classList.add('hidden');
             
             const displayNCM = formatNCMDisplay(searchKey);
+            const chapter = getChapterFromNCM(searchKey);
+            const chapterName = CHAPTER_NAMES[chapter];
+            
+            let message = '';
+            if (chapterName && searchKey.length === 2) {
+                message = `
+                    <p class="text-muted">O capítulo ${chapter} (${chapterName}) não possui NCMs com benefícios fiscais</p>
+                `;
+            } else {
+                message = `
+                    <p class="text-muted">Este código não está na base com redução/imunidade</p>
+                `;
+            }
+            
             elements.initialMessage.innerHTML = `
                 <i class="fas fa-question-circle"></i>
                 <h3>NCM ${displayNCM} não encontrado</h3>
-                <p class="text-muted">Este código não está na base com redução/imunidade</p>
+                ${message}
                 <p class="text-small" style="margin-top:1rem;">Regime geral: CST 000 (tributação integral)</p>
                 <p class="text-small" style="margin-top:0.5rem;">
                     <i class="fas fa-lightbulb" style="color: #fbbf24;"></i>
-                    Tente: 0201, 0405, 1006, 15171000
+                    Tente: 0201, 0405, 1006, 15171000 ou selecione um capítulo
                 </p>
             `;
             elements.initialMessage.classList.remove('hidden');
         }
 
-        // AUTO-EXECUÇÃO se houver parâmetro na URL
+        // ===== MOSTRA DETALHES DO CST (NOVO) =====
+        window.showDetails = function(cclasstrib) {
+            const documentos = DOCUMENTOS_POR_CST[cclasstrib] || [];
+            showInfo(`CST ${cclasstrib} · Documentos: ${documentos.join(', ') || 'Nenhum documento específico'}`);
+        };
+
+        // ===== TORNA VARIÁVEIS GLOBAIS PARA DIAGNÓSTICO =====
+        window.ncmDatabase = ncmDatabase;
+        window.diagnostico = function() {
+            console.log('📊 DIAGNÓSTICO:', {
+                chaves: Object.keys(ncmDatabase || {}).length,
+                itens: Object.values(ncmDatabase || {}).reduce((acc, arr) => acc + arr.length, 0),
+                documentos: Object.keys(DOCUMENTOS_POR_CST).length
+            });
+        };
+
+        // ===== AUTO-EXECUÇÃO =====
         (function checkUrlParam() {
             const urlParams = new URLSearchParams(window.location.search);
             const ncmParam = urlParams.get('ncm');
@@ -1402,47 +1782,6 @@
                 }, 500);
             }
         })();
-
-        // ===== DIAGNÓSTICO =====
-window.diagnosticoNCM = function() {
-    const db = window.ncmDatabase;
-    if (!db) {
-        console.error('❌ Banco não carregado');
-        return { erro: 'Banco não carregado' };
-    }
-    
-    const stats = {
-        chavesNCM: Object.keys(db).length,
-        totalRegistros: Object.values(db).reduce((acc, arr) => acc + arr.length, 0),
-        anexos: [...new Set(Object.values(db).flat().map(i => i.legislacao))].length,
-        regimes: [...new Set(Object.values(db).flat().map(i => i.regime))],
-        csts: [...new Set(Object.values(db).flat().map(i => i.cst))]
-    };
-    
-    console.log('📊 ESTATÍSTICAS DO BANCO:');
-    console.table(stats);
-    
-    // Detalhamento por CST
-    const porCST = {};
-    Object.values(db).flat().forEach(item => {
-        const cst = item.cst || 'sem CST';
-        porCST[cst] = (porCST[cst] || 0) + 1;
-    });
-    console.log('📌 Registros por CST:');
-    console.table(porCST);
-    
-    return stats;
-};
-
-// Torna ncmDatabase global
-window.ncmDatabase = ncmDatabase;
-
-// Auto-executa quando carregar
-setTimeout(() => {
-    if (window.ncmDatabase) {
-        console.log('✅ Banco pronto!', Object.keys(window.ncmDatabase).length, 'NCMs');
-    }
-}, 1000);
     </script>
 </body>
 </html>
