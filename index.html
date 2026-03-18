@@ -3,587 +3,740 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta cClassTrib · Reforma Tributária 2026</title>
-    <!-- Google Fonts & CSS -->
+    <title>cClassTrib · Consulta NCM · Reforma Tributária 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>
-    /* ===== VARIÁVEIS CSS ===== */
-    :root {
-        /* CORES PRINCIPAIS - Claras e Modernas */
-        --primary: #4a90e2;           /* Azul médio */
-        --primary-dark: #3a7bc8;       /* Azul um pouco mais escuro */
-        --primary-light: #6ba6f0;      /* Azul claro */
-        --primary-soft: #e8f0fe;       /* Azul bem clarinho */
-        
-        /* CORES DE ACENTO */
-        --accent-green: #28a745;        /* Verde */
-        --accent-orange: #fd7e14;       /* Laranja */
-        --accent-purple: #8a6d9c;       /* Roxo suave */
-        --accent-teal: #20c997;          /* Verde água */
-        --accent-yellow: #ffc107;        /* Amarelo */
-        
-        /* FUNDOS - TODOS CLAROS */
-        --bg-main: #ffffff;              /* Branco puro */
-        --bg-card: #ffffff;                /* Branco */
-        --bg-secondary: #f8f9fa;           /* Cinza claríssimo */
-        --bg-header: #ffffff;               /* Branco para header */
-        --bg-highlight: #f1f3f5;            /* Cinza claro */
-        
-        /* TEXTOS - ESCUROS PARA CONTRASTE */
-        --text-primary: #212529;           /* Quase preto */
-        --text-secondary: #343a40;          /* Cinza muito escuro */
-        --text-tertiary: #495057;            /* Cinza escuro */
-        --text-link: #4a90e2;                 /* Azul */
-        --text-white: #ffffff;                 /* Branco */
-        --text-soft: #6c757d;                   /* Cinza médio */
-        
-        /* BORDAS - SUAVES */
-        --border-color: #e9ecef;             /* Cinza clarinho */
-        --border-hover: #ced4da;               /* Cinza médio */
-        
-        /* SOMBRAS - LEVES */
-        --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        --box-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
-        
-        /* FONTES RESPONSIVAS */
-        --font-xs: clamp(0.6rem, 2vw, 0.7rem);
-        --font-sm: clamp(0.7rem, 2.5vw, 0.85rem);
-        --font-md: clamp(0.85rem, 3vw, 1rem);
-        --font-lg: clamp(1rem, 4vw, 1.2rem);
-        --font-xl: clamp(1.2rem, 5vw, 1.4rem);
-        
-        /* BORDAS ARREDONDADAS */
-        --border-radius-sm: 4px;
-        --border-radius-md: 8px;
-        --border-radius-lg: 12px;
-        --border-radius-xl: 24px;
-        
-        /* TRANSIÇÕES */
-        --transition: all 0.2s ease;
-    }
-
-    /* ===== RESET E BASE ===== */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        background: var(--bg-main);
-        color: var(--text-primary);
-        line-height: 1.5;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    /* ===== HEADER ===== */
-    .header {
-        background: var(--bg-header);
-        border-bottom: 1px solid var(--border-color);
-        padding: 1rem 0;
-        margin-bottom: 2rem;
-    }
-
-    .header-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .logo-icon {
-        font-size: 1.8rem;
-        color: var(--primary);
-        width: 45px;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--primary-soft);
-        border-radius: var(--border-radius-md);
-    }
-
-    .header-text h1 {
-        font-size: var(--font-xl);
-        font-weight: 600;
-        color: var(--text-primary);
-        margin-bottom: 0.1rem;
-    }
-
-    .header-text p {
-        font-size: var(--font-sm);
-        color: var(--text-soft);
-    }
-
-    /* ===== SEARCH CARD ===== */
-    .search-card {
-        background: var(--bg-card);
-        border-radius: var(--border-radius-lg);
-        padding: 1.5rem;
-        box-shadow: var(--box-shadow);
-        margin-bottom: 2rem;
-        border: 1px solid var(--border-color);
-    }
-
-    .search-label {
-        font-weight: 500;
-        font-size: var(--font-sm);
-        color: var(--text-soft);
-        margin-bottom: 0.75rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .search-box {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-    }
-
-    .search-input-wrapper {
-        flex: 1;
-        position: relative;
-        min-width: 250px;
-    }
-
-    .search-input-wrapper i {
-        position: absolute;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--text-soft);
-        font-size: 1rem;
-    }
-
-    .search-input {
-        width: 100%;
-        padding: 0.8rem 1rem 0.8rem 3rem;
-        font-size: var(--font-md);
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius-xl);
-        outline: none;
-        transition: var(--transition);
-        background: var(--bg-secondary);
-        color: var(--text-primary);
-    }
-
-    .search-input:focus {
-        border-color: var(--primary);
-        background: var(--bg-card);
-        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
-    }
-
-    .search-btn {
-        background: var(--primary);
-        color: white;
-        border: none;
-        padding: 0.8rem 2rem;
-        border-radius: var(--border-radius-xl);
-        font-weight: 500;
-        font-size: var(--font-md);
-        cursor: pointer;
-        transition: var(--transition);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .search-btn:hover {
-        background: var(--primary-dark);
-    }
-
-    /* ===== CHAPTER SELECTOR ===== */
-    .chapter-selector {
-        margin-top: 1.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid var(--border-color);
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .chapter-label {
-        font-size: var(--font-sm);
-        color: var(--text-soft);
-        font-weight: 500;
-    }
-
-    .chapter-select {
-        flex: 1;
-        min-width: 250px;
-        padding: 0.7rem 1rem;
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius-xl);
-        background: var(--bg-secondary);
-        font-size: var(--font-md);
-        color: var(--text-primary);
-        cursor: pointer;
-        outline: none;
-    }
-
-    .chapter-select:focus {
-        border-color: var(--primary);
-        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
-    }
-
-    .chapter-btn {
-        background: var(--accent-green);
-        color: white;
-        border: none;
-        padding: 0.7rem 1.5rem;
-        border-radius: var(--border-radius-xl);
-        font-weight: 500;
-        font-size: var(--font-md);
-        cursor: pointer;
-        transition: var(--transition);
-    }
-
-    .chapter-btn:hover {
-        background: #218838;
-    }
-
-    .chapter-badge {
-        background: var(--accent-purple);
-        color: white;
-        padding: 0.2rem 0.8rem;
-        border-radius: var(--border-radius-xl);
-        font-size: var(--font-xs);
-        font-weight: 500;
-        margin-left: 0.5rem;
-    }
-
-    /* ===== EXEMPLOS ===== */
-    .quick-examples {
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        align-items: center;
-    }
-
-    .examples-label {
-        font-size: var(--font-sm);
-        color: var(--text-soft);
-    }
-
-    .example-chip {
-        background: var(--bg-secondary);
-        padding: 0.4rem 1rem;
-        border-radius: var(--border-radius-xl);
-        font-size: var(--font-sm);
-        color: var(--text-secondary);
-        cursor: pointer;
-        border: 1px solid var(--border-color);
-        transition: var(--transition);
-    }
-
-    .example-chip:hover {
-        background: var(--primary-soft);
-        border-color: var(--primary-light);
-    }
-
-    /* ===== FILTER BAR ===== */
-    .filter-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-        padding: 0.5rem;
-        background: var(--bg-secondary);
-        border-radius: var(--border-radius-xl);
-    }
-
-    .filter-btn {
-        padding: 0.4rem 1rem;
-        border: none;
-        border-radius: var(--border-radius-xl);
-        font-size: var(--font-sm);
-        font-weight: 500;
-        cursor: pointer;
-        background: transparent;
-        color: var(--text-secondary);
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-    }
-
-    .filter-btn:hover {
-        background: var(--primary-soft);
-    }
-
-    .filter-btn.active {
-        background: var(--primary);
-        color: white;
-    }
-
-    .filter-btn .count {
-        background: rgba(255,255,255,0.2);
-        padding: 0.1rem 0.4rem;
-        border-radius: 12px;
-        font-size: var(--font-xs);
-    }
-
-    /* ===== RESULT CARD ===== */
-    .result-card {
-        background: var(--bg-card);
-        border-radius: var(--border-radius-lg);
-        padding: 1.5rem;
-        box-shadow: var(--box-shadow);
-        border: 1px solid var(--border-color);
-    }
-
-    .result-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .result-ncm {
-        background: var(--bg-secondary);
-        padding: 0.5rem 1.2rem;
-        border-radius: var(--border-radius-xl);
-        font-weight: 600;
-        font-size: var(--font-lg);
-        color: var(--text-primary);
-        border: 1px solid var(--border-color);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .result-badge {
-        background: var(--accent-green);
-        color: white;
-        padding: 0.3rem 1rem;
-        border-radius: var(--border-radius-xl);
-        font-size: var(--font-sm);
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-    }
-
-    .result-actions {
-        display: flex;
-        gap: 0.5rem;
-    }
-
-    .action-btn {
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-color);
-        padding: 0.4rem 1rem;
-        border-radius: var(--border-radius-xl);
-        font-size: var(--font-sm);
-        cursor: pointer;
-        color: var(--text-secondary);
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-    }
-
-    .action-btn:hover {
-        background: var(--primary-soft);
-    }
-
-    /* ===== RESULT ITEMS ===== */
-    .result-item {
-        padding: 1rem 0;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .result-item:last-child {
-        border-bottom: none;
-    }
-
-    .item-title {
-        font-weight: 600;
-        font-size: var(--font-md);
-        color: var(--text-primary);
-        margin-bottom: 0.3rem;
-    }
-
-    .item-desc {
-        color: var(--text-secondary);
-        font-size: var(--font-sm);
-        margin-bottom: 0.5rem;
-    }
-
-    .item-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.4rem;
-    }
-
-    .tag {
-        background: var(--bg-secondary);
-        padding: 0.2rem 0.8rem;
-        border-radius: var(--border-radius-xl);
-        font-size: var(--font-xs);
-        font-weight: 500;
-        color: var(--text-secondary);
-        border: 1px solid var(--border-color);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.3rem;
-    }
-
-    .tag.regime-reducao {
-        background: #d4edda;
-        color: #155724;
-        border-color: #c3e6cb;
-    }
-
-    .tag.regime-imunidade {
-        background: #fff3cd;
-        color: #856404;
-        border-color: #ffeeba;
-    }
-
-    .tag.cst-200 {
-        background: #cce5ff;
-        color: #004085;
-        border-color: #b8daff;
-    }
-
-    .tag.cst-410 {
-        background: #e2d5f0;
-        color: #5a3e85;
-        border-color: #d4c0f0;
-    }
-
-    .tag.documentos {
-        background: #d1ecf1;
-        color: #0c5460;
-        border-color: #bee5eb;
-    }
-
-    /* ===== HISTORY CARD ===== */
-    .history-card {
-        background: var(--bg-card);
-        border-radius: var(--border-radius-lg);
-        padding: 1.5rem;
-        margin-top: 1.5rem;
-        border: 1px solid var(--border-color);
-    }
-
-    .history-title {
-        font-weight: 600;
-        color: var(--text-primary);
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .history-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    .history-item {
-        background: var(--bg-secondary);
-        padding: 0.5rem 1rem;
-        border-radius: var(--border-radius-xl);
-        font-size: var(--font-sm);
-        cursor: pointer;
-        border: 1px solid var(--border-color);
-        color: var(--text-secondary);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .history-item:hover {
-        background: var(--primary-soft);
-    }
-
-    .history-item i {
-        color: var(--primary);
-    }
-
-    .history-item small {
-        color: var(--text-soft);
-        font-size: var(--font-xs);
-    }
-
-    /* ===== FOOTER ===== */
-    .footer {
-        background: var(--bg-card);
-        border-top: 1px solid var(--border-color);
-        padding: 1.5rem 0;
-        margin-top: 3rem;
-        text-align: center;
-        color: var(--text-soft);
-        font-size: var(--font-sm);
-    }
-
-    .footer a {
-        color: var(--primary);
-        text-decoration: none;
-    }
-
-    .footer a:hover {
-        text-decoration: underline;
-    }
-
-    .stats {
-        margin-top: 0.5rem;
-        font-size: var(--font-xs);
-        color: var(--text-soft);
-    }
-
-    .footer-badges {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-    }
-
-    .badge {
-        background: var(--bg-secondary);
-        padding: 0.2rem 0.8rem;
-        border-radius: var(--border-radius-xl);
-        font-size: var(--font-xs);
-        color: var(--text-secondary);
-        border: 1px solid var(--border-color);
-    }
-
-    /* ===== UTILS ===== */
-    .hidden { display: none !important; }
-    .text-small { font-size: var(--font-xs); }
-    .text-muted { color: var(--text-soft); }
-    
-    /* ===== RESPONSIVIDADE ===== */
-    @media screen and (max-width: 768px) {
-        .header-content { flex-direction: column; text-align: center; }
-        .search-box { flex-direction: column; }
-        .search-btn { width: 100%; justify-content: center; }
-        .chapter-selector { flex-direction: column; }
-        .chapter-select, .chapter-btn { width: 100%; }
-        .filter-bar { justify-content: center; }
-    }
-
-    @media screen and (max-width: 480px) {
-        .container { padding: 1rem; }
-        .result-ncm { flex-direction: column; align-items: flex-start; }
-        .chapter-badge { margin-left: 0; }
-    }
-</style>
+    <style>
+        /* ===== VARIÁVEIS CSS ===== */
+        :root {
+            --primary: #4a90e2;
+            --primary-dark: #3a7bc8;
+            --primary-light: #6ba6f0;
+            --primary-soft: #e8f0fe;
+            
+            --accent-green: #28a745;
+            --accent-orange: #fd7e14;
+            --accent-purple: #8a6d9c;
+            --accent-teal: #20c997;
+            --accent-yellow: #ffc107;
+            
+            --bg-main: #ffffff;
+            --bg-card: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-header: #ffffff;
+            --bg-highlight: #f1f3f5;
+            
+            --text-primary: #212529;
+            --text-secondary: #343a40;
+            --text-tertiary: #495057;
+            --text-link: #4a90e2;
+            --text-white: #ffffff;
+            --text-soft: #6c757d;
+            
+            --border-color: #e9ecef;
+            --border-hover: #ced4da;
+            
+            --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --box-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+            
+            --font-xs: clamp(0.6rem, 2vw, 0.7rem);
+            --font-sm: clamp(0.7rem, 2.5vw, 0.85rem);
+            --font-md: clamp(0.85rem, 3vw, 1rem);
+            --font-lg: clamp(1rem, 4vw, 1.2rem);
+            --font-xl: clamp(1.2rem, 5vw, 1.4rem);
+            
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 24px;
+            
+            --transition: all 0.2s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            width: 100%;
+            flex: 1;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: var(--bg-header);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-soft);
+            border-radius: var(--border-radius-md);
+        }
+
+        .header-text h1 {
+            font-size: var(--font-xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.1rem;
+        }
+
+        .header-text p {
+            font-size: var(--font-sm);
+            color: var(--text-soft);
+        }
+
+        /* ===== NAV TABS ===== */
+        .nav-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .nav-tab {
+            padding: 0.6rem 1.5rem;
+            border: none;
+            background: transparent;
+            color: var(--text-soft);
+            font-weight: 500;
+            font-size: var(--font-md);
+            cursor: pointer;
+            border-radius: var(--border-radius-xl);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-tab:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .nav-tab.active {
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* ===== SEARCH CARD (TAB 1) ===== */
+        .search-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .search-label {
+            font-weight: 500;
+            font-size: var(--font-sm);
+            color: var(--text-soft);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input-wrapper {
+            flex: 1;
+            position: relative;
+            min-width: 250px;
+        }
+
+        .search-input-wrapper i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-soft);
+            font-size: 1rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.8rem 1rem 0.8rem 3rem;
+            font-size: var(--font-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-xl);
+            outline: none;
+            transition: var(--transition);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            background: var(--bg-card);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .search-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 500;
+            font-size: var(--font-md);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .search-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* ===== CHAPTER SELECTOR ===== */
+        .chapter-selector {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .chapter-label {
+            font-size: var(--font-sm);
+            color: var(--text-soft);
+            font-weight: 500;
+        }
+
+        .chapter-select {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.7rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-xl);
+            background: var(--bg-secondary);
+            font-size: var(--font-md);
+            color: var(--text-primary);
+            cursor: pointer;
+            outline: none;
+        }
+
+        .chapter-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .chapter-btn {
+            background: var(--accent-green);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 500;
+            font-size: var(--font-md);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .chapter-btn:hover {
+            background: #218838;
+        }
+
+        .quick-examples {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .examples-label {
+            font-size: var(--font-sm);
+            color: var(--text-soft);
+        }
+
+        .example-chip {
+            background: var(--bg-secondary);
+            padding: 0.4rem 1rem;
+            border-radius: var(--border-radius-xl);
+            font-size: var(--font-sm);
+            color: var(--text-secondary);
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .example-chip:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary-light);
+        }
+
+        /* ===== FILTER BAR ===== */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem;
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius-xl);
+        }
+
+        .filter-btn {
+            padding: 0.4rem 1rem;
+            border: none;
+            border-radius: var(--border-radius-xl);
+            font-size: var(--font-sm);
+            font-weight: 500;
+            cursor: pointer;
+            background: transparent;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .filter-btn:hover {
+            background: var(--primary-soft);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* ===== RESULT CARD ===== */
+        .result-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .result-ncm {
+            background: var(--bg-secondary);
+            padding: 0.5rem 1.2rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 600;
+            font-size: var(--font-lg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chapter-badge {
+            background: var(--accent-purple);
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: var(--border-radius-xl);
+            font-size: var(--font-xs);
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+
+        .result-badge {
+            background: var(--accent-green);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: var(--border-radius-xl);
+            font-size: var(--font-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .result-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: var(--font-md);
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .item-desc {
+            color: var(--text-secondary);
+            font-size: var(--font-sm);
+            margin-bottom: 0.5rem;
+        }
+
+        .item-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            background: var(--bg-secondary);
+            padding: 0.2rem 0.8rem;
+            border-radius: var(--border-radius-xl);
+            font-size: var(--font-xs);
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .tag.regime-reducao {
+            background: #d4edda;
+            color: #155724;
+            border-color: #c3e6cb;
+        }
+
+        .tag.regime-imunidade {
+            background: #fff3cd;
+            color: #856404;
+            border-color: #ffeeba;
+        }
+
+        .tag.cst-200 {
+            background: #cce5ff;
+            color: #004085;
+            border-color: #b8daff;
+        }
+
+        .tag.cst-410 {
+            background: #e2d5f0;
+            color: #5a3e85;
+            border-color: #d4c0f0;
+        }
+
+        /* ===== SOBRE TAB ===== */
+        .about-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            color: var(--text-soft);
+            font-size: var(--font-sm);
+        }
+
+        .legislacao-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .leg-item {
+            background: var(--bg-secondary);
+            padding: 1.2rem;
+            border-radius: var(--border-radius-md);
+            border-left: 4px solid var(--primary);
+        }
+
+        .leg-titulo {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .leg-desc {
+            color: var(--text-secondary);
+            font-size: var(--font-sm);
+            margin-bottom: 0.3rem;
+        }
+
+        .leg-beneficio {
+            font-size: var(--font-xs);
+            color: var(--accent-green);
+            font-weight: 500;
+        }
+
+        .cst-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .cst-item {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: var(--border-radius-md);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cst-codigo {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 600;
+            font-size: var(--font-sm);
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .cst-desc {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .aviso-legal {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: var(--border-radius-md);
+            padding: 1.2rem;
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .aviso-legal i {
+            color: #856404;
+            font-size: 1.5rem;
+        }
+
+        /* ===== CHAPTERS TAB ===== */
+        .chapters-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .chapters-search {
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chapters-search input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-xl);
+            font-size: var(--font-md);
+            outline: none;
+        }
+
+        .chapters-search input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .chapters-search button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius-xl);
+            cursor: pointer;
+        }
+
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .chapters-grid::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chapters-grid::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+        }
+
+        .chapters-grid::-webkit-scrollbar-thumb {
+            background: var(--primary-light);
+            border-radius: 10px;
+        }
+
+        .chapter-item {
+            background: var(--bg-secondary);
+            padding: 1.2rem;
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .chapter-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: var(--primary-light);
+        }
+
+        .chapter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .chapter-code {
+            background: var(--primary);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 600;
+            font-size: var(--font-sm);
+        }
+
+        .chapter-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: var(--font-md);
+        }
+
+        .chapter-count {
+            color: var(--text-soft);
+            font-size: var(--font-xs);
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+        }
+
+        .chapter-ncms {
+            margin-top: 0.5rem;
+            font-size: var(--font-xs);
+            color: var(--text-tertiary);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+
+        .chapter-ncm-tag {
+            background: var(--bg-card);
+            padding: 0.1rem 0.4rem;
+            border-radius: var(--border-radius-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-soft);
+            font-size: var(--font-sm);
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .stats {
+            margin-top: 0.5rem;
+            font-size: var(--font-xs);
+            color: var(--text-soft);
+        }
+
+        .hidden { display: none !important; }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -593,246 +746,214 @@
             </div>
             <div class="header-text">
                 <h1>cClassTrib · Consulta NCM</h1>
-                <p>IBS/CBS · Reforma Tributária LC 214/2025</p>
+                <p>Reforma Tributária LC 214/2025 · IBS/CBS</p>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <!-- ===== CARD DE PESQUISA ===== -->
-        <div class="search-card">
-            <div class="search-label">
-                <i class="fas fa-hashtag" style="color:var(--primary);"></i>
-                <span>Digite o código NCM (4, 6 ou 8 dígitos)</span>
-            </div>
-            
-            <div class="search-box">
-                <div class="search-input-wrapper">
-                    <i class="fas fa-search"></i>
-                    <input type="text" class="search-input" id="ncmInput" placeholder="Ex: 0201, 0401.20, 10064000" inputmode="numeric" autofocus>
-                </div>
-                <button class="search-btn" id="searchBtn">
-                    <i class="fas fa-arrow-right"></i>
-                    <span>Consultar</span>
-                </button>
-            </div>
-
-            <!-- SELETOR DE CAPÍTULOS (NOVO!) -->
-            <div class="chapter-selector">
-                <div class="chapter-label">
-                    <i class="fas fa-book-open"></i>
-                    <span>Ou navegue por capítulo:</span>
-                </div>
-                <select id="chapterSelect" class="chapter-select">
-                    <option value="">Selecione um capítulo...</option>
-                    <option value="01">01 - Animais vivos</option>
-                    <option value="02">02 - Carnes e miudezas</option>
-                    <option value="03">03 - Peixes e crustáceos</option>
-                    <option value="04">04 - Laticínios, ovos, mel</option>
-                    <option value="05">05 - Outros produtos de origem animal</option>
-                    <option value="06">06 - Plantas vivas</option>
-                    <option value="07">07 - Hortaliças</option>
-                    <option value="08">08 - Frutas</option>
-                    <option value="09">09 - Café, mate, especiarias</option>
-                    <option value="10">10 - Cereais</option>
-                    <option value="11">11 - Farinhas</option>
-                    <option value="12">12 - Sementes oleaginosas</option>
-                    <option value="15">15 - Gorduras e óleos</option>
-                    <option value="16">16 - Preparações de carne/peixe</option>
-                    <option value="17">17 - Açúcares</option>
-                    <option value="18">18 - Cacau</option>
-                    <option value="19">19 - Preparações de cereais</option>
-                    <option value="20">20 - Conservas vegetais</option>
-                    <option value="21">21 - Preparações alimentícias</option>
-                    <option value="22">22 - Bebidas</option>
-                    <option value="23">23 - Resíduos alimentares</option>
-                    <option value="24">24 - Tabaco</option>
-                    <option value="25">25 - Sal</option>
-                    <option value="29">29 - Produtos químicos</option>
-                    <option value="30">30 - Produtos farmacêuticos</option>
-                    <option value="31">31 - Fertilizantes</option>
-                    <option value="33">33 - Óleos essenciais</option>
-                    <option value="34">34 - Sabões</option>
-                    <option value="38">38 - Produtos químicos diversos</option>
-                    <option value="39">39 - Plástico</option>
-                    <option value="40">40 - Borracha</option>
-                    <option value="84">84 - Máquinas</option>
-                    <option value="85">85 - Aparelhos elétricos</option>
-                    <option value="87">87 - Veículos</option>
-                    <option value="90">90 - Instrumentos médicos</option>
-                </select>
-                <button class="search-btn chapter-btn" id="searchChapterBtn">
-                    <i class="fas fa-search"></i> Buscar Capítulo
-                </button>
-            </div>
-
-            <div class="quick-examples">
-                <span class="examples-label"><i class="fas fa-bolt" style="color:#fbbf24;"></i> Exemplos:</span>
-                <span class="example-chip" data-ncm="0201">0201 (Carnes)</span>
-                <span class="example-chip" data-ncm="0405">0405 (Manteiga)</span>
-                <span class="example-chip" data-ncm="0702">0702 (Tomates)</span>
-                <span class="example-chip" data-ncm="1006">1006 (Arroz)</span>
-                <span class="example-chip" data-ncm="15171000">15171000 (Margarina)</span>
-                <span class="example-chip" data-ncm="29362812">29362812 (Vitamina E)</span>
-            </div>
-
-            <!-- Dica de formatação -->
-            <div class="text-small" style="margin-top: 0.5rem; color: var(--gray-500);">
-                <i class="fas fa-info-circle"></i> 
-                Digite com ou sem pontos: 0201, 0201.10, 02011000
-            </div>
+        <!-- NAVEGAÇÃO POR ABAS -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="switchTab('consulta')">
+                <i class="fas fa-search"></i> Consulta
+            </button>
+            <button class="nav-tab" onclick="switchTab('capitulos')">
+                <i class="fas fa-book-open"></i> Capítulos
+            </button>
+            <button class="nav-tab" onclick="switchTab('sobre')">
+                <i class="fas fa-info-circle"></i> Sobre
+            </button>
         </div>
 
-        <!-- ===== ÁREA DE RESULTADO ===== -->
-        <div class="result-card" id="resultCard">
-            <!-- FILTROS -->
-            <div id="filterBar" class="filter-bar hidden">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-list"></i> Todos
-                </button>
-                <button class="filter-btn" data-filter="reducao">
-                    <i class="fas fa-arrow-down"></i> Redução
-                </button>
-                <button class="filter-btn" data-filter="imunidade">
-                    <i class="fas fa-shield-alt"></i> Imunidade
-                </button>
-                <button class="filter-btn" data-filter="cst200">
-                    <i class="fas fa-tag"></i> CST 200
-                </button>
-                <button class="filter-btn" data-filter="cst410">
-                    <i class="fas fa-tag"></i> CST 410
-                </button>
-                <div style="margin-left: auto; display: flex; gap: 0.5rem;">
-                    <button class="action-btn" id="exportBtn" title="Exportar resultados">
-                        <i class="fas fa-download"></i>
-                    </button>
-                    <button class="action-btn" id="sortBtn" title="Ordenar por cClassTrib">
-                        <i class="fas fa-sort-alpha-down"></i>
-                    </button>
+        <!-- ABA 1: CONSULTA -->
+        <div id="tab-consulta" class="tab-content active">
+            <div class="search-card">
+                <div class="search-label">
+                    <i class="fas fa-hashtag"></i> Digite o código NCM (4, 6 ou 8 dígitos)
                 </div>
-            </div>
-
-            <!-- MENSAGEM INICIAL -->
-            <div id="initialMessage" class="not-found">
-                <i class="fas fa-file-search"></i>
-                <h3>Digite um NCM para consultar</h3>
-                <p class="text-muted">Ex: 0201, 0405, 1006, 15171000</p>
-                <p class="text-muted text-small">Ou selecione um capítulo acima</p>
-            </div>
-
-            <!-- SKELETON LOADING -->
-            <div id="skeletonLoading" class="hidden">
-                <div class="skeleton-item">
-                    <div class="skeleton-line short skeleton"></div>
-                    <div class="skeleton-line long skeleton"></div>
-                    <div class="skeleton-line medium skeleton"></div>
-                </div>
-                <div class="skeleton-item">
-                    <div class="skeleton-line short skeleton"></div>
-                    <div class="skeleton-line long skeleton"></div>
-                    <div class="skeleton-line medium skeleton"></div>
-                </div>
-                <div class="skeleton-item">
-                    <div class="skeleton-line short skeleton"></div>
-                    <div class="skeleton-line long skeleton"></div>
-                    <div class="skeleton-line medium skeleton"></div>
-                </div>
-            </div>
-
-            <!-- LOADING SPINNER -->
-            <div id="loadingSpinner" class="loading hidden">
-                <i class="fas fa-spinner fa-pulse"></i>
-                <p>Carregando dados...</p>
-            </div>
-
-            <!-- CONTAINER DE ERRO -->
-            <div id="errorContainer" class="error-message hidden"></div>
-
-            <!-- CONTEÚDO DO RESULTADO -->
-            <div id="resultContent" class="hidden">
-                <div class="result-header">
-                    <div class="result-ncm" id="resultNCM">
-                        <span id="resultNCMText">-</span>
-                        <span class="chapter-badge" id="resultChapter"></span>
+                
+                <div class="search-box">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="search-input" id="ncmInput" placeholder="Ex: 0201, 0401.20, 10064000">
                     </div>
-                    <div style="display: flex; gap: 1rem; align-items: center;">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-arrow-right"></i> Consultar
+                    </button>
+                </div>
+
+                <div class="chapter-selector">
+                    <span class="chapter-label"><i class="fas fa-book-open"></i> Navegar por capítulo:</span>
+                    <select id="chapterSelect" class="chapter-select">
+                        <option value="">Selecione um capítulo...</option>
+                    </select>
+                    <button class="chapter-btn" id="searchChapterBtn">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+
+                <div class="quick-examples">
+                    <span class="examples-label"><i class="fas fa-bolt"></i> Exemplos:</span>
+                    <span class="example-chip" data-ncm="0201">0201 (Carnes)</span>
+                    <span class="example-chip" data-ncm="0405">0405 (Manteiga)</span>
+                    <span class="example-chip" data-ncm="0702">0702 (Tomates)</span>
+                    <span class="example-chip" data-ncm="1006">1006 (Arroz)</span>
+                </div>
+            </div>
+
+            <!-- FILTROS E RESULTADOS -->
+            <div class="result-card" id="resultCard">
+                <div id="filterBar" class="filter-bar hidden">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="reducao">Redução</button>
+                    <button class="filter-btn" data-filter="imunidade">Imunidade</button>
+                    <button class="filter-btn" data-filter="cst200">CST 200</button>
+                    <button class="filter-btn" data-filter="cst410">CST 410</button>
+                </div>
+
+                <div id="initialMessage" class="not-found">
+                    <i class="fas fa-file-search"></i>
+                    <h3>Digite um NCM para consultar</h3>
+                    <p class="text-muted">Ex: 0201, 0405, 1006, 15171000</p>
+                </div>
+
+                <div id="resultContent" class="hidden">
+                    <div class="result-header">
+                        <div class="result-ncm" id="resultNCM">
+                            <span id="resultNCMText">-</span>
+                            <span class="chapter-badge" id="resultChapter"></span>
+                        </div>
                         <span class="result-badge" id="resultCount">
-                            <i class="fas fa-list"></i>
-                            <span>0 registros</span>
+                            <i class="fas fa-list"></i> <span>0 registros</span>
                         </span>
                     </div>
+                    <div id="resultList"></div>
                 </div>
-                <div id="resultList"></div>
             </div>
         </div>
 
-        <!-- HISTÓRICO DE CONSULTAS -->
-        <div class="history-card" id="historyCard">
-            <div class="history-title">
-                <i class="fas fa-history" style="color: var(--primary);"></i>
-                <span>Últimas consultas</span>
+        <!-- ABA 2: CAPÍTULOS -->
+        <div id="tab-capitulos" class="tab-content">
+            <div class="chapters-card">
+                <div class="chapters-search">
+                    <input type="text" id="chapterSearch" placeholder="Pesquisar capítulo...">
+                    <button onclick="filterChapters()"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="chaptersList" class="chapters-grid">
+                    <!-- Capítulos serão carregados aqui via JS -->
+                </div>
             </div>
-            <div class="history-list" id="historyList">
-                <div class="text-muted" style="padding: 0.5rem;">Nenhuma consulta recente</div>
-            </div>
-            <div class="text-small" style="margin-top: 0.5rem; text-align: right;">
-                <button class="filter-btn" id="clearHistory" style="font-size: 0.7rem;">
-                    <i class="fas fa-trash"></i> Limpar histórico
-                </button>
+        </div>
+
+        <!-- ABA 3: SOBRE -->
+        <div id="tab-sobre" class="tab-content">
+            <div class="about-card">
+                <h2 style="margin-bottom: 1rem;">📋 Sobre o App</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    Ferramenta de consulta da classificação tributária IBS/CBS por código NCM, 
+                    baseada na LC 214/2025 — Reforma Tributária do governo brasileiro. 
+                    Sistema otimizado para contadores, fiscais e empresários.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value" id="statNCMs">0</div>
+                        <div class="stat-label">NCMs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="statRegras">0</div>
+                        <div class="stat-label">Regras</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="statVersao">4.0</div>
+                        <div class="stat-label">Versão DB</div>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">⚖️ Mapeamento da Legislação</h3>
+                <div class="legislacao-grid">
+                    <div class="leg-item">
+                        <div class="leg-titulo">
+                            <i class="fas fa-file-alt" style="color: var(--primary);"></i>
+                            LC 214/2025 · Anexo I
+                        </div>
+                        <div class="leg-desc">Cesta Básica</div>
+                        <div class="leg-beneficio">Redução 100% — Proteínas, Arroz, Feijão, Leite e derivados</div>
+                    </div>
+                    <div class="leg-item">
+                        <div class="leg-titulo">
+                            <i class="fas fa-file-alt" style="color: var(--primary);"></i>
+                            LC 214/2025 · Anexo VII/VIII
+                        </div>
+                        <div class="leg-desc">Saúde e Higiene</div>
+                        <div class="leg-beneficio">Medicamentos (100%) e Higiene Pessoal (60%)</div>
+                    </div>
+                    <div class="leg-item">
+                        <div class="leg-titulo">
+                            <i class="fas fa-file-alt" style="color: var(--primary);"></i>
+                            LC 214/2025 · Anexo IX
+                        </div>
+                        <div class="leg-desc">Insumos Agro</div>
+                        <div class="leg-beneficio">Rações, Sementes e Fertilizantes — Redução 60%</div>
+                    </div>
+                    <div class="leg-item">
+                        <div class="leg-titulo">
+                            <i class="fas fa-file-alt" style="color: var(--primary);"></i>
+                            LC 214/2025 · Anexo XV
+                        </div>
+                        <div class="leg-desc">Hortifrúti</div>
+                        <div class="leg-beneficio">Imunidade CST 410 — Frutas, Ovos e Legumes</div>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">🏷️ Códigos CST IBS/CBS</h3>
+                <div class="cst-grid">
+                    <div class="cst-item">
+                        <span class="cst-codigo">200</span>
+                        <span class="cst-desc">Redução de alíquota</span>
+                    </div>
+                    <div class="cst-item">
+                        <span class="cst-codigo">410</span>
+                        <span class="cst-desc">Imunidade (Hortifrúti)</span>
+                    </div>
+                </div>
+
+                <div class="aviso-legal">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>⚠️ Aviso Legal</strong>
+                        <p style="margin-top: 0.3rem; color: var(--text-secondary); font-size: var(--font-sm);">
+                            Este software é uma ferramenta de simulação pedagógica e de apoio ao desenvolvimento. 
+                            Os dados devem ser validados por um profissional de contabilidade antes de serem 
+                            aplicados em ambientes de produção fiscal.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
     <footer class="footer">
         <div>
-            <i class="fas fa-balance-scale"></i> 
-            Dados baseados na <strong>LC 214/2025</strong> (Reforma Tributária)
+            <i class="fas fa-balance-scale"></i> Dados baseados na <strong>LC 214/2025</strong> (Reforma Tributária)
         </div>
         <div class="stats" id="stats">
             <i class="fas fa-database"></i> <span id="totalNCMs">0</span> NCMs · 
-            <i class="fas fa-boxes"></i> <span id="totalItens">0</span> registros ·
-            <i class="fas fa-file-alt"></i> <span id="totalAnexos">11</span> anexos
+            <i class="fas fa-tag"></i> <span id="totalRegras">0</span> regras
         </div>
-        <div class="footer-badges">
-            <span class="badge"><i class="fas fa-check-circle" style="color:#10b981;"></i> Cache 1h</span>
-            <span class="badge"><i class="fas fa-bolt" style="color:#fbbf24;"></i> Debounce 300ms</span>
-            <span class="badge"><i class="fas fa-moon" style="color:#6b7280;"></i> Dark mode</span>
-            <span class="badge"><i class="fas fa-file-invoice"></i> DFes</span>
-            <span class="badge"><i class="fas fa-book-open"></i> Capítulos</span>
-        </div>
-        <div style="margin-top: 1rem;">
-            <a href="https://github.com/franklind22/cclasstrib-app" target="_blank"><i class="fab fa-github"></i> GitHub</a> · 
-            <a href="#" id="refreshData"><i class="fas fa-sync-alt"></i> Recarregar</a> ·
-            <a href="#" id="exportAll"><i class="fas fa-database"></i> Exportar base</a> ·
-            <span>versão 5.0</span>
+        <div style="margin-top: 0.5rem;">
+            <span>versão 4.0 · © 2026</span>
         </div>
     </footer>
-
-    <!-- TEMPLATES -->
-    <template id="skeletonTemplate">
-        <div class="skeleton-item">
-            <div class="skeleton-line short skeleton"></div>
-            <div class="skeleton-line long skeleton"></div>
-            <div class="skeleton-line medium skeleton"></div>
-        </div>
-    </template>
 
     <script>
         // ===== CONSTANTES =====
         const DATA_FILE = 'dados.json';
-        const CACHE_TIME = 3600000; // 1 hora
-        const DEBOUNCE_TIME = 300; // 300ms
-
         let ncmDatabase = null;
-        let lastFetchTime = 0;
         let currentResults = [];
-        let currentSearchKey = '';
-        let currentFilter = 'all';
-        let sortAscending = true;
-        let searchTimeout;
 
-        // ===== MAPA DE CAPÍTULOS =====
-        const CHAPTER_NAMES = {
+        // ===== CAPÍTULOS NCM =====
+        const CHAPTERS = {
             '01': 'Animais vivos',
             '02': 'Carnes e miudezas',
             '03': 'Peixes e crustáceos',
@@ -845,6 +966,8 @@
             '10': 'Cereais',
             '11': 'Farinhas',
             '12': 'Sementes oleaginosas',
+            '13': 'Gomas e resinas',
+            '14': 'Matérias para entrançar',
             '15': 'Gorduras e óleos',
             '16': 'Preparações de carne/peixe',
             '17': 'Açúcares',
@@ -856,9 +979,11 @@
             '23': 'Resíduos alimentares',
             '24': 'Tabaco',
             '25': 'Sal',
-            '29': 'Produtos químicos',
+            '28': 'Produtos químicos inorgânicos',
+            '29': 'Produtos químicos orgânicos',
             '30': 'Produtos farmacêuticos',
             '31': 'Fertilizantes',
+            '32': 'Extratos tanantes',
             '33': 'Óleos essenciais',
             '34': 'Sabões',
             '38': 'Produtos químicos diversos',
@@ -870,274 +995,23 @@
             '90': 'Instrumentos médicos'
         };
 
-        // ===== DOCUMENTOS FISCAIS POR CST (NOVO!) =====
-        const DOCUMENTOS_POR_CST = {
-            '200003': ['NFCE', 'NFE'],
-            '200004': ['NFCE', 'NFE', 'NFSE'],
-            '200005': ['NFE', 'NFSE'],
-            '200007': ['NFCE', 'NFE', 'NFSE'],
-            '200008': ['NFE', 'NFSE'],
-            '200009': ['NFCE', 'NFE'],
-            '200011': ['NFE'],
-            '200013': ['NFCE', 'NFE'],
-            '200014': ['NFCE', 'NFE'],
-            '200028': ['NFSE'],
-            '200029': ['NFSE'],
-            '200030': ['NFCE', 'NFE', 'NFSE'],
-            '200031': ['NFCE', 'NFE', 'NFSE'],
-            '200032': ['NFCE', 'NFE'],
-            '200033': ['NFCE', 'NFE'],
-            '200034': ['NFCE', 'NFE'],
-            '200035': ['NFCE', 'NFE'],
-            '200036': ['NFCE', 'NFE'],
-            '200037': ['NFSE'],
-            '200038': ['NFCE', 'NFE', 'NFSE'],
-            '200039': ['NFE', 'NFSE'],
-            '200043': ['NFCOM', 'NFE', 'NFSE'],
-            '200044': ['NFCOM', 'NFSE'],
-            '200046': ['NFABI', 'NFSE'],
-            '200047': ['NFCE', 'NFE'],
-            '200048': ['NFSE'],
-            '200049': ['BPE'],
-            '200050': ['BPETA', 'CTE', 'CTEOS'],
-            '200051': ['NFSE'],
-            '200052': ['NFSE'],
-            '200053': ['NFCE', 'NFE'],
-            '410001': ['BPE', 'BPETA', 'BPETM', 'CTE', 'CTEOS', 'NF3E', 'NFABI', 'NFAG', 'NFCE', 'NFCOM', 'NFE', 'NFSE', 'NFGAS'],
-            '410002': ['NFE'],
-            '410003': ['BPE', 'BPETA', 'BPETM', 'CTE', 'CTEOS', 'NF3E', 'NFABI', 'NFAG', 'NFCE', 'NFCOM', 'NFE', 'NFSE', 'NFSVIA', 'NFGAS', 'DERE'],
-            '410004': ['BPE', 'BPETA', 'CTE', 'CTEOS', 'NF3E', 'NFCOM', 'NFE', 'NFSE'],
-            '410005': ['NFAG', 'NFCE', 'NFE', 'NFSE'],
-            '410006': ['NFCE', 'NFE', 'NFSE'],
-            '410007': ['NFCE', 'NFE', 'NFSE'],
-            '410008': ['NFCE', 'NFCOM', 'NFE', 'NFSE'],
-            '410009': ['NFCE', 'NFCOM', 'NFE', 'NFSE'],
-            '410010': ['NFCOM', 'NFSE', 'DERE'],
-            '410011': [],
-            '410012': ['NFCE', 'NFE', 'NFSE'],
-            '410013': ['NFE'],
-            '410014': ['NFCE', 'NFE', 'NFSE'],
-            '410015': ['CTE', 'NFSE'],
-            '410016': ['NFE'],
-            '410017': ['NFE'],
-            '410018': ['NFABI', 'DERE'],
-            '410019': ['NFCE', 'NFE'],
-            '410020': ['NFCE', 'NFE'],
-            '410021': ['NF3E'],
-            '410022': ['NFABI'],
-            '410023': ['NFABI'],
-            '410024': ['NFABI'],
-            '410025': ['NFABI'],
-            '410026': ['BPE', 'BPETA', 'BPETM', 'CTE', 'CTEOS', 'NF3E', 'NFABI', 'NFAG', 'NFCE', 'NFCOM', 'NFE', 'NFSE', 'NFSVIA', 'NFGAS', 'DERE'],
-            '410027': ['CTE', 'CTEOS', 'NFE', 'NFSE'],
-            '410028': ['NFABI', 'NFSE'],
-            '410029': ['NFCE', 'NFE'],
-            '410030': ['NFE'],
-            '410031': ['NF3E', 'NFAG', 'NFCOM', 'NFE', 'NFGAS'],
-            '410032': ['NF3E', 'NFAG', 'NFCOM', 'NFGAS'],
-            '410033': ['NFABI', 'NFSE'],
-            '410034': ['NFSE', 'DERE'],
-            '410035': ['CTE', 'CTEOS', 'NFCE', 'NFE', 'NFSE'],
-            '410999': ['BPE', 'BPETA', 'BPETM', 'CTE', 'CTEOS', 'NF3E', 'NFABI', 'NFAG', 'NFCE', 'NFCOM', 'NFE', 'NFSE', 'NFGAS']
-        };
-
-        // ===== ELEMENTOS DOM =====
-        const elements = {
-            ncmInput: document.getElementById('ncmInput'),
-            searchBtn: document.getElementById('searchBtn'),
-            chapterSelect: document.getElementById('chapterSelect'),
-            searchChapterBtn: document.getElementById('searchChapterBtn'),
-            initialMessage: document.getElementById('initialMessage'),
-            skeletonLoading: document.getElementById('skeletonLoading'),
-            loadingSpinner: document.getElementById('loadingSpinner'),
-            errorContainer: document.getElementById('errorContainer'),
-            resultContent: document.getElementById('resultContent'),
-            resultNCMText: document.getElementById('resultNCMText'),
-            resultChapter: document.getElementById('resultChapter'),
-            resultCount: document.getElementById('resultCount').querySelector('span'),
-            resultList: document.getElementById('resultList'),
-            filterBar: document.getElementById('filterBar'),
-            totalNCMs: document.getElementById('totalNCMs'),
-            totalItens: document.getElementById('totalItens'),
-            totalAnexos: document.getElementById('totalAnexos'),
-            refreshData: document.getElementById('refreshData'),
-            exportBtn: document.getElementById('exportBtn'),
-            sortBtn: document.getElementById('sortBtn'),
-            historyList: document.getElementById('historyList'),
-            clearHistory: document.getElementById('clearHistory'),
-            exportAll: document.getElementById('exportAll')
-        };
-
         // ===== INICIALIZAÇÃO =====
         document.addEventListener('DOMContentLoaded', () => {
             loadDatabase();
+            populateChapterSelect();
+            loadChaptersList();
             setupEventListeners();
-            loadHistory();
-            updateStatsPlaceholder();
         });
 
-        // ===== CONFIGURA EVENTOS =====
-        function setupEventListeners() {
-            elements.searchBtn.addEventListener('click', handleSearch);
-            
-            // Input com debounce
-            elements.ncmInput.addEventListener('input', () => {
-                clearTimeout(searchTimeout);
-                searchTimeout = setTimeout(() => {
-                    if (elements.ncmInput.value.length >= 4) {
-                        handleSearch();
-                    }
-                }, DEBOUNCE_TIME);
-            });
-
-            elements.ncmInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    clearTimeout(searchTimeout);
-                    handleSearch();
-                }
-            });
-
-            // Seletor de capítulos
-            if (elements.searchChapterBtn) {
-                elements.searchChapterBtn.addEventListener('click', () => {
-                    const chapter = elements.chapterSelect.value;
-                    if (chapter) {
-                        elements.ncmInput.value = chapter;
-                        handleSearch();
-                    } else {
-                        showWarning('Selecione um capítulo');
-                    }
-                });
-            }
-
-            if (elements.chapterSelect) {
-                elements.chapterSelect.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter' && elements.chapterSelect.value) {
-                        elements.ncmInput.value = elements.chapterSelect.value;
-                        handleSearch();
-                    }
-                });
-            }
-
-            // Exemplos rápidos
-            document.querySelectorAll('.example-chip').forEach(chip => {
-                chip.addEventListener('click', () => {
-                    elements.ncmInput.value = chip.dataset.ncm;
-                    handleSearch();
-                });
-            });
-
-            // Refresh manual
-            elements.refreshData.addEventListener('click', (e) => {
-                e.preventDefault();
-                loadDatabase(true);
-            });
-
-            // Exportar resultados
-            if (elements.exportBtn) {
-                elements.exportBtn.addEventListener('click', exportResults);
-            }
-
-            // Ordenar
-            if (elements.sortBtn) {
-                elements.sortBtn.addEventListener('click', toggleSort);
-            }
-
-            // Filtros
-            document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const filter = btn.dataset.filter;
-                    setActiveFilter(filter);
-                    filterResults(filter);
-                });
-            });
-
-            // Limpar histórico
-            if (elements.clearHistory) {
-                elements.clearHistory.addEventListener('click', clearHistory);
-            }
-
-            // Exportar base completa
-            if (elements.exportAll) {
-                elements.exportAll.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    exportDatabase();
-                });
-            }
-
-            // Tecla ESC limpa input
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    elements.ncmInput.value = '';
-                    showInitialMessage();
-                }
-            });
-        }
-
-        // ===== CARREGA BASE DE DADOS =====
-        async function loadDatabase(force = false) {
-            const now = Date.now();
-            
-            // Tenta carregar do cache
+        // ===== CARREGA DADOS =====
+        async function loadDatabase() {
             try {
-                const cached = localStorage.getItem('ncmDatabase');
-                const cacheTime = localStorage.getItem('ncmCacheTime');
-                
-                if (!force && cached && cacheTime && (now - parseInt(cacheTime)) < CACHE_TIME) {
-                    ncmDatabase = JSON.parse(cached);
-                    lastFetchTime = parseInt(cacheTime);
-                    console.log('📦 Dados carregados do cache');
-                    updateStats();
-                    return;
-                }
-            } catch (e) {
-                console.warn('Erro ao ler cache:', e);
-            }
-
-            showSkeleton(true);
-
-            try {
-                const response = await fetch(DATA_FILE + '?t=' + now);
-                if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
-                
+                const response = await fetch(DATA_FILE);
                 ncmDatabase = await response.json();
-                lastFetchTime = now;
-                
-                // Salva no localStorage
-                try {
-                    localStorage.setItem('ncmDatabase', JSON.stringify(ncmDatabase));
-                    localStorage.setItem('ncmCacheTime', now.toString());
-                } catch (e) {
-                    console.warn('Erro ao salvar cache:', e);
-                }
-                
-                console.log('✅ Dados carregados do servidor');
                 updateStats();
-                hideError();
+                loadChaptersList(); // Recarrega com os dados
             } catch (error) {
                 console.error('Erro ao carregar dados:', error);
-                
-                // Tenta usar cache expirado
-                if (ncmDatabase) {
-                    showWarning('Usando dados em cache - conexão com servidor falhou');
-                } else {
-                    showError('Falha ao carregar base de dados. Tente novamente mais tarde.');
-                    ncmDatabase = {};
-                }
-            } finally {
-                showSkeleton(false);
-            }
-        }
-
-        // ===== MOSTRA SKELETON =====
-        function showSkeleton(show) {
-            if (show) {
-                elements.skeletonLoading.classList.remove('hidden');
-                elements.initialMessage.classList.add('hidden');
-                elements.resultContent.classList.add('hidden');
-                elements.errorContainer.classList.add('hidden');
-            } else {
-                elements.skeletonLoading.classList.add('hidden');
             }
         }
 
@@ -1146,461 +1020,169 @@
             if (!ncmDatabase) return;
             
             const totalNCMs = Object.keys(ncmDatabase).length;
-            const totalItens = Object.values(ncmDatabase).reduce((acc, arr) => acc + arr.length, 0);
+            const totalRegras = Object.values(ncmDatabase).flat().length;
             
-            elements.totalNCMs.textContent = totalNCMs.toLocaleString();
-            elements.totalItens.textContent = totalItens.toLocaleString();
-            elements.totalAnexos.textContent = '11';
+            document.getElementById('totalNCMs').textContent = totalNCMs;
+            document.getElementById('totalRegras').textContent = totalRegras;
+            document.getElementById('statNCMs').textContent = totalNCMs;
+            document.getElementById('statRegras').textContent = totalRegras;
         }
 
-        function updateStatsPlaceholder() {
-            elements.totalNCMs.textContent = 'carregando...';
-            elements.totalItens.textContent = 'carregando...';
+        // ===== POPULA SELECT DE CAPÍTULOS =====
+        function populateChapterSelect() {
+            const select = document.getElementById('chapterSelect');
+            Object.entries(CHAPTERS).forEach(([code, name]) => {
+                const option = document.createElement('option');
+                option.value = code;
+                option.textContent = `${code} - ${name}`;
+                select.appendChild(option);
+            });
+        }
+
+        // ===== CARREGA LISTA DE CAPÍTULOS =====
+        function loadChaptersList() {
+            const container = document.getElementById('chaptersList');
+            container.innerHTML = '';
+            
+            Object.entries(CHAPTERS).forEach(([code, name]) => {
+                // Conta NCMs neste capítulo
+                const ncms = ncmDatabase ? Object.keys(ncmDatabase)
+                    .filter(key => key.toString().padStart(4, '0').startsWith(code)) : [];
+                
+                const item = document.createElement('div');
+                item.className = 'chapter-item';
+                item.onclick = () => {
+                    switchTab('consulta');
+                    document.getElementById('ncmInput').value = code;
+                    document.getElementById('searchBtn').click();
+                };
+                
+                item.innerHTML = `
+                    <div class="chapter-header">
+                        <span class="chapter-code">${code}</span>
+                        <span class="chapter-name">${name}</span>
+                    </div>
+                    <div class="chapter-count">
+                        <i class="fas fa-hashtag"></i> ${ncms.length} NCMs
+                    </div>
+                    <div class="chapter-ncms">
+                        ${ncms.slice(0, 5).map(ncm => 
+                            `<span class="chapter-ncm-tag">${ncm}</span>`
+                        ).join('')}
+                        ${ncms.length > 5 ? '<span class="chapter-ncm-tag">...</span>' : ''}
+                    </div>
+                `;
+                
+                container.appendChild(item);
+            });
+        }
+
+        // ===== FILTRA CAPÍTULOS =====
+        function filterChapters() {
+            const search = document.getElementById('chapterSearch').value.toLowerCase();
+            const items = document.querySelectorAll('.chapter-item');
+            
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(search) ? 'block' : 'none';
+            });
+        }
+
+        // ===== SWITCH TABS =====
+        window.switchTab = function(tab) {
+            document.querySelectorAll('.nav-tab').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            document.querySelector(`.nav-tab[onclick="switchTab('${tab}')"]`).classList.add('active');
+            document.getElementById(`tab-${tab}`).classList.add('active');
+        };
+
+        // ===== CONFIGURA EVENTOS =====
+        function setupEventListeners() {
+            document.getElementById('searchBtn').addEventListener('click', handleSearch);
+            
+            document.getElementById('searchChapterBtn').addEventListener('click', () => {
+                const chapter = document.getElementById('chapterSelect').value;
+                if (chapter) {
+                    document.getElementById('ncmInput').value = chapter;
+                    handleSearch();
+                }
+            });
+
+            document.querySelectorAll('.example-chip').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    document.getElementById('ncmInput').value = chip.dataset.ncm;
+                    handleSearch();
+                });
+            });
         }
 
         // ===== FUNÇÃO DE PESQUISA =====
         function handleSearch() {
-            const rawInput = elements.ncmInput.value.trim().replace(/\D/g, '');
-            
-            if (!rawInput) {
-                showError('Digite um código NCM válido');
-                return;
-            }
+            const input = document.getElementById('ncmInput').value.trim().replace(/\D/g, '');
+            if (!input || !ncmDatabase) return;
 
-            if (rawInput.length < 2 || rawInput.length > 8) {
-                showError('NCM deve ter entre 2 e 8 dígitos numéricos');
-                return;
-            }
+            let results = [];
+            let matchedKey = null;
 
-            if (!ncmDatabase) {
-                showError('Base de dados não carregada. Tente novamente.');
-                return;
-            }
-
-            const searchKey = normalizeNCM(rawInput);
-            currentSearchKey = searchKey;
-            
-            performSearch(searchKey);
-        }
-
-        // ===== NORMALIZA NCM =====
-        function normalizeNCM(ncm) {
-            let clean = ncm.replace(/\D/g, '');
-            if (clean.length > 8) clean = clean.substring(0, 8);
-            return clean.replace(/^0+/, '') || '0';
-        }
-
-        // ===== EXTRAI CAPÍTULO DO NCM =====
-        function getChapterFromNCM(ncm) {
-            const digits = ncm.replace(/\D/g, '');
-            return digits.substring(0, 2);
-        }
-
-        // ===== BUSCA NO BANCO DE DADOS =====
-        function performSearch(searchKey) {
-            hideError();
-            hideInitialMessage();
-            showSkeleton(true);
-
-            setTimeout(() => {
-                let results = [];
-                let matchedKey = null;
-
-                // 1. Tenta correspondência exata
-                if (ncmDatabase[searchKey]) {
-                    results = ncmDatabase[searchKey];
-                    matchedKey = searchKey;
-                } else {
-                    // 2. Busca por início (capítulos!)
-                    for (const [key, value] of Object.entries(ncmDatabase)) {
-                        const normalizedKey = key.replace(/\D/g, '').replace(/^0+/, '');
-                        
-                        if (normalizedKey.startsWith(searchKey)) {
-                            results = [...results, ...value];
-                            if (!matchedKey || key.length < matchedKey.length) {
-                                matchedKey = key;
-                            }
-                        }
+            // Busca exata
+            if (ncmDatabase[input]) {
+                results = ncmDatabase[input];
+                matchedKey = input;
+            } else {
+                // Busca por prefixo
+                for (const [key, value] of Object.entries(ncmDatabase)) {
+                    if (key.startsWith(input)) {
+                        results = [...results, ...value];
+                        if (!matchedKey) matchedKey = key;
                     }
                 }
+            }
 
-                const uniqueResults = removeDuplicates(results);
+            if (results.length === 0) {
+                alert('NCM não encontrado');
+                return;
+            }
 
-                showSkeleton(false);
+            // Remove duplicatas
+            const unique = results.filter((item, index, self) => 
+                index === self.findIndex(i => i.cclasstrib === item.cclasstrib)
+            );
 
-                if (uniqueResults.length === 0) {
-                    showNotFound(searchKey);
-                    return;
-                }
-
-                addToHistory(matchedKey || searchKey, uniqueResults.length);
-                
-                currentResults = uniqueResults;
-                displayResults(uniqueResults, matchedKey || searchKey);
-            }, 300);
-        }
-
-        // ===== REMOVE DUPLICATAS =====
-        function removeDuplicates(results) {
-            const seen = new Set();
-            return results.filter(item => {
-                const key = `${item.cclasstrib}-${item.cst}-${item.descricao}-${item.regime}`;
-                if (seen.has(key)) return false;
-                seen.add(key);
-                return true;
-            });
+            displayResults(unique, matchedKey);
         }
 
         // ===== EXIBE RESULTADOS =====
-        function displayResults(results, searchedNCM) {
+        function displayResults(results, ncm) {
             currentResults = results;
             
-            const displayNCM = formatNCMDisplay(searchedNCM);
-            const chapter = getChapterFromNCM(searchedNCM);
-            const chapterName = CHAPTER_NAMES[chapter] || 'Capítulo desconhecido';
+            document.getElementById('initialMessage').classList.add('hidden');
+            document.getElementById('resultContent').classList.remove('hidden');
+            document.getElementById('filterBar').classList.remove('hidden');
             
-            elements.resultNCMText.textContent = displayNCM;
-            elements.resultChapter.textContent = `Cap. ${chapter} · ${chapterName}`;
-            elements.resultCount.textContent = `${results.length} ${results.length === 1 ? 'registro' : 'registros'}`;
+            document.getElementById('resultNCMText').textContent = ncm;
+            document.getElementById('resultCount').querySelector('span').textContent = 
+                `${results.length} registros`;
             
-            let filteredResults = filterResultsByType(results, currentFilter);
+            const chapter = ncm.substring(0, 2);
+            const chapterName = CHAPTERS[chapter] || '';
+            document.getElementById('resultChapter').textContent = `Cap. ${chapter} · ${chapterName}`;
             
-            if (!sortAscending) {
-                filteredResults = [...filteredResults].reverse();
-            }
-            
-            const html = filteredResults.map(item => {
-                // Adiciona documentos fiscais
-                const documentos = DOCUMENTOS_POR_CST[item.cclasstrib] || [];
-                
-                return `
+            const html = results.map(item => `
                 <div class="result-item">
-                    <div class="item-title">
-                        ${item.cclasstrib || 'N/A'} · CST ${item.cst || 'N/A'}
-                        ${item.cclasstrib ? `<span class="tag tooltip" data-tooltip="Ver detalhes" style="font-size:0.7rem; cursor:pointer;" onclick="showDetails('${item.cclasstrib}')"><i class="fas fa-info-circle"></i></span>` : ''}
-                    </div>
-                    <div class="item-desc">${item.descricao || 'Descrição não disponível'}</div>
+                    <div class="item-title">${item.cclasstrib} · CST ${item.cst}</div>
+                    <div class="item-desc">${item.descricao}</div>
                     <div class="item-tags">
-                        <span class="tag"><i class="fas fa-percent"></i> ${item.pReducao || 'N/A'}</span>
-                        <span class="tag ${item.regime === 'reducao' ? 'regime-reducao' : 'regime-imunidade'}">
-                            <i class="fas ${item.regime === 'reducao' ? 'fa-arrow-down' : 'fa-shield-alt'}"></i>
-                            ${item.regime || 'N/A'}
-                        </span>
-                        <span class="tag ${item.cst === '200' ? 'cst-200' : 'cst-410'}">
-                            <i class="fas fa-tag"></i> CST ${item.cst || 'N/A'}
-                        </span>
-                        <span class="tag"><i class="fas fa-gavel"></i> ${item.legislacao || 'LC 214/2025'}</span>
-                        ${documentos.length > 0 ? `
-                        <span class="tag documentos" title="Documentos fiscais permitidos">
-                            <i class="fas fa-file-invoice"></i> ${documentos.join(', ')}
-                        </span>
-                        ` : ''}
-                        ${item.indicadores ? `
-                        <span class="tag indicador" title="Redução IBS: ${item.indicadores.pRedIBS || 0}% · Redução CBS: ${item.indicadores.pRedCBS || 0}%">
-                            <i class="fas fa-chart-line"></i> ${item.indicadores.pRedIBS || 0}%/${item.indicadores.pRedCBS || 0}%
-                        </span>
-                        ` : ''}
+                        <span class="tag"><i class="fas fa-percent"></i> ${item.pReducao}</span>
+                        <span class="tag regime-${item.regime}">${item.regime}</span>
+                        <span class="tag cst-${item.cst}">CST ${item.cst}</span>
+                        <span class="tag"><i class="fas fa-gavel"></i> ${item.legislacao}</span>
                     </div>
-                </div>
-            `}).join('');
-
-            elements.resultList.innerHTML = html;
-            
-            elements.filterBar.classList.remove('hidden');
-            elements.resultContent.classList.remove('hidden');
-            
-            updateFilterCounts();
-        }
-
-        // ===== FILTRA RESULTADOS =====
-        function filterResultsByType(results, filter) {
-            if (filter === 'all') return results;
-            if (filter === 'reducao') return results.filter(r => r.regime === 'reducao');
-            if (filter === 'imunidade') return results.filter(r => r.regime === 'imunidade');
-            if (filter === 'cst200') return results.filter(r => r.cst === '200');
-            if (filter === 'cst410') return results.filter(r => r.cst === '410');
-            return results;
-        }
-
-        // ===== ATUALIZA CONTADORES DOS FILTROS =====
-        function updateFilterCounts() {
-            const counts = {
-                all: currentResults.length,
-                reducao: currentResults.filter(r => r.regime === 'reducao').length,
-                imunidade: currentResults.filter(r => r.regime === 'imunidade').length,
-                cst200: currentResults.filter(r => r.cst === '200').length,
-                cst410: currentResults.filter(r => r.cst === '410').length
-            };
-
-            document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
-                const filter = btn.dataset.filter;
-                const count = counts[filter] || 0;
-                
-                let countSpan = btn.querySelector('.count');
-                if (!countSpan) {
-                    countSpan = document.createElement('span');
-                    countSpan.className = 'count';
-                    btn.appendChild(countSpan);
-                }
-                countSpan.textContent = count;
-            });
-        }
-
-        // ===== APLICA FILTRO =====
-        function filterResults(filter) {
-            currentFilter = filter;
-            const filtered = filterResultsByType(currentResults, filter);
-            
-            const sorted = sortAscending ? filtered : [...filtered].reverse();
-            
-            const html = sorted.map(item => {
-                const documentos = DOCUMENTOS_POR_CST[item.cclasstrib] || [];
-                
-                return `
-                <div class="result-item">
-                    <div class="item-title">${item.cclasstrib || 'N/A'} · CST ${item.cst || 'N/A'}</div>
-                    <div class="item-desc">${item.descricao || 'Descrição não disponível'}</div>
-                    <div class="item-tags">
-                        <span class="tag"><i class="fas fa-percent"></i> ${item.pReducao || 'N/A'}</span>
-                        <span class="tag ${item.regime === 'reducao' ? 'regime-reducao' : 'regime-imunidade'}">
-                            <i class="fas ${item.regime === 'reducao' ? 'fa-arrow-down' : 'fa-shield-alt'}"></i>
-                            ${item.regime || 'N/A'}
-                        </span>
-                        <span class="tag ${item.cst === '200' ? 'cst-200' : 'cst-410'}">
-                            <i class="fas fa-tag"></i> CST ${item.cst || 'N/A'}
-                        </span>
-                        <span class="tag"><i class="fas fa-gavel"></i> ${item.legislacao || 'LC 214/2025'}</span>
-                        ${documentos.length > 0 ? `
-                        <span class="tag documentos">
-                            <i class="fas fa-file-invoice"></i> ${documentos.join(', ')}
-                        </span>
-                        ` : ''}
-                    </div>
-                </div>
-            `}).join('');
-
-            elements.resultList.innerHTML = html;
-            elements.resultCount.textContent = `${filtered.length} ${filtered.length === 1 ? 'registro' : 'registros'}`;
-        }
-
-        // ===== ALTERNA ORDENAÇÃO =====
-        function toggleSort() {
-            sortAscending = !sortAscending;
-            elements.sortBtn.innerHTML = `<i class="fas fa-sort-alpha-${sortAscending ? 'down' : 'up'}"></i>`;
-            filterResults(currentFilter);
-        }
-
-        // ===== SETA FILTRO ATIVO =====
-        function setActiveFilter(filter) {
-            document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
-                if (btn.dataset.filter === filter) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-        }
-
-        // ===== FORMATA NCM =====
-        function formatNCMDisplay(ncm) {
-            const digits = ncm.replace(/\D/g, '');
-            
-            if (digits.length === 8) {
-                return `${digits.substring(0,4)}.${digits.substring(4,6)}.${digits.substring(6,8)}`;
-            } else if (digits.length === 6) {
-                return `${digits.substring(0,4)}.${digits.substring(4,6)}`;
-            } else if (digits.length === 4) {
-                return digits.padStart(4, '0');
-            } else if (digits.length === 2) {
-                return digits.padStart(2, '0');
-            }
-            return digits;
-        }
-
-        // ===== EXPORTA RESULTADOS =====
-        function exportResults() {
-            const dataStr = JSON.stringify(currentResults, null, 2);
-            const blob = new Blob([dataStr], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `ncm-${elements.ncmInput.value}-resultados.json`;
-            a.click();
-            
-            URL.revokeObjectURL(url);
-            showInfo('Resultados exportados com sucesso!');
-        }
-
-        // ===== EXPORTA BASE COMPLETA =====
-        function exportDatabase() {
-            if (!ncmDatabase) {
-                showError('Base de dados não carregada');
-                return;
-            }
-            
-            const dataStr = JSON.stringify(ncmDatabase, null, 2);
-            const blob = new Blob([dataStr], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `dados-completos-${new Date().toISOString().slice(0,10)}.json`;
-            a.click();
-            
-            URL.revokeObjectURL(url);
-            showInfo('Base completa exportada!');
-        }
-
-        // ===== HISTÓRICO =====
-        function addToHistory(ncm, count) {
-            const history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
-            
-            history.unshift({
-                ncm: ncm,
-                display: formatNCMDisplay(ncm),
-                chapter: getChapterFromNCM(ncm),
-                chapterName: CHAPTER_NAMES[getChapterFromNCM(ncm)] || '',
-                count: count,
-                timestamp: new Date().toISOString()
-            });
-            
-            if (history.length > 8) history.pop();
-            localStorage.setItem('searchHistory', JSON.stringify(history));
-            
-            updateHistoryDisplay();
-        }
-
-        function loadHistory() {
-            const history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
-            updateHistoryDisplay(history);
-        }
-
-        function updateHistoryDisplay(history = null) {
-            const items = history || JSON.parse(localStorage.getItem('searchHistory') || '[]');
-            
-            if (items.length === 0) {
-                elements.historyList.innerHTML = '<div class="text-muted" style="padding: 0.5rem;">Nenhuma consulta recente</div>';
-                return;
-            }
-            
-            const html = items.map(h => `
-                <div class="history-item" onclick="document.getElementById('ncmInput').value='${h.ncm}';handleSearch()">
-                    <i class="fas fa-history"></i>
-                    <span>${h.display}</span>
-                    ${h.chapterName ? `<small>${h.chapterName}</small>` : ''}
-                    <small>${h.count} ${h.count === 1 ? 'item' : 'itens'}</small>
                 </div>
             `).join('');
             
-            elements.historyList.innerHTML = html;
+            document.getElementById('resultList').innerHTML = html;
         }
-
-        function clearHistory() {
-            localStorage.removeItem('searchHistory');
-            elements.historyList.innerHTML = '<div class="text-muted" style="padding: 0.5rem;">Nenhuma consulta recente</div>';
-            showInfo('Histórico limpo!');
-        }
-
-        // ===== ESTADOS DE TELA =====
-        function showError(message) {
-            elements.errorContainer.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${message}`;
-            elements.errorContainer.className = 'error-message error';
-            elements.errorContainer.classList.remove('hidden');
-            elements.initialMessage.classList.add('hidden');
-            elements.resultContent.classList.add('hidden');
-            elements.filterBar.classList.add('hidden');
-        }
-
-        function showWarning(message) {
-            elements.errorContainer.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${message}`;
-            elements.errorContainer.className = 'error-message warning';
-            elements.errorContainer.classList.remove('hidden');
-        }
-
-        function showInfo(message) {
-            elements.errorContainer.innerHTML = `<i class="fas fa-info-circle"></i> ${message}`;
-            elements.errorContainer.className = 'error-message info';
-            elements.errorContainer.classList.remove('hidden');
-            setTimeout(() => {
-                elements.errorContainer.classList.add('hidden');
-            }, 3000);
-        }
-
-        function hideError() {
-            elements.errorContainer.classList.add('hidden');
-        }
-
-        function hideInitialMessage() {
-            elements.initialMessage.classList.add('hidden');
-        }
-
-        function showInitialMessage() {
-            elements.initialMessage.classList.remove('hidden');
-            elements.resultContent.classList.add('hidden');
-            elements.filterBar.classList.add('hidden');
-            elements.errorContainer.classList.add('hidden');
-        }
-
-        function showNotFound(searchKey) {
-            elements.resultContent.classList.add('hidden');
-            elements.filterBar.classList.add('hidden');
-            
-            const displayNCM = formatNCMDisplay(searchKey);
-            const chapter = getChapterFromNCM(searchKey);
-            const chapterName = CHAPTER_NAMES[chapter];
-            
-            let message = '';
-            if (chapterName && searchKey.length === 2) {
-                message = `
-                    <p class="text-muted">O capítulo ${chapter} (${chapterName}) não possui NCMs com benefícios fiscais</p>
-                `;
-            } else {
-                message = `
-                    <p class="text-muted">Este código não está na base com redução/imunidade</p>
-                `;
-            }
-            
-            elements.initialMessage.innerHTML = `
-                <i class="fas fa-question-circle"></i>
-                <h3>NCM ${displayNCM} não encontrado</h3>
-                ${message}
-                <p class="text-small" style="margin-top:1rem;">Regime geral: CST 000 (tributação integral)</p>
-                <p class="text-small" style="margin-top:0.5rem;">
-                    <i class="fas fa-lightbulb" style="color: #fbbf24;"></i>
-                    Tente: 0201, 0405, 1006, 15171000 ou selecione um capítulo
-                </p>
-            `;
-            elements.initialMessage.classList.remove('hidden');
-        }
-
-        // ===== MOSTRA DETALHES DO CST (NOVO) =====
-        window.showDetails = function(cclasstrib) {
-            const documentos = DOCUMENTOS_POR_CST[cclasstrib] || [];
-            showInfo(`CST ${cclasstrib} · Documentos: ${documentos.join(', ') || 'Nenhum documento específico'}`);
-        };
-
-        // ===== TORNA VARIÁVEIS GLOBAIS PARA DIAGNÓSTICO =====
-        window.ncmDatabase = ncmDatabase;
-        window.diagnostico = function() {
-            console.log('📊 DIAGNÓSTICO:', {
-                chaves: Object.keys(ncmDatabase || {}).length,
-                itens: Object.values(ncmDatabase || {}).reduce((acc, arr) => acc + arr.length, 0),
-                documentos: Object.keys(DOCUMENTOS_POR_CST).length
-            });
-        };
-
-        // ===== AUTO-EXECUÇÃO =====
-        (function checkUrlParam() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const ncmParam = urlParams.get('ncm');
-            if (ncmParam) {
-                setTimeout(() => {
-                    elements.ncmInput.value = ncmParam;
-                    handleSearch();
-                }, 500);
-            }
-        })();
     </script>
 </body>
 </html>
