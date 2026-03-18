@@ -1,6 +1,4 @@
-## 📄 **README.md - VERSÃO BONITÃO 🚀**
 
-```markdown
 <div align="center">
   <img src="https://img.icons8.com/fluency/96/000000/search.png" width="80" height="80"/>
   <h1>🧾 cClassTrib · Consulta NCM</h1>
