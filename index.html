@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta cClassTrib · Reforma Tributária 2026</title>
+    <!-- Google Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* VARIÁVEIS CSS */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --success-bg: #e6f7e6;
+            --success-text: #0a5c0a;
+            --success-border: #b7e6b7;
+            --warning-bg: #fff3cd;
+            --warning-text: #856404;
+            --warning-border: #ffe69c;
+            --danger-bg: #fee2e2;
+            --danger-text: #991b1b;
+            --danger-border: #fecaca;
+            --info-bg: #dbeafe;
+            --info-text: #1e40af;
+            --info-border: #b8d3ff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --border-radius-sm: 8px;
+            --border-radius-md: 16px;
+            --border-radius-lg: 24px;
+            --border-radius-xl: 40px;
+            --box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            --transition: all 0.2s ease;
+        }
+
+        /* DARK MODE (opcional) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1a1a1a;
+                --bg-secondary: #2d2d2d;
+                --text-primary: #f0f0f0;
+                --text-secondary: #a0a0a0;
+                --border-color: #404040;
+            }
+        }
+
+        /* RESET E BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            width: 100%;
+            flex: 1;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #0b2b5c 0%, #143875 100%);
+            color: white;
+            padding: 1.2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            background: rgba(255,255,255,0.15);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--border-radius-md);
+        }
+
+        .header-text h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.1rem;
+        }
+
+        .header-text p {
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        /* SEARCH CARD */
+        .search-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 1.8rem;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--gray-200);
+        }
+
+        .search-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: var(--gray-600);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input-wrapper {
+            flex: 1;
+            position: relative;
+            min-width: 250px;
+        }
+
+        .search-input-wrapper i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-400);
+            font-size: 1rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            font-size: 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--border-radius-xl);
+            outline: none;
+            transition: var(--transition);
+            background: var(--gray-50);
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(37,99,235,0.1);
+        }
+
+        .search-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            white-space: nowrap;
+        }
+
+        .search-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .search-btn:active {
+            transform: scale(0.98);
+        }
+
+        .search-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* EXEMPLOS RÁPIDOS */
+        .quick-examples {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .examples-label {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        .example-chip {
+            background: var(--gray-100);
+            padding: 0.4rem 1rem;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-800);
+            cursor: pointer;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .example-chip:hover {
+            background: var(--gray-200);
+            border-color: var(--gray-300);
+        }
+
+        /* FILTER BAR */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem;
+            background: var(--gray-100);
+            border-radius: var(--border-radius-xl);
+            border: 1px solid var(--gray-200);
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            background: transparent;
+            color: var(--gray-600);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-btn:hover {
+            background: var(--gray-200);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* RESULT CARD */
+        .result-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 1.8rem;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--gray-200);
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .result-ncm {
+            background: var(--gray-100);
+            padding: 0.5rem 1.2rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--gray-800);
+            border: 1px solid var(--gray-200);
+            font-family: monospace;
+        }
+
+        .result-badge {
+            background: var(--success-bg);
+            color: var(--success-text);
+            padding: 0.4rem 1rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            border: 1px solid var(--success-border);
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: auto;
+        }
+
+        .action-btn {
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .action-btn:hover {
+            background: var(--gray-200);
+        }
+
+        .action-btn.export {
+            background: var(--success-bg);
+            color: var(--success-text);
+            border-color: var(--success-border);
+        }
+
+        .action-btn.export:hover {
+            background: #d4f0d4;
+        }
+
+        /* ITEM DE RESULTADO */
+        .result-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-100);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: var(--gray-900);
+            font-family: monospace;
+        }
+
+        .item-desc {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .item-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--gray-100);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .tag i {
+            font-size: 0.7rem;
+        }
+
+        .tag.regime-reducao {
+            background: var(--success-bg);
+            color: var(--success-text);
+            border-color: var(--success-border);
+        }
+
+        .tag.regime-imunidade {
+            background: var(--warning-bg);
+            color: var(--warning-text);
+            border-color: var(--warning-border);
+        }
+
+        .tag.cst-200 {
+            background: var(--info-bg);
+            color: var(--info-text);
+            border-color: var(--info-border);
+        }
+
+        .tag.cst-410 {
+            background: #f3e8ff;
+            color: #6b21a8;
+            border-color: #d9c5ff;
+        }
+
+        /* SKELETON LOADING */
+        .skeleton {
+            animation: skeleton-loading 1.5s infinite;
+        }
+
+        @keyframes skeleton-loading {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        .skeleton-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .skeleton-line {
+            height: 1rem;
+            background: var(--gray-200);
+            border-radius: var(--border-radius-sm);
+            margin: 0.75rem 0;
+        }
+
+        .skeleton-line.short {
+            width: 30%;
+        }
+
+        .skeleton-line.medium {
+            width: 70%;
+        }
+
+        .skeleton-line.long {
+            width: 100%;
+        }
+
+        /* ESTADOS */
+        .loading, .not-found {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--gray-500);
+        }
+
+        .loading i, .not-found i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .loading i {
+            color: var(--primary);
+        }
+
+        .error-message {
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius-md);
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .error-message.error {
+            background: var(--danger-bg);
+            border: 1px solid var(--danger-border);
+            color: var(--danger-text);
+        }
+
+        .error-message.warning {
+            background: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            color: var(--warning-text);
+        }
+
+        .error-message.info {
+            background: var(--info-bg);
+            border: 1px solid var(--info-border);
+            color: var(--info-text);
+        }
+
+        .error-message i {
+            font-size: 1.2rem;
+        }
+
+        /* HISTORY CARD */
+        .history-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border: 1px solid var(--gray-200);
+        }
+
+        .history-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray-700);
+        }
+
+        .history-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .history-item {
+            background: var(--gray-100);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .history-item:hover {
+            background: var(--gray-200);
+        }
+
+        .history-item i {
+            color: var(--primary);
+            font-size: 0.75rem;
+        }
+
+        .history-item small {
+            color: var(--gray-500);
+            font-size: 0.7rem;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: white;
+            border-top: 1px solid var(--gray-200);
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .stats {
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--gray-400);
+        }
+
+        .footer-badges {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: var(--gray-100);
+            padding: 0.2rem 0.8rem;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.7rem;
+            color: var(--gray-600);
+            border: 1px solid var(--gray-200);
+        }
+
+        /* UTILS */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-small {
+            font-size: 0.8rem;
+        }
+
+        .text-muted {
+            color: var(--gray-500);
+        }
+
+        .mt-2 {
+            margin-top: 1rem;
+        }
+
+        .gap-2 {
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="header-text">
+                <h1>cClassTrib · Consulta NCM</h1>
+                <p>IBS/CBS · Reforma Tributária LC 214/2025</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- CARD DE PESQUISA -->
+        <div class="search-card">
+            <div class="search-label">
+                <i class="fas fa-hashtag" style="color:var(--primary);"></i>
+                <span>Digite o código NCM (4, 6 ou 8 dígitos)</span>
+            </div>
+            
+            <div class="search-box">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="search-input" id="ncmInput" placeholder="Ex: 0201, 0401.20, 10064000" inputmode="numeric" autofocus>
+                </div>
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Consultar</span>
+                </button>
+            </div>
+
+            <div class="quick-examples">
+                <span class="examples-label"><i class="fas fa-bolt" style="color:#fbbf24;"></i> Exemplos:</span>
+                <span class="example-chip" data-ncm="0201">0201 (Carnes)</span>
+                <span class="example-chip" data-ncm="0405">0405 (Manteiga)</span>
+                <span class="example-chip" data-ncm="0702">0702 (Tomates)</span>
+                <span class="example-chip" data-ncm="1006">1006 (Arroz)</span>
+                <span class="example-chip" data-ncm="15171000">15171000 (Margarina)</span>
+                <span class="example-chip" data-ncm="29362812">29362812 (Vitamina E)</span>
+            </div>
+
+            <!-- Dica de formatação -->
+            <div class="text-small" style="margin-top: 0.5rem; color: var(--gray-500);">
+                <i class="fas fa-info-circle"></i> 
+                Digite com ou sem pontos: 0201, 0201.10, 02011000
+            </div>
+        </div>
+
+        <!-- ÁREA DE RESULTADO -->
+        <div class="result-card" id="resultCard">
+            <!-- FILTROS (aparecem quando há resultados) -->
+            <div id="filterBar" class="filter-bar hidden">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-list"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="reducao">
+                    <i class="fas fa-arrow-down"></i> Redução
+                </button>
+                <button class="filter-btn" data-filter="imunidade">
+                    <i class="fas fa-shield-alt"></i> Imunidade
+                </button>
+                <button class="filter-btn" data-filter="cst200">
+                    <i class="fas fa-tag"></i> CST 200
+                </button>
+                <button class="filter-btn" data-filter="cst410">
+                    <i class="fas fa-tag"></i> CST 410
+                </button>
+                <div style="margin-left: auto; display: flex; gap: 0.5rem;">
+                    <button class="action-btn" id="exportBtn" title="Exportar resultados">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="action-btn" id="sortBtn" title="Ordenar por cClassTrib">
+                        <i class="fas fa-sort-alpha-down"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- MENSAGEM INICIAL -->
+            <div id="initialMessage" class="not-found">
+                <i class="fas fa-file-search"></i>
+                <h3>Digite um NCM para consultar</h3>
+                <p class="text-muted">Ex: 0201, 0405, 1006, 15171000</p>
+            </div>
+
+            <!-- SKELETON LOADING -->
+            <div id="skeletonLoading" class="hidden">
+                <div class="skeleton-item">
+                    <div class="skeleton-line short skeleton"></div>
+                    <div class="skeleton-line long skeleton"></div>
+                    <div class="skeleton-line medium skeleton"></div>
+                </div>
+                <div class="skeleton-item">
+                    <div class="skeleton-line short skeleton"></div>
+                    <div class="skeleton-line long skeleton"></div>
+                    <div class="skeleton-line medium skeleton"></div>
+                </div>
+                <div class="skeleton-item">
+                    <div class="skeleton-line short skeleton"></div>
+                    <div class="skeleton-line long skeleton"></div>
+                    <div class="skeleton-line medium skeleton"></div>
+                </div>
+            </div>
+
+            <!-- LOADING SPINNER (fallback) -->
+            <div id="loadingSpinner" class="loading hidden">
+                <i class="fas fa-spinner fa-pulse"></i>
+                <p>Carregando dados...</p>
+            </div>
+
+            <!-- CONTAINER DE ERRO -->
+            <div id="errorContainer" class="error-message hidden"></div>
+
+            <!-- CONTEÚDO DO RESULTADO -->
+            <div id="resultContent" class="hidden">
+                <div class="result-header">
+                    <span class="result-ncm" id="resultNCM">-</span>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <span class="result-badge" id="resultCount">
+                            <i class="fas fa-list"></i>
+                            <span>0 registros</span>
+                        </span>
+                    </div>
+                </div>
+                <div id="resultList"></div>
+            </div>
+        </div>
+
+        <!-- HISTÓRICO DE CONSULTAS -->
+        <div class="history-card" id="historyCard">
+            <div class="history-title">
+                <i class="fas fa-history" style="color: var(--primary);"></i>
+                <span>Últimas consultas</span>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="text-muted" style="padding: 0.5rem;">Nenhuma consulta recente</div>
+            </div>
+            <div class="text-small" style="margin-top: 0.5rem; text-align: right;">
+                <button class="filter-btn" id="clearHistory" style="font-size: 0.7rem;">
+                    <i class="fas fa-trash"></i> Limpar histórico
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <i class="fas fa-balance-scale"></i> 
+            Dados baseados na <strong>LC 214/2025</strong> (Reforma Tributária)
+        </div>
+        <div class="stats" id="stats">
+            <i class="fas fa-database"></i> <span id="totalNCMs">0</span> NCMs mapeados · 
+            <i class="fas fa-file-alt"></i> <span id="totalAnexos">11</span> anexos
+        </div>
+        <div class="footer-badges">
+            <span class="badge"><i class="fas fa-check-circle" style="color:#10b981;"></i> Cache 1h</span>
+            <span class="badge"><i class="fas fa-bolt" style="color:#fbbf24;"></i> Debounce 300ms</span>
+            <span class="badge"><i class="fas fa-moon" style="color:#6b7280;"></i> Dark mode ready</span>
+        </div>
+        <div style="margin-top: 1rem;">
+            <a href="https://github.com/franklind22/cclasstrib-app" target="_blank"><i class="fab fa-github"></i> GitHub</a> · 
+            <a href="#" id="refreshData"><i class="fas fa-sync-alt"></i> Recarregar</a> ·
+            <a href="#" id="exportAll"><i class="fas fa-database"></i> Exportar base</a> ·
+            <span>versão 4.1</span>
+        </div>
+    </footer>
+
+    <!-- TEMPLATE SKELETON (fallback) -->
+    <template id="skeletonTemplate">
+        <div class="skeleton-item">
+            <div class="skeleton-line short skeleton"></div>
+            <div class="skeleton-line long skeleton"></div>
+            <div class="skeleton-line medium skeleton"></div>
+        </div>
+    </template>
+
+    <script>
+        // CONSTANTES
+        const DATA_FILE = 'dados.json';
+        const CACHE_TIME = 3600000; // 1 hora
+        const DEBOUNCE_TIME = 300; // 300ms
+
+        let ncmDatabase = null;
+        let lastFetchTime = 0;
+        let currentResults = [];
+        let currentSearchKey = '';
+        let currentFilter = 'all';
+        let sortAscending = true;
+        let searchTimeout;
+
+        // ELEMENTOS DOM
+        const elements = {
+            ncmInput: document.getElementById('ncmInput'),
+            searchBtn: document.getElementById('searchBtn'),
+            initialMessage: document.getElementById('initialMessage'),
+            skeletonLoading: document.getElementById('skeletonLoading'),
+            loadingSpinner: document.getElementById('loadingSpinner'),
+            errorContainer: document.getElementById('errorContainer'),
+            resultContent: document.getElementById('resultContent'),
+            resultNCM: document.getElementById('resultNCM'),
+            resultCount: document.getElementById('resultCount').querySelector('span'),
+            resultList: document.getElementById('resultList'),
+            filterBar: document.getElementById('filterBar'),
+            totalNCMs: document.getElementById('totalNCMs'),
+            totalAnexos: document.getElementById('totalAnexos'),
+            refreshData: document.getElementById('refreshData'),
+            exportBtn: document.getElementById('exportBtn'),
+            sortBtn: document.getElementById('sortBtn'),
+            historyList: document.getElementById('historyList'),
+            clearHistory: document.getElementById('clearHistory'),
+            exportAll: document.getElementById('exportAll')
+        };
+
+        // INICIALIZAÇÃO
+        document.addEventListener('DOMContentLoaded', () => {
+            loadDatabase();
+            setupEventListeners();
+            loadHistory();
+            updateStatsPlaceholder();
+        });
+
+        // CONFIGURA EVENTOS
+        function setupEventListeners() {
+            elements.searchBtn.addEventListener('click', handleSearch);
+            
+            // Input com debounce
+            elements.ncmInput.addEventListener('input', () => {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    if (elements.ncmInput.value.length >= 4) {
+                        handleSearch();
+                    }
+                }, DEBOUNCE_TIME);
+            });
+
+            elements.ncmInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    clearTimeout(searchTimeout);
+                    handleSearch();
+                }
+            });
+
+            // Exemplos rápidos
+            document.querySelectorAll('.example-chip').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    elements.ncmInput.value = chip.dataset.ncm;
+                    handleSearch();
+                });
+            });
+
+            // Refresh manual
+            elements.refreshData.addEventListener('click', (e) => {
+                e.preventDefault();
+                loadDatabase(true);
+            });
+
+            // Exportar resultados
+            if (elements.exportBtn) {
+                elements.exportBtn.addEventListener('click', exportResults);
+            }
+
+            // Ordenar
+            if (elements.sortBtn) {
+                elements.sortBtn.addEventListener('click', toggleSort);
+            }
+
+            // Filtros
+            document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.dataset.filter;
+                    setActiveFilter(filter);
+                    filterResults(filter);
+                });
+            });
+
+            // Limpar histórico
+            if (elements.clearHistory) {
+                elements.clearHistory.addEventListener('click', clearHistory);
+            }
+
+            // Exportar base completa
+            if (elements.exportAll) {
+                elements.exportAll.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    exportDatabase();
+                });
+            }
+
+            // Tecla ESC limpa input
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    elements.ncmInput.value = '';
+                    showInitialMessage();
+                }
+            });
+        }
+
+        // CARREGA BASE DE DADOS
+        async function loadDatabase(force = false) {
+            const now = Date.now();
+            
+            // Tenta carregar do cache (localStorage)
+            try {
+                const cached = localStorage.getItem('ncmDatabase');
+                const cacheTime = localStorage.getItem('ncmCacheTime');
+                
+                if (!force && cached && cacheTime && (now - parseInt(cacheTime)) < CACHE_TIME) {
+                    ncmDatabase = JSON.parse(cached);
+                    lastFetchTime = parseInt(cacheTime);
+                    console.log('📦 Dados carregados do cache');
+                    updateStats();
+                    return;
+                }
+            } catch (e) {
+                console.warn('Erro ao ler cache:', e);
+            }
+
+            showSkeleton(true);
+
+            try {
+                const response = await fetch(DATA_FILE + '?t=' + now);
+                if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
+                
+                ncmDatabase = await response.json();
+                lastFetchTime = now;
+                
+                // Salva no localStorage
+                try {
+                    localStorage.setItem('ncmDatabase', JSON.stringify(ncmDatabase));
+                    localStorage.setItem('ncmCacheTime', now.toString());
+                } catch (e) {
+                    console.warn('Erro ao salvar cache:', e);
+                }
+                
+                console.log('✅ Dados carregados do servidor');
+                updateStats();
+                hideError();
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                
+                // Tenta usar cache expirado como fallback
+                if (ncmDatabase) {
+                    showWarning('Usando dados em cache - conexão com servidor falhou');
+                } else {
+                    showError('Falha ao carregar base de dados. Tente novamente mais tarde.');
+                    ncmDatabase = {};
+                }
+            } finally {
+                showSkeleton(false);
+            }
+        }
+
+        // MOSTRA SKELETON LOADING
+        function showSkeleton(show) {
+            if (show) {
+                elements.skeletonLoading.classList.remove('hidden');
+                elements.initialMessage.classList.add('hidden');
+                elements.resultContent.classList.add('hidden');
+                elements.errorContainer.classList.add('hidden');
+            } else {
+                elements.skeletonLoading.classList.add('hidden');
+            }
+        }
+
+        // ATUALIZA ESTATÍSTICAS
+        function updateStats() {
+            if (!ncmDatabase) return;
+            
+            const totalNCMs = Object.keys(ncmDatabase).length;
+            elements.totalNCMs.textContent = totalNCMs.toLocaleString();
+            elements.totalAnexos.textContent = '11';
+        }
+
+        function updateStatsPlaceholder() {
+            elements.totalNCMs.textContent = 'carregando...';
+        }
+
+        // FUNÇÃO DE PESQUISA PRINCIPAL
+        function handleSearch() {
+            const rawInput = elements.ncmInput.value.trim().replace(/\D/g, '');
+            
+            if (!rawInput) {
+                showError('Digite um código NCM válido');
+                return;
+            }
+
+            if (rawInput.length < 4 || rawInput.length > 8) {
+                showError('NCM deve ter entre 4 e 8 dígitos numéricos');
+                return;
+            }
+
+            if (!ncmDatabase) {
+                showError('Base de dados não carregada. Tente novamente.');
+                return;
+            }
+
+            // Padroniza para busca
+            const searchKey = normalizeNCM(rawInput);
+            currentSearchKey = searchKey;
+            
+            // Executa busca
+            performSearch(searchKey);
+        }
+
+        // NORMALIZA NCM
+        function normalizeNCM(ncm) {
+            let clean = ncm.replace(/\D/g, '');
+            if (clean.length > 8) clean = clean.substring(0, 8);
+            return clean.replace(/^0+/, '') || '0';
+        }
+
+        // BUSCA NO BANCO DE DADOS
+        function performSearch(searchKey) {
+            hideError();
+            hideInitialMessage();
+            showSkeleton(true);
+
+            // Simula pequeno delay para mostrar skeleton
+            setTimeout(() => {
+                let results = [];
+                let matchedKey = null;
+
+                // 1. Tenta correspondência exata
+                if (ncmDatabase[searchKey]) {
+                    results = ncmDatabase[searchKey];
+                    matchedKey = searchKey;
+                } else {
+                    // 2. Tenta buscar por início
+                    for (const [key, value] of Object.entries(ncmDatabase)) {
+                        const normalizedKey = key.replace(/\D/g, '').replace(/^0+/, '');
+                        
+                        if (normalizedKey.startsWith(searchKey)) {
+                            results = [...results, ...value];
+                            if (!matchedKey || key.length < matchedKey.length) {
+                                matchedKey = key;
+                            }
+                        }
+                    }
+                }
+
+                // Remove duplicatas
+                const uniqueResults = removeDuplicates(results);
+
+                showSkeleton(false);
+
+                if (uniqueResults.length === 0) {
+                    showNotFound(searchKey);
+                    return;
+                }
+
+                // Salva no histórico
+                addToHistory(matchedKey || searchKey, uniqueResults.length);
+                
+                // Guarda e exibe resultados
+                currentResults = uniqueResults;
+                displayResults(uniqueResults, matchedKey || searchKey);
+            }, 300);
+        }
+
+        // REMOVE REGISTROS DUPLICADOS
+        function removeDuplicates(results) {
+            const seen = new Set();
+            return results.filter(item => {
+                const key = `${item.cclasstrib}-${item.cst}-${item.descricao}-${item.regime}`;
+                if (seen.has(key)) return false;
+                seen.add(key);
+                return true;
+            });
+        }
+
+        // EXIBE RESULTADOS
+        function displayResults(results, searchedNCM) {
+            currentResults = results;
+            
+            const displayNCM = formatNCMDisplay(searchedNCM);
+            
+            elements.resultNCM.textContent = displayNCM;
+            elements.resultCount.textContent = `${results.length} ${results.length === 1 ? 'registro' : 'registros'}`;
+            
+            // Aplica filtro atual
+            let filteredResults = filterResultsByType(results, currentFilter);
+            
+            // Aplica ordenação
+            if (!sortAscending) {
+                filteredResults = [...filteredResults].reverse();
+            }
+            
+            // Gera HTML
+            const html = filteredResults.map(item => `
+                <div class="result-item">
+                    <div class="item-title">${item.cclasstrib || 'N/A'} · CST ${item.cst || 'N/A'}</div>
+                    <div class="item-desc">${item.descricao || 'Descrição não disponível'}</div>
+                    <div class="item-tags">
+                        <span class="tag"><i class="fas fa-percent"></i> ${item.pReducao || 'N/A'}</span>
+                        <span class="tag ${item.regime === 'reducao' ? 'regime-reducao' : 'regime-imunidade'}">
+                            <i class="fas ${item.regime === 'reducao' ? 'fa-arrow-down' : 'fa-shield-alt'}"></i>
+                            ${item.regime || 'N/A'}
+                        </span>
+                        <span class="tag ${item.cst === '200' ? 'cst-200' : 'cst-410'}">
+                            <i class="fas fa-tag"></i> CST ${item.cst || 'N/A'}
+                        </span>
+                        <span class="tag"><i class="fas fa-gavel"></i> ${item.legislacao || 'LC 214/2025'}</span>
+                    </div>
+                </div>
+            `).join('');
+
+            elements.resultList.innerHTML = html;
+            
+            // Mostra containers
+            elements.filterBar.classList.remove('hidden');
+            elements.resultContent.classList.remove('hidden');
+            
+            // Atualiza contador no filtro ativo
+            updateFilterCounts();
+        }
+
+        // FILTRA RESULTADOS POR TIPO
+        function filterResultsByType(results, filter) {
+            if (filter === 'all') return results;
+            if (filter === 'reducao') return results.filter(r => r.regime === 'reducao');
+            if (filter === 'imunidade') return results.filter(r => r.regime === 'imunidade');
+            if (filter === 'cst200') return results.filter(r => r.cst === '200');
+            if (filter === 'cst410') return results.filter(r => r.cst === '410');
+            return results;
+        }
+
+        // ATUALIZA BOTÕES DE FILTRO
+        function updateFilterCounts() {
+            const counts = {
+                all: currentResults.length,
+                reducao: currentResults.filter(r => r.regime === 'reducao').length,
+                imunidade: currentResults.filter(r => r.regime === 'imunidade').length,
+                cst200: currentResults.filter(r => r.cst === '200').length,
+                cst410: currentResults.filter(r => r.cst === '410').length
+            };
+
+            document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+                const filter = btn.dataset.filter;
+                const count = counts[filter] || 0;
+                const span = btn.querySelector('span') || document.createElement('span');
+                
+                // Atualiza ou cria contador
+                if (!btn.querySelector('.count')) {
+                    btn.innerHTML = btn.innerHTML.replace('</span>', '');
+                    btn.innerHTML += ` <span class="count" style="background: rgba(255,255,255,0.2); padding: 0.1rem 0.4rem; border-radius: 12px; font-size: 0.7rem;">${count}</span>`;
+                } else {
+                    btn.querySelector('.count').textContent = count;
+                }
+            });
+        }
+
+        // APLICA FILTRO
+        function filterResults(filter) {
+            currentFilter = filter;
+            const filtered = filterResultsByType(currentResults, filter);
+            
+            // Aplica ordenação
+            const sorted = sortAscending ? filtered : [...filtered].reverse();
+            
+            // Reexibe com filtro
+            const displayNCM = elements.resultNCM.textContent;
+            const html = sorted.map(item => `
+                <div class="result-item">
+                    <div class="item-title">${item.cclasstrib || 'N/A'} · CST ${item.cst || 'N/A'}</div>
+                    <div class="item-desc">${item.descricao || 'Descrição não disponível'}</div>
+                    <div class="item-tags">
+                        <span class="tag"><i class="fas fa-percent"></i> ${item.pReducao || 'N/A'}</span>
+                        <span class="tag ${item.regime === 'reducao' ? 'regime-reducao' : 'regime-imunidade'}">
+                            <i class="fas ${item.regime === 'reducao' ? 'fa-arrow-down' : 'fa-shield-alt'}"></i>
+                            ${item.regime || 'N/A'}
+                        </span>
+                        <span class="tag ${item.cst === '200' ? 'cst-200' : 'cst-410'}">
+                            <i class="fas fa-tag"></i> CST ${item.cst || 'N/A'}
+                        </span>
+                        <span class="tag"><i class="fas fa-gavel"></i> ${item.legislacao || 'LC 214/2025'}</span>
+                    </div>
+                </div>
+            `).join('');
+
+            elements.resultList.innerHTML = html;
+            elements.resultCount.textContent = `${filtered.length} ${filtered.length === 1 ? 'registro' : 'registros'}`;
+        }
+
+        // ALTERNA ORDENAÇÃO
+        function toggleSort() {
+            sortAscending = !sortAscending;
+            elements.sortBtn.innerHTML = `<i class="fas fa-sort-alpha-${sortAscending ? 'down' : 'up'}"></i>`;
+            filterResults(currentFilter);
+        }
+
+        // SETA FILTRO ATIVO
+        function setActiveFilter(filter) {
+            document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+                if (btn.dataset.filter === filter) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // FORMATA NCM PARA EXIBIÇÃO
+        function formatNCMDisplay(ncm) {
+            const digits = ncm.replace(/\D/g, '');
+            
+            if (digits.length === 8) {
+                return `${digits.substring(0,4)}.${digits.substring(4,6)}.${digits.substring(6,8)}`;
+            } else if (digits.length === 6) {
+                return `${digits.substring(0,4)}.${digits.substring(4,6)}`;
+            } else if (digits.length === 4) {
+                return digits.padStart(4, '0');
+            }
+            return digits;
+        }
+
+        // EXPORTA RESULTADOS
+        function exportResults() {
+            const dataStr = JSON.stringify(currentResults, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `ncm-${elements.ncmInput.value}-resultados.json`;
+            a.click();
+            
+            URL.revokeObjectURL(url);
+            
+            // Feedback
+            showInfo('Resultados exportados com sucesso!');
+        }
+
+        // EXPORTA BASE COMPLETA
+        function exportDatabase() {
+            if (!ncmDatabase) {
+                showError('Base de dados não carregada');
+                return;
+            }
+            
+            const dataStr = JSON.stringify(ncmDatabase, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `dados-completos-${new Date().toISOString().slice(0,10)}.json`;
+            a.click();
+            
+            URL.revokeObjectURL(url);
+            showInfo('Base completa exportada!');
+        }
+
+        // HISTÓRICO
+        function addToHistory(ncm, count) {
+            const history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+            
+            history.unshift({
+                ncm: ncm,
+                display: formatNCMDisplay(ncm),
+                count: count,
+                timestamp: new Date().toISOString()
+            });
+            
+            // Mantém últimos 8
+            if (history.length > 8) history.pop();
+            localStorage.setItem('searchHistory', JSON.stringify(history));
+            
+            updateHistoryDisplay();
+        }
+
+        function loadHistory() {
+            const history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+            updateHistoryDisplay(history);
+        }
+
+        function updateHistoryDisplay(history = null) {
+            const items = history || JSON.parse(localStorage.getItem('searchHistory') || '[]');
+            
+            if (items.length === 0) {
+                elements.historyList.innerHTML = '<div class="text-muted" style="padding: 0.5rem;">Nenhuma consulta recente</div>';
+                return;
+            }
+            
+            const html = items.map(h => `
+                <div class="history-item" onclick="document.getElementById('ncmInput').value='${h.ncm}';handleSearch()">
+                    <i class="fas fa-history"></i>
+                    <span>${h.display}</span>
+                    <small>${h.count} ${h.count === 1 ? 'item' : 'itens'}</small>
+                </div>
+            `).join('');
+            
+            elements.historyList.innerHTML = html;
+        }
+
+        function clearHistory() {
+            localStorage.removeItem('searchHistory');
+            elements.historyList.innerHTML = '<div class="text-muted" style="padding: 0.5rem;">Nenhuma consulta recente</div>';
+            showInfo('Histórico limpo!');
+        }
+
+        // ESTADOS DE TELA
+        function showError(message) {
+            elements.errorContainer.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${message}`;
+            elements.errorContainer.className = 'error-message error';
+            elements.errorContainer.classList.remove('hidden');
+            elements.initialMessage.classList.add('hidden');
+            elements.resultContent.classList.add('hidden');
+            elements.filterBar.classList.add('hidden');
+        }
+
+        function showWarning(message) {
+            elements.errorContainer.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${message}`;
+            elements.errorContainer.className = 'error-message warning';
+            elements.errorContainer.classList.remove('hidden');
+        }
+
+        function showInfo(message) {
+            elements.errorContainer.innerHTML = `<i class="fas fa-info-circle"></i> ${message}`;
+            elements.errorContainer.className = 'error-message info';
+            elements.errorContainer.classList.remove('hidden');
+            setTimeout(() => {
+                elements.errorContainer.classList.add('hidden');
+            }, 3000);
+        }
+
+        function hideError() {
+            elements.errorContainer.classList.add('hidden');
+        }
+
+        function hideInitialMessage() {
+            elements.initialMessage.classList.add('hidden');
+        }
+
+        function showInitialMessage() {
+            elements.initialMessage.classList.remove('hidden');
+            elements.resultContent.classList.add('hidden');
+            elements.filterBar.classList.add('hidden');
+            elements.errorContainer.classList.add('hidden');
+        }
+
+        function showNotFound(searchKey) {
+            elements.resultContent.classList.add('hidden');
+            elements.filterBar.classList.add('hidden');
+            
+            const displayNCM = formatNCMDisplay(searchKey);
+            elements.initialMessage.innerHTML = `
+                <i class="fas fa-question-circle"></i>
+                <h3>NCM ${displayNCM} não encontrado</h3>
+                <p class="text-muted">Este código não está na base com redução/imunidade</p>
+                <p class="text-small" style="margin-top:1rem;">Regime geral: CST 000 (tributação integral)</p>
+                <p class="text-small" style="margin-top:0.5rem;">
+                    <i class="fas fa-lightbulb" style="color: #fbbf24;"></i>
+                    Tente: 0201, 0405, 1006, 15171000
+                </p>
+            `;
+            elements.initialMessage.classList.remove('hidden');
+        }
+
+        // AUTO-EXECUÇÃO se houver parâmetro na URL
+        (function checkUrlParam() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const ncmParam = urlParams.get('ncm');
+            if (ncmParam) {
+                setTimeout(() => {
+                    elements.ncmInput.value = ncmParam;
+                    handleSearch();
+                }, 500);
+            }
+        })();
+    </script>
+</body>
+</html>
