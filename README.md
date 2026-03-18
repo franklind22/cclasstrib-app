@@ -5,7 +5,8 @@
 
 ## 📱 **APP WEB DE ALTA PERFORMANCE - LC 214/2025**
 
-**Consulta cClassTrib por NCM** com carregamento assíncrono e arquitetura desacoplada. Sistema otimizado para a Reforma Tributária IBS/CBS oficial do governo brasileiro.
+**Consulta cClassTrib por NCM** com carregamento assíncrono e arquitetura desacoplada.
+Sistema otimizado para a Reforma Tributária IBS/CBS oficial do governo brasileiro.
 
 ### ✨ **🚀 DEMO AO VIVO**
 
