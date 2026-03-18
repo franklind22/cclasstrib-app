@@ -1402,6 +1402,47 @@
                 }, 500);
             }
         })();
+
+        // ===== DIAGNÓSTICO =====
+window.diagnosticoNCM = function() {
+    const db = window.ncmDatabase;
+    if (!db) {
+        console.error('❌ Banco não carregado');
+        return { erro: 'Banco não carregado' };
+    }
+    
+    const stats = {
+        chavesNCM: Object.keys(db).length,
+        totalRegistros: Object.values(db).reduce((acc, arr) => acc + arr.length, 0),
+        anexos: [...new Set(Object.values(db).flat().map(i => i.legislacao))].length,
+        regimes: [...new Set(Object.values(db).flat().map(i => i.regime))],
+        csts: [...new Set(Object.values(db).flat().map(i => i.cst))]
+    };
+    
+    console.log('📊 ESTATÍSTICAS DO BANCO:');
+    console.table(stats);
+    
+    // Detalhamento por CST
+    const porCST = {};
+    Object.values(db).flat().forEach(item => {
+        const cst = item.cst || 'sem CST';
+        porCST[cst] = (porCST[cst] || 0) + 1;
+    });
+    console.log('📌 Registros por CST:');
+    console.table(porCST);
+    
+    return stats;
+};
+
+// Torna ncmDatabase global
+window.ncmDatabase = ncmDatabase;
+
+// Auto-executa quando carregar
+setTimeout(() => {
+    if (window.ncmDatabase) {
+        console.log('✅ Banco pronto!', Object.keys(window.ncmDatabase).length, 'NCMs');
+    }
+}, 1000);
     </script>
 </body>
 </html>
