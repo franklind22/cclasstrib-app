@@ -9,40 +9,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* ===== VARIÁVEIS CSS ===== */
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #3b82f6;
-            --success-bg: #e6f7e6;
-            --success-text: #0a5c0a;
-            --success-border: #b7e6b7;
-            --warning-bg: #fff3cd;
-            --warning-text: #856404;
-            --warning-border: #ffe69c;
-            --danger-bg: #fee2e2;
-            --danger-text: #991b1b;
-            --danger-border: #fecaca;
-            --info-bg: #dbeafe;
-            --info-text: #1e40af;
-            --info-border: #b8d3ff;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-300: #d1d5db;
-            --gray-400: #9ca3af;
-            --gray-500: #6b7280;
-            --gray-600: #4b5563;
-            --gray-700: #374151;
-            --gray-800: #1f2937;
-            --gray-900: #111827;
-            --border-radius-sm: 8px;
-            --border-radius-md: 16px;
-            --border-radius-lg: 24px;
-            --border-radius-xl: 40px;
-            --box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-            --transition: all 0.2s ease;
-        }
-
+:root {
+    /* CORES PRIMÁRIAS - Mais vibrantes */
+    --primary: #4361ee;           /* Azul royal mais intenso */
+    --primary-dark: #3a0ca3;       /* Roxo/azul escuro */
+    --primary-light: #4895ef;      /* Azul médio claro */
+    --primary-soft: #b8d0ff;       /* Azul pastel para fundos */
+    
+    /* CORES DE ACENTO - Novas! */
+    --accent-purple: #7209b7;       /* Roxo vibrante */
+    --accent-pink: #f72585;         /* Rosa choque */
+    --accent-orange: #fb8500;        /* Laranja */
+    --accent-teal: #06d6a0;          /* Verde água */
+    --accent-yellow: #ffd166;        /* Amarelo */
+    
+    /* SUCESSO - Mais vivos */
+    --success-bg: #c9f0d1;          /* Verde mais claro e vivo */
+    --success-text: #006d3c;        /* Verde escuro intenso */
+    --success-border: #94d7a5;       /* Verde médio */
+    
+    /* AVISO/ALERTA - Mais chamativos */
+    --warning-bg: #ffe5b4;           /* Laranja claro */
+    --warning-text: #b85e00;         /* Laranja escuro */
+    --warning-border: #fdbe68;       /* Laranja médio */
+    
+    /* PERIGO/ERRO - Mais intensos */
+    --danger-bg: #ffd6d6;            /* Vermelho claro */
+    --danger-text: #b00020;           /* Vermelho escuro */
+    --danger-border: #ff9a9a;         /* Vermelho médio */
+    
+    /* INFO - Mais destacados */
+    --info-bg: #cfe2ff;              /* Azul claro */
+    --info-text: #003e9c;             /* Azul escuro */
+    --info-border: #9ac0fa;           /* Azul médio */
+    
+    /* NOVAS CATEGORIAS DE CORES */
+    --reducao-bg: #c0f0c0;            /* Verde para redução */
+    --reducao-text: #006d3c;          
+    --imunidade-bg: #ffe5b4;           /* Laranja para imunidade */
+    --imunidade-text: #b85e00;
+    --cst200-bg: #cfe2ff;              /* Azul para CST 200 */
+    --cst200-text: #003e9c;
+    --cst410-bg: #f0d0ff;              /* Roxo para CST 410 */
+    --cst410-text: #5a0b8c;
+    --documentos-bg: #d0f0fd;          /* Azul bebê para documentos */
+    --documentos-text: #0369a1;
+    
+    /* ESCALA DE CINZA - Mantida mas com menos ênfase */
+    --gray-50: #ffffff;                /* Branco puro */
+    --gray-100: #f8fafc;               /* Quase branco com azul */
+    --gray-200: #e9ecef;               /* Cinza claro azulado */
+    --gray-300: #d0d7de;               /* Cinza médio claro */
+    --gray-400: #a0aec0;               /* Cinza médio */
+    --gray-500: #64748b;               /* Cinza azulado */
+    --gray-600: #475569;               /* Cinza escuro */
+    --gray-700: #334155;               /* Cinza mais escuro */
+    --gray-800: #1e293b;               /* Quase preto azulado */
+    --gray-900: #0f172a;               /* Preto azulado */
+    
+    /* CORES DE FUNDO - Mais definidas */
+    --bg-primary: #ffffff;              /* Fundo principal */
+    --bg-secondary: #f1f5f9;            /* Fundo secundário azulado */
+    --bg-card: #ffffff;                  /* Fundo de cards */
+    --bg-header: linear-gradient(135deg, #3a0ca3 0%, #4361ee 100%); /* Gradiente mais vibrante */
+    
+    /* BORDAS - Mais visíveis */
+    --border-color: #cbd5e1;             /* Cinza azulado para bordas */
+    --border-hover: #94a3b8;              /* Bordas ao passar mouse */
+    
+    /* SOMBRAS - Mais destacadas */
+    --box-shadow: 0 10px 30px rgba(67, 97, 238, 0.1); /* Sombra com tom primário */
+    --box-shadow-hover: 0 20px 40px rgba(67, 97, 238, 0.15);
+    
+    /* BORDAS ARREDONDADAS - Mantidas */
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+    --border-radius-xl: 40px;
+    
+    /* TRANSIÇÕES */
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
         /* DARK MODE */
         @media (prefers-color-scheme: dark) {
             :root {
