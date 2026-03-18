@@ -10,85 +10,87 @@
     <style>
         /* ===== VARIÁVEIS CSS ===== */
 :root {
+:root {
     /* CORES PRIMÁRIAS - Mais vibrantes */
     --primary: #4361ee;           /* Azul royal mais intenso */
     --primary-dark: #3a0ca3;       /* Roxo/azul escuro */
     --primary-light: #4895ef;      /* Azul médio claro */
     --primary-soft: #b8d0ff;       /* Azul pastel para fundos */
     
-    /* CORES DE ACENTO - Novas! */
+    /* CORES DE ACENTO */
     --accent-purple: #7209b7;       /* Roxo vibrante */
     --accent-pink: #f72585;         /* Rosa choque */
     --accent-orange: #fb8500;        /* Laranja */
     --accent-teal: #06d6a0;          /* Verde água */
     --accent-yellow: #ffd166;        /* Amarelo */
     
-    /* SUCESSO - Mais vivos */
-    --success-bg: #c9f0d1;          /* Verde mais claro e vivo */
-    --success-text: #006d3c;        /* Verde escuro intenso */
-    --success-border: #94d7a5;       /* Verde médio */
+    /* SUCESSO - Texto escuro */
+    --success-bg: #c9f0d1;          /* Verde claro */
+    --success-text: #004d2d;        /* Verde escuro (quase preto) */
+    --success-border: #94d7a5;
     
-    /* AVISO/ALERTA - Mais chamativos */
+    /* AVISO/ALERTA - Texto escuro */
     --warning-bg: #ffe5b4;           /* Laranja claro */
-    --warning-text: #b85e00;         /* Laranja escuro */
-    --warning-border: #fdbe68;       /* Laranja médio */
+    --warning-text: #7b4a00;         /* Marrom escuro */
+    --warning-border: #fdbe68;
     
-    /* PERIGO/ERRO - Mais intensos */
+    /* PERIGO/ERRO - Texto escuro */
     --danger-bg: #ffd6d6;            /* Vermelho claro */
-    --danger-text: #b00020;           /* Vermelho escuro */
-    --danger-border: #ff9a9a;         /* Vermelho médio */
+    --danger-text: #8b0000;           /* Vermelho escuro */
+    --danger-border: #ff9a9a;
     
-    /* INFO - Mais destacados */
+    /* INFO - Texto escuro */
     --info-bg: #cfe2ff;              /* Azul claro */
-    --info-text: #003e9c;             /* Azul escuro */
-    --info-border: #9ac0fa;           /* Azul médio */
+    --info-text: #002b6a;             /* Azul escuro */
+    --info-border: #9ac0fa;
     
-    /* NOVAS CATEGORIAS DE CORES */
-    --reducao-bg: #c0f0c0;            /* Verde para redução */
-    --reducao-text: #006d3c;          
-    --imunidade-bg: #ffe5b4;           /* Laranja para imunidade */
-    --imunidade-text: #b85e00;
-    --cst200-bg: #cfe2ff;              /* Azul para CST 200 */
-    --cst200-text: #003e9c;
-    --cst410-bg: #f0d0ff;              /* Roxo para CST 410 */
-    --cst410-text: #5a0b8c;
-    --documentos-bg: #d0f0fd;          /* Azul bebê para documentos */
-    --documentos-text: #0369a1;
+    /* REGIMES - Texto escuro */
+    --reducao-bg: #c0f0c0;            /* Verde claro */
+    --reducao-text: #004d2d;           /* Verde escuro */
+    --imunidade-bg: #ffe5b4;           /* Laranja claro */
+    --imunidade-text: #7b4a00;         /* Marrom escuro */
+    --cst200-bg: #cfe2ff;              /* Azul claro */
+    --cst200-text: #002b6a;             /* Azul escuro */
+    --cst410-bg: #f0d0ff;              /* Roxo claro */
+    --cst410-text: #4a007a;             /* Roxo escuro */
+    --documentos-bg: #d0f0fd;          /* Azul bebê */
+    --documentos-text: #004466;         /* Azul petróleo */
     
-    /* ESCALA DE CINZA - Mantida mas com menos ênfase */
-    --gray-50: #ffffff;                /* Branco puro */
-    --gray-100: #f8fafc;               /* Quase branco com azul */
-    --gray-200: #e9ecef;               /* Cinza claro azulado */
-    --gray-300: #d0d7de;               /* Cinza médio claro */
-    --gray-400: #a0aec0;               /* Cinza médio */
-    --gray-500: #64748b;               /* Cinza azulado */
-    --gray-600: #475569;               /* Cinza escuro */
-    --gray-700: #334155;               /* Cinza mais escuro */
-    --gray-800: #1e293b;               /* Quase preto azulado */
-    --gray-900: #0f172a;               /* Preto azulado */
+    /* FUNDOS */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f4fa;
+    --bg-card: #ffffff;
+    --bg-header: linear-gradient(135deg, #0b2b5c 0%, #1e4b8a 100%);
     
-    /* CORES DE FUNDO - Mais definidas */
-    --bg-primary: #ffffff;              /* Fundo principal */
-    --bg-secondary: #f1f5f9;            /* Fundo secundário azulado */
-    --bg-card: #ffffff;                  /* Fundo de cards */
-    --bg-header: linear-gradient(135deg, #3a0ca3 0%, #4361ee 100%); /* Gradiente mais vibrante */
+    /* TEXTOS PRINCIPAIS - AGORA TODOS ESCUROS */
+    --text-primary: #111111;           /* Preto suave para títulos */
+    --text-secondary: #222222;         /* Cinza muito escuro */
+    --text-tertiary: #333333;           /* Para textos menos importantes */
+    --text-link: #4361ee;               /* Links coloridos */
     
-    /* BORDAS - Mais visíveis */
-    --border-color: #cbd5e1;             /* Cinza azulado para bordas */
-    --border-hover: #94a3b8;              /* Bordas ao passar mouse */
+    /* BORDAS - Suaves */
+    --border-color: #c0c0c0;
+    --border-hover: #909090;
     
-    /* SOMBRAS - Mais destacadas */
-    --box-shadow: 0 10px 30px rgba(67, 97, 238, 0.1); /* Sombra com tom primário */
-    --box-shadow-hover: 0 20px 40px rgba(67, 97, 238, 0.15);
+    /* ESCALA DE CINZA - APENAS PARA FUNDOS */
+    --gray-50: #ffffff;
+    --gray-100: #f8fafd;
+    --gray-200: #eef2f6;
+    --gray-300: #dde3e9;
+    --gray-400: #b0b8c0;
     
-    /* BORDAS ARREDONDADAS - Mantidas */
+    /* SOMBRAS */
+    --box-shadow: 0 8px 24px rgba(0, 20, 60, 0.08);
+    --box-shadow-hover: 0 12px 30px rgba(67, 97, 238, 0.12);
+    
+    /* BORDAS ARREDONDADAS */
     --border-radius-sm: 8px;
     --border-radius-md: 16px;
     --border-radius-lg: 24px;
     --border-radius-xl: 40px;
     
     /* TRANSIÇÕES */
-    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.25s ease;
 }
         /* DARK MODE */
         @media (prefers-color-scheme: dark) {
