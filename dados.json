@@ -1,810 +1,6152 @@
-{
-"0204": [
+[
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Carnes de ovinos ou caprinos",
-    "fundamento": "LC 214/2025 - Anexo I",
-    "cst": "200",
     "cclasstrib": "200003",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
-    "ativo": true
-  }
-],
-"02041000": [
-  {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Carcaças ou meias-carcaças de cordeiro",
-    "fundamento": "LC 214/2025 - Anexo I",
     "cst": "200",
+    "NCM": "1006.20",
+    "descricao": "Arroz em casca (arroz paddy)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
     "cclasstrib": "200003",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"02043000": [
-  {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Outras carnes de ovinos, desossadas",
-    "fundamento": "LC 214/2025 - Anexo I",
     "cst": "200",
+    "NCM": "1006.30.11",
+    "descricao": "Arroz semibranqueado, parboilizado",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
     "cclasstrib": "200003",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"0401": [
-  {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Leite e nata (creme de leite), não concentrados nem adicionados de açúcar",
-    "fundamento": "LC 214/2025 - Anexo I",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "1006.30.19",
+    "descricao": "Arroz semibranqueado, outros",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"04011010": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Leite UHT integral",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "1006.30.21",
+    "descricao": "Arroz branqueado, parboilizado, polido",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"04012010": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Leite UHT desnatado",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "1006.30.29",
+    "descricao": "Arroz branqueado, outros",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"0406": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Queijos e requeijão",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "1006.40.00",
+    "descricao": "Arroz partido",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"04069090": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Outros queijos",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "0401.10.10",
+    "descricao": "Leite UHT (longa vida) integral",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"0701": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Batatas, frescas ou refrigeradas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "0401.10.90",
+    "descricao": "Leite UHT (longa vida) semidesnatado ou desnatado",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"07019000": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Outras batatas frescas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "0401.20.10",
+    "descricao": "Leite pasteurizado integral",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"0703": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Cebolas, chalotas, alhos, alhos-porós e outros vegetais aliáceos",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "0401.20.90",
+    "descricao": "Leite pasteurizado semidesnatado ou desnatado",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"07031019": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Cebolas frescas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "0401.40.10",
+    "descricao": "Leite semidesnatado, outras apresentações",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"0708": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Leguminosas frescas ou refrigeradas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "0401.50.10",
+    "descricao": "Leite desnatado, outras apresentações",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"07082000": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Feijões frescos ou refrigerados",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "0402.10.10",
+    "descricao": "Leite em pó integral, com teor de gordura <= 1,5%, embalagens até 2kg",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"0803": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Bananas, frescas ou secas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "0402.10.90",
+    "descricao": "Leite em pó integral, com teor de gordura <= 1,5%, outras embalagens",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"08039000": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Outras bananas frescas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "0402.21.10",
+    "descricao": "Leite em pó integral, com teor de gordura > 1,5%, embalagens até 2kg",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"0805": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Frutas cítricas frescas ou secas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "0402.21.20",
+    "descricao": "Leite em pó integral, com teor de gordura > 1,5%, outras embalagens",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"08051000": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Laranjas frescas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "0402.29.10",
+    "descricao": "Leite em pó, modificado para alimentação infantil",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"0806": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Uvas frescas ou secas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "0402.29.20",
+    "descricao": "Leite em pó, com adição de outras substâncias",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"08061000": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Uvas frescas",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "1901.10.10",
+    "descricao": "Fórmulas infantis para lactentes (0-6 meses)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"1006": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Arroz",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "1901.10.20",
+    "descricao": "Fórmulas infantis de seguimento para lactentes (6-12 meses)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"10063021": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Arroz semibranqueado ou branqueado",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "1901.10.30",
+    "descricao": "Fórmulas infantis para crianças de primeira infância (12-36 meses)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"1001": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Trigo e mistura de trigo com centeio",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "1901.10.90",
+    "descricao": "Outras preparações para alimentação infantil",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"1101": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Farinha de trigo",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "0405.10.00",
+    "descricao": "Manteiga",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"11010010": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Farinha de trigo comum",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "1517.10.00",
+    "descricao": "Margarina, exceto margarina líquida",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"1507": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Óleo de soja, mesmo refinado",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "0713.33.11",
+    "descricao": "Feijão comum preto, para semeadura",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"15079011": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Óleo de soja refinado",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "0713.33.19",
+    "descricao": "Feijão comum preto, outros",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"1701": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Açúcar de cana ou de beterraba",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "0713.33.21",
+    "descricao": "Feijão comum de cor, para semeadura",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"17011400": [
+  },
   {
-    "anexo": "I",
-    "artigo": "Art. 1º",
-    "descricao_anexo": "Açúcar de cana",
-    "fundamento": "LC 214/2025 - Anexo I",
+    "cclasstrib": "200003",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "8d",
+    "NCM": "0713.33.29",
+    "descricao": "Feijão comum de cor, outros",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"3002": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Sangue humano; vacinas; toxinas; culturas de microrganismos",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "4d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0713.33.91",
+    "descricao": "Feijão comum, outros, para semeadura",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"30022000": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Vacinas para medicina humana",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0713.33.99",
+    "descricao": "Feijão comum, outros",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"3003": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Medicamentos não apresentados em doses",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "4d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0713.35.10",
+    "descricao": "Feijão-caupi (feijão-de-corda), para semeadura",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"3004": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Medicamentos apresentados em doses ou acondicionados para venda",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "4d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0713.35.90",
+    "descricao": "Feijão-caupi (feijão-de-corda), outros",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"30049099": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Outros medicamentos acondicionados para venda a retalho",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0901.11.10",
+    "descricao": "Café não torrado, não descafeinado, em grão, tipo arábica",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"3005": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Algodão, gaze, ataduras e artigos semelhantes para usos médicos",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "4d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0901.11.90",
+    "descricao": "Café não torrado, não descafeinado, em grão, outros",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"9018": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Instrumentos e aparelhos para medicina, cirurgia, odontologia ou veterinária",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "4d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0901.12.00",
+    "descricao": "Café não torrado, descafeinado",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"90189099": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Outros instrumentos e aparelhos médicos",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0901.21.00",
+    "descricao": "Café torrado, não descafeinado",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"9021": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Artigos e aparelhos ortopédicos, próteses e implantes",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "4d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0901.22.00",
+    "descricao": "Café torrado, descafeinado",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"90211020": [
+  },
   {
-    "anexo": "II",
-    "artigo": "Art. 2º",
-    "descricao_anexo": "Próteses articulares",
-    "fundamento": "LC 214/2025 - Anexo II",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2101.11.10",
+    "descricao": "Extratos, essências e concentrados de café",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
     "ativo": true
-  }
-],
-"0901": [
+  },
   {
-    "anexo": "III",
-    "artigo": "Art. 3º",
-    "descricao_anexo": "Café, mesmo torrado ou descafeinado",
-    "fundamento": "LC 214/2025 - Anexo III",
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2101.11.20",
+    "descricao": "Preparações à base de extratos, essências ou concentrados de café",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1513.21.10",
+    "descricao": "Óleo de babaçu em bruto",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1513.21.20",
+    "descricao": "Óleo de babaçu refinado",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1106.20.00",
+    "descricao": "Farinha de mandioca",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1903.00.00",
+    "descricao": "Tapioca e seus sucedâneos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1102.20.10",
+    "descricao": "Farinha de milho",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1102.20.90",
+    "descricao": "Outras farinhas de milho",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1103.13.10",
+    "descricao": "Grumos de milho",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1103.13.90",
+    "descricao": "Sêmolas de milho",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1104.19.10",
+    "descricao": "Grãos de milho esmagados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1104.19.20",
+    "descricao": "Grãos de milho em flocos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1104.23.00",
+    "descricao": "Grãos de milho pelados, perolizados ou cortados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1101.00.10",
+    "descricao": "Farinha de trigo",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1101.00.20",
+    "descricao": "Farinha de trigo com outras farinhas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1701.14.00",
+    "descricao": "Açúcar de cana em bruto",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1701.91.00",
+    "descricao": "Açúcar refinado, com adição de aromatizantes ou corantes",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1701.99.00",
+    "descricao": "Açúcar refinado, cristal, demerara, outros",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1902.11.00",
+    "descricao": "Massas alimentícias não cozidas, sem ovos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1902.19.00",
+    "descricao": "Massas alimentícias não cozidas, com ovos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1905.90.90",
+    "descricao": "Pão francês",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1901.20.10",
+    "descricao": "Misturas para preparação de pão francês",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1901.20.90",
+    "descricao": "Outras misturas para preparação de pães",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1104.12.10",
+    "descricao": "Grãos de aveia esmagados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1104.12.20",
+    "descricao": "Grãos de aveia em flocos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1104.22.00",
+    "descricao": "Grãos de aveia pelados, perolizados ou cortados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1102.90.10",
+    "descricao": "Farinha de aveia",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0201.10.00",
+    "descricao": "Carcaças e meias-carcaças de bovino, frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0201.20.10",
+    "descricao": "Cortes de bovino, frescos ou refrigerados, desossados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0201.20.20",
+    "descricao": "Cortes de bovino, frescos ou refrigerados, não desossados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0201.30.00",
+    "descricao": "Outras carnes de bovino, frescas ou refrigeradas, desossadas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0202.10.00",
+    "descricao": "Carcaças e meias-carcaças de bovino, congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0202.20.00",
+    "descricao": "Cortes de bovino, congelados, não desossados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0202.30.00",
+    "descricao": "Cortes de bovino, congelados, desossados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.10.00",
+    "descricao": "Miudezas comestíveis de bovino, frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.21.00",
+    "descricao": "Línguas de bovino, congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.22.00",
+    "descricao": "Fígados de bovino, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.29.10",
+    "descricao": "Corações de bovino, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.29.90",
+    "descricao": "Outras miudezas de bovino, congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0210.20.00",
+    "descricao": "Carnes de bovino, salgadas ou em salmoura, secas ou defumadas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0203.11.00",
+    "descricao": "Carcaças e meias-carcaças de suíno, frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0203.12.00",
+    "descricao": "Pernas, pás e cortes de suíno, não desossados, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0203.19.00",
+    "descricao": "Outras carnes de suíno, frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0203.21.00",
+    "descricao": "Carcaças e meias-carcaças de suíno, congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0203.22.00",
+    "descricao": "Pernas, pás e cortes de suíno, não desossados, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0203.29.00",
+    "descricao": "Outras carnes de suíno, congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.30.00",
+    "descricao": "Miudezas comestíveis de suíno, frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.41.00",
+    "descricao": "Fígados de suíno, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.49.00",
+    "descricao": "Outras miudezas de suíno, congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0209.10.10",
+    "descricao": "Toucinho sem partes magras, fresco, refrigerado, congelado, salgado ou em salmoura",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0209.10.20",
+    "descricao": "Gorduras de suíno, não fundidas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0210.11.00",
+    "descricao": "Presuntos, pernas e pedaços de suíno, salgados ou em salmoura, secos ou defumados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0210.12.00",
+    "descricao": "Barrigas (entremeadas) de suíno e seus pedaços, salgadas ou em salmoura, secas ou defumadas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0210.19.00",
+    "descricao": "Outras carnes de suíno, salgadas ou em salmoura, secas ou defumadas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0204.10.00",
+    "descricao": "Carcaças e meias-carcaças de cordeiro, frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0204.21.00",
+    "descricao": "Carcaças e meias-carcaças de ovino, frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0204.22.00",
+    "descricao": "Cortes de ovino, não desossados, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0204.23.00",
+    "descricao": "Cortes de ovino, desossados, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0204.30.00",
+    "descricao": "Carcaças e meias-carcaças de cordeiro, congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0204.41.00",
+    "descricao": "Carcaças e meias-carcaças de ovino, congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0204.42.00",
+    "descricao": "Cortes de ovino, não desossados, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0204.43.00",
+    "descricao": "Cortes de ovino, desossados, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0204.50.00",
+    "descricao": "Carnes de caprino, frescas, refrigeradas ou congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0210.99.20",
+    "descricao": "Carnes de ovino ou caprino, salgadas ou em salmoura, secas ou defumadas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.80.00",
+    "descricao": "Miudezas comestíveis de ovino e caprino, frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0206.90.00",
+    "descricao": "Miudezas comestíveis de ovino e caprino, congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.11.00",
+    "descricao": "Galinhas (galos) inteiros, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.12.00",
+    "descricao": "Galinhas (galos) inteiros, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.13.00",
+    "descricao": "Cortes de galinhas, e miudezas, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.14.00",
+    "descricao": "Cortes de galinhas, e miudezas, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.24.00",
+    "descricao": "Perus inteiros, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.25.00",
+    "descricao": "Perus inteiros, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.26.00",
+    "descricao": "Cortes de peru e miudezas, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.27.00",
+    "descricao": "Cortes de peru e miudezas, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.31.00",
+    "descricao": "Patos, gansos e galinhas d'angola inteiros, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.32.00",
+    "descricao": "Patos, gansos e galinhas d'angola inteiros, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.33.00",
+    "descricao": "Cortes de patos, gansos e galinhas d'angola e miudezas, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0207.34.00",
+    "descricao": "Cortes de patos, gansos e galinhas d'angola e miudezas, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0209.90.00",
+    "descricao": "Gorduras de aves, não fundidas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0210.99.11",
+    "descricao": "Carnes de aves, salgadas ou em salmoura",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0210.99.12",
+    "descricao": "Carnes de aves, secas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0210.99.13",
+    "descricao": "Carnes de aves, defumadas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.11.00",
+    "descricao": "Trutas (Salmo trutta, Oncorhynchus mykiss), frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.13.00",
+    "descricao": "Salmões do Pacífico (Oncorhynchus), frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.14.00",
+    "descricao": "Salmões do Atlântico (Salmo salar), frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.19.00",
+    "descricao": "Outros salmonídeos, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.31.00",
+    "descricao": "Albacoras brancas (Thunnus alalunga), frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.32.00",
+    "descricao": "Albacoras amarelas (Thunnus albacares), frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.33.00",
+    "descricao": "Bonitos listrados (Katsuwonus pelamis), frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.34.00",
+    "descricao": "Albacoras bandolim (Thunnus obesus), frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.35.00",
+    "descricao": "Atuns azuis (Thunnus thynnus), frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.36.00",
+    "descricao": "Atuns do sul (Thunnus maccoyii), frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.39.00",
+    "descricao": "Outros atuns, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.51.00",
+    "descricao": "Bacalhaus (Gadus morhua, Gadus ogac, Gadus macrocephalus), frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.52.00",
+    "descricao": "Hadoques (Melanogrammus aeglefinus), frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.53.00",
+    "descricao": "Saithes (Pollachius virens), frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0302.91.00",
+    "descricao": "Fígados, ovas e sêmen de peixe, frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.11.00",
+    "descricao": "Salmões vermelhos (Oncorhynchus nerka), congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.12.00",
+    "descricao": "Outros salmões do Pacífico (Oncorhynchus), congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.13.00",
+    "descricao": "Salmões do Atlântico (Salmo salar), congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.14.00",
+    "descricao": "Trutas (Salmo trutta, Oncorhynchus mykiss), congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.19.00",
+    "descricao": "Outros salmonídeos, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.41.00",
+    "descricao": "Albacoras brancas (Thunnus alalunga), congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.42.00",
+    "descricao": "Albacoras amarelas (Thunnus albacares), congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.43.00",
+    "descricao": "Bonitos listrados (Katsuwonus pelamis), congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.44.00",
+    "descricao": "Albacoras bandolim (Thunnus obesus), congeladas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.45.10",
+    "descricao": "Atuns azuis (Thunnus thynnus), congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.45.20",
+    "descricao": "Atuns do sul (Thunnus maccoyii), congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.46.00",
+    "descricao": "Outros atuns, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.63.00",
+    "descricao": "Bacalhaus (Gadus morhua, Gadus ogac, Gadus macrocephalus), congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.64.00",
+    "descricao": "Hadoques (Melanogrammus aeglefinus), congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.65.00",
+    "descricao": "Saithes (Pollachius virens), congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0303.91.00",
+    "descricao": "Fígados, ovas e sêmen de peixe, congelados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.10.10",
+    "descricao": "Queijo muçarela",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.10.90",
+    "descricao": "Queijo minas frescal",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.20.10",
+    "descricao": "Queijo parmesão ralado",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.20.90",
+    "descricao": "Outros queijos ralados ou em pó",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.90.10",
+    "descricao": "Queijo prato",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.90.20",
+    "descricao": "Queijo parmesão",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.90.30",
+    "descricao": "Queijo provolone",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.90.40",
+    "descricao": "Queijo ricota",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.90.50",
+    "descricao": "Queijo requeijão",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0406.90.60",
+    "descricao": "Queijo de coalho",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2501.00.11",
+    "descricao": "Sal grosso",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2501.00.19",
+    "descricao": "Sal refinado",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2501.00.20",
+    "descricao": "Sal de mesa",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2501.00.90",
+    "descricao": "Outros sais para alimentação humana",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0903.00.10",
+    "descricao": "Mate para chimarrão",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "0903.00.90",
+    "descricao": "Mate para chá",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1901.90.10",
+    "descricao": "Farinhas com baixo teor de proteína para fins medicinais",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "1901.90.20",
+    "descricao": "Massas com baixo teor de proteína para fins medicinais",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2106.90.10",
+    "descricao": "Fórmulas dietoterápicas para fenilcetonúria",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2106.90.20",
+    "descricao": "Fórmulas dietoterápicas para leucinose",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2106.90.30",
+    "descricao": "Fórmulas dietoterápicas para homocistinúria",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2106.90.40",
+    "descricao": "Fórmulas dietoterápicas para tirosinemia",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2106.90.50",
+    "descricao": "Fórmulas dietoterápicas para acidemias orgânicas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2106.90.60",
+    "descricao": "Fórmulas dietoterápicas para ciclo da ureia",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200003",
+    "cst": "200",
+    "NCM": "2106.90.90",
+    "descricao": "Outras fórmulas dietoterápicas para erros inatos do metabolismo",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo I",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3926.90.30",
+    "descricao": "Bolsas para drenagem, hemodiálise e usos medicinais",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Sistemas para drenagem com conjunto intermediário para medição contínua da diurese",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3701.10.10",
+    "descricao": "Chapas e filmes para raios-X, sensibilizados em uma face, para uso médico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.40.20",
+    "descricao": "Cimentos para reconstituição óssea",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3004.90.99",
+    "descricao": "Substitutos de enxerto ósseo",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3926.90.40",
+    "descricao": "Coletores para unidade de drenagem externa",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3917.31.00",
+    "descricao": "Conectores completos com tampa, de plástico, para uso médico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3917.32.00",
+    "descricao": "Conectores em Y, de plástico, para uso médico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3004.90.99",
+    "descricao": "Conjuntos de troca e concentrados polieletrolíticos para diálise",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.10",
+    "descricao": "Conjuntos para autotransfusão",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.19",
+    "descricao": "Conjuntos para hidrocefalia de baixo perfil",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.19",
+    "descricao": "Conjuntos para hidrocefalia standard",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.91",
+    "descricao": "Eletrodos endocárdicos definitivos para marcapasso",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.91",
+    "descricao": "Eletrodos epicárdicos definitivos para marcapasso",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.91",
+    "descricao": "Eletrodos para marcapasso temporário endocárdico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.91",
+    "descricao": "Eletrodos para marcapasso temporário epicárdico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.19",
+    "descricao": "Espaçadores de tendão",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3702.10.10",
+    "descricao": "Filmes especiais para raios-X sensibilizados em uma face, em rolos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3702.10.20",
+    "descricao": "Filmes especiais para raios-X sensibilizados em ambas as faces, em rolos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "8421.29.90",
+    "descricao": "Filtros de linha arterial e venoso para circulação extracorpórea",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "8421.29.90",
+    "descricao": "Filtros de sangue arterial e venoso para recirculação",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "8421.29.90",
+    "descricao": "Filtros para cardioplegia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.10.10",
+    "descricao": "Categutes esterilizados para suturas cirúrgicas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.10.20",
+    "descricao": "Materiais esterilizados para suturas cirúrgicas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.10.30",
+    "descricao": "Adesivos esterilizados para tecidos orgânicos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.10.40",
+    "descricao": "Laminárias esterilizadas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.10.50",
+    "descricao": "Hemostáticos absorvíveis esterilizados para cirurgia ou odontologia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.10.60",
+    "descricao": "Barreiras antiaderentes esterilizadas para cirurgia ou odontologia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.40",
+    "descricao": "Hemoconcentradores para circulação extracorpórea",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "8421.29.11",
+    "descricao": "Hemodialisadores capilares",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.50.00",
+    "descricao": "Marcapassos cardíacos de câmara dupla",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.50.00",
+    "descricao": "Marcapassos cardíacos multiprogramáveis com telemetria",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3701.10.29",
+    "descricao": "Outras chapas e filmes para raios-X",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Oxigenadores de bolha com tubos para circulação extracorpórea",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Oxigenadores de membrana com tubos para circulação extracorpórea",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Reservatórios de cardiotomia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Reservatórios para cardioplegia com tubo sem filtro",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.40",
+    "descricao": "Rins artificiais",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.19",
+    "descricao": "Shunts lombo-peritoneais",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3005.90.90",
+    "descricao": "Substitutos temporários de pele (biológica/sintética), por cm²",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.10.90",
+    "descricao": "Telas inorgânicas para uso cirúrgico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.19",
+    "descricao": "Válvulas para hidrocefalia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.89",
+    "descricao": "Válvulas para tratamento de ascite",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "2844.43.90",
+    "descricao": "Fontes de irídio 192 para braquiterapia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.12",
+    "descricao": "Stents vasculares",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "8479.89.99",
+    "descricao": "Reprocessadores de filtros utilizados em hemodiálise",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.10.10",
+    "descricao": "Implantes osseointegráveis na forma de parafuso e componentes para próteses dentárias",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.11",
+    "descricao": "Cardiodesfibriladores implantáveis",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.12",
+    "descricao": "Espirais para embolização",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3002.12.21",
+    "descricao": "Imunoglobulina anti-Rh",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3002.12.22",
+    "descricao": "Outras imunoglobulinas séricas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3002.12.23",
+    "descricao": "Concentrados de fator VIII",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3002.12.24",
+    "descricao": "Outras frações do sangue, exceto preparadas como medicamentos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3822.00.10",
+    "descricao": "Reagentes de diagnóstico em qualquer suporte",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3822.00.90",
+    "descricao": "Materiais de referência certificados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.30.21",
+    "descricao": "Reagentes de diagnóstico à base de somatoliberina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.40.10",
+    "descricao": "Cimentos para obturação dentária",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.40.20",
+    "descricao": "Cimentos para reconstituição óssea",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.70.00",
+    "descricao": "Preparações em gel lubrificante para uso médico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.91.10",
+    "descricao": "Bolsas para colostomia, ileostomia e urostomia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3006.91.90",
+    "descricao": "Equipamentos identificáveis para ostomia, exceto bolsas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3926.90.30",
+    "descricao": "Bolsas para hemodiálise e usos semelhantes",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3926.90.40",
+    "descricao": "Artigos exclusivamente de laboratório de análises clínicas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3926.90.50",
+    "descricao": "Acessórios de plástico para linhas de sangue em hemodiálise",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "4015.11.00",
+    "descricao": "Luvas cirúrgicas de látex",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "4015.12.00",
+    "descricao": "Luvas cirúrgicas de outros materiais",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "4015.19.00",
+    "descricao": "Luvas de procedimento",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.31.10",
+    "descricao": "Seringas de plástico, com ou sem agulhas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.31.90",
+    "descricao": "Seringas de outros materiais, com ou sem agulhas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.32.10",
+    "descricao": "Agulhas tubulares de metal",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.32.20",
+    "descricao": "Agulhas para suturas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.10",
+    "descricao": "Agulhas, exceto de metal e para suturas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.21",
+    "descricao": "Cateteres",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.22",
+    "descricao": "Cânulas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.23",
+    "descricao": "Sondas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.24",
+    "descricao": "Conjuntos de cateteres, cânulas ou sondas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.29",
+    "descricao": "Outros cateteres, cânulas e sondas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.30",
+    "descricao": "Lancetas para vacinação e cautérios",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.99",
+    "descricao": "Instrumentos semelhantes a seringas, agulhas, cateteres e cânulas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.49.11",
+    "descricao": "Brocas para odontologia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.49.12",
+    "descricao": "Fresas para odontologia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.49.19",
+    "descricao": "Outros instrumentos para odontologia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.49.20",
+    "descricao": "Limas para odontologia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.91",
+    "descricao": "Grampos e clipes cirúrgicos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.92",
+    "descricao": "Aplicadores de grampos e clipes",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.93",
+    "descricao": "Extratores de grampos e clipes",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Outros instrumentos e aparelhos para medicina, cirurgia e odontologia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9402.10.00",
+    "descricao": "Mesas de operação",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9402.90.10",
+    "descricao": "Mesas para exames clínicos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9402.90.20",
+    "descricao": "Camas hospitalares",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.21",
+    "descricao": "Bisturis elétricos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Aparelhos de anestesia com monitor multiparâmetros",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "8419.81.10",
+    "descricao": "Autoclaves para esterilização",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.50.90",
+    "descricao": "Retinógrafos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3821.00.00",
+    "descricao": "Meios de cultura para diagnóstico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "8419.89.99",
+    "descricao": "Termocicladores para diagnóstico e pesquisa científica",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "8419.90.40",
+    "descricao": "Partes e peças de termocicladores",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "8479.89.12",
+    "descricao": "Pipetadores laboratoriais para diagnóstico e pesquisa científica",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.20.11",
+    "descricao": "Cromatógrafos de fase líquida de alta eficiência",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.20.12",
+    "descricao": "Outros cromatógrafos de fase líquida",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.20.21",
+    "descricao": "Sequenciadores automáticos de ADN por eletroforese capilar",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.20.29",
+    "descricao": "Outros aparelhos de eletroforese para diagnóstico e pesquisa científica",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.30.11",
+    "descricao": "Espectrofotômetros para diagnóstico e pesquisa científica",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.30.19",
+    "descricao": "Outros analisadores por espectrofotometria",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.50.10",
+    "descricao": "Fotômetros de chama",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.50.20",
+    "descricao": "Analisadores por fotometria para diagnóstico e pesquisa científica",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.50.50",
+    "descricao": "Citômetros de fluxo",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.50.90",
+    "descricao": "Outros analisadores por radiações ópticas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.80.11",
+    "descricao": "Analisadores de pH",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.80.12",
+    "descricao": "Analisadores de gases sanguíneos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.80.19",
+    "descricao": "Outros analisadores para diagnóstico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.81.00",
+    "descricao": "Espectrômetros de massa",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.89.99",
+    "descricao": "Outros analisadores para diagnóstico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.90.10",
+    "descricao": "Micrótomos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9027.90.99",
+    "descricao": "Partes e peças de equipamentos analisadores laboratoriais",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "4014.10.00",
+    "descricao": "Preservativos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Dispositivos intrauterinos (DIU)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "3824.99.89",
+    "descricao": "Substâncias para conservação de órgãos e tecidos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.91",
+    "descricao": "Introdutores de punção para implante de eletrodo endocárdico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.99",
+    "descricao": "Enxertos tubulares de politetrafluoretileno (PTFE), por cm²",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.99",
+    "descricao": "Enxertos arteriais e venosos tubulares inorgânicos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9021.90.99",
+    "descricao": "Botões para crânio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.29",
+    "descricao": "Guias metálicos para introdução de cateter duplo lúmen",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.29",
+    "descricao": "Dilatadores para implante de cateter duplo lúmen",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.29",
+    "descricao": "Guias de troca para angioplastia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.29",
+    "descricao": "Introdutores para cateter com e sem válvula",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.99",
+    "descricao": "Kits de cânulas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.91",
+    "descricao": "Drenos para sucção",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.39.29",
+    "descricao": "Sistemas de drenagem mediastinal",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200030",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Conjuntos descartáveis de balão intra-aórtico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IV",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.99.10",
+    "descricao": "Comandos de embreagem manual para veículos adaptados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.99.10",
+    "descricao": "Comandos de freio manual para veículos adaptados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.99.10",
+    "descricao": "Comandos de acelerador manual para veículos adaptados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.99.10",
+    "descricao": "Inversões do pedal do acelerador para veículos adaptados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.99.10",
+    "descricao": "Prolongamentos de pedais para veículos adaptados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.29.99",
+    "descricao": "Empunhaduras para veículos adaptados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.99.10",
+    "descricao": "Servo acionadores de volante para veículos adaptados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.29.99",
+    "descricao": "Deslocamentos de comandos do painel para veículos adaptados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.29.99",
+    "descricao": "Plataformas giratórias para deslocamento giratório do assento",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.29.99",
+    "descricao": "Trilhos elétricos para deslocamento do assento dianteiro",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8428.90.90",
+    "descricao": "Plataformas de elevação para cadeira de rodas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8708.29.99",
+    "descricao": "Rampas para cadeira de rodas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8425.31.10",
+    "descricao": "Guinchos para transportar cadeira de rodas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "6602.00.00",
+    "descricao": "Bengalas inteiriças para deficientes visuais",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "6602.00.00",
+    "descricao": "Bengalas dobráveis para deficientes visuais",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "6602.00.00",
+    "descricao": "Bengalas telescópicas para deficientes visuais",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "9102.11.10",
+    "descricao": "Relógios em braille",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "9102.11.90",
+    "descricao": "Relógios com sintetizador de voz",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "9102.91.00",
+    "descricao": "Relógios com mostrador ampliado",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "9025.19.90",
+    "descricao": "Termômetros digitais com sistema de voz",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8470.10.00",
+    "descricao": "Calculadoras digitais com sistema de voz",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8470.29.00",
+    "descricao": "Calculadoras com sistema de voz e verbalização",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8543.70.99",
+    "descricao": "Agendas eletrônicas com teclado em braille",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "9017.20.00",
+    "descricao": "Regletes para escrita em braille",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8471.60.90",
+    "descricao": "Displays braille para microcomputadores",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8471.60.90",
+    "descricao": "Teclados em braille para microcomputadores",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8472.90.99",
+    "descricao": "Máquinas de escrever manuais em braille",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8472.90.99",
+    "descricao": "Máquinas de escrever eletrônicas em braille",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8443.32.22",
+    "descricao": "Impressoras de caracteres em braille para microcomputadores",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8471.80.00",
+    "descricao": "Equipamentos sintetizadores de voz para microcomputadores",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8517.13.10",
+    "descricao": "Aparelhos telefônicos com teclado alfanumérico e visor luminoso",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8517.13.90",
+    "descricao": "Outros aparelhos telefônicos para deficientes auditivos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "9103.10.00",
+    "descricao": "Relógios despertadores vibratórios",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "9105.11.00",
+    "descricao": "Relógios despertadores luminosos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200031",
+    "cst": "200",
+    "NCM": "8471.60.53",
+    "descricao": "Mouses controláveis pelo movimento dos olhos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo V",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.11.00",
+    "descricao": "Lagostas congeladas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.12.00",
+    "descricao": "Lagostins congelados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.14.00",
+    "descricao": "Caranguejos congelados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.15.00",
+    "descricao": "Lagostas norueguesas congeladas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.16.00",
+    "descricao": "Camarões congelados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.17.00",
+    "descricao": "Outros camarões congelados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.19.00",
+    "descricao": "Outros crustáceos congelados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.31.00",
+    "descricao": "Lagostas vivas, frescas ou refrigeradas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.32.00",
+    "descricao": "Lagostins vivos, frescos ou refrigerados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.34.00",
+    "descricao": "Caranguejos vivos, frescos ou refrigerados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.35.00",
+    "descricao": "Lagostas norueguesas vivas, frescas ou refrigeradas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.36.00",
+    "descricao": "Camarões vivos, frescos ou refrigerados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.39.10",
+    "descricao": "Camarões de água doce vivos, frescos ou refrigerados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0306.39.90",
+    "descricao": "Outros crustáceos vivos, frescos ou refrigerados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.31.10",
+    "descricao": "Mexilhões (Mytilus), vivos, frescos ou refrigerados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.31.90",
+    "descricao": "Outros mexilhões, vivos, frescos ou refrigerados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.32.00",
+    "descricao": "Mexilhões congelados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.42.10",
+    "descricao": "Lulas (Loligo), vivas, frescas ou refrigeradas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.42.90",
+    "descricao": "Outras lulas, vivas, frescas ou refrigeradas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.43.11",
+    "descricao": "Lulas (Loligo), congeladas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.43.19",
+    "descricao": "Outras lulas, congeladas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.51.00",
+    "descricao": "Polvos (Octopus), vivos, frescos ou refrigerados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.52.10",
+    "descricao": "Polvos (Octopus), congelados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.52.90",
+    "descricao": "Outros polvos, congelados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.91.00",
+    "descricao": "Outros moluscos, vivos, frescos ou refrigerados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0307.92.00",
+    "descricao": "Outros moluscos, congelados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0403.10.10",
+    "descricao": "Iogurte",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0403.10.90",
+    "descricao": "Leite fermentado",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0403.90.00",
+    "descricao": "Coalhada, kefir e outros leites fermentados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "2202.99.00",
+    "descricao": "Bebidas e compostos lácteos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0409.00.00",
+    "descricao": "Mel natural",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1101.00.10",
+    "descricao": "Farinha de trigo (exceto Anexo I)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1102.10.00",
+    "descricao": "Farinha de centeio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1102.20.10",
+    "descricao": "Farinha de milho",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1102.90.10",
+    "descricao": "Farinha de cevada",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1105.10.00",
+    "descricao": "Farinha de batata",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1106.10.00",
+    "descricao": "Farinha de ervilha",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1208.10.00",
+    "descricao": "Farinha de soja",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1103.11.10",
+    "descricao": "Grumos de trigo",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1103.19.10",
+    "descricao": "Grumos de cevada",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1104.11.00",
+    "descricao": "Grãos de cevada esmagados ou em flocos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1104.21.00",
+    "descricao": "Grãos de cevada pelados, perolizados ou cortados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1108.12.00",
+    "descricao": "Amido de milho",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1507.90.11",
+    "descricao": "Óleo de soja refinado, em recipientes com capacidade <= 5 litros",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1508.10.00",
+    "descricao": "Óleo de amendoim em bruto",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1511.10.00",
+    "descricao": "Óleo de palma em bruto",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1512.11.00",
+    "descricao": "Óleo de girassol em bruto",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1513.11.00",
+    "descricao": "Óleo de coco em bruto",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1514.11.00",
+    "descricao": "Óleo de canola em bruto",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1515.11.00",
+    "descricao": "Óleo de linhaça em bruto",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1902.20.10",
+    "descricao": "Massas recheadas, cozidas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1902.30.00",
+    "descricao": "Massas alimentícias instantâneas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "2009.11.00",
+    "descricao": "Suco de laranja congelado",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "2008.11.10",
+    "descricao": "Amendoins torrados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "1905.90.10",
+    "descricao": "Pão de forma",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "2002.90.00",
+    "descricao": "Extrato de tomate",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0701.10.00",
+    "descricao": "Batatas para semeadura",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0703.10.10",
+    "descricao": "Cebolas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0704.10.00",
+    "descricao": "Couve-flor e brócolis",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0706.10.00",
+    "descricao": "Cenouras e nabos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0709.20.00",
+    "descricao": "Espargos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200034",
+    "cst": "200",
+    "NCM": "0710.10.00",
+    "descricao": "Batatas congeladas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200035",
+    "cst": "200",
+    "NCM": "3401.11.10",
+    "descricao": "Sabões de toucador em barras",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VIII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200035",
+    "cst": "200",
+    "NCM": "3401.11.90",
+    "descricao": "Sabões de toucador líquidos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VIII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200035",
+    "cst": "200",
+    "NCM": "3306.10.00",
+    "descricao": "Dentifrícios (cremes dentais)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VIII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200035",
+    "cst": "200",
+    "NCM": "9603.21.00",
+    "descricao": "Escovas de dentes",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VIII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200035",
+    "cst": "200",
+    "NCM": "4818.10.00",
+    "descricao": "Papel higiênico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VIII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200035",
+    "cst": "200",
+    "NCM": "3808.94.19",
+    "descricao": "Água sanitária (hipoclorito de sódio)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VIII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200035",
+    "cst": "200",
+    "NCM": "3401.19.00",
+    "descricao": "Sabões em barra para lavanderia",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VIII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200035",
+    "cst": "200",
+    "NCM": "9619.00.00",
+    "descricao": "Fraldas descartáveis e artigos higiênicos semelhantes",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VIII",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9018.11.00",
+    "descricao": "Eletrocardiógrafos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9018.19.80",
+    "descricao": "Eletroencefalógrafos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9018.20.10",
+    "descricao": "Aparelhos de raios ultravioleta",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9021.10.10",
+    "descricao": "Artigos e aparelhos ortopédicos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9021.10.20",
+    "descricao": "Artigos e aparelhos para fraturas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9021.31.10",
+    "descricao": "Próteses de articulações",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9022.12.00",
+    "descricao": "Tomógrafos computadorizados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9022.13.10",
+    "descricao": "Aparelhos de raio X para uso odontológico",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9022.21.10",
+    "descricao": "Aparelhos de radiocobalto",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9018.90.99",
+    "descricao": "Aparelhos de crioterapia",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9019.20.40",
+    "descricao": "Respiradores",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9018.90.10",
+    "descricao": "Bombas de infusão",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9018.13.00",
+    "descricao": "Aparelhos de ressonância magnética",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200004",
+    "cst": "200",
+    "NCM": "9018.12.10",
+    "descricao": "Aparelhos de ultrassom",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200007",
+    "cst": "200",
+    "NCM": "8302.41.00",
+    "descricao": "Barras de apoio para pessoas com deficiência",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200007",
+    "cst": "200",
+    "NCM": "8713.10.00",
+    "descricao": "Cadeiras de rodas não motorizadas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200007",
+    "cst": "200",
+    "NCM": "8713.90.00",
+    "descricao": "Cadeiras de rodas motorizadas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200007",
+    "cst": "200",
+    "NCM": "8714.20.00",
+    "descricao": "Partes e acessórios para cadeiras de rodas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200007",
+    "cst": "200",
+    "NCM": "9021.40.00",
+    "descricao": "Aparelhos auditivos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200007",
+    "cst": "200",
+    "NCM": "9021.90.92",
+    "descricao": "Partes de aparelhos auditivos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200007",
+    "cst": "200",
+    "NCM": "9021.90.19",
+    "descricao": "Implantes cocleares",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIII",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200005",
+    "cst": "200",
+    "NCM": "Anexo IV",
+    "descricao": "Dispositivos médicos do Anexo IV (quando adquiridos por órgãos públicos)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 144, II",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200008",
+    "cst": "200",
+    "NCM": "Anexo V",
+    "descricao": "Dispositivos de acessibilidade do Anexo V (quando adquiridos por órgãos públicos)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 145, II",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200009",
+    "cst": "200",
+    "NCM": "Anexo XIV",
+    "descricao": "Medicamentos do Anexo XIV (lista completa no Anexo XIV da LC)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 146",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200010",
+    "cst": "200",
+    "NCM": "Capítulos 29, 30",
+    "descricao": "Medicamentos registrados na Anvisa (quando adquiridos por órgãos públicos)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 146, §1º",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200013",
+    "cst": "200",
+    "NCM": "9619.00.00",
+    "descricao": "Tampões higiênicos, absorventes, coletores menstruais",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 147",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "Anexo XV",
+    "descricao": "Produtos hortícolas, frutas e ovos do Anexo XV",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 148",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200028",
+    "cst": "200",
+    "NCM": "N/A",
+    "descricao": "Serviços de educação do Anexo II (NBS)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 129",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200029",
+    "cst": "200",
+    "NCM": "N/A",
+    "descricao": "Serviços de saúde do Anexo III (NBS)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 130",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200032",
+    "cst": "200",
+    "NCM": "Capítulos 29, 30",
+    "descricao": "Medicamentos registrados na Anvisa ou produzidos por farmácias de manipulação",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 133",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200036",
+    "cst": "200",
+    "NCM": "Capítulos 1 a 24",
+    "descricao": "Produtos agropecuários, aquícolas, pesqueiros, florestais e extrativistas vegetais in natura",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 137",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200037",
+    "cst": "200",
+    "NCM": "N/A",
+    "descricao": "Serviços ambientais de conservação ou recuperação da vegetação nativa",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 137, §3º",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "Anexo IX",
+    "descricao": "Insumos agropecuários e aquícolas do Anexo IX",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 138",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200039",
+    "cst": "200",
+    "NCM": "4911.91.00, 9701.91.00, 9702.90.00, 9703.90.00",
+    "descricao": "Produções artísticas originais (fotografias, quadros, gravuras, esculturas)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo X",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200040",
+    "cst": "200",
+    "NCM": "N/A",
+    "descricao": "Serviços de comunicação institucional à administração pública",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 140",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200043",
+    "cst": "200",
+    "NCM": "Anexo XI",
+    "descricao": "Bens relativos à soberania e segurança nacional do Anexo XI (para administração pública)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 142, I",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200044",
+    "cst": "200",
+    "NCM": "Anexo XI",
+    "descricao": "Bens de segurança da informação e cibernética do Anexo XI (com sócio brasileiro)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 142, II",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "410008",
+    "cst": "410",
+    "NCM": "4901, 4902, 4903, 4904, 4905, 4906, 4907, 4801.00, 4802, 4805, 4810, 4811",
+    "descricao": "Livros, jornais, periódicos e papel destinado à sua impressão",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 9º, IV",
+    "regime": "imunidade",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "410009",
+    "cst": "410",
+    "NCM": "8523.49, 8524",
+    "descricao": "Fonogramas e videofonogramas musicais produzidos no Brasil",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 9º, V",
+    "regime": "imunidade",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "410011",
+    "cst": "410",
+    "NCM": "7108.13",
+    "descricao": "Ouro como ativo financeiro ou instrumento cambial",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 9º, VII",
+    "regime": "imunidade",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "410013",
+    "cst": "410",
+    "NCM": "2710, 2711, 2712",
+    "descricao": "Combustíveis para abastecimento de aeronaves em tráfego internacional",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 98",
+    "regime": "imunidade",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "410014",
+    "cst": "410",
+    "NCM": "Capítulos 1 a 24",
+    "descricao": "Produtos de produtor rural não contribuinte (receita < R$ 3,6 milhões)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 164",
+    "regime": "nao_incidencia",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "410016",
+    "cst": "410",
+    "NCM": "Capítulos 38, 39, 40, 47, 48",
+    "descricao": "Resíduos sólidos de coletores incentivados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 170",
+    "regime": "nao_incidencia",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "410017",
+    "cst": "410",
+    "NCM": "Diversos",
+    "descricao": "Bens móveis usados adquiridos de pessoa física para revenda",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 171",
+    "regime": "nao_incidencia",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "515001",
+    "cst": "515",
+    "NCM": "Anexo IX",
+    "descricao": "Insumos agropecuários e aquícolas do Anexo IX (diferimento com redução)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 138, §2º",
+    "regime": "diferimento_com_reducao",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "550019",
+    "cst": "550",
+    "NCM": "Capítulos 84, 85, 86, 87, 88, 89, 90",
+    "descricao": "Importação de bens por indústria incentivada na ZFM (suspensão)",
+    "pReducao": "Suspensão",
+    "legislacao": "LC 214/2025, art. 443",
+    "regime": "suspensao",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "550020",
+    "cst": "550",
+    "NCM": "Diversos",
+    "descricao": "Importação de bens por indústria habilitada em Áreas de Livre Comércio (suspensão)",
+    "pReducao": "Suspensão",
+    "legislacao": "LC 214/2025, art. 461",
+    "regime": "suspensao",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "550021",
+    "cst": "550",
+    "NCM": "Capítulos 1 a 24",
+    "descricao": "Produtos agropecuários in natura para industrialização destinada à exportação",
+    "pReducao": "Suspensão",
+    "legislacao": "LC 214/2025, art. 82, §11",
+    "regime": "suspensao",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "620001",
+    "cst": "620",
+    "NCM": "2710, 2711, 2712",
+    "descricao": "Combustíveis sujeitos à tributação monofásica",
+    "pReducao": "Monofásico",
+    "legislacao": "LC 214/2025, arts. 172 e 179, I",
+    "regime": "monofasico",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "810001",
+    "cst": "810",
+    "NCM": "Capítulos 84, 85, 86, 87, 88, 89, 90",
+    "descricao": "Produtos industrializados na ZFM com crédito presumido de IBS",
+    "pReducao": "N/A",
+    "legislacao": "LC 214/2025, art. 450",
+    "regime": "ajuste_zfm",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "830001",
+    "cst": "830",
+    "NCM": "2716.00.00",
+    "descricao": "Energia elétrica - exclusão da BC para sistema de compensação",
+    "pReducao": "Exclusão BC",
+    "legislacao": "LC 214/2025, art. 28, §§3º e 4º",
+    "regime": "exclusao_bc",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "010001",
+    "cst": "010",
+    "NCM": "N/A",
+    "descricao": "Operações do FGTS (não realizadas pela Caixa Econômica Federal)",
+    "pReducao": "Uniforme",
+    "legislacao": "LC 214/2025, art. 212",
+    "regime": "uniforme_setorial",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "011001",
+    "cst": "011",
+    "NCM": "N/A",
+    "descricao": "Planos de assistência funerária",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 236",
+    "regime": "uniforme_nacional_reduzido",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "011002",
+    "cst": "011",
+    "NCM": "N/A",
+    "descricao": "Planos de assistência à saúde",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, art. 237",
+    "regime": "uniforme_nacional_reduzido",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "210001",
     "cst": "210",
-    "cclasstrib": "300003",
-    "regra": "reducao_cesta",
-    "tipo_ncm": "4d",
+    "NCM": "N/A",
+    "descricao": "Alienação de imóvel residencial novo com redutor social de R$ 100.000,00",
+    "pReducao": "50% + redutor",
+    "legislacao": "LC 214/2025, arts. 259 e 261",
+    "regime": "reducao_com_redutor_bc",
     "ativo": true
-  }
-],
-"09011110": [
+  },
   {
-    "anexo": "III",
-    "artigo": "Art. 3º",
-    "descricao_anexo": "Café não torrado, não descafeinado",
-    "fundamento": "LC 214/2025 - Anexo III",
-    "cst": "210",
-    "cclasstrib": "300003",
-    "regra": "reducao_cesta",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"09012100": [
-  {
-    "anexo": "III",
-    "artigo": "Art. 3º",
-    "descricao_anexo": "Café torrado, não descafeinado",
-    "fundamento": "LC 214/2025 - Anexo III",
-    "cst": "210",
-    "cclasstrib": "300003",
-    "regra": "reducao_cesta",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"1106": [
-  {
-    "anexo": "III",
-    "artigo": "Art. 3º",
-    "descricao_anexo": "Farinha de mandioca",
-    "fundamento": "LC 214/2025 - Anexo III",
-    "cst": "210",
-    "cclasstrib": "300003",
-    "regra": "reducao_cesta",
-    "tipo_ncm": "4d",
-    "ativo": true
-  }
-],
-"11062000": [
-  {
-    "anexo": "III",
-    "artigo": "Art. 3º",
-    "descricao_anexo": "Farinha de mandioca",
-    "fundamento": "LC 214/2025 - Anexo III",
-    "cst": "210",
-    "cclasstrib": "300003",
-    "regra": "reducao_cesta",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"1905": [
-  {
-    "anexo": "III",
-    "artigo": "Art. 3º",
-    "descricao_anexo": "Pão comum",
-    "fundamento": "LC 214/2025 - Anexo III",
-    "cst": "210",
-    "cclasstrib": "300003",
-    "regra": "reducao_cesta",
-    "tipo_ncm": "4d",
-    "ativo": true
-  }
-],
-"19059010": [
-  {
-    "anexo": "III",
-    "artigo": "Art. 3º",
-    "descricao_anexo": "Pão comum não recheado",
-    "fundamento": "LC 214/2025 - Anexo III",
-    "cst": "210",
-    "cclasstrib": "300003",
-    "regra": "reducao_cesta",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"15079000": [
-  {
-    "anexo": "III",
-    "artigo": "Art. 3º",
-    "descricao_anexo": "Óleo de soja refinado",
-    "fundamento": "LC 214/2025 - Anexo III",
-    "cst": "210",
-    "cclasstrib": "300003",
-    "regra": "reducao_cesta",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"17011400": [
-  {
-    "anexo": "III",
-    "artigo": "Art. 3º",
-    "descricao_anexo": "Açúcar de cana",
-    "fundamento": "LC 214/2025 - Anexo III",
-    "cst": "210",
-    "cclasstrib": "300003",
-    "regra": "reducao_cesta",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"04090000": [
-  {
-    "anexo": "VII",
-    "artigo": "Anexo VII",
-    "descricao_anexo": "Mel natural",
-    "fundamento": "LC 214/2025 - Anexo VII",
+    "cclasstrib": "220001",
     "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
+    "NCM": "N/A",
+    "descricao": "Incorporação imobiliária no regime especial de tributação (RET) - 2,08%",
+    "pReducao": "Fixa",
+    "legislacao": "LC 214/2025, art. 485, I",
+    "regime": "aliquota_fixa",
     "ativo": true
-  }
-],
-"0403": [
+  },
   {
-    "anexo": "VII",
-    "artigo": "Anexo VII",
-    "descricao_anexo": "Leite fermentado e bebidas lácteas",
-    "fundamento": "LC 214/2025 - Anexo VII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "4d",
+    "cclasstrib": "221001",
+    "cst": "221",
+    "NCM": "N/A",
+    "descricao": "Locação de imóvel com alíquota sobre a receita bruta - 3,65%",
+    "pReducao": "Fixa",
+    "legislacao": "LC 214/2025, art. 487, §2º",
+    "regime": "aliquota_fixa_proporcional",
     "ativo": true
-  }
-],
-"04032000": [
+  },
   {
-    "anexo": "VII",
-    "artigo": "Anexo VII",
-    "descricao_anexo": "Leite fermentado",
-    "fundamento": "LC 214/2025 - Anexo VII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
+    "cclasstrib": "222001",
+    "cst": "222",
+    "NCM": "N/A",
+    "descricao": "Transporte internacional de passageiros (ida e volta) - 50% da BC",
+    "pReducao": "50% BC",
+    "legislacao": "LC 214/2025, art. 12, §8º",
+    "regime": "reducao_bc",
     "ativo": true
-  }
-],
-"1103": [
+  },
   {
-    "anexo": "VII",
-    "artigo": "Anexo VII",
-    "descricao_anexo": "Grumos e sêmolas de cereais",
-    "fundamento": "LC 214/2025 - Anexo VII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "4d",
+    "cclasstrib": "400001",
+    "cst": "400",
+    "NCM": "N/A",
+    "descricao": "Transporte público coletivo rodoviário e metroviário urbano",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 157",
+    "regime": "isencao",
     "ativo": true
-  }
-],
-"19022000": [
+  },
   {
-    "anexo": "VII",
-    "artigo": "Anexo VII",
-    "descricao_anexo": "Massas alimentícias recheadas",
-    "fundamento": "LC 214/2025 - Anexo VII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
+    "cclasstrib": "510001",
+    "cst": "510",
+    "NCM": "2716.00.00",
+    "descricao": "Operações com energia elétrica (geração, distribuição) - diferimento",
+    "pReducao": "Diferimento",
+    "legislacao": "LC 214/2025, art. 28, §1º",
+    "regime": "diferimento",
     "ativo": true
-  }
-],
-"19023000": [
-  {
-    "anexo": "VII",
-    "artigo": "Anexo VII",
-    "descricao_anexo": "Outras massas alimentícias",
-    "fundamento": "LC 214/2025 - Anexo VII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"2009": [
-  {
-    "anexo": "VII",
-    "artigo": "Anexo VII",
-    "descricao_anexo": "Sucos de frutas e hortícolas",
-    "fundamento": "LC 214/2025 - Anexo VII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "4d",
-    "ativo": true
-  }
-],
-"33061000": [
-  {
-    "anexo": "VIII",
-    "artigo": "Anexo VIII",
-    "descricao_anexo": "Dentifrícios",
-    "fundamento": "LC 214/2025 - Anexo VIII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"34011190": [
-  {
-    "anexo": "VIII",
-    "artigo": "Anexo VIII",
-    "descricao_anexo": "Sabões de toucador",
-    "fundamento": "LC 214/2025 - Anexo VIII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"48181000": [
-  {
-    "anexo": "VIII",
-    "artigo": "Anexo VIII",
-    "descricao_anexo": "Papel higiênico",
-    "fundamento": "LC 214/2025 - Anexo VIII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"96190000": [
-  {
-    "anexo": "VIII",
-    "artigo": "Anexo VIII",
-    "descricao_anexo": "Fraldas e artigos semelhantes",
-    "fundamento": "LC 214/2025 - Anexo VIII",
-    "cst": "220",
-    "cclasstrib": "300002",
-    "regra": "reducao_60",
-    "tipo_ncm": "8d",
-    "ativo": true
-  }
-],
-"0407": [
-  {
-    "anexo": "XV",
-    "artigo": "Anexo XV",
-    "descricao_anexo": "Ovos de aves",
-    "fundamento": "LC 214/2025 - Anexo XV",
+  },
+ {
+    "cclasstrib": "200033",
     "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
+    "NCM": "2936.28.12",
+    "descricao": "Acetato de dextroalfatocoferol (vitamina E)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.41.90",
+    "descricao": "Acetato de lisina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2915.29.90",
+    "descricao": "Acetato de potássio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2915.29.10",
+    "descricao": "Acetato de sódio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2915.29.90",
+    "descricao": "Acetato de zinco",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.50.39",
+    "descricao": "Acetiltirosina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2915.21.00",
+    "descricao": "Ácido acético",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.27.10",
+    "descricao": "Ácido ascórbico (vitamina C)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.49.90",
+    "descricao": "Ácido aspártico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2918.14.00",
+    "descricao": "Ácido cítrico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.29.11",
+    "descricao": "Ácido fólico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.42.10",
+    "descricao": "Ácido glutâmico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2918.19.90",
+    "descricao": "Ácido málico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2811.19.90",
+    "descricao": "Ácido selenioso",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2202.10.00",
+    "descricao": "Água para injeção",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.49.90",
+    "descricao": "Alanilglutamina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.49.90",
+    "descricao": "Alanina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "3002.12.36",
+    "descricao": "Albumina humana",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2925.29.19",
+    "descricao": "Arginina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.49.90",
+    "descricao": "Asparagina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2836.30.00",
+    "descricao": "Bicarbonato de sódio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.29.31",
+    "descricao": "Biotina (vitamina B7)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.26.10",
+    "descricao": "Cianocobalamina (vitamina B12)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2930.90.39",
+    "descricao": "Cistina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2827.39.93",
+    "descricao": "Cloreto crômico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2827.20.10",
+    "descricao": "Cloreto de cálcio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2827.20.90",
+    "descricao": "Cloreto de cálcio (outras formas)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2827.31.10",
+    "descricao": "Cloreto de magnésio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2827.31.90",
+    "descricao": "Cloreto de magnésio (outras formas)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2827.39.95",
+    "descricao": "Cloreto de manganês",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "3104.20.10",
+    "descricao": "Cloreto de potássio (grau alimentício)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "3104.20.90",
+    "descricao": "Cloreto de potássio (outras formas)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2501.00.90",
+    "descricao": "Cloreto de sódio (grau farmacêutico)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2827.39.98",
+    "descricao": "Cloreto de zinco",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.25.20",
+    "descricao": "Cloridrato de piridoxina (vitamina B6)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.22.10",
+    "descricao": "Cloridrato de tiamina (vitamina B1)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.22.90",
+    "descricao": "Cocarboxilase",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.29.21",
+    "descricao": "Colecalciferol (vitamina D3)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.29.29",
+    "descricao": "Ergocalciferol (vitamina D2)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.49.90",
+    "descricao": "Fenilalanina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.29.40",
+    "descricao": "Fitomenadiona (vitamina K1)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2106.90.90",
+    "descricao": "Fórmula para dieta isenta de fenilalanina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2106.90.90",
+    "descricao": "Fórmula para dieta isenta de metionina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2106.90.90",
+    "descricao": "Fórmula para dieta isenta de lisina e pobre em triptofano",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2106.90.90",
+    "descricao": "Fórmula para dieta isenta de leucina, isoleucina ou valina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2106.90.90",
+    "descricao": "Fórmula para dieta isenta de fenilalanina e metionina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2106.90.90",
+    "descricao": "Fórmula para dieta cetogênica (4:1 gordura/carboidrato+proteína)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2202.99.00",
+    "descricao": "Fórmula hiperlipídica com triglicerídeos de cadeia média",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2835.24.00",
+    "descricao": "Fosfato de potássio dibásico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2835.24.00",
+    "descricao": "Fosfato de potássio monobásico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2835.22.00",
+    "descricao": "Fosfato de sódio monobásico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.23.20",
+    "descricao": "Fosfato sódico de riboflavina (vitamina B2)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "1702.50.00",
+    "descricao": "Frutose",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2919.90.90",
+    "descricao": "Glicerofosfato de sódio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.49.10",
+    "descricao": "Glicina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2918.16.10",
+    "descricao": "Gluconato de cálcio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "1702.30.11",
+    "descricao": "Glicose",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2933.29.92",
+    "descricao": "Histidina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "3505.10.00",
+    "descricao": "Icodextrina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2827.60.12",
+    "descricao": "Iodeto de potássio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.49.90",
+    "descricao": "Isoleucina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2923.20.00",
+    "descricao": "Lecitina de ovo",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.49.90",
+    "descricao": "Leucina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.41.10",
+    "descricao": "Lisina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2930.40.10",
+    "descricao": "Metionina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2930.40.90",
+    "descricao": "Nicotinamida (vitamina B3)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.29.52",
+    "descricao": "Palmitato de retinol (vitamina A)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.21.13",
+    "descricao": "Prolina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.23.10",
+    "descricao": "Riboflavina (vitamina B2)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2842.90.00",
+    "descricao": "Selenito de sódio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.50.99",
+    "descricao": "Serina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2905.44.00",
+    "descricao": "Sorbitol",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2833.21.00",
+    "descricao": "Sulfato de magnésio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2833.29.70",
+    "descricao": "Sulfato de zinco",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.49.90",
+    "descricao": "Taurina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.50.39",
+    "descricao": "Tirosina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2936.28.11",
+    "descricao": "Tocoferol (vitamina E)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "2922.50.99",
+    "descricao": "Treonina",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "1513.19.00",
+    "descricao": "Triglicerídeos de cadeia média",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200033",
+    "cst": "200",
+    "NCM": "1513.29.11",
+    "descricao": "Triglicerídeos de cadeia média (outros)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo VI",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3101.00.00",
+    "descricao": "Biofertilizantes",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3102",
+    "descricao": "Fertilizantes minerais ou químicos nitrogenados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3103",
+    "descricao": "Fertilizantes minerais ou químicos fosfatados",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3104",
+    "descricao": "Fertilizantes minerais ou químicos potássicos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3105",
+    "descricao": "Fertilizantes contendo fósforo e potássio",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3824.99.77",
+    "descricao": "Fertilizantes com micronutrientes",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3824.99.79",
+    "descricao": "Outros fertilizantes",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3824.99.89",
+    "descricao": "Outros fertilizantes e corretivos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2503.00.10",
+    "descricao": "Enxofre",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2510.10.10",
+    "descricao": "Fosfatos de cálcio naturais, moídos",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2802.00.00",
+    "descricao": "Enxofre sublimado ou precipitado",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2806.10.20",
+    "descricao": "Ácido clorídrico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2807.00.10",
+    "descricao": "Ácido sulfúrico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2808.00.10",
+    "descricao": "Ácido nítrico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2809.20.11",
+    "descricao": "Ácido fosfórico",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2811.19.20",
+    "descricao": "Ácido fosforoso",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2815.11.00",
+    "descricao": "Hidróxido de sódio (soda cáustica)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2836.20.10",
+    "descricao": "Carbonato de dissódio (barrilha)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3002.49",
+    "descricao": "Inoculantes e microorganismos para uso agrícola",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3821.00.00",
+    "descricao": "Meios de cultura para uso agrícola",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3808",
+    "descricao": "Inseticidas, fungicidas, herbicidas para uso agropecuário",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2309.90",
+    "descricao": "Rações para animais (exceto domésticos)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2304.00",
+    "descricao": "Farelo de soja",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2305.00.00",
+    "descricao": "Farelo de amendoim",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "2306",
+    "descricao": "Farelos de outros óleos vegetais",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "1201.10.00",
+    "descricao": "Soja para semeadura",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "0601",
+    "descricao": "Mudas de plantas",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "0102",
+    "descricao": "Reprodutores bovinos de raça pura",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "0511.10.00",
+    "descricao": "Sêmen bovino",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "0407.11",
+    "descricao": "Ovos férteis para incubação",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "0105.11",
+    "descricao": "Aves de um dia (pintos)",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3002.12",
+    "descricao": "Vacinas de uso veterinário",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200038",
+    "cst": "200",
+    "NCM": "3004",
+    "descricao": "Medicamentos de uso veterinário",
+    "pReducao": "60%",
+    "legislacao": "LC 214/2025, Anexo IX",
+    "regime": "reducao_60",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200009",
+    "cst": "200",
+    "NCM": "3002",
+    "descricao": "Medicamentos do Anexo XIV (sangue, vacinas, etc.)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200009",
+    "cst": "200",
+    "NCM": "3003",
+    "descricao": "Medicamentos do Anexo XIV (não dosificados)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200009",
+    "cst": "200",
+    "NCM": "3004",
+    "descricao": "Medicamentos do Anexo XIV (dosificados)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200009",
+    "cst": "200",
+    "NCM": "3006",
+    "descricao": "Preparações farmacêuticas do Anexo XIV",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200009",
+    "cst": "200",
+    "NCM": "2936",
+    "descricao": "Vitaminas do Anexo XIV",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200009",
+    "cst": "200",
+    "NCM": "2941",
+    "descricao": "Antibióticos do Anexo XIV",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XIV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0701",
+    "descricao": "Batatas frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0702.00.00",
+    "descricao": "Tomates frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0703.10.10",
+    "descricao": "Cebolas frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0703.20.00",
+    "descricao": "Alhos frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0704",
+    "descricao": "Couves frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0705",
+    "descricao": "Alfaces e chicórias frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0706",
+    "descricao": "Cenouras, nabos e beterrabas frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0707.00.00",
+    "descricao": "Pepinos frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0708",
+    "descricao": "Leguminosas em vagem frescas ou refrigeradas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0709",
+    "descricao": "Outros produtos hortícolas frescos ou refrigerados",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0801",
+    "descricao": "Côcos, castanhas do Pará e castanhas de caju frescos ou secos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0802",
+    "descricao": "Outras frutas de casca rija frescas ou secas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0803",
+    "descricao": "Bananas frescas ou secas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0804",
+    "descricao": "Tâmaras, figos, abacaxis, abacates, goiabas, mangas, etc.",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0805",
+    "descricao": "Frutas cítricas frescas ou secas",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0806",
+    "descricao": "Uvas frescas ou secas (passas)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0807",
+    "descricao": "Melões, melancias e mamões frescos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0808",
+    "descricao": "Maçãs, peras e marmelos frescos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0809",
+    "descricao": "Damasco, cerejas, pêssegos, ameixas frescos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0810",
+    "descricao": "Outras frutas frescas (morangos, framboesas, etc.)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0813",
+    "descricao": "Frutas secas, exceto das posições 0801 a 0806",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200014",
+    "cst": "200",
+    "NCM": "0407",
+    "descricao": "Ovos de aves com casca, frescos",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, Anexo XV",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200011",
+    "cst": "200",
+    "NCM": "2936.28.12",
+    "descricao": "Acetato de dextroalfatocoferol (para órgãos públicos)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 146, §2º, Anexo VI",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200011",
+    "cst": "200",
+    "NCM": "2922.41.90",
+    "descricao": "Acetato de lisina (para órgãos públicos)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 146, §2º, Anexo VI",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200011",
+    "cst": "200",
+    "NCM": "2915.29.90",
+    "descricao": "Acetato de potássio (para órgãos públicos)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 146, §2º, Anexo VI",
+    "regime": "reducao_zero",
+    "ativo": true
+  },
+  {
+    "cclasstrib": "200011",
+    "cst": "200",
+    "NCM": "2915.29.10",
+    "descricao": "Acetato de sódio (para órgãos públicos)",
+    "pReducao": "100%",
+    "legislacao": "LC 214/2025, art. 146, §2º, Anexo VI",
+    "regime": "reducao_zero",
     "ativo": true
   }
-],
-"0702": [
-  {
-    "anexo": "XV",
-    "artigo": "Anexo XV",
-    "descricao_anexo": "Tomates frescos ou refrigerados",
-    "fundamento": "LC 214/2025 - Anexo XV",
-    "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
-    "ativo": true
-  }
-],
-"0801": [
-  {
-    "anexo": "XV",
-    "artigo": "Anexo XV",
-    "descricao_anexo": "Cocos e castanhas do Brasil",
-    "fundamento": "LC 214/2025 - Anexo XV",
-    "cst": "200",
-    "cclasstrib": "200001",
-    "regra": "reducao_100",
-    "tipo_ncm": "4d",
-    "ativo": true
-   }
- ]
-}
-
-
+]
