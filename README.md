@@ -1,6 +1,4 @@
-## 📄 **README.md ATUALIZADO - VERSÃO MOBILE-FRIENDLY**
 
-```markdown
 <div align="center">
   <img src="https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/assets/icon.png" width="80" height="80" alt="Logo"/>
   <h1>🧾 cClassTrib · Consulta NCM</h1>
