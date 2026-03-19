@@ -1480,7 +1480,7 @@
             width: 100%;
             border-collapse: collapse;
             font-size: var(--font-sm);
-            min-width: 600px; /* Força scroll horizontal em telas pequenas */
+            min-width: 600px;
         }
 
         .csts-table th {
@@ -2331,7 +2331,7 @@
                 <!-- MAPEAMENTO DA LEGISLAÇÃO -->
                 <h3 style="margin: 2rem 0 1rem; display: flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-gavel" style="color: var(--primary);"></i>
-                    ⚖️ Mapeamento da Legislação
+                    Mapeamento da Legislação
                 </h3>
                 
                 <div class="legislacao-grid">
@@ -2375,7 +2375,7 @@
                 <!-- CÓDIGOS CST -->
                 <h3 style="margin: 2rem 0 1rem; display: flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-tags" style="color: var(--primary);"></i>
-                    🏷️ Códigos CST IBS/CBS
+                     Códigos CST IBS/CBS
                 </h3>
                 
                 <div class="cst-grid">
@@ -2404,7 +2404,7 @@
                 <!-- LINKS ÚTEIS -->
                 <h3 style="margin: 2rem 0 1rem; display: flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-link" style="color: var(--primary);"></i>
-                    🔗 Links Úteis
+                    Links Úteis
                 </h3>
                 
                 <div class="links-grid">
@@ -2461,7 +2461,7 @@
                 <div class="aviso-legal">
                     <i class="fas fa-exclamation-triangle"></i>
                     <div>
-                        <strong>⚠️ Aviso Legal</strong>
+                        <strong> Aviso Legal</strong>
                         <p style="margin-top: 0.3rem; color: var(--text-secondary); font-size: var(--font-sm);">
                             Este software é uma ferramenta de simulação pedagógica e de apoio ao desenvolvimento. 
                             Os dados devem ser validados por um profissional de contabilidade antes de serem 
@@ -3019,46 +3019,46 @@
             document.getElementById('clearHistory')?.addEventListener('click', clearHistory);
         }
 
-// ===== FUNÇÃO DE PESQUISA CORRIGIDA (SEM REMOVER DUPLICATAS) =====
-function handleSearch() {
-    const input = document.getElementById('ncmInput').value.trim().replace(/\D/g, '');
-    if (!input || !ncmDatabase) return;
+        // ===== FUNÇÃO DE PESQUISA CORRIGIDA (SEM REMOVER DUPLICATAS) =====
+        function handleSearch() {
+            const input = document.getElementById('ncmInput').value.trim().replace(/\D/g, '');
+            if (!input || !ncmDatabase) return;
 
-    showSkeleton(true);
+            showSkeleton(true);
 
-    setTimeout(() => {
-        let results = [];
-        let matchedKey = null;
-        
-        // Normaliza o input (remove zeros à esquerda)
-        const normalizedInput = input.replace(/^0+/, '');
-        
-        // Busca por TODOS os NCMs que começam com o input
-        for (const [key, value] of Object.entries(ncmDatabase)) {
-            const normalizedKey = key.replace(/^0+/, '');
-            
-            if (normalizedKey.startsWith(normalizedInput)) {
-                results = [...results, ...value];
-                if (!matchedKey || key.length < matchedKey.length) {
-                    matchedKey = key;
+            setTimeout(() => {
+                let results = [];
+                let matchedKey = null;
+                
+                // Normaliza o input (remove zeros à esquerda)
+                const normalizedInput = input.replace(/^0+/, '');
+                
+                // Busca por TODOS os NCMs que começam com o input
+                for (const [key, value] of Object.entries(ncmDatabase)) {
+                    const normalizedKey = key.replace(/^0+/, '');
+                    
+                    if (normalizedKey.startsWith(normalizedInput)) {
+                        results = [...results, ...value];
+                        if (!matchedKey || key.length < matchedKey.length) {
+                            matchedKey = key;
+                        }
+                    }
                 }
-            }
+
+                showSkeleton(false);
+
+                if (results.length === 0) {
+                    showError('NCM não encontrado');
+                    return;
+                }
+
+                // ✅ REMOVIDO: Não filtra mais duplicatas
+                // Agora mostra TODOS os resultados
+                
+                displayResults(results, matchedKey || input);
+                addToHistory(matchedKey || input, results.length);
+            }, 300);
         }
-
-        showSkeleton(false);
-
-        if (results.length === 0) {
-            showError('NCM não encontrado');
-            return;
-        }
-
-        // ✅ REMOVIDO: Não filtra mais duplicatas
-        // Agora mostra TODOS os resultados
-        
-        displayResults(results, matchedKey || input);
-        addToHistory(matchedKey || input, results.length);
-    }, 300);
-}
 
         function showSkeleton(show) {
             if (show) {
