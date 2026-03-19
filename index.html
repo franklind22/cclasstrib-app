@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>cClassTrib · Consulta NCM · Reforma Tributária 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -109,6 +109,17 @@
             padding: 1.5rem;
             width: 100%;
             flex: 1;
+        }
+
+        /* ===== DESKTOP ONLY ===== */
+        .desktop-only {
+            display: none;
+        }
+
+        @media screen and (min-width: 769px) {
+            .desktop-only {
+                display: flex;
+            }
         }
 
         /* ===== HEADER ===== */
@@ -282,6 +293,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
         .search-box {
@@ -364,7 +376,7 @@
             box-shadow: var(--box-shadow-hover);
         }
 
-        /* ===== KEYBOARD SHORTCUTS ===== */
+        /* ===== KEYBOARD SHORTCUTS (DESKTOP ONLY) ===== */
         .keyboard-shortcuts {
             display: flex;
             align-items: center;
@@ -1299,6 +1311,7 @@
             max-height: 600px;
             overflow-y: auto;
             padding-right: 0.5rem;
+            -webkit-overflow-scrolling: touch;
         }
 
         .chapters-grid::-webkit-scrollbar {
@@ -1460,12 +1473,14 @@
             margin-bottom: 1.5rem;
             border-radius: var(--border-radius-md);
             border: 1px solid var(--border-color);
+            -webkit-overflow-scrolling: touch;
         }
 
         .csts-table {
             width: 100%;
             border-collapse: collapse;
             font-size: var(--font-sm);
+            min-width: 600px; /* Força scroll horizontal em telas pequenas */
         }
 
         .csts-table th {
@@ -1571,6 +1586,7 @@
             align-items: center;
             gap: 1rem;
             margin: 1.5rem 0;
+            flex-wrap: wrap;
         }
 
         .page-btn {
@@ -1583,6 +1599,9 @@
             color: var(--text-secondary);
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .page-btn:after {
@@ -1622,6 +1641,8 @@
             border-top: 1px solid var(--border-color);
             color: var(--text-soft);
             font-size: var(--font-sm);
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         #exportCSTs {
@@ -1768,35 +1789,223 @@
             background: var(--primary);
         }
 
-        /* ===== RESPONSIVIDADE ===== */
+        /* ===== MEDIA QUERIES MOBILE ===== */
         @media screen and (max-width: 1024px) {
-            .container { max-width: 95%; padding: 1rem; }
+            .container { 
+                max-width: 95%; 
+                padding: 1rem; 
+            }
         }
 
         @media screen and (max-width: 768px) {
-            .header-content { flex-direction: column; text-align: center; }
-            .logo-icon { margin: 0 auto; }
-            .nav-tabs { flex-direction: column; }
-            .nav-tab { width: 100%; justify-content: center; }
-            .search-box { flex-direction: column; }
-            .search-btn { width: 100%; }
-            .chapter-selector { flex-direction: column; }
-            .chapter-select, .chapter-btn { width: 100%; }
-            .csts-search { flex-direction: column; }
-            .csts-search .search-btn, .csts-search .chapter-btn { width: 100%; }
-            .cst-groups { flex-direction: column; }
-            .cst-group-btn { width: 100%; }
-            .csts-table th, .csts-table td { padding: 0.5rem; }
-            .stats { flex-direction: column; gap: 0.3rem; }
+            .header-content { 
+                flex-direction: column; 
+                text-align: center; 
+                gap: 0.5rem;
+            }
+            
+            .logo-icon { 
+                margin: 0 auto; 
+            }
+            
+            .theme-toggle {
+                margin: 0 auto;
+            }
+            
+            .nav-tabs { 
+                flex-direction: column; 
+                gap: 0.3rem;
+            }
+            
+            .nav-tab { 
+                width: 100%; 
+                justify-content: center;
+                padding: 0.8rem;
+                font-size: var(--font-md);
+            }
+            
+            .search-box { 
+                flex-direction: column; 
+            }
+            
+            .search-btn { 
+                width: 100%; 
+            }
+            
+            .chapter-selector { 
+                flex-direction: column; 
+            }
+            
+            .chapter-select, .chapter-btn { 
+                width: 100%; 
+            }
+            
+            .filter-bar {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                padding: 0.5rem;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .filter-btn {
+                white-space: nowrap;
+                padding: 0.6rem 1rem;
+            }
+            
+            .result-actions {
+                width: 100%;
+                justify-content: flex-end;
+            }
+            
+            .item-tags {
+                gap: 0.3rem;
+            }
+            
+            .tag {
+                font-size: 0.65rem;
+                padding: 0.2rem 0.5rem;
+            }
+            
+            .csts-table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                margin: 0 -0.5rem;
+                width: calc(100% + 1rem);
+            }
+            
+            .csts-table {
+                min-width: 600px;
+            }
+            
+            .csts-table th, 
+            .csts-table td {
+                padding: 0.5rem;
+                font-size: 0.7rem;
+            }
+            
+            .csts-pagination {
+                flex-wrap: wrap;
+            }
+            
+            .page-btn {
+                padding: 0.6rem;
+                font-size: 0.8rem;
+            }
+            
+            .chapters-grid {
+                grid-template-columns: 1fr;
+                max-height: 500px;
+            }
+            
+            .chapters-search {
+                flex-direction: column;
+            }
+            
+            .chapters-search button {
+                width: 100%;
+            }
+            
+            .chapter-item {
+                padding: 1rem;
+            }
+            
+            .favorites-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .legislacao-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cst-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.5rem;
+            }
+            
+            .cst-item {
+                padding: 0.8rem;
+            }
+            
+            .cst-codigo {
+                min-width: 50px;
+                font-size: 0.7rem;
+                padding: 0.2rem 0.4rem;
+            }
+            
+            .cst-desc {
+                font-size: 0.7rem;
+            }
+            
+            .aviso-legal {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .footer-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .badge {
+                width: fit-content;
+            }
         }
 
         @media screen and (max-width: 480px) {
-            .result-ncm { flex-direction: column; align-items: flex-start; }
-            .chapter-badge { margin-left: 0; }
-            .stats-grid { grid-template-columns: 1fr; }
-            .legislacao-grid { grid-template-columns: 1fr; }
-            .links-grid { grid-template-columns: 1fr; }
-            .cst-grid { grid-template-columns: 1fr; }
+            .result-ncm { 
+                flex-direction: column; 
+                align-items: flex-start; 
+                width: 100%;
+            }
+            
+            .chapter-badge { 
+                margin-left: 0; 
+            }
+            
+            .result-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .result-badge {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .result-actions {
+                justify-content: center;
+            }
+            
+            .item-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+            
+            .cst-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .csts-footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -1872,8 +2081,8 @@
                     <span class="example-chip" data-ncm="15171000"><i class="fas fa-oil-can"></i> 15171000 (Margarina)</span>
                 </div>
 
-                <!-- Dica de atalhos de teclado -->
-                <div class="keyboard-shortcuts">
+                <!-- Dica de atalhos de teclado (só aparece no desktop) -->
+                <div class="keyboard-shortcuts desktop-only">
                     <i class="fas fa-keyboard"></i> 
                     <span class="shortcut">Ctrl+K</span> buscar · 
                     <span class="shortcut">ESC</span> limpar · 
@@ -2122,7 +2331,7 @@
                 <!-- MAPEAMENTO DA LEGISLAÇÃO -->
                 <h3 style="margin: 2rem 0 1rem; display: flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-gavel" style="color: var(--primary);"></i>
-                     Mapeamento da Legislação
+                    ⚖️ Mapeamento da Legislação
                 </h3>
                 
                 <div class="legislacao-grid">
@@ -2166,7 +2375,7 @@
                 <!-- CÓDIGOS CST -->
                 <h3 style="margin: 2rem 0 1rem; display: flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-tags" style="color: var(--primary);"></i>
-                    Códigos CST IBS/CBS
+                    🏷️ Códigos CST IBS/CBS
                 </h3>
                 
                 <div class="cst-grid">
@@ -2195,7 +2404,7 @@
                 <!-- LINKS ÚTEIS -->
                 <h3 style="margin: 2rem 0 1rem; display: flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-link" style="color: var(--primary);"></i>
-                     Links Úteis
+                    🔗 Links Úteis
                 </h3>
                 
                 <div class="links-grid">
@@ -2252,7 +2461,7 @@
                 <div class="aviso-legal">
                     <i class="fas fa-exclamation-triangle"></i>
                     <div>
-                        <strong> Aviso Legal</strong>
+                        <strong>⚠️ Aviso Legal</strong>
                         <p style="margin-top: 0.3rem; color: var(--text-secondary); font-size: var(--font-sm);">
                             Este software é uma ferramenta de simulação pedagógica e de apoio ao desenvolvimento. 
                             Os dados devem ser validados por um profissional de contabilidade antes de serem 
@@ -2810,7 +3019,7 @@
             document.getElementById('clearHistory')?.addEventListener('click', clearHistory);
         }
 
-        // ===== FUNÇÃO DE PESQUISA =====
+        // ===== FUNÇÃO DE PESQUISA CORRIGIDA =====
         function handleSearch() {
             const input = document.getElementById('ncmInput').value.trim().replace(/\D/g, '');
             if (!input || !ncmDatabase) return;
@@ -2820,19 +3029,20 @@
             setTimeout(() => {
                 let results = [];
                 let matchedKey = null;
-
-                // Busca exata
-                if (ncmDatabase[input]) {
-                    results = ncmDatabase[input];
-                    matchedKey = input;
-                } else {
-                    // Busca por prefixo (capítulos)
-                    for (const [key, value] of Object.entries(ncmDatabase)) {
-                        // Compara os primeiros dígitos (para capturar capítulos inteiros)
-                        const keyDigits = key.replace(/\D/g, '');
-                        if (keyDigits.startsWith(input)) {
-                            results = [...results, ...value];
-                            if (!matchedKey) matchedKey = key;
+                
+                // Normaliza o input (remove zeros à esquerda para comparação)
+                const normalizedInput = input.replace(/^0+/, '');
+                
+                // Busca por TODOS os NCMs que começam com o input
+                for (const [key, value] of Object.entries(ncmDatabase)) {
+                    // Remove zeros à esquerda da chave para comparação
+                    const normalizedKey = key.replace(/^0+/, '');
+                    
+                    // Se a chave normalizada começa com o input normalizado
+                    if (normalizedKey.startsWith(normalizedInput)) {
+                        results = [...results, ...value];
+                        if (!matchedKey || key.length < matchedKey.length) {
+                            matchedKey = key; // Pega a chave mais curta para exibição
                         }
                     }
                 }
@@ -2849,8 +3059,8 @@
                     index === self.findIndex(i => i.cclasstrib === item.cclasstrib)
                 );
 
-                displayResults(unique, matchedKey);
-                addToHistory(matchedKey, unique.length);
+                displayResults(unique, matchedKey || input);
+                addToHistory(matchedKey || input, unique.length);
             }, 300);
         }
 
