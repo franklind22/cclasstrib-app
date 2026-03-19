@@ -3019,50 +3019,46 @@
             document.getElementById('clearHistory')?.addEventListener('click', clearHistory);
         }
 
-        // ===== FUNÇÃO DE PESQUISA CORRIGIDA =====
-        function handleSearch() {
-            const input = document.getElementById('ncmInput').value.trim().replace(/\D/g, '');
-            if (!input || !ncmDatabase) return;
+// ===== FUNÇÃO DE PESQUISA CORRIGIDA (SEM REMOVER DUPLICATAS) =====
+function handleSearch() {
+    const input = document.getElementById('ncmInput').value.trim().replace(/\D/g, '');
+    if (!input || !ncmDatabase) return;
 
-            showSkeleton(true);
+    showSkeleton(true);
 
-            setTimeout(() => {
-                let results = [];
-                let matchedKey = null;
-                
-                // Normaliza o input (remove zeros à esquerda para comparação)
-                const normalizedInput = input.replace(/^0+/, '');
-                
-                // Busca por TODOS os NCMs que começam com o input
-                for (const [key, value] of Object.entries(ncmDatabase)) {
-                    // Remove zeros à esquerda da chave para comparação
-                    const normalizedKey = key.replace(/^0+/, '');
-                    
-                    // Se a chave normalizada começa com o input normalizado
-                    if (normalizedKey.startsWith(normalizedInput)) {
-                        results = [...results, ...value];
-                        if (!matchedKey || key.length < matchedKey.length) {
-                            matchedKey = key; // Pega a chave mais curta para exibição
-                        }
-                    }
+    setTimeout(() => {
+        let results = [];
+        let matchedKey = null;
+        
+        // Normaliza o input (remove zeros à esquerda)
+        const normalizedInput = input.replace(/^0+/, '');
+        
+        // Busca por TODOS os NCMs que começam com o input
+        for (const [key, value] of Object.entries(ncmDatabase)) {
+            const normalizedKey = key.replace(/^0+/, '');
+            
+            if (normalizedKey.startsWith(normalizedInput)) {
+                results = [...results, ...value];
+                if (!matchedKey || key.length < matchedKey.length) {
+                    matchedKey = key;
                 }
-
-                showSkeleton(false);
-
-                if (results.length === 0) {
-                    showError('NCM não encontrado');
-                    return;
-                }
-
-                // Remove duplicatas baseado em cclasstrib
-                const unique = results.filter((item, index, self) => 
-                    index === self.findIndex(i => i.cclasstrib === item.cclasstrib)
-                );
-
-                displayResults(unique, matchedKey || input);
-                addToHistory(matchedKey || input, unique.length);
-            }, 300);
+            }
         }
+
+        showSkeleton(false);
+
+        if (results.length === 0) {
+            showError('NCM não encontrado');
+            return;
+        }
+
+        // ✅ REMOVIDO: Não filtra mais duplicatas
+        // Agora mostra TODOS os resultados
+        
+        displayResults(results, matchedKey || input);
+        addToHistory(matchedKey || input, results.length);
+    }, 300);
+}
 
         function showSkeleton(show) {
             if (show) {
