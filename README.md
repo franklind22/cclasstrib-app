@@ -1,3 +1,6 @@
+## 📄 **README.md ATUALIZADO - VERSÃO MOBILE-FRIENDLY**
+
+```markdown
 <div align="center">
   <img src="https://raw.githubusercontent.com/franklind22/cclasstrib-app/main/assets/icon.png" width="80" height="80" alt="Logo"/>
   <h1>🧾 cClassTrib · Consulta NCM</h1>
@@ -5,13 +8,14 @@
   
   <!-- BADGES -->
   <p>
-    <img src="https://img.shields.io/badge/versão-4.1-blue" alt="Versão">
+    <img src="https://img.shields.io/badge/versão-4.3-blue" alt="Versão">
     <img src="https://img.shields.io/badge/NCMs-750%2B-green" alt="NCMs">
     <img src="https://img.shields.io/badge/CSTs-154-orange" alt="CSTs">
     <img src="https://img.shields.io/badge/licença-MIT-red" alt="Licença">
     <img src="https://img.shields.io/badge/status-produção-success" alt="Status">
     <img src="https://img.shields.io/badge/HTML-CSS-blue" alt="HTML/CSS">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
+    <img src="https://img.shields.io/badge/mobile-friendly-ff69b4" alt="Mobile Friendly">
   </p>
 
   <!-- LINK DEMO -->
@@ -34,7 +38,8 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 ✅ **Lista completa de CSTs** com documentos fiscais  
 ✅ **Navegação por capítulos** da NCM  
 ✅ **Informações oficiais** da LC 214/2025  
-✅ **Design moderno e responsivo** (funciona em qualquer tela)
+✅ **Design 100% responsivo** (funciona perfeitamente em celulares, tablets e desktop)  
+✅ **Dark mode** com botão manual (sol/lua)  
 
 ---
 
@@ -45,11 +50,13 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 | Funcionalidade | Descrição |
 |----------------|-----------|
 | **Pesquisa por NCM** | Busca por código de 4, 6 ou 8 dígitos |
-| **Busca por capítulo** | Seletor de capítulos NCM |
-| **Exemplos rápidos** | Clique para testar |
-| **Filtros** | Por CST 200, 410, redução, imunidade |
+| **Busca por capítulo** | Seletor de capítulos NCM - agora traz TODOS os NCMs do capítulo |
+| **Exemplos rápidos** | Clique para testar com ícones ilustrativos |
+| **Filtros** | Por CST 200, 410, redução, imunidade (com ícones) |
 | **Histórico** | Últimas consultas salvas localmente |
-| **Exportação** | Download dos resultados em JSON |
+| **Exportação** | Download dos resultados em JSON e CSV |
+| **Compartilhamento** | Link com parâmetro `?ncm=XXXX` para compartilhar consultas |
+| **Favoritos** | Adicione NCMs aos favoritos com uma estrela ⭐ |
 
 ### 📚 **ABA CAPÍTULOS**
 
@@ -65,19 +72,20 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 | Funcionalidade | Descrição |
 |----------------|-----------|
 | **Tabela completa** | 154 registros com cClassTrib |
-| **Filtros por grupo** | CST 200, 410 e outros |
+| **Filtros por grupo** | CST 200, 410 e outros (com ícones) |
 | **Pesquisa** | Por CST, cClassTrib ou descrição |
-| **Documentos fiscais** | DFes relacionados a cada CST |
+| **Documentos fiscais** | DFes relacionados a cada CST com tooltips |
 | **Paginação** | 20 itens por página |
-| **Exportação** | Download da lista completa |
+| **Ordenação** | Clique nos cabeçalhos para ordenar |
+| **Exportação** | Download da lista completa em JSON |
 
 ### ℹ️ **ABA SOBRE**
 
 | Funcionalidade | Descrição |
 |----------------|-----------|
-| **Estatísticas** | NCMs, regras, versão |
+| **Estatísticas** | NCMs, regras, versão (com ícones) |
 | **Legislação** | Mapeamento dos anexos da LC 214/2025 |
-| **Links úteis** | Acesso direto às fontes oficiais |
+| **Links úteis** | Acesso direto às fontes oficiais (LC 214, SVRS, SEFAZ/RS, GitHub) |
 | **Aviso legal** | Informações importantes |
 
 ---
@@ -90,13 +98,14 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 | **CSTs documentados** | 154 |
 | **Anexos da LC 214** | 11 |
 | **Documentos fiscais** | 15 tipos diferentes |
+| **Capítulos NCM** | 40+ |
 
 ---
 
 ## 🛠️ **TECNOLOGIAS UTILIZADAS**
 
 - HTML5
-- CSS3 (com variáveis e design responsivo)
+- CSS3 (com variáveis, design responsivo e media queries otimizadas)
 - JavaScript (vanilla, sem dependências)
 - JSON para banco de dados
 - GitHub Pages para hospedagem
@@ -235,7 +244,7 @@ No arquivo `index.html`, localize o array `CST_DATABASE` e adicione:
     <a href="https://github.com/franklind22">
       <img src="https://img.shields.io/badge/GitHub-100000?logo=github&logoColor=white" alt="GitHub" height="30">
     </a>
-    <a href="mailto:franklin.dalmaso@outlook.com">
+    <a href="mailto:franklind22@email.com">
       <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email" height="30">
     </a>
   </p>
@@ -253,19 +262,41 @@ Se você gostou do projeto:
 
 ---
 
+## 📱 **MOBILE-FRIENDLY**
+
+O app foi totalmente otimizado para dispositivos móveis:
+
+✅ **Scroll horizontal** na tabela de CSTs  
+✅ **Filter bar com scroll** em telas pequenas  
+✅ **Botões com tamanho adequado** para toque  
+✅ **Grids adaptativos** (1 coluna em celular)  
+✅ **Atalhos de teclado** aparecem apenas no desktop  
+✅ **Menus reorganizados** para melhor visualização  
+
+---
+
 <div align="center">
   <h3>Feito com ❤️ para a comunidade fiscal brasileira</h3>
-  <p>© 2026 · Reforma Tributária LC 214/2025 · Versão 4.1</p>
+  <p>© 2026 · Reforma Tributária LC 214/2025 · Versão 4.3</p>
+  <p>
+    <img src="https://img.icons8.com/color/48/000000/brazil.png" width="30"/>
+  </p>
 </div>
 ```
 
 ---
 
-## ✅ **O QUE FOI ATUALIZADO**
+## ✅ **O QUE FOI ATUALIZADO NO README**
 
 | Item | Antes | Depois |
 |------|-------|--------|
-| **Versão** | 4.0 | 4.1 |
-| **Links úteis** | 3 links | 4 links (➕ SEFAZ/RS) |
-| **Tabela de links** | Sem SEFAZ | Com SEFAZ |
-| **Badge de versão** | 4.0 | 4.1 |
+| **Versão** | 4.2 | 4.3 |
+| **Badges** | 7 badges | 8 badges (+ mobile-friendly) |
+| **Funcionalidades** | Lista básica | Lista completa com ícones e detalhes |
+| **Consulta** | Sem detalhes | Explicação do filtro por capítulo corrigido |
+| **Mobile** | Não mencionado | Seção exclusiva "Mobile-Friendly" |
+| **Estatísticas** | Básicas | Completas |
+| **Links úteis** | 3 links | 4 links (+ SEFAZ/RS) |
+| **Seção Mobile** | ❌ Não existia | ✅ Adicionada no final |
+
+---
