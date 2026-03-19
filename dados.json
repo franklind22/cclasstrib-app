@@ -5410,5 +5410,2045 @@
       "documentos": ["NFCE", "NFE"],
       "ativo": true
     }
+  ],
+  "3101.00.00": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Biofertilizantes (adubos de origem animal ou vegetal)",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3102": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Fertilizantes minerais ou químicos nitrogenados",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3103": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Fertilizantes minerais ou químicos fosfatados",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3104": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Fertilizantes minerais ou químicos potássicos",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3105": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Fertilizantes contendo fósforo e potássio",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3808": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Inseticidas, fungicidas, herbicidas para uso agropecuário",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2309": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Rações para animais (exceto domésticos)",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2304": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Farelo de soja",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2305": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Farelo de amendoim",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2306": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Farelos de outros óleos vegetais",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "1201": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Soja para semeadura",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0601": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Mudas de plantas",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0602": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Outras plantas vivas",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0102": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Reprodutores bovinos de raça pura",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0103": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Reprodutores suínos de raça pura",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0104": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Reprodutores ovinos e caprinos de raça pura",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0511": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Sêmen animal",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0407": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Ovos férteis para incubação",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0105": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Aves de um dia",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3002": [
+    {
+      "cclasstrib": "200009",
+      "cst": "200",
+      "descricao": "Sangue humano, animal, vacinas, toxinas, culturas de microorganismos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XIV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "3003": [
+    {
+      "cclasstrib": "200009",
+      "cst": "200",
+      "descricao": "Medicamentos não dosificados (exceto 3002, 3005, 3006)",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XIV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "3004": [
+    {
+      "cclasstrib": "200009",
+      "cst": "200",
+      "descricao": "Medicamentos dosificados (exceto 3002, 3005, 3006)",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XIV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "3006": [
+    {
+      "cclasstrib": "200009",
+      "cst": "200",
+      "descricao": "Preparações farmacêuticas especiais",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XIV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2936": [
+    {
+      "cclasstrib": "200009",
+      "cst": "200",
+      "descricao": "Provitaminas e vitaminas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XIV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2941": [
+    {
+      "cclasstrib": "200009",
+      "cst": "200",
+      "descricao": "Antibióticos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XIV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "8709": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Veículos automóveis para usos especiais militares",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8710": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Carros de combate e blindados",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8802": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Aeronaves para uso militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8526": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Radares para uso militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9301": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Foguetes para uso militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3602": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Explosivos de emprego militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9306": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Bombas, torpedos, mísseis e munições",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8517": [
+    {
+      "cclasstrib": "200044",
+      "cst": "200",
+      "descricao": "Firewalls e dispositivos de segurança cibernética",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8471": [
+    {
+      "cclasstrib": "200044",
+      "cst": "200",
+      "descricao": "Equipamentos de criptografia",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9701": [
+    {
+      "cclasstrib": "200039",
+      "cst": "200",
+      "descricao": "Quadros, pinturas e desenhos artísticos originais",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo X",
+      "regime": "reducao",
+      "documentos": ["NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9702": [
+    {
+      "cclasstrib": "200039",
+      "cst": "200",
+      "descricao": "Gravuras, estampas e litografias artísticas originais",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo X",
+      "regime": "reducao",
+      "documentos": ["NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9703": [
+    {
+      "cclasstrib": "200039",
+      "cst": "200",
+      "descricao": "Esculturas e estatuárias originais",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo X",
+      "regime": "reducao",
+      "documentos": ["NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "4911": [
+    {
+      "cclasstrib": "200039",
+      "cst": "200",
+      "descricao": "Fotografias artísticas originais",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo X",
+      "regime": "reducao",
+      "documentos": ["NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0803": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Bananas frescas ou secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0804": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Tâmaras, figos, abacaxis, abacates, goiabas, mangas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0805": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Frutas cítricas frescas ou secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0806": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Uvas frescas ou secas (passas)",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0807": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Melões, melancias e mamões frescos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0808": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Maçãs, peras e marmelos frescos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0809": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Damasco, cerejas, pêssegos, ameixas frescos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0810": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Morangos, framboesas e outras frutas frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0813": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Frutas secas (exceto 0801 a 0806)",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "3824.99.77": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Fertilizantes com micronutrientes",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3824.99.79": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Outros fertilizantes",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3824.99.89": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Outros fertilizantes e corretivos",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2503.00.10": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Enxofre",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2510.10.10": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Fosfatos de cálcio naturais, moídos",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2802.00.00": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Enxofre sublimado ou precipitado",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2806.10.20": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Ácido clorídrico",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2807.00.10": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Ácido sulfúrico",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2808.00.10": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Ácido nítrico",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2809.20.11": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Ácido fosfórico",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2811.19.20": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Ácido fosforoso",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2815.11.00": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Hidróxido de sódio (soda cáustica)",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2836.20.10": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Carbonato de dissódio (barrilha)",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3002.49": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Inoculantes e microorganismos para uso agrícola",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3821.00.00": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Meios de cultura para uso agrícola",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2309.90": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Rações para animais (exceto domésticos)",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2304.00": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Farelo de soja",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "2305.00.00": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Farelo de amendoim",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "1201.10.00": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Soja para semeadura",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0511.10.00": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Sêmen bovino",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0407.11": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Ovos férteis para incubação",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0105.11": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Aves de um dia (pintos)",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3002.12": [
+    {
+      "cclasstrib": "200038",
+      "cst": "200",
+      "descricao": "Vacinas de uso veterinário",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IX",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8710.00.00": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Carros de combate e blindados",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9031.80.99": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Simuladores de veículos militares",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8701": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Tratores para uso militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8526.10.00": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Radares para uso militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9301.20.00": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Foguetes para uso militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "3602.00.00": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Explosivos de emprego militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8804.00.00": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Paraquedas para uso militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8805.10.00": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Equipamentos de lançamento e aterrissagem para uso militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8901.20.00": [
+    {
+      "cclasstrib": "200043",
+      "cst": "200",
+      "descricao": "Embarcações para uso militar",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8517.62.59": [
+    {
+      "cclasstrib": "200044",
+      "cst": "200",
+      "descricao": "Firewalls e dispositivos de prevenção de intrusão (IPS)",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8523.52": [
+    {
+      "cclasstrib": "200044",
+      "cst": "200",
+      "descricao": "Tokens de autenticação",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8471.50.90": [
+    {
+      "cclasstrib": "200044",
+      "cst": "200",
+      "descricao": "Equipamentos de criptografia",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8517.62.34": [
+    {
+      "cclasstrib": "200044",
+      "cst": "200",
+      "descricao": "Switches seguros",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "8523.51": [
+    {
+      "cclasstrib": "200044",
+      "cst": "200",
+      "descricao": "Unidades de armazenamento criptografadas",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo XI",
+      "regime": "reducao",
+      "documentos": ["NFCOM", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9701.91.00": [
+    {
+      "cclasstrib": "200039",
+      "cst": "200",
+      "descricao": "Quadros, pinturas e desenhos artísticos originais",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo X",
+      "regime": "reducao",
+      "documentos": ["NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9702.90.00": [
+    {
+      "cclasstrib": "200039",
+      "cst": "200",
+      "descricao": "Gravuras, estampas e litografias artísticas originais",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo X",
+      "regime": "reducao",
+      "documentos": ["NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9703.90.00": [
+    {
+      "cclasstrib": "200039",
+      "cst": "200",
+      "descricao": "Esculturas e estatuárias originais",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo X",
+      "regime": "reducao",
+      "documentos": ["NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "4911.91.00": [
+    {
+      "cclasstrib": "200039",
+      "cst": "200",
+      "descricao": "Fotografias artísticas originais",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo X",
+      "regime": "reducao",
+      "documentos": ["NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "0803.00.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Bananas frescas ou secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0804.10.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Tâmaras frescas ou secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0804.20.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Figos frescos ou secos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0804.30.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Abacaxis frescos ou secos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0804.40.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Abacates frescos ou secos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0804.50.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Goiabas, mangas e mangostões frescos ou secos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0805.10.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Laranjas frescas ou secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0805.20.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Tangerinas, clementinas, etc. frescas ou secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0805.40.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Toranjas e pomelos frescos ou secos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0805.50.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Limões e limas frescos ou secos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0806.10.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Uvas frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0806.20.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Uvas passas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0807.11.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Melancias frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0807.19.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Melões frescos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0807.20.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Mamões (papaias) frescos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0808.10.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Maçãs frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0808.30.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Peras frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0808.40.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Marmelos frescos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0809.10.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Damasco (abricó) fresco",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0809.21.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Cerejas ácidas (ginjas) frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0809.29.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Outras cerejas frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0809.30.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Pêssegos frescos, incluindo nectarinas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0809.40.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Ameixas frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0810.10.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Morangos frescos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0810.20.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Framboesas, amoras e amoras-framboesas frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0810.30.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Groselhas frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0810.40.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Mirtilos (blueberries) frescos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0810.50.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Kiwi fresco",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0810.60.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Durian fresco",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0810.70.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Caqui fresco",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0810.90.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Outras frutas frescas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0813.10.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Damascos secos",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0813.20.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Ameixas secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0813.30.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Maçãs secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0813.40.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Outras frutas secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0813.50.00": [
+    {
+      "cclasstrib": "200014",
+      "cst": "200",
+      "descricao": "Misturas de frutas secas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo XV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.11.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de laranja congelado",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.12.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de laranja não congelado, com valor Brix <= 20",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.19.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Outros sucos de laranja",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.21.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de toranja (pomelo), com valor Brix <= 20",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.29.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Outros sucos de toranja",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.31.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de limão, com valor Brix <= 20",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.39.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Outros sucos de limão",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.41.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de abacaxi, com valor Brix <= 20",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.49.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Outros sucos de abacaxi",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.61.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de uva, com valor Brix <= 20",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.69.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Outros sucos de uva",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.71.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de maçã, com valor Brix <= 20",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.79.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Outros sucos de maçã",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.81.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de cranberry (oxicoco)",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.89.10": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de maracujá",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.89.20": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de caju",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.89.30": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de manga",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.89.40": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Suco de goiaba",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.89.90": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Outros sucos de frutas",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2009.90.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Misturas de sucos",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.11.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Amendoins torrados",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.19.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Castanhas e nozes torradas",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.20.10": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Polpa de abacaxi",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.20.90": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Preparações de abacaxi",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.30.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Polpa de frutas cítricas",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.40.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Polpa de pera",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.50.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Polpa de damasco",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.60.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Polpa de cereja",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.70.10": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Polpa de pêssego",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.70.90": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Preparações de pêssego",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.80.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Polpa de morango",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.91.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Polpa de palmito",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.93.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Polpa de cranberry",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.97.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Misturas de polpas",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "2008.99.00": [
+    {
+      "cclasstrib": "200034",
+      "cst": "200",
+      "descricao": "Outras polpas de frutas",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo VII",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0201.30.00": [
+    {
+      "cclasstrib": "200003",
+      "cst": "200",
+      "descricao": "Carnes de bovino, frescas ou refrigeradas, desossadas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo I",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0202.30.00": [
+    {
+      "cclasstrib": "200003",
+      "cst": "200",
+      "descricao": "Carnes de bovino, congeladas, desossadas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo I",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0203.19.00": [
+    {
+      "cclasstrib": "200003",
+      "cst": "200",
+      "descricao": "Outras carnes de suíno, frescas ou refrigeradas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo I",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0203.29.00": [
+    {
+      "cclasstrib": "200003",
+      "cst": "200",
+      "descricao": "Outras carnes de suíno, congeladas",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo I",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0207.14.00": [
+    {
+      "cclasstrib": "200003",
+      "cst": "200",
+      "descricao": "Cortes de frango, congelados",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo I",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0302.19.00": [
+    {
+      "cclasstrib": "200003",
+      "cst": "200",
+      "descricao": "Outros salmonídeos frescos ou refrigerados",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo I",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "0303.19.00": [
+    {
+      "cclasstrib": "200003",
+      "cst": "200",
+      "descricao": "Outros salmonídeos congelados",
+      "pReducao": "100%",
+      "legislacao": "LC 214/2025 Anexo I",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE"],
+      "ativo": true
+    }
+  ],
+  "9018.39.29": [
+    {
+      "cclasstrib": "200030",
+      "cst": "200",
+      "descricao": "Guias metálicos para cateter, dilatadores, introdutores",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9021.90.19": [
+    {
+      "cclasstrib": "200030",
+      "cst": "200",
+      "descricao": "Conjuntos para hidrocefalia, shunts, implantes cocleares",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9021.90.99": [
+    {
+      "cclasstrib": "200030",
+      "cst": "200",
+      "descricao": "Enxertos tubulares, botões para crânio",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
+  ],
+  "9021.90.91": [
+    {
+      "cclasstrib": "200030",
+      "cst": "200",
+      "descricao": "Introdutores de punção para eletrodos",
+      "pReducao": "60%",
+      "legislacao": "LC 214/2025 Anexo IV",
+      "regime": "reducao",
+      "documentos": ["NFCE", "NFE", "NFSE"],
+      "ativo": true
+    }
   ]
 }
