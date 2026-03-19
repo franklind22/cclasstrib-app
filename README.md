@@ -6,7 +6,7 @@
   
   <!-- BADGES -->
   <p>
-    <img src="https://img.shields.io/badge/versão-4.4-blue" alt="Versão">
+    <img src="https://img.shields.io/badge/versão-4.5-blue" alt="Versão">
     <img src="https://img.shields.io/badge/NCMs-800%2B-green" alt="NCMs">
     <img src="https://img.shields.io/badge/CSTs-154-orange" alt="CSTs">
     <img src="https://img.shields.io/badge/licença-MIT-red" alt="Licença">
@@ -14,6 +14,7 @@
     <img src="https://img.shields.io/badge/HTML-CSS-blue" alt="HTML/CSS">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
     <img src="https://img.shields.io/badge/mobile-friendly-ff69b4" alt="Mobile Friendly">
+    <img src="https://img.shields.io/badge/pesquisa-lote-8b5cf6" alt="Pesquisa em Lote">
   </p>
 
   <!-- LINK DEMO -->
@@ -51,11 +52,13 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 | **Pesquisa por NCM** | Busca por código de 4, 6 ou 8 dígitos (mantendo a exatidão da LC 214/2025) |
 | **Busca por capítulo** | Seletor de capítulos NCM - traz TODOS os NCMs do capítulo conforme a lei |
 | **Exemplos rápidos** | Clique para testar com ícones ilustrativos |
-| **Filtros** | Por CST 200, 410, redução, imunidade (com ícones) |
+| **Filtros avançados** | Por CST (200/410), Anexo (I, IV, IX, XIV, XV), Regime, Redução |
+| **Visualização moderna** | Alternância entre Cards e Tabela interativa |
 | **Histórico** | Últimas consultas salvas localmente |
-| **Exportação** | Download dos resultados em JSON e CSV |
+| **Exportação** | Download dos resultados em JSON, CSV e Excel |
 | **Compartilhamento** | Link com parâmetro `?ncm=XXXX` para compartilhar consultas |
 | **Favoritos** | Adicione NCMs aos favoritos com uma estrela ⭐ |
+| **Copiar NCM** | Botão para copiar o código rapidamente |
 
 ### 📚 **ABA CAPÍTULOS**
 
@@ -65,6 +68,8 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 | **Contagem de NCMs** | Quantidade por capítulo |
 | **Pesquisa** | Filtro por nome ou código |
 | **Clique para consultar** | Navegação direta para a aba Consulta |
+| **Ctrl+Click** | Abre modal com todos os NCMs do capítulo |
+| **Exportar capítulo** | Download da lista de NCMs do capítulo em Excel |
 
 ### 🏷️ **ABA CSTs**
 
@@ -77,6 +82,27 @@ Desenvolvido para **contadores, profissionais fiscais e empresários**, o sistem
 | **Paginação** | 20 itens por página |
 | **Ordenação** | Clique nos cabeçalhos para ordenar |
 | **Exportação** | Download da lista completa em JSON |
+
+### 🎯 **ABA PESQUISA EM LOTE** (NOVA)
+
+| Funcionalidade | Descrição |
+|----------------|-----------|
+| **Digitar múltiplos NCMs** | Separe por vírgula para consultar vários de uma vez |
+| **Upload de arquivo** | Importe arquivos .txt ou .csv com um NCM por linha |
+| **Busca exata ou por prefixo** | Escolha o modo de pesquisa |
+| **Tabela de resultados** | Visualize todos os resultados com status |
+| **Resumo** | Total de NCMs consultados, encontrados e não encontrados |
+| **Exportação** | Resultados em JSON, CSV e Excel |
+| **Lista de não encontrados** | Visualize os NCMs que não foram localizados |
+
+### ⭐ **ABA FAVORITOS**
+
+| Funcionalidade | Descrição |
+|----------------|-----------|
+| **Lista de favoritos** | Todos os NCMs marcados com estrela |
+| **Remoção rápida** | Clique no X para remover |
+| **Clique para consultar** | Navegação direta para a aba Consulta |
+| **Data de adição** | Timestamp de quando foi favoritado |
 
 ### ℹ️ **ABA SOBRE**
 
@@ -229,7 +255,61 @@ A **Lei Complementar 214/2025** utiliza diferentes níveis de agregação confor
 
 ---
 
-## 🔧 **CORREÇÕES RECENTES (Versão 4.4)**
+## 🖥️ **INTERFACE MODERNA**
+
+### Visualização em Cards
+![Cards](https://via.placeholder.com/800x400/2563eb/ffffff?text=Visualização+em+Cards)
+
+- **Cards coloridos** com gradientes no cabeçalho
+- **Tags visuais** para CST, redução, regime e anexo
+- **Documentos fiscais** com tooltips
+- **Ações rápidas**: favoritar, copiar, compartilhar
+
+### Visualização em Tabela
+![Tabela](https://via.placeholder.com/800x400/10b981/ffffff?text=Visualização+em+Tabela)
+
+- **Ordenação** por qualquer coluna
+- **Células destacadas** para informações importantes
+- **Compacta** para visualizar muitos registros
+
+### Filtros Avançados
+![Filtros](https://via.placeholder.com/800x400/8b5cf6/ffffff?text=Filtros+Avançados)
+
+- **Filtro por CST**: 200, 410
+- **Filtro por Anexo**: I, IV, IX, XIV, XV
+- **Botão para limpar** todos os filtros
+
+---
+
+## 📱 **MOBILE-FRIENDLY**
+
+O app foi totalmente otimizado para dispositivos móveis:
+
+✅ **Scroll horizontal** na tabela de CSTs  
+✅ **Filter bar com scroll** em telas pequenas  
+✅ **Botões com tamanho adequado** para toque  
+✅ **Grids adaptativos** (1 coluna em celular)  
+✅ **Cards responsivos** que se ajustam à tela  
+✅ **Tooltips informativos** em elementos de toque  
+✅ **Modal de capítulos** com rolagem suave  
+
+---
+
+## 🔧 **CORREÇÕES RECENTES (Versão 4.5)**
+
+### ✨ **Novas Funcionalidades**
+
+| Funcionalidade | Descrição |
+|----------------|-----------|
+| **Visualização em Cards** | Interface moderna com cards coloridos |
+| **Visualização em Tabela** | Alternância entre modos de visualização |
+| **Filtros avançados** | Por CST, Anexo, Regime e Redução |
+| **Botões de ação** | Exportar JSON, CSV, Excel (sem atalhos) |
+| **Modal de capítulos** | Ctrl+Click para ver NCMs do capítulo |
+| **Pesquisa em lote** | Nova aba para consultar múltiplos NCMs |
+| **Upload de arquivo** | Importar .txt ou .csv com NCMs |
+| **Copiar NCM** | Botão para copiar rapidamente |
+| **Compartilhar** | Link direto para o NCM consultado |
 
 ### 🔍 **Duplicidades Resolvidas**
 
@@ -270,7 +350,7 @@ A **Lei Complementar 214/2025** utiliza diferentes níveis de agregação confor
 
 ```
 cclasstrib-app/
-├── index.html          # Aplicação principal
+├── index.html          # Aplicação principal (versão 4.5)
 ├── dados.json          # Base de dados dos NCMs (800+ registros)
 ├── README.md           # Documentação
 └── assets/             # Imagens e ícones
@@ -349,7 +429,8 @@ No arquivo `index.html`, localize o array `CST_DATABASE` e adicione:
   cst: '200', 
   cclass: '200054', 
   descricao: 'Novo regime tributário', 
-  reducao: '60%', 
+  reducaoIBS: '60%', 
+  reducaoCBS: '60%', 
   documentos: ['NFCE', 'NFE'], 
   anexo: 'XVI' 
 }
@@ -405,27 +486,24 @@ Se você gostou do projeto:
 
 ---
 
-## 📱 **MOBILE-FRIENDLY**
-
-O app foi totalmente otimizado para dispositivos móveis:
-
-✅ **Scroll horizontal** na tabela de CSTs  
-✅ **Filter bar com scroll** em telas pequenas  
-✅ **Botões com tamanho adequado** para toque  
-✅ **Grids adaptativos** (1 coluna em celular)  
-✅ **Atalhos de teclado** aparecem apenas no desktop  
-✅ **Menus reorganizados** para melhor visualização  
-✅ **Tooltips informativos** em elementos de toque  
-
----
-
 ## 📝 **CHANGELOG**
 
-### Versão 4.4 (Março/2026)
+### Versão 4.5 (Março/2026)
+- ✅ **Interface moderna** com visualização em Cards e Tabela
+- ✅ **Filtros avançados** por CST, Anexo, Regime e Redução
+- ✅ **Botões de ação** para exportar JSON, CSV, Excel
+- ✅ **Modal de capítulos** com Ctrl+Click
+- ✅ **Nova aba** de Pesquisa em Lote
+- ✅ **Upload de arquivo** .txt e .csv
+- ✅ **Copiar NCM** e compartilhar link
+- ✅ **Tooltips informativos** em documentos fiscais
+- ✅ **Melhorias responsivas** para mobile
 - ✅ Base de dados expandida para 800+ NCMs
 - ✅ Correção de duplicidades em `3002`, `3004`, `3006`, `38210000`, `90189099`
 - ✅ Padronização de regimes (`exclusao_bc` → `exclusao`)
 - ✅ Remoção de `"NFCOM"` dos documentos fiscais
+
+### Versão 4.4 (Março/2026)
 - ✅ Adição de campos hierárquicos (`nivel_ncm`, `herdado_de`)
 - ✅ Documentação completa da estrutura hierárquica
 - ✅ Mapeamento detalhado dos anexos da LC 214/2025
@@ -439,7 +517,7 @@ O app foi totalmente otimizado para dispositivos móveis:
 
 <div align="center">
   <h3>Feito com ❤️ para a comunidade fiscal brasileira</h3>
-  <p>© 2026 · Reforma Tributária LC 214/2025 · Versão 4.4</p>
+  <p>© 2026 · Reforma Tributária LC 214/2025 · Versão 4.5</p>
   <p>
     <img src="https://img.icons8.com/color/48/000000/brazil.png" width="30"/>
   </p>
@@ -452,15 +530,15 @@ O app foi totalmente otimizado para dispositivos móveis:
 
 | Seção | O que mudou |
 |-------|-------------|
-| **Versão** | 4.3 → 4.4 |
-| **Badges** | Atualizadas |
-| **Funcionalidades** | Adicionada "Base de dados validada" |
-| **Estatísticas** | NCMs 750+ → 800+ / Anexos 11 → 15 |
-| **Nova seção** | **Hierarquia NCM na Base de Dados** (explicando os níveis e por que mantemos códigos de 4, 6 e 8 dígitos) |
-| **Estrutura do JSON** | Ampliada com campos especiais (`nivel_ncm`, `herdado_de`) |
-| **Mapeamento da Legislação** | Completo, com todos os 15 anexos e cClassTrib |
-| **Correções Recentes** | Nova seção detalhando as correções da versão 4.4 |
-| **Como atualizar** | Exemplos para adicionar posições (capítulos) como na lei |
-| **Links úteis** | Adicionado link da Tabela NCM Completa (SISCOMEX) |
-| **Aviso Legal** | Reforçada a explicação sobre os diferentes níveis de agregação |
-| **Changelog** | Versão 4.4 detalhada |
+| **Versão** | 4.4 → 4.5 |
+| **Badges** | Adicionado badge "Pesquisa em Lote" |
+| **Funcionalidades** | Expandida com detalhes da interface moderna, filtros avançados, visualização Cards/Tabela |
+| **ABA CONSULTA** | Adicionados filtros avançados, visualização moderna, copiar NCM |
+| **ABA CAPÍTULOS** | Adicionado Ctrl+Click para modal e exportar capítulo |
+| **NOVA ABA** | **Pesquisa em Lote** com todas as funcionalidades |
+| **ABA FAVORITOS** | Detalhada com remoção rápida e timestamp |
+| **Nova seção** | **INTERFACE MODERNA** com descrição das visualizações |
+| **Nova seção** | **MOBILE-FRIENDLY** expandida |
+| **Correções Recentes** | Atualizada para versão 4.5 com todas as novas funcionalidades |
+| **Changelog** | Versão 4.5 detalhada com todas as implementações |
+| **Footer** | Atualizado para versão 4.5 |
